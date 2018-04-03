@@ -1,0 +1,21 @@
+@tailwind preflight;
+@tailwind utilities;
+@tailwind components;
+
+body {
+  @apply .font-sans;
+}
+
+.text-white-dark {
+  color: config('colors.white-dark');
+}
+
+.label {
+  @apply .inline-block .bg-grey-lighter .rounded-full .px-3 .py-1 .text-sm .font-semibold .text-grey-darker .mr-2 .mb-2;
+}
+
+.application-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+}

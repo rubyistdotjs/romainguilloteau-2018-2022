@@ -1,0 +1,211 @@
+[{
+  "name": "Codeur",
+  "role": "Lead developer & Software architect",
+  "startYear": "2015",
+  "endYear": null,
+  "applications": [{
+    "name": "Graphiste.com",
+    "logo": "graphiste-logo.png",
+    "timePeriod": "2015 - présent",
+    "description": "Développement et design de la nouvelle version du site en faisant table rase de l'ancienne. Le site a pour objectif de faciliter la mise en relation et les échanges entre les graphistes freelance et les porteurs de project.",
+    "challenges": "Système de paiement complet (facturation, export comptable, paiements récurrents) par carte bancaire ou PayPal. Chat permettant des échanges en direct entre client et graphiste ou par groupe. Messagerie (de type Slack) utilisé pour les échanges lors du suivis des prestations.",
+    "tags": [{
+        "name": "Ruby on Rails",
+        "legacy": false
+      },
+      {
+        "name": "PostgreSQL",
+        "legacy": false
+      },
+      {
+        "name": "Redis",
+        "legacy": false
+      },
+      {
+        "name": "Bootstrap",
+        "legacy": false
+      },
+      {
+        "name": "Slim",
+        "legacy": false
+      },
+      {
+        "name": "Sass",
+        "legacy": false
+      },
+      {
+        "name": "Vue.js",
+        "legacy": false
+      },
+      {
+        "name": "Braintree",
+        "legacy": false
+      }, {
+        "name": "Amazon Machine Learning",
+        "legacy": false
+      },
+      {
+        "name": "AngularJS",
+        "legacy": true
+      },
+      {
+        "name": "Stripe",
+        "legacy": true
+      },
+      {
+        "name": "PayPal",
+        "legacy": true
+      }
+    ]
+  }, {
+    "name": "Facture.net",
+    "logo": "facture-logo.png",
+    "timePeriod": "2016 - présent",
+    "description": "Développement et design d'une application permettant d'établir simplement des factures, acomptes, devis et avoir avoir un système de gestion clients.",
+    "tags": [{
+        "name": "Ruby on Rails",
+        "legacy": false
+      },
+      {
+        "name": "PostgreSQL",
+        "legacy": false
+      },
+      {
+        "name": "Redis",
+        "legacy": false
+      },
+      {
+        "name": "Semantic UI",
+        "legacy": false
+      },
+      {
+        "name": "Slim",
+        "legacy": false
+      },
+      {
+        "name": "Sass",
+        "legacy": false
+      },
+      {
+        "name": "Amazon Glacier",
+        "legacy": false
+      }
+    ]
+  }, {
+    "name": "Redacteur.com",
+    "logo": "redacteur-logo.png",
+    "timePeriod": "2015 - présent",
+    "description": "",
+    "tags": [{
+        "name": "Ruby on Rails",
+        "legacy": false
+      },
+      {
+        "name": "MySQL",
+        "legacy": false
+      },
+      {
+        "name": "Redis",
+        "legacy": false
+      },
+      {
+        "name": "Bootstrap",
+        "legacy": false
+      },
+      {
+        "name": "Slim",
+        "legacy": false
+      },
+      {
+        "name": "Sass",
+        "legacy": false
+      },
+      {
+        "name": "Stripe",
+        "legacy": false
+      },
+      {
+        "name": "PayPal",
+        "legacy": false
+      }
+    ]
+  }, {
+    "name": "Knoba",
+    "logo": "knoba-logo.png",
+    "timePeriod": "2015 - présent",
+    "description": "",
+    "tags": [{
+        "name": "Ruby on Rails",
+        "legacy": false
+      },
+      {
+        "name": "PostgreSQL",
+        "legacy": false
+      },
+      {
+        "name": "Algolia",
+        "legacy": false
+      },
+      {
+        "name": "Bootstrap",
+        "legacy": false
+      },
+      {
+        "name": "Slim",
+        "legacy": false
+      },
+      {
+        "name": "Sass",
+        "legacy": false
+      }
+    ]
+  }, {
+    "name": "Nuage de mots",
+    "logo": "wordcloud-logo.png",
+    "timePeriod": "septembre 2017",
+    "description": "",
+    "tags": [{
+        "name": "Ruby on Rails",
+        "legacy": false
+      },
+      {
+        "name": "Vue.js",
+        "legacy": false
+      },
+      {
+        "name": "Bootstrap",
+        "legacy": false
+      },
+      {
+        "name": "Slim",
+        "legacy": false
+      },
+      {
+        "name": "Sass",
+        "legacy": false
+      }
+    ]
+  }, {
+    "name": "RailsSES",
+    "logo": "rubygem-logo.png",
+    "timePeriod": "2017 - présent",
+    "description": "",
+    "tags": [{
+        "name": "Ruby on Rails",
+        "legacy": false
+      },
+      {
+        "name": "Minitest",
+        "legacy": false
+      },
+      {
+        "name": "AWS SES",
+        "legacy": false
+      },
+      {
+        "name": "AWS SNS",
+        "legacy": false
+      }
+    ]
+  }]
+}]

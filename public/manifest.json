@@ -1,0 +1,23 @@
+{
+  "short_name": "Romain G.",
+  "name": "Romain Guilloteau",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64",
+      "type": "image/x-icon"
+    }, {
+      "src": "icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }, {
+      "src": "tile-square.png",
+      "sizes": "558x558",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#ffffff",
+  "background_color": "#3d4852"
+}

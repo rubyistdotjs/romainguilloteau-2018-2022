@@ -1,0 +1,28 @@
+{
+  "name": "romainguilloteau",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "firebase": "^4.12.1",
+    "lodash": "^4.17.5",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-ga": "^2.4.1",
+    "react-helmet": "^5.2.0",
+    "react-intl": "^2.4.0",
+    "react-scripts": "1.1.1"
+  },
+  "scripts": {
+    "start": "npm run watch:css & react-scripts start",
+    "build": "npm run build:css && react-scripts build",
+    "build:css": "postcss src/stylesheets/app.css -o src/app.css",
+    "watch:css": "postcss src/stylesheets/app.css -o src/app.css -w",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "autoprefixer": "^8.1.0",
+    "postcss-cli": "^5.0.0",
+    "tailwindcss": "^0.4.3"
+  }
+}

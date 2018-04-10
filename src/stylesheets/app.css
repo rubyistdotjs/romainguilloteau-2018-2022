@@ -3,11 +3,26 @@
 @tailwind components;
 
 body {
-  @apply .font-sans;
+  @apply .font-sans .leading-normal;
 }
 
 .text-white-dark {
   color: config('colors.white-dark');
+}
+
+.bg-annecy-lake {
+  background-image: url('./images/annecy-lake.jpg');
+}
+
+.bg-blue-darkest-filter * {
+  z-index: 2;
+}
+
+.bg-blue-darkest-filter::before {
+  content: '';
+  z-index: 1;
+  opacity: .65;
+  @apply .bg-blue-darker .absolute .pin;
 }
 
 .label {
@@ -18,4 +33,26 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 1rem;
+}
+
+.challenge {
+  @apply .block .text-grey-darkest .text-base .leading-tight .px-6 .py-4 .border-grey-lighter .border-solid .border-t;
+}
+
+.hobbies div:not(:last-child) {
+  @apply .mr-6;
+}
+
+.hobby {
+  @apply .block .text-white .text-base .leading-tight .py-3 .border-blue-darker .border-solid .border-t .overflow-hidden;
+}
+
+
+h1 {
+  font-size: 4rem;
+  line-height: 1.4;
+}
+
+h1 + p {
+  font-size: 2.5rem;
 }

@@ -1,211 +1,348 @@
-[{
-  "name": "Codeur",
-  "role": "Lead developer & Software architect",
-  "startYear": "2015",
-  "endYear": null,
-  "applications": [{
-    "name": "Graphiste.com",
-    "logo": "graphiste-logo.png",
-    "timePeriod": "2015 - présent",
-    "description": "Développement et design de la nouvelle version du site en faisant table rase de l'ancienne. Le site a pour objectif de faciliter la mise en relation et les échanges entre les graphistes freelance et les porteurs de project.",
-    "challenges": "Système de paiement complet (facturation, export comptable, paiements récurrents) par carte bancaire ou PayPal. Chat permettant des échanges en direct entre client et graphiste ou par groupe. Messagerie (de type Slack) utilisé pour les échanges lors du suivis des prestations.",
-    "tags": [{
-        "name": "Ruby on Rails",
-        "legacy": false
+[
+  {
+    "name": "Codeur",
+    "logo": "codeur-logo.png",
+    "role": "Lead developer & Software architect",
+    "startYear": "2015",
+    "endYear": null,
+    "applications": [
+      {
+        "name": "Graphiste.com",
+        "url": "https://graphiste.com/",
+        "logo": "graphiste-logo.png",
+        "timePeriod": "2015 - présent",
+        "description":
+          "Développement et design de la nouvelle version du site en faisant table rase de l'ancienne. Le site a pour objectif de faciliter la mise en relation et les échanges entre graphistes freelance et porteurs de project.",
+        "challenges": [
+          "Système de paiement complet (facturation, exports comptables, paiements récurrents) par carte bancaire ou PayPal.",
+          "Chat permettant des échanges en direct entre clients et prestataires ainsi que des conversions groupés.",
+          "Messagerie (de type Slack) utilisée lors du suivis des prestations pour les échanges en direct (messages et tous type de fichier) entre le prestataire et le client ."
+        ],
+        "tags": [
+          {
+            "name": "Ruby on Rails",
+            "legacy": false
+          },
+          {
+            "name": "PostgreSQL",
+            "legacy": false
+          },
+          {
+            "name": "Redis",
+            "legacy": false
+          },
+          {
+            "name": "Bootstrap",
+            "legacy": false
+          },
+          {
+            "name": "Slim",
+            "legacy": false
+          },
+          {
+            "name": "Sass",
+            "legacy": false
+          },
+          {
+            "name": "Vue.js",
+            "legacy": false
+          },
+          {
+            "name": "Braintree",
+            "legacy": false
+          },
+          {
+            "name": "Amazon Machine Learning",
+            "legacy": false
+          },
+          {
+            "name": "AngularJS",
+            "legacy": true
+          },
+          {
+            "name": "Stripe",
+            "legacy": true
+          },
+          {
+            "name": "PayPal",
+            "legacy": true
+          }
+        ]
       },
       {
-        "name": "PostgreSQL",
-        "legacy": false
+        "name": "Facture.net",
+        "url": "https://www.facture.net/",
+        "logo": "facture-logo.png",
+        "timePeriod": "2016 - présent",
+        "description":
+          "Développement et design d'une application permettant d'établir et partager simplement des factures, acomptes, devis et avoir avec un système de gestion clients. Le tout en conformité avec les lois en vigueures en France.",
+        "challenges": [
+          "Une recherche poussée capable de filtrer chaque type de donnée par date (jour ou mois ou année), deux dates (de début et fin, par jours, mois ou année), par client, par devise, par email du client etc ...",
+          "Personnalisation de l'outil permettant de definir de nombreux paramètres par défaut et le format de la numérotation pour chaque type de document.",
+          "Système d'export comptable mensuel pour des milliers d'utilisateurs de manière sécurisé et immuable pour répondre aux éxigeances des lois Française."
+        ],
+        "tags": [
+          {
+            "name": "Ruby on Rails",
+            "legacy": false
+          },
+          {
+            "name": "PostgreSQL",
+            "legacy": false
+          },
+          {
+            "name": "Redis",
+            "legacy": false
+          },
+          {
+            "name": "Semantic UI",
+            "legacy": false
+          },
+          {
+            "name": "Slim",
+            "legacy": false
+          },
+          {
+            "name": "Sass",
+            "legacy": false
+          },
+          {
+            "name": "Amazon Glacier",
+            "legacy": false
+          }
+        ]
       },
       {
-        "name": "Redis",
-        "legacy": false
+        "name": "Redacteur.com",
+        "url": "https://www.redacteur.com/",
+        "logo": "redacteur-logo.png",
+        "timePeriod": "2015 - présent",
+        "description": "Assurer la maintenance et l'evolution du site existant dont l'objectif est la mise en relation entre rédacteurs freelance et porteurs de projets et le suivis des rédactions.",
+        "challenges": [],
+        "tags": [
+          {
+            "name": "Ruby on Rails",
+            "legacy": false
+          },
+          {
+            "name": "MySQL",
+            "legacy": false
+          },
+          {
+            "name": "Redis",
+            "legacy": false
+          },
+          {
+            "name": "Bootstrap",
+            "legacy": false
+          },
+          {
+            "name": "Slim",
+            "legacy": false
+          },
+          {
+            "name": "Sass",
+            "legacy": false
+          },
+          {
+            "name": "Stripe",
+            "legacy": false
+          },
+          {
+            "name": "PayPal",
+            "legacy": false
+          }
+        ]
       },
       {
-        "name": "Bootstrap",
-        "legacy": false
+        "name": "Knoba",
+        "url": "https://aide.facture.net/",
+        "logo": "knoba-logo.png",
+        "timePeriod": "2015 - présent",
+        "description": "Développement et design d'une application simple permettant d'éditer une FAQ. Celle-ci peut être dupliquée puis personnalisée pour chaque site, actuellement Codeur utilise 5 différente instances.",
+        "challenges": [],
+        "tags": [
+          {
+            "name": "Ruby on Rails",
+            "legacy": false
+          },
+          {
+            "name": "PostgreSQL",
+            "legacy": false
+          },
+          {
+            "name": "Algolia",
+            "legacy": false
+          },
+          {
+            "name": "Bootstrap",
+            "legacy": false
+          },
+          {
+            "name": "Slim",
+            "legacy": false
+          },
+          {
+            "name": "Sass",
+            "legacy": false
+          }
+        ]
       },
       {
-        "name": "Slim",
-        "legacy": false
+        "name": "Nuage de mots",
+        "url": "https://nuagedemots.co/",
+        "logo": "wordcloud-logo.png",
+        "timePeriod": "septembre 2017",
+        "description": "Développement d'une application Vue.js permettant de générer simplemenent un nuage de mot grâce à plusieurs paramètres prédéfinis. Le nuage peut être télécharger en PNG (avec transparence), JPG ou WebP.",
+        "challenges": [],
+        "tags": [
+          {
+            "name": "Ruby on Rails",
+            "legacy": false
+          },
+          {
+            "name": "Vue.js",
+            "legacy": false
+          },
+          {
+            "name": "Bootstrap",
+            "legacy": false
+          },
+          {
+            "name": "Slim",
+            "legacy": false
+          },
+          {
+            "name": "Sass",
+            "legacy": false
+          }
+        ]
       },
       {
-        "name": "Sass",
-        "legacy": false
-      },
+        "name": "RailsSES",
+        "url": null,
+        "logo": "rubygem-logo.png",
+        "timePeriod": "2017 - présent",
+        "description": "Développement d'une Gem permettant à une app Rails d'envoyer des emails via AWS SES, maintenir un registre de tous les destinataires, mettre à jour leurs statut en fonction des retours reçu via AWS SNS et le cas écheant intercepter les emails vers des destinataires invalides.",
+        "challenges": [],
+        "tags": [
+          {
+            "name": "Ruby on Rails",
+            "legacy": false
+          },
+          {
+            "name": "Minitest",
+            "legacy": false
+          },
+          {
+            "name": "AWS SES",
+            "legacy": false
+          },
+          {
+            "name": "AWS SNS",
+            "legacy": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "1Year1Book",
+    "logo": "1year1book-logo.png",
+    "role": "Lead developer",
+    "startYear": "2013",
+    "endYear": "2014",
+    "applications": [
       {
-        "name": "Vue.js",
-        "legacy": false
-      },
-      {
-        "name": "Braintree",
-        "legacy": false
+        "name": "Réseau Social",
+        "logo": "1year1book-old-logo.png",
+        "timePeriod": "2013 - 2014",
+        "description": "Développement et design d'un réseau social privé dont l'objectif premier est le partage de photographies. Les utilisateurs peuvent également échanger des messages, commenter et voter (j'aime, je n'aime pas) les photographies. Les votes permettent à l'échéance d'une période donnée de générer automatiquement un Yearbook.",
+        "challenges": [
+          "Envoi, traitement (redimensionnement, compression, ...)  et stockage d'images volumineuses et généralement envoyées par paquets.",
+          "Les réseaux sociaux peuvent être générés automatiquement via de nombreux paramètres, il faut donc un système d'autorisation complexe, la quasi-totalité des fonctionnalités peuvent être désactivées ou bloquées pour être uniquement utilisable par les administrateurs."
+        ],
+        "tags": [
+          {
+            "name": "Ruby on Rails",
+            "legacy": false
+          },
+          {
+            "name": "PostgreSQL",
+            "legacy": false
+          },
+          {
+            "name": "Bootstrap",
+            "legacy": false
+          },
+          {
+            "name": "Haml",
+            "legacy": false
+          },
+          {
+            "name": "Sass",
+            "legacy": false
+          },
+          {
+            "name": "CoffeeScript",
+            "legacy": false
+          },
+          {
+            "name": "AngularJS",
+            "legacy": false
+          },
+          {
+            "name": "Heroku",
+            "legacy": false
+          },
+          {
+            "name": "Amazon S3",
+            "legacy": false
+          }
+        ]
       }, {
-        "name": "Amazon Machine Learning",
-        "legacy": false
-      },
-      {
-        "name": "AngularJS",
-        "legacy": true
-      },
-      {
-        "name": "Stripe",
-        "legacy": true
-      },
-      {
-        "name": "PayPal",
-        "legacy": true
+        "name": "Back-Office",
+        "logo": "1year1book-old-logo.png",
+        "timePeriod": "2013 - 2014",
+        "description": "Développement et design d'une interface permettant aux employés de, entre autres, créé automatiquement un réseau social personnalisé grâce à de nombreux paramètres, suivre l'état de santé des réseaux sociaux via de multiple graphique et une checklist prédéfini, créé et suivre les commandes, créé et maintenir des fiches clients.",
+        "challenges": [
+          "Génération de statistiques et rapports pour plusieurs centaines de réseaux sociaux."
+        ],
+        "tags": [
+          {
+            "name": "Ruby on Rails",
+            "legacy": false
+          },
+          {
+            "name": "PostgreSQL",
+            "legacy": false
+          },
+          {
+            "name": "Bootstrap",
+            "legacy": false
+          },
+          {
+            "name": "Haml",
+            "legacy": false
+          },
+          {
+            "name": "Sass",
+            "legacy": false
+          },
+          {
+            "name": "CoffeeScript",
+            "legacy": false
+          },
+          {
+            "name": "AngularJS",
+            "legacy": false
+          },
+          {
+            "name": "Heroku",
+            "legacy": false
+          }
+        ]
       }
     ]
-  }, {
-    "name": "Facture.net",
-    "logo": "facture-logo.png",
-    "timePeriod": "2016 - présent",
-    "description": "Développement et design d'une application permettant d'établir simplement des factures, acomptes, devis et avoir avoir un système de gestion clients.",
-    "tags": [{
-        "name": "Ruby on Rails",
-        "legacy": false
-      },
-      {
-        "name": "PostgreSQL",
-        "legacy": false
-      },
-      {
-        "name": "Redis",
-        "legacy": false
-      },
-      {
-        "name": "Semantic UI",
-        "legacy": false
-      },
-      {
-        "name": "Slim",
-        "legacy": false
-      },
-      {
-        "name": "Sass",
-        "legacy": false
-      },
-      {
-        "name": "Amazon Glacier",
-        "legacy": false
-      }
-    ]
-  }, {
-    "name": "Redacteur.com",
-    "logo": "redacteur-logo.png",
-    "timePeriod": "2015 - présent",
-    "description": "",
-    "tags": [{
-        "name": "Ruby on Rails",
-        "legacy": false
-      },
-      {
-        "name": "MySQL",
-        "legacy": false
-      },
-      {
-        "name": "Redis",
-        "legacy": false
-      },
-      {
-        "name": "Bootstrap",
-        "legacy": false
-      },
-      {
-        "name": "Slim",
-        "legacy": false
-      },
-      {
-        "name": "Sass",
-        "legacy": false
-      },
-      {
-        "name": "Stripe",
-        "legacy": false
-      },
-      {
-        "name": "PayPal",
-        "legacy": false
-      }
-    ]
-  }, {
-    "name": "Knoba",
-    "logo": "knoba-logo.png",
-    "timePeriod": "2015 - présent",
-    "description": "",
-    "tags": [{
-        "name": "Ruby on Rails",
-        "legacy": false
-      },
-      {
-        "name": "PostgreSQL",
-        "legacy": false
-      },
-      {
-        "name": "Algolia",
-        "legacy": false
-      },
-      {
-        "name": "Bootstrap",
-        "legacy": false
-      },
-      {
-        "name": "Slim",
-        "legacy": false
-      },
-      {
-        "name": "Sass",
-        "legacy": false
-      }
-    ]
-  }, {
-    "name": "Nuage de mots",
-    "logo": "wordcloud-logo.png",
-    "timePeriod": "septembre 2017",
-    "description": "",
-    "tags": [{
-        "name": "Ruby on Rails",
-        "legacy": false
-      },
-      {
-        "name": "Vue.js",
-        "legacy": false
-      },
-      {
-        "name": "Bootstrap",
-        "legacy": false
-      },
-      {
-        "name": "Slim",
-        "legacy": false
-      },
-      {
-        "name": "Sass",
-        "legacy": false
-      }
-    ]
-  }, {
-    "name": "RailsSES",
-    "logo": "rubygem-logo.png",
-    "timePeriod": "2017 - présent",
-    "description": "",
-    "tags": [{
-        "name": "Ruby on Rails",
-        "legacy": false
-      },
-      {
-        "name": "Minitest",
-        "legacy": false
-      },
-      {
-        "name": "AWS SES",
-        "legacy": false
-      },
-      {
-        "name": "AWS SNS",
-        "legacy": false
-      }
-    ]
-  }]
-}]
+  }
+]

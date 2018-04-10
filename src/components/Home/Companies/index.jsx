@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 import Company from './Company';
-import companiesJSON from '../database/companies.json';
+import companiesJSON from '../../../database/companies.json';
 
-export default class Experience extends Component {
+export default class Companies extends Component {
   constructor(props) {
     super(props);
-    this.state = { companies: [] };
+
+    this.state = {
+      companies: [],
+    };
   }
 
   componentDidMount() {
@@ -19,14 +22,6 @@ export default class Experience extends Component {
       <Company key={company.name.toLowerCase()} company={company} />
     ));
 
-    return (
-      <section>
-        <div className="container px-8 mx-auto">
-          <h2 className="text-3xl ">Expérience professionnelle</h2>
-        </div>
-
-        {companies}
-      </section>
-    );
+    return <section className="bg-grey-lightest pb-8">{companies}</section>;
   }
 }

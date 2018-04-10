@@ -1,7 +1,6 @@
 import React from 'react';
 
-export default props => {
-  const { tag } = props;
+export default function CompanyApplicationTag({ tag }) {
   const small = tag.legacy ? (
     <small className="align-middle leading-none">(legacy)</small>
   ) : (
@@ -13,4 +12,4 @@ export default props => {
       {tag.name} {small}
     </span>
   );
-};
+}

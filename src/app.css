@@ -2155,7 +2155,11 @@ button,
 }
 
 .font-sans {
-  font-family: Nunito, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: Muli, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+.font-heading {
+  font-family: Nunito Sans, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 .font-serif {
@@ -4039,7 +4043,7 @@ button,
 }
 
 .tracking-tight {
-  letter-spacing: -0.05em;
+  letter-spacing: -0.01em;
 }
 
 .tracking-normal {
@@ -4271,11 +4275,32 @@ button,
 }
 
 body {
-  font-family: Nunito, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: Muli, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  line-height: 1.5;
 }
 
 .text-white-dark {
   color: rgba(255, 255, 255, .7);
+}
+
+.bg-annecy-lake {
+  background-image: url('./images/annecy-lake.jpg');
+}
+
+.bg-blue-darkest-filter * {
+  z-index: 2;
+}
+
+.bg-blue-darkest-filter::before {
+  content: '';
+  z-index: 1;
+  opacity: .65;
+  background-color: #1c3d5a;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .label {
@@ -4297,6 +4322,46 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 1rem;
+}
+
+.challenge {
+  display: block;
+  color: #3d4852;
+  font-size: 1rem;
+  line-height: 1.25;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-color: #f1f5f8;
+  border-style: solid;
+  border-top-width: 1px;
+}
+
+.hobbies div:not(:last-child) {
+  margin-right: 1.5rem;
+}
+
+.hobby {
+  display: block;
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1.25;
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  border-color: #1c3d5a;
+  border-style: solid;
+  border-top-width: 1px;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 4rem;
+  line-height: 1.4;
+}
+
+h1 + p {
+  font-size: 2.5rem;
 }
 
 @media (min-width: 576px) {
@@ -5798,7 +5863,11 @@ body {
   }
 
   .sm\:font-sans {
-    font-family: Nunito, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: Muli, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  }
+
+  .sm\:font-heading {
+    font-family: Nunito Sans, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   }
 
   .sm\:font-serif {
@@ -7674,7 +7743,7 @@ body {
   }
 
   .sm\:tracking-tight {
-    letter-spacing: -0.05em;
+    letter-spacing: -0.01em;
   }
 
   .sm\:tracking-normal {
@@ -9405,7 +9474,11 @@ body {
   }
 
   .md\:font-sans {
-    font-family: Nunito, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: Muli, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  }
+
+  .md\:font-heading {
+    font-family: Nunito Sans, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   }
 
   .md\:font-serif {
@@ -11281,7 +11354,7 @@ body {
   }
 
   .md\:tracking-tight {
-    letter-spacing: -0.05em;
+    letter-spacing: -0.01em;
   }
 
   .md\:tracking-normal {
@@ -13012,7 +13085,11 @@ body {
   }
 
   .lg\:font-sans {
-    font-family: Nunito, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: Muli, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  }
+
+  .lg\:font-heading {
+    font-family: Nunito Sans, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   }
 
   .lg\:font-serif {
@@ -14888,7 +14965,7 @@ body {
   }
 
   .lg\:tracking-tight {
-    letter-spacing: -0.05em;
+    letter-spacing: -0.01em;
   }
 
   .lg\:tracking-normal {
@@ -16619,7 +16696,11 @@ body {
   }
 
   .xl\:font-sans {
-    font-family: Nunito, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: Muli, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  }
+
+  .xl\:font-heading {
+    font-family: Nunito Sans, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   }
 
   .xl\:font-serif {
@@ -18495,7 +18576,7 @@ body {
   }
 
   .xl\:tracking-tight {
-    letter-spacing: -0.05em;
+    letter-spacing: -0.01em;
   }
 
   .xl\:tracking-normal {

@@ -195,7 +195,22 @@ module.exports = {
 
   fonts: {
     'sans': [
-      'Nunito',
+      'Muli',
+      'system-ui',
+      'BlinkMacSystemFont',
+      '-apple-system',
+      'Segoe UI',
+      'Roboto',
+      'Oxygen',
+      'Ubuntu',
+      'Cantarell',
+      'Fira Sans',
+      'Droid Sans',
+      'Helvetica Neue',
+      'sans-serif',
+    ],
+    'heading': [
+      'Nunito Sans',
       'system-ui',
       'BlinkMacSystemFont',
       '-apple-system',
@@ -324,7 +339,7 @@ module.exports = {
   */
 
   tracking: {
-    'tight': '-0.05em',
+    'tight': '-0.01em',
     'normal': '0',
     'wide': '0.05em',
   },

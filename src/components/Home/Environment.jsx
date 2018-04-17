@@ -1,75 +1,44 @@
 import React from 'react';
+import { chunk } from 'lodash';
 import Section from './Section';
 
+import devToolsJSON from '../../database/dev-tools.json';
+
 export default function Environment() {
+  const devtools = devToolsJSON;
+
+  const logos = require.context('../../images/dev-tools', false, /\.svg$/)
+  const fetchLogo = (name) => logos(name, true);
+
   return (
-    <Section bgColor="indigo-dark">
+    <Section bgColor="grey-lightest">
       <div className="container py-8 mx-auto flex flex-col align-center">
-        <h2 className="text-5xl text-white pb-8 antialiased font-semibold antialiased">
-          Environnement de dev. / outils
+        <h2 className="font-heading text-5xl text-black pb-8 antialiased font-semibold">
+          Environnement de développement
         </h2>
 
         <div className="flex flex-row">
-          <div className="w-1/2">
-            <ul className="list-reset">
-              <li className="py-2 flex flex-row items-center">
-                <div className="bg-indigo-light w-10 h-10 mr-4 rounded-full">
-                </div>
-                <div className="text-white text-lg text-semibold">
-                  <span className="block leading-none">MacBook Pro (High Sierra)</span>
-                </div>
-              </li>
-              <li className="py-2 flex flex-row items-center">
-                <div className="bg-indigo-light w-10 h-10 mr-4 rounded-full">
-                </div>
-                <div className="text-white text-lg text-semibold">
-                  <span className="block leading-none">Visual Studio Code</span>
-                </div>
-              </li>
-              <li className="py-2 flex flex-row items-center">
-                <div className="bg-indigo-light w-10 h-10 mr-4 rounded-full">
-                </div>
-                <div className="text-white text-lg text-semibold">
-                  <span className="block leading-none">Chrome et Firefox</span>
-                </div>
-              </li>
-              <li className="py-2 flex flex-row items-center">
-                <div className="bg-indigo-light w-10 h-10 mr-4 rounded-full">
-                </div>
-                <div className="text-white text-lg text-semibold">
-                  <span className="block leading-none">Sketch</span>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div className="w-1/2">
-            <ul className="list-reset">
-              <li className="py-2 flex flex-row items-center">
-                <div className="bg-indigo-light w-10 h-10 mr-4 rounded-full">
-                </div>
-                <div className="text-white text-lg text-semibold">
-                  <span className="block leading-none">Homebrew</span>
-                </div>
-              </li>
-              <li className="py-2 flex flex-row items-center">
-                <div className="bg-indigo-light w-10 h-10 mr-4 rounded-full">
-                </div>
-                <div className="text-white text-lg text-semibold">
-                  <span className="block leading-none">chruby</span>
-                </div>
-              </li>
-              <li className="py-2 flex flex-row items-center">
-                <div className="bg-indigo-light w-10 h-10 mr-4 rounded-full">
-                </div>
-                <div className="text-white text-lg text-semibold">
-                  <span className="block leading-none">Git (Github / Gitlab)</span>
-                </div>
-              </li>
-
-            </ul>
-          </div>
+          {chunk(devtools, Math.round(devtools.length * 0.5)).map((tools, index) => (
+            <div key={index} className="w-1/2">
+              <ul className="list-reset">
+                {tools.map(tool => (
+                  <li key={tool.id} className="py-3 flex flex-row items-center">
+                    <div className="bg-grey w-10 h-10 mr-4 rounded-full flex items-center justify-center">
+                      <img
+                        src={fetchLogo(`./${tool.logo.filename}`)}
+                        alt={tool.logo.alt}
+                        className="w-6 h-6" />
+                    </div>
+                    <div className="text-grey-darkest text-lg text-semibold">
+                      <span className="block leading-none">{tool.name}</span>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
       </div>
     </Section>
-  )
+  );
 }

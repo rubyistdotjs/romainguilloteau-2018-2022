@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Section from '../Section';
 import Hobby from './Hobby';
 import HobbyListItem from './HobbyListItem';
+import HobbyListItemRoadtripSubtitle from './HobbyListItemRoadtripSubtitle';
 
 import booksJSON from '../../../database/books.json';
 import seriesJSON from '../../../database/series.json';
@@ -49,13 +50,19 @@ export default class Hobbies extends Component {
 
           <Hobby color="red" listTitle="Dernieres Séries">
             {this.state.series.map(show => (
-              <HobbyListItem itemTitle={show.title} itemSubtitle={show.category} />
+              <HobbyListItem
+                itemTitle={show.title}
+                itemSubtitle={show.category}
+              />
             ))}
           </Hobby>
 
           <Hobby color="indigo" listTitle="Derniers jeux">
             {this.state.games.map(game => (
-              <HobbyListItem itemTitle={game.title} itemSubtitle={game.category} />
+              <HobbyListItem
+                itemTitle={game.title}
+                itemSubtitle={game.category}
+              />
             ))}
           </Hobby>
 
@@ -63,7 +70,12 @@ export default class Hobbies extends Component {
             {this.state.roadtrips.map(roadtrip => (
               <HobbyListItem
                 itemTitle={roadtrip.name}
-                itemSubtitle={roadtrip.distance}
+                itemSubtitle={
+                  <HobbyListItemRoadtripSubtitle
+                    distance={roadtrip.distance}
+                    mapsUrl={roadtrip.mapsUrl}
+                  />
+                }
               />
             ))}
           </Hobby>

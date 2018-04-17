@@ -40,7 +40,7 @@ body {
 }
 
 .hobbies div:not(:last-child) {
-  @apply .mr-6;
+  @apply .mr-8;
 }
 
 .hobby {

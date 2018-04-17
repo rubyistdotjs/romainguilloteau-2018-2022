@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { camelCase } from 'lodash';
+import { kebabCase } from 'lodash';
 import CompanyApplicationTag from './CompanyApplicationTag';
 import CompanyApplicationChallenges from './CompanyApplicationChallenges';
 
@@ -22,7 +22,7 @@ export default class CompanyApplication extends Component {
   render() {
     const { application } = this.props;
     const tags = application.tags.map(tag => (
-      <CompanyApplicationTag key={camelCase(tag.name)} tag={tag} />
+      <CompanyApplicationTag key={kebabCase(tag.name)} tag={tag} />
     ));
 
     return (

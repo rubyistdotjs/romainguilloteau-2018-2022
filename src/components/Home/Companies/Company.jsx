@@ -13,15 +13,15 @@ export default function Company({ company }) {
         <div className="flex flex-row pt-8 pb-2">
           <div
             className={`
-              w-24
-              h-24
+              w-20
+              h-20
               mr-3
               border-4
               border-solid
               border-white 
               rounded-full
               overflow-hidden 
-              shadow-md
+              shadow
             `}
           >
             <img
@@ -29,12 +29,12 @@ export default function Company({ company }) {
               alt={`Logo de ${company.name}`}
             />
           </div>
-          <div>
+          <div className="pt-1">
             <h3
               className={`
                 text-black
                 font-heading
-                text-4xl
+                text-3xl
                 font-bold
                 leading-tight
               `}
@@ -47,8 +47,7 @@ export default function Company({ company }) {
                 text-grey-darkest
                 text-xl
                 font-semibold
-                leading-normal
-                tracking-tight
+                leading-tight
               `}
             >
               {company.role}

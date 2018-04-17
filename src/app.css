@@ -2278,6 +2278,10 @@ button,
   height: 4rem;
 }
 
+.h-20 {
+  height: 5.5rem;
+}
+
 .h-24 {
   height: 6rem;
 }
@@ -4170,6 +4174,10 @@ button,
   width: 4rem;
 }
 
+.w-20 {
+  width: 5.5rem;
+}
+
 .w-24 {
   width: 6rem;
 }
@@ -4339,7 +4347,7 @@ body {
 }
 
 .hobbies div:not(:last-child) {
-  margin-right: 1.5rem;
+  margin-right: 2rem;
 }
 
 .hobby {
@@ -5984,6 +5992,10 @@ h1 + p {
 
   .sm\:h-16 {
     height: 4rem;
+  }
+
+  .sm\:h-20 {
+    height: 5.5rem;
   }
 
   .sm\:h-24 {
@@ -7870,6 +7882,10 @@ h1 + p {
     width: 4rem;
   }
 
+  .sm\:w-20 {
+    width: 5.5rem;
+  }
+
   .sm\:w-24 {
     width: 6rem;
   }
@@ -9595,6 +9611,10 @@ h1 + p {
 
   .md\:h-16 {
     height: 4rem;
+  }
+
+  .md\:h-20 {
+    height: 5.5rem;
   }
 
   .md\:h-24 {
@@ -11481,6 +11501,10 @@ h1 + p {
     width: 4rem;
   }
 
+  .md\:w-20 {
+    width: 5.5rem;
+  }
+
   .md\:w-24 {
     width: 6rem;
   }
@@ -13206,6 +13230,10 @@ h1 + p {
 
   .lg\:h-16 {
     height: 4rem;
+  }
+
+  .lg\:h-20 {
+    height: 5.5rem;
   }
 
   .lg\:h-24 {
@@ -15092,6 +15120,10 @@ h1 + p {
     width: 4rem;
   }
 
+  .lg\:w-20 {
+    width: 5.5rem;
+  }
+
   .lg\:w-24 {
     width: 6rem;
   }
@@ -16817,6 +16849,10 @@ h1 + p {
 
   .xl\:h-16 {
     height: 4rem;
+  }
+
+  .xl\:h-20 {
+    height: 5.5rem;
   }
 
   .xl\:h-24 {
@@ -18701,6 +18737,10 @@ h1 + p {
 
   .xl\:w-16 {
     width: 4rem;
+  }
+
+  .xl\:w-20 {
+    width: 5.5rem;
   }
 
   .xl\:w-24 {

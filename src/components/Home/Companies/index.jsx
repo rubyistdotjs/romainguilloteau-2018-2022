@@ -18,10 +18,14 @@ export default class Companies extends Component {
   }
 
   render() {
-    const companies = this.state.companies.map(company => (
-      <Company key={company.name.toLowerCase()} company={company} />
+    const companies = this.state.companies.map((company, index) => (
+      <Company
+        key={company.name.toLowerCase()}
+        company={company}
+        bgColor={index % 2 === 0 ? 'white' : 'grey-lightest'}
+      />
     ));
 
-    return <section className="bg-grey-lightest pb-8">{companies}</section>;
+    return <section>{companies}</section>;
   }
 }

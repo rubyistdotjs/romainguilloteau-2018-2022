@@ -13,7 +13,7 @@ export default function Environment() {
   return (
     <Section bgColor="grey-lightest">
       <div className="container py-8 mx-auto flex flex-col align-center">
-        <h2 className="font-heading text-5xl text-black pb-8 antialiased font-semibold">
+        <h2 className="font-heading text-5xl text-black pb-8 antialiased">
           Environnement de développement
         </h2>
 

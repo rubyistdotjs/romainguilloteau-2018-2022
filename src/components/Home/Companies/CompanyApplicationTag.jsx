@@ -8,7 +8,7 @@ export default function CompanyApplicationTag({ tag }) {
   );
 
   return (
-    <span className="label">
+    <span className="inline-block text-grey-darker text-sm mr-2 mb-2 px-2 py-1 bg-grey-lighter rounded-sm">
       {tag.name} {small}
     </span>
   );

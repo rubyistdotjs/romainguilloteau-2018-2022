@@ -1,15 +1,15 @@
 import React from 'react';
 
-export default function CompanyApplicationChallenges({ challenges, visible }) {
-  if (!visible) return null;
-
+export default function CompanyApplicationChallenges({ challenges }) {
   const listItems = challenges.map((challenge, index) => (
-    <li key={index} className="challenge">
+    <li key={index} className="block py-1">
       {challenge}
     </li>
   ));
 
   return (
-    <ul className="list-reset bg-grey-lightest mb-6 -mt-2">{listItems}</ul>
+    <ul className="list-reset text-grey-darker text-sm hidden lg:block xl:block">
+      {listItems}
+    </ul>
   );
 }

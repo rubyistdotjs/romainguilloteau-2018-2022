@@ -1,7 +1,6 @@
 [
   {
     "name": "Codeur",
-    "logo": "codeur-logo.png",
     "role": "Lead developer & Software architect",
     "startYear": "2015",
     "endYear": null,
@@ -9,7 +8,8 @@
       {
         "name": "Graphiste.com",
         "url": "https://graphiste.com/",
-        "logo": "graphiste-logo.png",
+        "brandColor": "#EF4347",
+        "browserScreenshot": "graphiste",
         "timePeriod": "2015 - présent",
         "description":
           "Développement et design de la nouvelle version du site en faisant table rase de l'ancienne. Le site a pour objectif de faciliter la mise en relation et les échanges entre graphistes freelance et porteurs de project.",
@@ -58,21 +58,15 @@
           {
             "name": "AngularJS",
             "legacy": true
-          },
-          {
-            "name": "Stripe",
-            "legacy": true
-          },
-          {
-            "name": "PayPal",
-            "legacy": true
           }
         ]
       },
       {
         "name": "Facture.net",
         "url": "https://www.facture.net/",
-        "logo": "facture-logo.png",
+        "brandColor": "#2DD8A8",
+        "browserScreenshot": "crm",
+        "mobileScreenshot": "crm",
         "timePeriod": "2016 - présent",
         "description":
           "Développement et design d'une application permettant d'établir et partager simplement des factures, acomptes, devis et avoir avec un système de gestion clients. Le tout en conformité avec les lois en vigueures en France.",
@@ -115,7 +109,8 @@
       {
         "name": "Redacteur.com",
         "url": "https://www.redacteur.com/",
-        "logo": "redacteur-logo.png",
+        "brandColor": "#5393EE",
+        "browserScreenshot": "redacteur",
         "timePeriod": "2015 - présent",
         "description": "Assurer la maintenance et l'evolution du site existant dont l'objectif est la mise en relation entre rédacteurs freelance et porteurs de projets et le suivis des rédactions.",
         "challenges": [],
@@ -157,7 +152,8 @@
       {
         "name": "Knoba",
         "url": "https://aide.facture.net/",
-        "logo": "knoba-logo.png",
+        "brandColor": "#3E99D2",
+        "browserScreenshot": "knoba",
         "timePeriod": "2015 - présent",
         "description": "Développement et design d'une application simple permettant d'éditer une FAQ. Celle-ci peut être dupliquée puis personnalisée pour chaque site, actuellement Codeur utilise 5 différente instances.",
         "challenges": [],
@@ -191,7 +187,8 @@
       {
         "name": "Nuage de mots",
         "url": "https://nuagedemots.co/",
-        "logo": "wordcloud-logo.png",
+        "brandColor": "#5E6183",
+        "browserScreenshot": "word-cloud",
         "timePeriod": "septembre 2017",
         "description": "Développement d'une application Vue.js permettant de générer simplemenent un nuage de mot grâce à plusieurs paramètres prédéfinis. Le nuage peut être télécharger en PNG (avec transparence), JPG ou WebP.",
         "challenges": [],
@@ -221,7 +218,7 @@
       {
         "name": "RailsSES",
         "url": null,
-        "logo": "rubygem-logo.png",
+        "brandColor": "#E9573F",
         "timePeriod": "2017 - présent",
         "description": "Développement d'une Gem permettant à une app Rails d'envoyer des emails via AWS SES, maintenir un registre de tous les destinataires, mettre à jour leurs statut en fonction des retours reçu via AWS SNS et le cas écheant intercepter les emails vers des destinataires invalides.",
         "challenges": [],
@@ -248,14 +245,13 @@
   },
   {
     "name": "1Year1Book",
-    "logo": "1year1book-logo.png",
     "role": "Lead developer",
     "startYear": "2013",
     "endYear": "2014",
     "applications": [
       {
         "name": "Réseau Social",
-        "logo": "1year1book-old-logo.png",
+        "brandColor": "#2B3B8E",
         "timePeriod": "2013 - 2014",
         "description": "Développement et design d'un réseau social privé dont l'objectif premier est le partage de photographies. Les utilisateurs peuvent également échanger des messages, commenter et voter (j'aime, je n'aime pas) les photographies. Les votes permettent à l'échéance d'une période donnée de générer automatiquement un Yearbook.",
         "challenges": [
@@ -302,7 +298,7 @@
         ]
       }, {
         "name": "Back-Office",
-        "logo": "1year1book-old-logo.png",
+        "brandColor": "#2B3B8E",
         "timePeriod": "2013 - 2014",
         "description": "Développement et design d'une interface permettant aux employés de, entre autres, créé automatiquement un réseau social personnalisé grâce à de nombreux paramètres, suivre l'état de santé des réseaux sociaux via de multiple graphique et une checklist prédéfini, créé et suivre les commandes, créé et maintenir des fiches clients.",
         "challenges": [

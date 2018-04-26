@@ -3,30 +3,56 @@
 @tailwind components;
 
 body {
-  @apply .font-sans .leading-normal;
+  @apply .font-sans .leading-normal .subpixel-antialiased;
 }
 
 .text-white-dark {
   color: config('colors.white-dark');
 }
 
-.bg-annecy-lake {
-  background-image: url('./images/annecy-lake.jpg');
-}
-
-.bg-blue-darkest-filter * {
-  z-index: 2;
-}
-
-.bg-blue-darkest-filter::before {
-  content: '';
-  z-index: 1;
-  opacity: .65;
-  @apply .bg-blue-darker .absolute .pin;
-}
-
 .label {
   @apply .inline-block .bg-grey-lighter .rounded-full .px-3 .py-1 .text-sm .font-semibold .text-grey-darker .mr-2 .mb-2;
+}
+
+.transition {
+  transition-duration: 320ms;
+  transition-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+}
+
+.transition-bg {
+  transition-property: background-color;
+}
+
+.transition-color {
+  transition-property: color;
+}
+
+.transition-transform {
+  transition-property: transform;
+}
+
+.browser-transform {
+  transform-origin: top center;
+  transform: scale(0.9) perspective(3000px) rotateY(-24deg) rotateX(4deg) rotate(1deg);
+}
+
+.browser-scroll {
+  animation-duration: 10s;
+  animation-delay: 1s;
+	animation-name: browserScroll;
+	animation-timing-function: cubic-bezier(1.000, 0.005, 0.305, 1.000);
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+@keyframes browserScroll {
+	10% {
+    transform: translateY(0%);
+  }
+
+	100% {
+	  transform: translateY(calc(-100% + 51vh));
+	}
 }
 
 .application-cards {
@@ -45,14 +71,4 @@ body {
 
 .hobby {
   @apply .block .text-white .text-base .leading-tight .py-3 .border-blue-darker .border-solid .border-t .overflow-hidden;
-}
-
-
-h1 {
-  font-size: 4rem;
-  line-height: 1.4;
-}
-
-h1 + p {
-  font-size: 2.5rem;
 }

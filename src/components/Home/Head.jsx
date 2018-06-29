@@ -7,7 +7,7 @@ export default function Head() {
       <title>Romain Guilloteau - Développeur full stack</title>
       <meta
         name="description"
-        content="Développeur full stack, principalement Ruby on Rails et JavaScript (Node.js, React et Vue.js) avec une sensibilité pour le design, basé à Annecy, Haute-Savoie, France."
+        content="Développeur full stack, principalement Ruby on Rails et JavaScript (Node.js, React et Vue.js), basé à Annecy, Haute-Savoie, France."
       />
       <meta
         property="og:title"
@@ -15,7 +15,7 @@ export default function Head() {
       />
       <meta
         property="og:description"
-        content="Développeur full stack, principalement Ruby on Rails et JavaScript (Node.js, React et Vue.js) avec une sensibilité pour le design, basé à Annecy, Haute-Savoie, France."
+        content="Développeur full stack, principalement Ruby on Rails et JavaScript (Node.js, React et Vue.js), basé à Annecy, Haute-Savoie, France."
       />
       <meta property="og:url" content="https://www.romainguilloteau.com" />
       <meta property="og:type" content="profile" />
@@ -24,19 +24,19 @@ export default function Head() {
       <meta property="profile:gender" content="male" />
       <meta
         property="og:image"
-        content="https://www.romainguilloteau.com/images/og-large.png"
+        content="https://www.romainguilloteau.com/images/mugshot.jpg"
       />
       <meta
         property="og:image:secure_url"
-        content="https://www.romainguilloteau.com/images/og-large.png"
+        content="https://www.romainguilloteau.com/images/mugshot.jpg"
       />
-      <meta property="og:image:type" content="image/png" />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
-      <meta property="og:image:alt" content="" />
+      <meta property="og:image:type" content="image/jpeg" />
+      <meta property="og:image:width" content="1256" />
+      <meta property="og:image:height" content="1256" />
       <meta property="og:image:user_generated" content="false" />
       <meta name="twitter:card" content="summary" />
-      <meta name="robots" content="none" />
+      <meta name="twitter:creator" content="rubyistdotjs" />
+      <meta name="robots" content="nofollow, noarchive" />
 
       <script type="application/ld+json">{`
       {
@@ -46,7 +46,7 @@ export default function Head() {
         "givenName": "Romain",
         "familyName": "Guilloteau",
         "jobTitle": "Lead developer & Software architect",
-        "description": "Développeur full stack, principalement Ruby on Rails et JavaScript (Node.js, React et Vue.js) avec une sensibilité pour le design, basé à Annecy, Haute-Savoie, France.",
+        "description": "Développeur full stack, principalement Ruby on Rails et JavaScript (Node.js, React et Vue.js), basé à Annecy, Haute-Savoie, France.",
         "gender": "Male",
         "nationality": "FR",
         "birthDate": "1992-08-13",

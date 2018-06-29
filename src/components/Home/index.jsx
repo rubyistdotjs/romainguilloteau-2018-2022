@@ -12,6 +12,7 @@ import Contact from './Contact';
 export default function Home() {
   return (
     <div className="Home">
+      <Head />
       <Header />
       <Companies />
       <Rails />

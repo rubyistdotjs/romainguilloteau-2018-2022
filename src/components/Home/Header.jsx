@@ -13,16 +13,13 @@ export default function Header() {
           <span className="text-red-light">Ruby on Rails</span> et{' '}
           <span className="text-yellow">JavaScript</span>
         </p>
-        <div className="self-center mt-8">
-          <a
-            href="#contact-form"
-            className="inline-block text-white font-semibold no-underline py-2 px-4 mr-2 bg-indigo border-2 border-transparent rounded hover:bg-indigo-dark"
-          >
+        <div className="self-center mt-4 md:mt-6 lg:mt-8">
+          <a href="#contact-form" className="btn btn-indigo">
             Envoyer moi un message
           </a>
           <a
             href={resume}
-            className="inline-block text-grey font-semibold no-underline py-2 px-4 border-2 border-grey rounded hover:bg-grey hover:text-black hover:border-transparent"
+            className="btn btn-outline-grey"
             download="romain-guilloteau.pdf"
           >
             Télécharger mon CV

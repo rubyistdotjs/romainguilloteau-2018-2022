@@ -14,6 +14,38 @@ body {
   @apply .inline-block .bg-grey-lighter .rounded-full .px-3 .py-1 .text-sm .font-semibold .text-grey-darker .mr-2 .mb-2;
 }
 
+.btn {
+  @apply .inline-block .text-sm .text-white .font-semibold .no-underline .py-2 .px-3 .mr-2 .mb-2 .border-2 .border-transparent .rounded;
+}
+
+@screen md {
+  .btn {
+    @apply .text-base .py-2 .px-3;
+  }
+}
+
+@screen lg {
+  .btn {
+    @apply px-4;
+  }
+}
+
+.btn-indigo {
+  @apply .bg-indigo;
+}
+
+.btn-indigo:hover, .btn-indigo:focus {
+  @apply .bg-indigo-dark;
+}
+
+.btn-outline-grey {
+  @apply .text-grey .border-grey;
+}
+
+.btn-outline-grey:hover, .btn-outline-grey:focus {
+  @apply .text-black .bg-grey .border-transparent;
+}
+
 .transition {
   transition-duration: 320ms;
   transition-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
@@ -53,12 +85,6 @@ body {
 	100% {
 	  transform: translateY(calc(-100% + 51vh));
 	}
-}
-
-.application-cards {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 1rem;
 }
 
 .challenge {

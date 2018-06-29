@@ -50,10 +50,10 @@ export default class Company extends Component {
         />
 
         <div className="relative container flex flex-col mx-auto mb-6 z-10">
-          <h3 className="text-black text-3xl font-heading font-bold leading-none antialiased">
+          <h3 className="text-black text-3xl font-heading font-extrabold leading-none antialiased">
             {company.name}
           </h3>
-          <span className="block text-black text-2xl font-heading font-semibold leading-normal antialiased">
+          <span className="block text-black text-2xl font-heading font-bold leading-normal antialiased">
             {company.role}
           </span>
           <span className="block text-grey-dark text-xl font-heading font-semibold leading-tight">

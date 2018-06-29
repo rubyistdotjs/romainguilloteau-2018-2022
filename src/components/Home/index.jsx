@@ -7,6 +7,7 @@ import Rails from './Rails';
 import Javascript from './Javascript';
 import Environment from './Environment';
 import Hobbies from './Hobbies';
+import Contact from './Contact';
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <Javascript />
       <Environment />
       <Hobbies />
+      <Contact />
     </div>
   )
 }

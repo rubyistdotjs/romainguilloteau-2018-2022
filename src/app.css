@@ -4646,18 +4646,12 @@ body {
 }
 
 .browser-scroll {
-  -webkit-animation-duration: 10s;
-          animation-duration: 10s;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-  -webkit-animation-name: browserScroll;
-          animation-name: browserScroll;
-  -webkit-animation-timing-function: cubic-bezier(1, .005, .305, 1);
-          animation-timing-function: cubic-bezier(1, .005, .305, 1);
-  -webkit-animation-direction: alternate;
-          animation-direction: alternate;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  /* animation-duration: 10s;
+  animation-delay: 1s;
+	animation-name: browserScroll;
+	animation-timing-function: cubic-bezier(1.000, 0.005, 0.305, 1.000);
+  animation-direction: alternate;
+  animation-iteration-count: infinite; */
 }
 
 @-webkit-keyframes browserScroll {

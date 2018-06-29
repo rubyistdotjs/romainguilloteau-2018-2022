@@ -14,14 +14,11 @@ export default function CompanyApplication({ application, step }) {
       style={{transform: `translateX(-${step * 100}%)`}}
     >
       <h4
-        className="text-black text-2xl font-heading font-bold leading-tight antialiased"
+        className="text-black text-2xl font-heading font-bold leading-tight antialiased mb-1"
         style={{ color: application.brandColor }}
       >
         {application.name}
       </h4>
-      <span className="block text-grey-dark text-lg font-heading font-semibold">
-        {application.timePeriod}
-      </span>
       <p className="text-grey-darkest text-base leading-tight py-2">
         {application.description}
       </p>

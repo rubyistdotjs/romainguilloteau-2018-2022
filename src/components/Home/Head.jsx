@@ -45,6 +45,7 @@ export default function Head() {
         "name": "Romain Guilloteau",
         "givenName": "Romain",
         "familyName": "Guilloteau",
+        "image": "images/mugshot.jpg",
         "jobTitle": "Lead developer & Software architect",
         "description": "Développeur full stack, principalement Ruby on Rails et JavaScript (Node.js, React et Vue.js), basé à Annecy, Haute-Savoie, France.",
         "gender": "Male",
@@ -66,7 +67,11 @@ export default function Head() {
         },
         "url": "https://www.romainguilloteau.com/",
         "sameAs": [
-          "https://www.linkedin.com/in/romainguilloteau"
+          "https://www.linkedin.com/in/romainguilloteau",
+          "https://twitter.com/rubyistdotjs",
+          "https://plus.google.com/110337874986223414450",
+          "https://github.com/rubyistdotjs",
+          "https://gitlab.com/rubyistdotjs"
         ]
       }
     `}</script>

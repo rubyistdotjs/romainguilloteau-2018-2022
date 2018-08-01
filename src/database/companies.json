@@ -64,9 +64,9 @@
       {
         "name": "Facture.net",
         "url": "https://www.facture.net/",
-        "brandColor": "#2DD8A8",
-        "browserScreenshot": "crm",
-        "mobileScreenshot": "crm",
+        "brandColor": "#516AA7",
+        "browserScreenshot": "crm-browser",
+        "mobileScreenshot": "crm-mobile",
         "timePeriod": "2016 - aujourd'hui",
         "description":
           "Développement et design d'une application permettant d'établir et partager simplement des factures, acomptes, devis et avoir avec un système de gestion clients. Le tout en conformité avec les lois en vigueures en France.",
@@ -109,7 +109,7 @@
       {
         "name": "Redacteur.com",
         "url": "https://www.redacteur.com/",
-        "brandColor": "#5393EE",
+        "brandColor": "#3668BF",
         "browserScreenshot": "redacteur",
         "timePeriod": "2015 - aujourd'hui",
         "description": "Assurer la maintenance et l'evolution du site existant dont l'objectif est la mise en relation entre rédacteurs freelance et porteurs de projets et le suivis des rédactions.",
@@ -152,7 +152,7 @@
       {
         "name": "Knoba",
         "url": "https://aide.facture.net/",
-        "brandColor": "#3E99D2",
+        "brandColor": "#6e91e5",
         "browserScreenshot": "knoba",
         "timePeriod": "2015 - aujourd'hui",
         "description": "Développement et design d'une application simple permettant d'éditer une FAQ. Celle-ci peut être dupliquée puis personnalisée pour chaque site, actuellement Codeur utilise 5 différente instances.",
@@ -219,6 +219,7 @@
         "name": "RailsSES",
         "url": null,
         "brandColor": "#E9573F",
+        "browserScreenshot": "rses",
         "timePeriod": "2017 - aujourd'hui",
         "description": "Développement d'une Gem permettant à une app Rails d'envoyer des emails via AWS SES, maintenir un registre de tous les destinataires, mettre à jour leurs statut en fonction des retours reçu via AWS SNS et le cas écheant intercepter les emails vers des destinataires invalides.",
         "challenges": [],
@@ -252,6 +253,7 @@
       {
         "name": "Réseau Social",
         "brandColor": "#2B3B8E",
+        "browserScreenshot": "demo-social-network",
         "timePeriod": "2013 - 2014",
         "description": "Développement et design d'un réseau social privé dont l'objectif premier est le partage de photographies. Les utilisateurs peuvent également échanger des messages, commenter et voter (j'aime, je n'aime pas) les photographies. Les votes permettent à l'échéance d'une période donnée de générer automatiquement un Yearbook.",
         "challenges": [

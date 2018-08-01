@@ -520,16 +520,6 @@ ul {
 }
 
 /**
- * Suppress the focus outline on elements that cannot be accessed via keyboard.
- * This prevents an unwanted focus outline from appearing around elements that
- * might still respond to pointer events.
- */
-
-[tabindex="-1"]:focus {
-  outline: none !important;
-}
-
-/**
  * Tailwind custom reset styles
  */
 
@@ -590,6 +580,7 @@ textarea {
 
 img {
   max-width: 100%;
+  height: auto;
 }
 
 button,
@@ -627,6 +618,10 @@ textarea::placeholder {
 button,
 [role=button] {
   cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
 }
 
 .list-reset {
@@ -1298,6 +1293,14 @@ button,
 
 .bg-contain {
   background-size: contain;
+}
+
+.border-collapse {
+  border-collapse: collapse;
+}
+
+.border-separate {
+  border-collapse: separate;
 }
 
 .border-transparent {
@@ -3208,6 +3211,14 @@ button,
   opacity: 1;
 }
 
+.outline-none {
+  outline: 0;
+}
+
+.focus\:outline-none:focus {
+  outline: 0;
+}
+
 .overflow-auto {
   overflow: auto;
 }
@@ -3230,6 +3241,22 @@ button,
 
 .overflow-y-auto {
   overflow-y: auto;
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+
+.overflow-y-hidden {
+  overflow-y: hidden;
+}
+
+.overflow-x-visible {
+  overflow-x: visible;
+}
+
+.overflow-y-visible {
+  overflow-y: visible;
 }
 
 .overflow-x-scroll {
@@ -3599,6 +3626,14 @@ button,
 
 .stroke-current {
   stroke: currentColor;
+}
+
+.table-auto {
+  table-layout: auto;
+}
+
+.table-fixed {
+  table-layout: fixed;
 }
 
 .text-left {
@@ -4693,44 +4728,23 @@ body {
   transition-property: transform, -webkit-transform;
 }
 
-.browser-transform {
-  -webkit-transform-origin: top center;
-          transform-origin: top center;
-  -webkit-transform: scale(.9) perspective(3000px) rotateY(-24deg) rotateX(4deg) rotate(1deg);
-          transform: scale(.9) perspective(3000px) rotateY(-24deg) rotateX(4deg) rotate(1deg);
+.screenshot-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  background-color: rgba(34, 41, 47, 0.8);
+  transition: opacity 260ms ease-in-out;
+  z-index: 1;
 }
 
-.browser-scroll {
-  /* animation-duration: 10s;
-  animation-delay: 1s;
-	animation-name: browserScroll;
-	animation-timing-function: cubic-bezier(1.000, 0.005, 0.305, 1.000);
-  animation-direction: alternate;
-  animation-iteration-count: infinite; */
-}
-
-@-webkit-keyframes browserScroll {
-  10% {
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%);
-  }
-
-  100% {
-    -webkit-transform: translateY(calc(-100% + 51vh));
-            transform: translateY(calc(-100% + 51vh));
-  }
-}
-
-@keyframes browserScroll {
-  10% {
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%);
-  }
-
-  100% {
-    -webkit-transform: translateY(calc(-100% + 51vh));
-            transform: translateY(calc(-100% + 51vh));
-  }
+.screenshot:hover .screenshot-overlay {
+  opacity: 1;
 }
 
 .challenge {
@@ -7368,6 +7382,22 @@ body {
     overflow-y: auto;
   }
 
+  .sm\:overflow-x-hidden {
+    overflow-x: hidden;
+  }
+
+  .sm\:overflow-y-hidden {
+    overflow-y: hidden;
+  }
+
+  .sm\:overflow-x-visible {
+    overflow-x: visible;
+  }
+
+  .sm\:overflow-y-visible {
+    overflow-y: visible;
+  }
+
   .sm\:overflow-x-scroll {
     overflow-x: scroll;
   }
@@ -7727,6 +7757,14 @@ body {
 
   .sm\:shadow-none {
     box-shadow: none;
+  }
+
+  .sm\:table-auto {
+    table-layout: auto;
+  }
+
+  .sm\:table-fixed {
+    table-layout: fixed;
   }
 
   .sm\:text-left {
@@ -11298,6 +11336,22 @@ body {
     overflow-y: auto;
   }
 
+  .md\:overflow-x-hidden {
+    overflow-x: hidden;
+  }
+
+  .md\:overflow-y-hidden {
+    overflow-y: hidden;
+  }
+
+  .md\:overflow-x-visible {
+    overflow-x: visible;
+  }
+
+  .md\:overflow-y-visible {
+    overflow-y: visible;
+  }
+
   .md\:overflow-x-scroll {
     overflow-x: scroll;
   }
@@ -11657,6 +11711,14 @@ body {
 
   .md\:shadow-none {
     box-shadow: none;
+  }
+
+  .md\:table-auto {
+    table-layout: auto;
+  }
+
+  .md\:table-fixed {
+    table-layout: fixed;
   }
 
   .md\:text-left {
@@ -15228,6 +15290,22 @@ body {
     overflow-y: auto;
   }
 
+  .lg\:overflow-x-hidden {
+    overflow-x: hidden;
+  }
+
+  .lg\:overflow-y-hidden {
+    overflow-y: hidden;
+  }
+
+  .lg\:overflow-x-visible {
+    overflow-x: visible;
+  }
+
+  .lg\:overflow-y-visible {
+    overflow-y: visible;
+  }
+
   .lg\:overflow-x-scroll {
     overflow-x: scroll;
   }
@@ -15587,6 +15665,14 @@ body {
 
   .lg\:shadow-none {
     box-shadow: none;
+  }
+
+  .lg\:table-auto {
+    table-layout: auto;
+  }
+
+  .lg\:table-fixed {
+    table-layout: fixed;
   }
 
   .lg\:text-left {
@@ -19158,6 +19244,22 @@ body {
     overflow-y: auto;
   }
 
+  .xl\:overflow-x-hidden {
+    overflow-x: hidden;
+  }
+
+  .xl\:overflow-y-hidden {
+    overflow-y: hidden;
+  }
+
+  .xl\:overflow-x-visible {
+    overflow-x: visible;
+  }
+
+  .xl\:overflow-y-visible {
+    overflow-y: visible;
+  }
+
   .xl\:overflow-x-scroll {
     overflow-x: scroll;
   }
@@ -19517,6 +19619,14 @@ body {
 
   .xl\:shadow-none {
     box-shadow: none;
+  }
+
+  .xl\:table-auto {
+    table-layout: auto;
+  }
+
+  .xl\:table-fixed {
+    table-layout: fixed;
   }
 
   .xl\:text-left {

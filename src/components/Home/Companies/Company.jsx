@@ -1,11 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import { camelCase } from 'lodash';
 import { ChevronRight } from 'react-feather';
-import BrowserIllustration from '../BrowserIllustration';
-import MobileIllustration from '../MobileIllustration';
+import BrowserIllustration from './BrowserIllustration';
+import MobileIllustration from './MobileIllustration';
 import CompanyApplication from './CompanyApplication';
 
-export default class Company extends Component {
+export default class Company extends React.Component {
   constructor(props) {
     super(props);
 
@@ -26,24 +27,25 @@ export default class Company extends Component {
   }
 
   handleClick() {
-    this.setState((prevState, props) => {
+    this.setState((prevState) => {
       const nextStep = prevState.step + 1;
       return { step: nextStep >= prevState.steps ? 0 : nextStep };
     });
   }
 
   render() {
-    const { company } = this.props;
-    const applications = company.applications.map((app, index) => (
+    const { company, bgColor } = this.props;
+    const { step } = this.state;
+    const applications = company.applications.map(app => (
       <CompanyApplication
         key={camelCase(app.name)}
         application={app}
-        step={this.state.step}
+        step={step}
       />
     ));
 
     return (
-      <div className={`relative bg-${this.props.bgColor} py-8`}>
+      <div className={`relative bg-${bgColor} py-8`}>
         <div
           className="hidden md:block absolute pin-r pin-b pin-t w-24 w-2/5 mt-8 transition transition-bg z-0"
           style={{ backgroundColor: this.brandColor() }}
@@ -68,12 +70,14 @@ export default class Company extends Component {
             </div>
             <div className="hidden md:block relative w-1/2 pb-8 px-4 overflow-hidden">
               <BrowserIllustration
-                filename={this.currentApplication().browserScreenshot}
-                alt={`Capture d'écran du site ${this.currentApplication().name}`}
+                url={this.currentApplication().url}
+                screenshot={this.currentApplication().browserScreenshot}
+                screenshotAlt={`Capture d'écran du site ${this.currentApplication().name}`}
               />
               <MobileIllustration
-                filename={this.currentApplication().mobileScreenshot}
-                alt={`Capture d'écran sur smartphone du site ${this.currentApplication().name}`}
+                url={this.currentApplication().url}
+                screenshot={this.currentApplication().mobileScreenshot}
+                screenshotAlt={`Capture d'écran sur smartphone du site ${this.currentApplication().name}`}
               />
             </div>
           </div>
@@ -93,3 +97,14 @@ export default class Company extends Component {
     );
   }
 }
+
+Company.propTypes = {
+  bgColor: PropTypes.string.isRequired,
+  company: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    role: PropTypes.string.isRequired,
+    startYear: PropTypes.string.isRequired,
+    endYear: PropTypes.string,
+    applications: PropTypes.array.isRequired,
+  }).isRequired,
+};

@@ -26,15 +26,15 @@ export default class Companies extends Component {
       />
     ));
 
-  return (
-    <section>
-      <div className="container py-8 mx-auto flex flex-col align-center">
-        <h2 className="font-heading text-5xl text-black antialiased font-extrabold">
-          Expérience
-        </h2>
-      </div>
-      {companies}
-    </section>
-  );
+    return (
+      <section>
+        <div className="container py-8 mx-auto flex flex-col align-center">
+          <h2 className="font-heading text-4xl lg:text-5xl text-black antialiased font-extrabold">
+            Expérience
+          </h2>
+        </div>
+        {companies}
+      </section>
+    );
   }
 }

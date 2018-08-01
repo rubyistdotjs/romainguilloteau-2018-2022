@@ -63,28 +63,15 @@ body {
   transition-property: transform;
 }
 
-.browser-transform {
-  transform-origin: top center;
-  transform: scale(0.9) perspective(3000px) rotateY(-24deg) rotateX(4deg) rotate(1deg);
+.screenshot-overlay {
+  @apply .absolute .pin .flex .justify-center .items-center .opacity-0;
+  background-color: color(config('colors.black') a(80%));
+  transition: opacity 260ms ease-in-out;
+  z-index: 1;
 }
 
-.browser-scroll {
-  /* animation-duration: 10s;
-  animation-delay: 1s;
-	animation-name: browserScroll;
-	animation-timing-function: cubic-bezier(1.000, 0.005, 0.305, 1.000);
-  animation-direction: alternate;
-  animation-iteration-count: infinite; */
-}
-
-@keyframes browserScroll {
-	10% {
-    transform: translateY(0%);
-  }
-
-	100% {
-	  transform: translateY(calc(-100% + 51vh));
-	}
+.screenshot:hover .screenshot-overlay {
+  @apply .opacity-100;
 }
 
 .challenge {

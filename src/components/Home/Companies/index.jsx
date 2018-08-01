@@ -27,7 +27,7 @@ export default class Companies extends Component {
     ));
 
     return (
-      <section>
+      <section className="pl-8">
         <div className="container py-8 mx-auto flex flex-col align-center">
           <h2 className="font-heading text-4xl lg:text-5xl text-black antialiased font-extrabold">
             Expérience

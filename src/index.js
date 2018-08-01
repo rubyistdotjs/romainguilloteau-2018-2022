@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import firebase from 'firebase/app';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
-// import firebase from 'firebase/app';
 
 const config = {
   apiKey: 'AIzaSyDOxfIAHCu1TaCNLk4270bPcFn4g3x9NcA',
@@ -12,7 +12,7 @@ const config = {
   storageBucket: 'romainguilloteau-af1c1.appspot.com',
   messagingSenderId: '348648773457',
 };
-// firebase.initializeApp(config);
+firebase.initializeApp(config);
 
 ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();

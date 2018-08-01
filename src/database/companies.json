@@ -10,7 +10,6 @@
         "url": "https://graphiste.com/",
         "brandColor": "#EF4347",
         "browserScreenshot": "graphiste",
-        "timePeriod": "2015 - aujourd'hui",
         "description":
           "Développement et design de la nouvelle version du site en faisant table rase de l'ancienne. Le site a pour objectif de faciliter la mise en relation et les échanges entre graphistes freelance et porteurs de project.",
         "challenges": [
@@ -67,7 +66,6 @@
         "brandColor": "#516AA7",
         "browserScreenshot": "crm-browser",
         "mobileScreenshot": "crm-mobile",
-        "timePeriod": "2016 - aujourd'hui",
         "description":
           "Développement et design d'une application permettant d'établir et partager simplement des factures, acomptes, devis et avoir avec un système de gestion clients. Le tout en conformité avec les lois en vigueures en France.",
         "challenges": [
@@ -111,7 +109,6 @@
         "url": "https://www.redacteur.com/",
         "brandColor": "#3668BF",
         "browserScreenshot": "redacteur",
-        "timePeriod": "2015 - aujourd'hui",
         "description": "Assurer la maintenance et l'evolution du site existant dont l'objectif est la mise en relation entre rédacteurs freelance et porteurs de projets et le suivis des rédactions.",
         "challenges": [],
         "tags": [
@@ -154,7 +151,6 @@
         "url": "https://aide.facture.net/",
         "brandColor": "#6e91e5",
         "browserScreenshot": "knoba",
-        "timePeriod": "2015 - aujourd'hui",
         "description": "Développement et design d'une application simple permettant d'éditer une FAQ. Celle-ci peut être dupliquée puis personnalisée pour chaque site, actuellement Codeur utilise 5 différente instances.",
         "challenges": [],
         "tags": [
@@ -189,7 +185,6 @@
         "url": "https://nuagedemots.co/",
         "brandColor": "#5E6183",
         "browserScreenshot": "word-cloud",
-        "timePeriod": "septembre 2017",
         "description": "Développement d'une application Vue.js permettant de générer simplemenent un nuage de mot grâce à plusieurs paramètres prédéfinis. Le nuage peut être télécharger en PNG (avec transparence), JPG ou WebP.",
         "challenges": [],
         "tags": [
@@ -220,8 +215,7 @@
         "url": null,
         "brandColor": "#E9573F",
         "browserScreenshot": "rses",
-        "timePeriod": "2017 - aujourd'hui",
-        "description": "Développement d'une Gem permettant à une app Rails d'envoyer des emails via AWS SES, maintenir un registre de tous les destinataires, mettre à jour leurs statut en fonction des retours reçu via AWS SNS et le cas écheant intercepter les emails vers des destinataires invalides.",
+        "description": "Développement d'une Gem permettant à une application Rails d'envoyer des emails via Amazon SES. La gem maintient automatiquement un registre de tous les destinataires et intercepte immédiatement les emails à destination d'une adresse non existante ou ayant précédemment signalé un spam. Un log des emails est également conservé pour une période de 14 jours (par défaut).",
         "challenges": [],
         "tags": [
           {
@@ -233,11 +227,11 @@
             "legacy": false
           },
           {
-            "name": "AWS SES",
+            "name": "Amazon SES",
             "legacy": false
           },
           {
-            "name": "AWS SNS",
+            "name": "Amazon SNS",
             "legacy": false
           }
         ]
@@ -254,7 +248,6 @@
         "name": "Réseau Social",
         "brandColor": "#2B3B8E",
         "browserScreenshot": "demo-social-network",
-        "timePeriod": "2013 - 2014",
         "description": "Développement et design d'un réseau social privé dont l'objectif premier est le partage de photographies. Les utilisateurs peuvent également échanger des messages, commenter et voter (j'aime, je n'aime pas) les photographies. Les votes permettent à l'échéance d'une période donnée de générer automatiquement un Yearbook.",
         "challenges": [
           "Envoi, traitement (redimensionnement, compression, ...)  et stockage d'images volumineuses et généralement envoyées par paquets.",
@@ -301,7 +294,6 @@
       }, {
         "name": "Back-Office",
         "brandColor": "#2B3B8E",
-        "timePeriod": "2013 - 2014",
         "description": "Développement et design d'une interface permettant aux employés de, entre autres, créé automatiquement un réseau social personnalisé grâce à de nombreux paramètres, suivre l'état de santé des réseaux sociaux via de multiple graphique et une checklist prédéfini, créé et suivre les commandes, créé et maintenir des fiches clients.",
         "challenges": [
           "Génération de statistiques et rapports pour plusieurs centaines de réseaux sociaux."

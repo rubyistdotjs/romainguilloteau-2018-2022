@@ -45,7 +45,7 @@ export default class Company extends React.Component {
     ));
 
     return (
-      <div className={`relative bg-${bgColor} py-8`}>
+      <div className={`relative bg-${bgColor} py-8 pl-8`}>
         <div
           className="hidden md:block absolute pin-r pin-b pin-t w-24 w-2/5 mt-8 transition transition-bg z-0"
           style={{ backgroundColor: this.brandColor() }}

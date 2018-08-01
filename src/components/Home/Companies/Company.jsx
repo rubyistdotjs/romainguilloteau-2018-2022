@@ -85,6 +85,7 @@ export default class Company extends React.Component {
             type="button"
             className="shadow-md flex flex-no-shrink items-center justify-center w-10 h-10 bg-grey-lighter border-none md:bg-white md:ml-4 rounded-sm opacity-75 md:opacity-50 hover:opacity-100"
             onClick={this.handleClick}
+            aria-label="Voir la prochaine application"
           >
             <ChevronRight
               size={38}

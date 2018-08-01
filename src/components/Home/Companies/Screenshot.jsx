@@ -12,7 +12,7 @@ export default function Screenshot({ filename, alt, url }) {
     <div className="screenshot relative w-full h-full bg-grey-lighter overflow-hidden">
       {url && (
         <div className="screenshot-overlay">
-          <a href={url} className="text-white hover:text-blue-light" target="_blank" rel="noopener noreferrer nofollow">
+          <a href={url} title="Visiter le site" className="text-white hover:text-blue-light" target="_blank" rel="noopener noreferrer nofollow">
             <ExternalLink size={42} />
           </a>
         </div>

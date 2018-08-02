@@ -1,6 +1,6 @@
-import React from '../../../../../../../Library/Caches/typescript/2.9/node_modules/@types/react';
-import PropTypes from '../../../../../../../Library/Caches/typescript/2.9/node_modules/@types/prop-types';
-import { camelCase } from '../../../../../../../Library/Caches/typescript/2.9/node_modules/@types/lodash';
+import React from 'react';
+import PropTypes from 'prop-types';
+import { camelCase } from 'lodash';
 import { ChevronRight } from 'react-feather';
 import BrowserIllustration from './BrowserIllustration';
 import MobileIllustration from './MobileIllustration';

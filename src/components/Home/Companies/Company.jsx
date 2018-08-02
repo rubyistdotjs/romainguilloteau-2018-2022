@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { camelCase } from 'lodash';
+import React from '../../../../../../../Library/Caches/typescript/2.9/node_modules/@types/react';
+import PropTypes from '../../../../../../../Library/Caches/typescript/2.9/node_modules/@types/prop-types';
+import { camelCase } from '../../../../../../../Library/Caches/typescript/2.9/node_modules/@types/lodash';
 import { ChevronRight } from 'react-feather';
 import BrowserIllustration from './BrowserIllustration';
 import MobileIllustration from './MobileIllustration';
@@ -58,7 +58,7 @@ export default class Company extends React.Component {
           <span className="block text-black text-2xl font-heading font-bold leading-normal antialiased">
             {company.role}
           </span>
-          <span className="block text-grey-dark text-xl font-heading font-semibold leading-tight">
+          <span className="block text-grey-darker text-xl font-heading font-semibold leading-tight">
             {company.startYear} - {company.endYear || 'présent'}
           </span>
         </div>

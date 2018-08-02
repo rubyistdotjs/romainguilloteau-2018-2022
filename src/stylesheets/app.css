@@ -47,7 +47,7 @@ body {
 }
 
 .transition {
-  transition-duration: 320ms;
+  transition-duration: 140ms;
   transition-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
 }
 

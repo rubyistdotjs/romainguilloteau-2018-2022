@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Screenshot from './Screenshot';
 
-export default function BrowserIllustration({ screenshot, screenshotAlt, url }) {
+function BrowserIllustration({ screenshot, screenshotAlt, url }) {
   if (!screenshot) return '';
 
   return (
@@ -28,3 +28,5 @@ BrowserIllustration.defaultProps = {
   screenshotAlt: '',
   url: null,
 };
+
+export default BrowserIllustration;

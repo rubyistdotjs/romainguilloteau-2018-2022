@@ -246,6 +246,7 @@
     "applications": [
       {
         "name": "Réseau Social",
+        "url": "http://demo.1year1book.com/",
         "brandColor": "#2B3B8E",
         "browserScreenshot": "demo-social-network",
         "description": "Développement et design d'un réseau social privé dont l'objectif premier est le partage de photographies. Les utilisateurs peuvent également échanger des messages, commenter et voter (j'aime, je n'aime pas) les photographies. Les votes permettent à l'échéance d'une période donnée de générer automatiquement un Yearbook.",

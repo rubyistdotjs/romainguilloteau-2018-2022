@@ -1,13 +1,12 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { camelCase } from 'lodash';
 import externalLinksJSON from '../../../database/external-links.json';
 import ExternalLink from './ExternalLink';
 
-class ExternalLinkList extends React.Component {
+export default class ExternalLinkList extends React.Component {
   constructor(props) {
     super(props);
-  
+
     this.state = {
       externalLinks: [],
     };
@@ -33,7 +32,3 @@ class ExternalLinkList extends React.Component {
     );
   }
 }
-
-ExternalLinkList.propTypes = {};
-
-export default ExternalLinkList;

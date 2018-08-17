@@ -54,7 +54,7 @@ export default class Job extends React.Component {
           <span className="block text-black text-2xl font-heading font-bold leading-normal antialiased">
             {job.company}
           </span>
-          <span className="block text-grey-dark text-xl font-heading font-semibold leading-tight">
+          <span className="block text-grey-darker text-xl font-heading font-semibold leading-tight">
             {startYear} - {endYear}
           </span>
         </div>

@@ -1,6 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-export default function CompanyApplicationChallenges({ challenges }) {
+export default function ApplicationChallenges({ challenges }) {
   const listItems = challenges.map((challenge, index) => (
     <li key={index} className="block py-1">
       {challenge}
@@ -13,3 +14,7 @@ export default function CompanyApplicationChallenges({ challenges }) {
     </ul>
   );
 }
+
+ApplicationChallenges.propTypes = {
+  challenges: PropTypes.arrayOf(PropTypes.string).isRequired,
+};

@@ -2,7 +2,7 @@ import React from 'react';
 
 import Head from './Head';
 import Header from './Header';
-import Companies from './Companies';
+import Jobs from './Jobs';
 import Rails from './Rails';
 import Javascript from './Javascript';
 import Environment from './Environment';
@@ -14,11 +14,11 @@ export default function Home() {
     <div className="Home">
       <Head />
       <Header />
-      <Companies />
+      <Jobs />
+      <Hobbies />
       <Rails />
       <Javascript />
       <Environment />
-      <Hobbies />
       <Contact />
     </div>
   )

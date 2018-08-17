@@ -2,28 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { camelCase } from 'lodash';
 import { ChevronRight } from 'react-feather';
-import BrowserIllustration from './BrowserIllustration';
-import MobileIllustration from './MobileIllustration';
-import CompanyApplication from './CompanyApplication';
+import Application from './Application';
+import ApplicationScreenshots from './ApplicationScreenshots';
 
-export default class Company extends React.Component {
+export default class Job extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
       step: 0,
-      steps: this.props.company.applications.length,
+      steps: this.props.job.applications.length,
     };
 
     this.handleClick = this.handleClick.bind(this);
-  }
-
-  currentApplication() {
-    return this.props.company.applications[this.state.step];
-  }
-
-  brandColor() {
-    return this.currentApplication().brandColor;
   }
 
   handleClick() {
@@ -34,32 +25,37 @@ export default class Company extends React.Component {
   }
 
   render() {
-    const { company, bgColor } = this.props;
+    const { job, bgColor } = this.props;
     const { step } = this.state;
-    const applications = company.applications.map(app => (
-      <CompanyApplication
+    const startYear = new Date(job.startedAt).getFullYear();
+    const endYear = job.endedAt ? new Date(job.endedAt).getFullYear() : 'présent';
+
+    const { name, url, screenshots, brandColor } = job.applications[step];
+    const applications = job.applications.map(app => (
+      <Application
         key={camelCase(app.name)}
         application={app}
         step={step}
       />
     ));
 
+
     return (
       <div className={`relative bg-${bgColor} py-8 pl-8`}>
         <div
           className="hidden md:block absolute pin-r pin-b pin-t w-24 w-2/5 mt-8 transition transition-bg z-0"
-          style={{ backgroundColor: this.brandColor() }}
+          style={{ backgroundColor: brandColor }}
         />
 
         <div className="relative container flex flex-col mx-auto mb-6 z-10">
           <h3 className="text-black text-3xl font-heading font-extrabold leading-none antialiased">
-            {company.name}
+            {job.title}
           </h3>
           <span className="block text-black text-2xl font-heading font-bold leading-normal antialiased">
-            {company.role}
+            {job.company}
           </span>
           <span className="block text-grey-dark text-xl font-heading font-semibold leading-tight">
-            {company.startYear} - {company.endYear || 'présent'}
+            {startYear} - {endYear}
           </span>
         </div>
 
@@ -68,16 +64,11 @@ export default class Company extends React.Component {
             <div className="w-full md:w-1/2 mr-4 flex flex-row flex-no-wrap overflow-hidden">
               {applications}
             </div>
-            <div className="hidden md:block relative w-1/2 pb-8 px-4 overflow-hidden">
-              <BrowserIllustration
-                url={this.currentApplication().url}
-                screenshot={this.currentApplication().browserScreenshot}
-                screenshotAlt={`Capture d'écran du site ${this.currentApplication().name}`}
-              />
-              <MobileIllustration
-                url={this.currentApplication().url}
-                screenshot={this.currentApplication().mobileScreenshot}
-                screenshotAlt={`Capture d'écran sur smartphone du site ${this.currentApplication().name}`}
+            <div className="hidden md:block w-1/2 pb-8 px-4">
+              <ApplicationScreenshots
+                appName={name}
+                appUrl={url}
+                screenshots={screenshots}
               />
             </div>
           </div>
@@ -90,7 +81,7 @@ export default class Company extends React.Component {
             <ChevronRight
               size={38}
               className="block transition transition-color"
-              style={{ color: this.brandColor() }}
+              style={{ color: brandColor }}
             />
           </button>
         </div>
@@ -99,9 +90,9 @@ export default class Company extends React.Component {
   }
 }
 
-Company.propTypes = {
+Job.propTypes = {
   bgColor: PropTypes.string.isRequired,
-  company: PropTypes.shape({
+  job: PropTypes.shape({
     name: PropTypes.string,
     role: PropTypes.string,
     startYear: PropTypes.string,

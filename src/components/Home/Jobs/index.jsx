@@ -1,27 +1,25 @@
 import React, { Component } from 'react';
-import Company from './Company';
-import companiesJSON from '../../../database/companies.json';
+import Job from './Job';
+import jobsJSON from '../../../database/jobs.json';
 
-export default class Companies extends Component {
+export default class Jobs extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      companies: [],
+      jobs: [],
     };
   }
 
   componentDidMount() {
-    this.setState((prevState, props) => ({
-      companies: companiesJSON,
-    }));
+    this.setState({ jobs: jobsJSON });
   }
 
   render() {
-    const companies = this.state.companies.map((company, index) => (
-      <Company
-        key={company.name.toLowerCase()}
-        company={company}
+    const jobs = this.state.jobs.map((job, index) => (
+      <Job
+        key={job.title.toLowerCase()}
+        job={job}
         bgColor={index % 2 === 0 ? 'white' : 'grey-lightest'}
       />
     ));
@@ -35,7 +33,7 @@ export default class Companies extends Component {
             </h2>
           </div>
         </div>
-        {companies}
+        {jobs}
       </section>
     );
   }

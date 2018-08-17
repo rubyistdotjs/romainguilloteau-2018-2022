@@ -1,6 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-export default function CompanyApplicationTag({ tag }) {
+export default function ApplicationTag({ tag }) {
   const small = tag.legacy ? (
     <small className="align-middle leading-none">(legacy)</small>
   ) : (
@@ -13,3 +14,10 @@ export default function CompanyApplicationTag({ tag }) {
     </span>
   );
 }
+
+ApplicationTag.propTypes = {
+  tag: PropTypes.shape({
+    name: PropTypes.string,
+    legacy: PropTypes.bool,
+  }).isRequired,
+};

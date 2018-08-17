@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { kebabCase } from 'lodash';
-import CompanyApplicationTag from './CompanyApplicationTag';
-import CompanyApplicationChallenges from './CompanyApplicationChallenges';
+import ApplicationTag from './ApplicationTag';
+import ApplicationChallenges from './ApplicationChallenges';
 
-export default function CompanyApplication({ application, step }) {
+export default function Application({ application, step }) {
   const tags = application.tags.map(tag => (
-    <CompanyApplicationTag key={kebabCase(tag.name)} tag={tag} />
+    <ApplicationTag key={kebabCase(tag.name)} tag={tag} />
   ));
 
   return (
@@ -23,7 +23,7 @@ export default function CompanyApplication({ application, step }) {
       <p className="text-grey-darkest text-base leading-tight py-2">
         {application.description}
       </p>
-      <CompanyApplicationChallenges challenges={application.challenges} />
+      <ApplicationChallenges challenges={application.challenges} />
       <div className="mt-4">
         {tags}
       </div>
@@ -31,7 +31,7 @@ export default function CompanyApplication({ application, step }) {
   );
 }
 
-CompanyApplication.propTypes = {
+Application.propTypes = {
   step: PropTypes.number.isRequired,
   application: PropTypes.shape({
     brandColor: PropTypes.string,

@@ -3,13 +3,12 @@ import PropTypes from 'prop-types';
 import { ExternalLink } from 'react-feather';
 import ProgressiveImage from 'react-progressive-image';
 
-export default function Screenshot({ filename, alt, url }) {
+export default function Screenshot({ filename, thumbnail, alt, url }) {
   const screenshots = require.context('../../../images/screenshots', false, /\.jpg$/);
-  const largeScreenshot = screenshots(`./${filename}.jpg`, true);
-  const placeholderScreenshot = screenshots(`./${filename}-placeholder.jpg`, true);
+  const largeScreenshot = screenshots(`./${filename}`, true);
 
   return (
-    <div className="screenshot relative w-full h-full bg-grey-lighter overflow-hidden">
+    <div className="screenshot relative w-full h-full bg-grey-lightest overflow-hidden">
       {url && (
         <div className="screenshot-overlay">
           <a href={url} title="Visiter le site" className="text-white hover:text-blue-light" target="_blank" rel="noopener noreferrer nofollow">
@@ -17,7 +16,7 @@ export default function Screenshot({ filename, alt, url }) {
           </a>
         </div>
       )}
-      <ProgressiveImage src={largeScreenshot} placeholder={placeholderScreenshot}>
+      <ProgressiveImage src={largeScreenshot} placeholder={`data:image/svg+xml;utf8,${thumbnail}`}>
         {src => (
           <img src={src} alt={alt} className="absolute w-full pin-t" />
         )}

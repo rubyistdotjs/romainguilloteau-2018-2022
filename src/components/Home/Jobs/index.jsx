@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import Job from './Job';
+import JobLight from './JobLight';
+import Certification from './Certification';
 import jobsJSON from '../../../database/jobs.json';
+import certificationsJSON from '../../../database/certifications.json';
 
 export default class Jobs extends Component {
   constructor(props) {
@@ -8,32 +11,46 @@ export default class Jobs extends Component {
 
     this.state = {
       jobs: [],
+      certifications: [],
     };
   }
 
   componentDidMount() {
-    this.setState({ jobs: jobsJSON });
+    this.setState({
+      jobs: jobsJSON,
+      certifications: certificationsJSON,
+    });
   }
 
   render() {
-    const jobs = this.state.jobs.map((job, index) => (
-      <Job
-        key={job.title.toLowerCase()}
-        job={job}
-        bgColor={index % 2 === 0 ? 'white' : 'grey-lightest'}
-      />
-    ));
+    const sortedJobs = this.state.jobs.sort(
+      (a, b) => b.startedAt - a.startedAt,
+    );
+    const sortedCertifications = this.state.certifications.sort(
+      (a, b) => b.startedAt - a.startedAt,
+    );
+    const lastJob = sortedJobs[sortedJobs.length - 1] || null;
+
+    function jobComponent(job) {
+      if (job.applications && job.applications.length > 0) {
+        return <Job key={job.startedAt} job={job} />;
+      }
+      return <JobLight key={job.startedAt} job={job} />;
+    }
 
     return (
-      <section>
-        <div className="pl-8 py-8">
-          <div className="container mx-auto">
-            <h2 className="font-heading text-4xl lg:text-5xl text-black antialiased font-extrabold">
-              Expérience
-            </h2>
+      <section className="bg-grey-lightest py-8">
+        {sortedJobs.slice(0, -1).map(job => jobComponent(job))}
+
+        <div className="flex flex-row">
+          {lastJob && <JobLight key={lastJob.startedAt} job={lastJob} />}
+
+          <div>
+            {sortedCertifications.map(cert => (
+              <Certification certification={cert} />
+            ))}
           </div>
         </div>
-        {jobs}
       </section>
     );
   }

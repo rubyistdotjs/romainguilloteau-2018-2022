@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { kebabCase } from 'lodash';
-import ApplicationTag from './ApplicationTag';
+import Tag from './Tag';
 import ApplicationChallenges from './ApplicationChallenges';
 
 export default function Application({ application, step }) {
   const tags = application.tags.map(tag => (
-    <ApplicationTag key={kebabCase(tag.name)} tag={tag} />
+    <Tag key={kebabCase(tag.name)} tag={tag} />
   ));
 
   return (
@@ -15,12 +15,12 @@ export default function Application({ application, step }) {
       style={{ transform: `translateX(-${step * 100}%)` }}
     >
       <h4
-        className="text-black text-2xl font-heading font-bold leading-tight antialiased mb-1"
+        className="text-2xl font-heading font-bold leading-tight mb-1"
         style={{ color: application.brandColor }}
       >
         {application.name}
       </h4>
-      <p className="text-grey-darkest text-base leading-tight py-2">
+      <p className="text-grey-darkest py-2">
         {application.description}
       </p>
       <ApplicationChallenges challenges={application.challenges} />

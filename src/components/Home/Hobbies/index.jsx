@@ -1,13 +1,9 @@
 import React, { Component } from 'react';
+import { ExternalLink } from 'react-feather';
+import { chunk } from 'lodash';
 import Section from '../Section';
-import Hobby from './Hobby';
-import HobbyListItem from './HobbyListItem';
-import HobbyListItemRoadtripSubtitle from './HobbyListItemRoadtripSubtitle';
 
 import booksJSON from '../../../database/books.json';
-import seriesJSON from '../../../database/series.json';
-import gamesJSON from '../../../database/games.json';
-import roadtripsJSON from '../../../database/roadtrips.json';
 
 export default class Hobbies extends Component {
   constructor(props) {
@@ -15,70 +11,52 @@ export default class Hobbies extends Component {
 
     this.state = {
       books: [],
-      series: [],
-      games: [],
-      roadtrips: [],
     };
   }
 
   componentDidMount() {
-    this.setState((prevState, props) => ({
+    this.setState({
       books: booksJSON,
-      series: seriesJSON,
-      games: gamesJSON,
-      roadtrips: roadtripsJSON,
-    }));
+    });
   }
 
   render() {
+    const covers = require.context('../../../images/books', false, /\.jpg$/);
+    const cover = filename => covers(`./${filename}.jpg`, true);
+    const shelfs = chunk(this.state.books, 3);
+
     return (
-      <Section bgColor="blue-darkest">
-        <div className="container py-8 mx-auto align-center">
-          <h2 className="font-heading text-5xl text-white pb-8 antialiased font-semibold antialiased">
+      <Section bgColor="black">
+        <div className="container mx-auto pb-8">
+          <h2 className="font-heading text-4xl lg:text-5xl text-black antialiased font-extrabold">
             Loisirs
           </h2>
         </div>
-        <div className="container hobbies mx-auto flex flex-row">
-          <Hobby color="teal" listTitle="Derniers livres">
-            {this.state.books.map(book => (
-              <HobbyListItem
-                itemTitle={book.title}
-                itemSubtitle={`${book.author} - ${book.category}`}
-              />
-            ))}
-          </Hobby>
+        <div className="container flex mx-auto">
+          <div className="w-1/2">
+            <h3 className="text-black text-3xl font-heading font-extrabold leading-none antialiased">
+              Derniers livres
+            </h3>
+          </div>
+          <div className="w-1/2">
+            <div className="flex media-cols">
+              {shelfs.map(books => (
+                <div className="flex flex-col items-center w-1/3 border-r border-grey-darkest">
+                  {books.map(book => (
+                    <div className="mb-12 px-4 overflow-hidden">
+                      <img
+                        src={cover(book.cover.filename)}
+                        alt={`Couverture du livre ${book.title}`}
+                        className="rounded shadow-md"
+                      />
+                    </div>
+                  ))}
+                </div>
+              ))
 
-          <Hobby color="red" listTitle="Dernieres Séries">
-            {this.state.series.map(show => (
-              <HobbyListItem
-                itemTitle={show.title}
-                itemSubtitle={show.category}
-              />
-            ))}
-          </Hobby>
-
-          <Hobby color="indigo" listTitle="Derniers jeux">
-            {this.state.games.map(game => (
-              <HobbyListItem
-                itemTitle={game.title}
-                itemSubtitle={game.category}
-              />
-            ))}
-          </Hobby>
-
-          <Hobby color="green" listTitle="Derniers trajet moto">
-            {this.state.roadtrips.map(roadtrip => (
-              <HobbyListItem
-                itemTitle={roadtrip.name}
-                itemSubtitle={
-                  <HobbyListItemRoadtripSubtitle
-                    distance={roadtrip.distance}
-                    mapsUrl={roadtrip.mapsUrl}
-                  />
-                }
-              />
-            ))}
-          </Hobby>
+              }
+            </div>
+          </div>
         </div>
       </Section>
     );

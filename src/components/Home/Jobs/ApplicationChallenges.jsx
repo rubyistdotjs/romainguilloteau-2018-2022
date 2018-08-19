@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 export default function ApplicationChallenges({ challenges }) {
   const listItems = challenges.map((challenge, index) => (
-    <li key={index} className="block py-1">
+    <li key={index} className="block leading-normal py-1">
       {challenge}
     </li>
   ));

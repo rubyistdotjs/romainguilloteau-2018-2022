@@ -1,22 +1,23 @@
 import React from 'react';
+import Me from './Me';
 import ExternalLinkList from './ExternalLinkList';
+import { Info } from 'react-feather';
 import resume from '../../../documents/resume.pdf';
 
 export default function Header() {
   return (
-    <header>
-      <div className="flex flex-col items-center h-screen p-8 bg-black">
-        <div className="flex flex-col justify-center flex-grow text-center pb-8">
-          <h1 className="lg:text-6xl sm:text-5xl text-4xl text-white font-heading font-extrabold leading-normal antialiased">
-            Romain Guilloteau
+    <React.Fragment>
+      <header className="flex flex-col sm:flex-row justify-between items-center h-screen min-h-content p-8">
+        <div className="pr-1 my-auto">
+          <Me />
+          <h1 className="text-black font-heading text-5xl sm:text-6xl md:text-xxl font-bold leading-none mt-6 mb-3">
+            Développeur <span className="block">Full Stack</span>
           </h1>
-          <p className="text-grey-light lg:text-4xl sm:text-3xl text-2xl font-heading font-semibold leading-tight antialiased mb-4">
-            Développeur full stack{' '}
-            <span className="text-red-light">Ruby on Rails</span> et{' '}
-            <span className="text-yellow">JavaScript</span>
-          </p>
-          <div className="self-center mt-4 md:mt-6 lg:mt-8">
-            <a href="#contact-form" className="btn btn-indigo">
+          <span className="text-grey-darkest font-bold text-2xl sm:text-3xl md:text-4xl">
+            Ruby on Rails et JavaScript
+          </span>
+          <div className="mt-8 sm:mt-12">
+            <a href="#contact-form" className="btn btn-blue">
               Envoyer moi un message
             </a>
             <a
@@ -28,13 +29,14 @@ export default function Header() {
             </a>
           </div>
         </div>
-        <ExternalLinkList />
+        <div className="pl-1">
+          <ExternalLinkList />
+        </div>
+      </header>
+      <div className="text-lg text-orange-darkest text-center font-semibold bg-orange-light leading-none py-8 px-8">
+        <Info size={22} className="align-text-bottom mr-2" />
+        Site en cours de développement
       </div>
-      <div className="bg-grey-darkest p-8">
-        <p className="text-grey-light text-sm md:text-base lg:text-lg text-md text-center font-medium">
-          Site en cours de développement
-        </p>
-      </div>
-    </header>
+    </React.Fragment>
   );
 }

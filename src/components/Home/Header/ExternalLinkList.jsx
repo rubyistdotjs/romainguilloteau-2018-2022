@@ -13,7 +13,9 @@ export default class ExternalLinkList extends React.Component {
   }
 
   componentDidMount() {
-    this.setState({ externalLinks: externalLinksJSON });
+    this.setState({
+      externalLinks: externalLinksJSON,
+    });
   }
 
   render() {
@@ -26,7 +28,7 @@ export default class ExternalLinkList extends React.Component {
     ));
 
     return (
-      <div className="flex flex-row">
+      <div className="flex flex-row sm:flex-col">
         {links}
       </div>
     );

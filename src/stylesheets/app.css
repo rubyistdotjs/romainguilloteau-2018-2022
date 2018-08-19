@@ -6,44 +6,58 @@ body {
   @apply .font-sans .leading-normal .subpixel-antialiased;
 }
 
-.text-white-dark {
-  color: config('colors.white-dark');
+strong {
+  @apply .font-bold;
 }
 
-.label {
-  @apply .inline-block .bg-grey-lighter .rounded-full .px-3 .py-1 .text-sm .font-semibold .text-grey-darker .mr-2 .mb-2;
+.tag {
+  @apply .inline-block .text-grey-darkest .text-xs .font-semibold .mr-2 .mb-2 .px-2 .py-1 .bg-grey-light .rounded-sm;
 }
 
 .btn {
-  @apply .inline-block .text-sm .text-white .font-semibold .no-underline .py-2 .px-3 .mr-2 .mb-2 .border-2 .border-transparent .rounded;
+  transition-property: color, background-color, border-color;
+  transition-duration: 320ms;
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  @apply .inline-block .text-sm .text-white .font-semibold .no-underline .py-2 .px-2 .mr-2 .mb-2 border-2 .border-transparent .rounded;
 }
 
 @screen md {
   .btn {
-    @apply .text-base .py-2 .px-3;
+    @apply .text-base .px-4;
   }
 }
 
 @screen lg {
   .btn {
-    @apply px-4;
+    @apply .px-4;
   }
 }
 
-.btn-indigo {
-  @apply .bg-indigo;
+.btn-blue {
+  @apply .bg-blue-dark;
 }
 
-.btn-indigo:hover, .btn-indigo:focus {
-  @apply .bg-indigo-dark;
+.btn-blue:hover, .btn-blue:focus {
+  @apply .bg-blue-darker;
 }
 
 .btn-outline-grey {
-  @apply .text-grey .border-grey;
+  @apply .text-grey-darker .border-grey;
 }
 
 .btn-outline-grey:hover, .btn-outline-grey:focus {
-  @apply .text-black .bg-grey .border-transparent;
+  @apply .text-black .bg-grey;
+}
+
+.external-link {
+  transition-property: color, background-color, box-shadow;
+  transition-duration: 320ms;
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  @apply .flex .items-center .justify-center .text-white .w-10 .h-10 .bg-grey .rounded-full .m-2;
+}
+
+.external-link:hover, .external-link:focus, .external-link:active {
+  @apply .bg-grey-darkest .shadow-md;
 }
 
 .transition {
@@ -84,4 +98,28 @@ body {
 
 .hobby {
   @apply .block .text-white .text-base .leading-tight .py-3 .border-blue-darker .border-solid .border-t .overflow-hidden;
+}
+
+.media-cols > div:first-child {
+  @apply .pt-32;
+}
+
+.media-cols > div:last-child {
+  @apply .pt-24;
+}
+
+.field {
+  @apply .appearance-none .block .text-grey-darker .w-full .p-4 .mb-3 .bg-grey-lighter .border-b-2 .border-grey-light .rounded;
+}
+
+.field:focus {
+  @apply .outline-none .border-indigo-light;
+}
+
+.field.valid {
+  @apply .border-green-light;
+}
+
+.field.invalid {
+  @apply .border-red-light;
 }

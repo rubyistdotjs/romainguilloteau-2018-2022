@@ -25,41 +25,36 @@ export default class Job extends React.Component {
   }
 
   render() {
-    const { job, bgColor } = this.props;
+    const { job } = this.props;
     const { step } = this.state;
     const startYear = new Date(job.startedAt).getFullYear();
-    const endYear = job.endedAt ? new Date(job.endedAt).getFullYear() : 'présent';
+    const endYear = job.endedAt
+      ? new Date(job.endedAt).getFullYear()
+      : 'présent';
 
     const { name, url, screenshots, brandColor } = job.applications[step];
     const applications = job.applications.map(app => (
-      <Application
-        key={camelCase(app.name)}
-        application={app}
-        step={step}
-      />
+      <Application key={camelCase(app.name)} application={app} step={step} />
     ));
 
-
     return (
-      <div className={`relative bg-${bgColor} py-8 pl-8`}>
+      <div className="relative p-8">
         <div
           className="hidden md:block absolute pin-r pin-b pin-t w-24 w-2/5 mt-8 transition transition-bg z-0"
           style={{ backgroundColor: brandColor }}
         />
 
-        <div className="relative container flex flex-col mx-auto mb-6 z-10">
-          <h3 className="text-black text-3xl font-heading font-extrabold leading-none antialiased">
+        <div className="w-1/2 mb-6">
+          <h2 className="text-dark text-3xl font-heading font-bold leading-none">
             {job.title}
-          </h3>
-          <span className="block text-black text-2xl font-heading font-bold leading-normal antialiased">
-            {job.company}
-          </span>
-          <span className="block text-grey-darker text-xl font-heading font-semibold leading-tight">
-            {startYear} - {endYear}
+          </h2>
+          <span className="block text-grey-darkest text-2xl font-semibold leading-normal mt-2">
+            de <strong>{startYear}</strong> à <strong>{endYear}</strong> chez{' '}
+            <strong>{job.company}</strong>
           </span>
         </div>
 
-        <div className="relative container flex flex-row items-center mx-auto z-10">
+        <div className="relative flex flex-row items-center mx-auto z-10">
           <div className="flex-1 flex flex-row flex-no-wrap overflow-hidden">
             <div className="w-full md:w-1/2 mr-4 flex flex-row flex-no-wrap overflow-hidden">
               {applications}
@@ -91,12 +86,11 @@ export default class Job extends React.Component {
 }
 
 Job.propTypes = {
-  bgColor: PropTypes.string.isRequired,
   job: PropTypes.shape({
-    name: PropTypes.string,
-    role: PropTypes.string,
-    startYear: PropTypes.string,
-    endYear: PropTypes.string,
-    applications: PropTypes.array,
+    title: PropTypes.string.isRequired,
+    company: PropTypes.string.isRequired,
+    startedAt: PropTypes.number.isRequired,
+    endedAt: PropTypes.number,
+    applications: PropTypes.arrayOf(PropTypes.object),
   }).isRequired,
 };

@@ -26,10 +26,6 @@ export default function Head() {
         property="og:image"
         content="https://www.romainguilloteau.com/images/mugshot.jpg"
       />
-      <meta
-        property="og:image:secure_url"
-        content="https://www.romainguilloteau.com/images/mugshot.jpg"
-      />
       <meta property="og:image:type" content="image/jpeg" />
       <meta property="og:image:width" content="1256" />
       <meta property="og:image:height" content="1256" />
@@ -45,7 +41,7 @@ export default function Head() {
         "name": "Romain Guilloteau",
         "givenName": "Romain",
         "familyName": "Guilloteau",
-        "image": "images/mugshot.jpg",
+        "image": "https://www.romainguilloteau.com/images/mugshot.jpg",
         "jobTitle": "Lead developer & Software architect",
         "description": "Développeur full stack, principalement Ruby on Rails et JavaScript (Node.js, React et Vue.js), basé à Annecy, Haute-Savoie, France.",
         "gender": "Male",

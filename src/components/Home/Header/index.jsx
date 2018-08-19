@@ -17,12 +17,9 @@ export default function Header() {
             Ruby on Rails et JavaScript
           </span>
           <div className="mt-8 sm:mt-12">
-            <a href="#contact-form" className="btn btn-blue">
-              Envoyer moi un message
-            </a>
             <a
               href={resume}
-              className="btn btn-outline-grey"
+              className="btn btn-blue"
               download="romain-guilloteau.pdf"
             >
               Télécharger mon CV

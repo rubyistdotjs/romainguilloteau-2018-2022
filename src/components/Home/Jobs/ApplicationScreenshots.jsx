@@ -34,7 +34,7 @@ export default function ApplicationScreenshots({
         </div>
       )}
       {mobileScreenshot && (
-        <div className="absolute pin-b pin-r mb-6 mr-3 flex flex-col w-24 h-48 lg:w-32 lg:h-64 bg-grey-darkest rounded-lg shadow-lg overflow-hidden z-10">
+        <div className="absolute pin-b pin-r flex flex-col w-24 h-48 lg:w-32 lg:h-64 bg-grey-darkest rounded shadow-lg overflow-hidden z-10">
           <div className="bg-grey-darkest w-full h-3 lg:h-4 flex flex-row justify-center items-center pr-4 shadow z-10">
             <div className="flex items-center justify-center flex-no-shrink w-1 h-1 lg:w-2 lg:h-2 bg-grey-darker mr-4 rounded-full">
               <div className="hidden lg:block w-1 h-1 bg-grey-darkest rounded-full" />

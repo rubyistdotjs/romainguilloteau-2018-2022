@@ -10,7 +10,7 @@ export default function Header() {
       <header className="flex flex-col sm:flex-row justify-between items-center h-screen min-h-content p-8">
         <div className="pr-1 my-auto">
           <Me />
-          <h1 className="text-black font-heading text-5xl sm:text-6xl md:text-xxl font-bold leading-none mt-6 mb-3">
+          <h1 className="text-black font-heading text-5xl sm:text-6xl md:text-xxl font-black leading-none mt-6 mb-3">
             Développeur <span className="block">Full Stack</span>
           </h1>
           <span className="text-grey-darkest font-bold text-2xl sm:text-3xl md:text-4xl">

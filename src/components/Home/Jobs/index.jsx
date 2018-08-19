@@ -42,7 +42,7 @@ export default class Jobs extends Component {
       <section className="bg-grey-lightest py-8">
         {sortedJobs.slice(0, -1).map(job => jobComponent(job))}
 
-        <div className="flex flex-row">
+        <div className="flex flex-col md:flex-row">
           {lastJob && <JobLight key={lastJob.startedAt} job={lastJob} />}
 
           <div>

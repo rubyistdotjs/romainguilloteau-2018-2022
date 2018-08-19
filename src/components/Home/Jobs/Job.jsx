@@ -44,7 +44,7 @@ export default class Job extends React.Component {
           style={{ backgroundColor: brandColor }}
         />
 
-        <div className="w-1/2 mb-6">
+        <div className="w-full md:w-1/2 mb-6">
           <h2 className="text-dark text-3xl font-heading font-bold leading-none">
             {job.title}
           </h2>

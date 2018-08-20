@@ -7,7 +7,7 @@ import resume from '../../../documents/resume.pdf';
 export default function Header() {
   return (
     <React.Fragment>
-      <header className="flex flex-col sm:flex-row justify-between items-center h-screen min-h-content p-8">
+      <header className="flex flex-col sm:flex-row justify-between sm:items-center h-screen min-h-content p-8">
         <div className="pr-1 my-auto">
           <Me />
           <h1 className="text-black font-heading text-5xl sm:text-6xl md:text-xxl font-black leading-none mt-6 mb-3">

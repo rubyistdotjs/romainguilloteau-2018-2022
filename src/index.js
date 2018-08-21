@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-snapshot';
 import firebase from 'firebase/app';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
@@ -14,5 +14,5 @@ const config = {
 };
 firebase.initializeApp(config);
 
-ReactDOM.render(<App />, document.getElementById('root'));
+render(<App />, document.getElementById('root'));
 registerServiceWorker();

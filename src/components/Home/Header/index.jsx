@@ -1,7 +1,7 @@
 import React from 'react';
+import { Info } from 'react-feather';
 import Me from './Me';
 import ExternalLinkList from './ExternalLinkList';
-import { Info } from 'react-feather';
 import resume from '../../../documents/resume.pdf';
 
 export default function Header() {

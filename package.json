@@ -1,6 +1,7 @@
 {
   "name": "romainguilloteau",
   "version": "0.1.0",
+  "homepage": "https://www.romainguilloteau.com",
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
@@ -20,7 +21,7 @@
   },
   "scripts": {
     "start": "npm run watch:css & react-scripts start",
-    "build": "npm run build:css && react-scripts build && react-snapshot",
+    "build": "npm run build:css && react-scripts build && node sitemap.js && react-snapshot",
     "build:css": "postcss src/stylesheets/app.css -o src/app.css",
     "watch:css": "postcss src/stylesheets/app.css -o src/app.css -w",
     "test": "react-scripts test --env=jsdom",
@@ -35,6 +36,7 @@
     "eslint-plugin-react": "^7.10.0",
     "postcss-cli": "^6.0.0",
     "postcss-color-function": "^4.0.1",
+    "sitemap": "^1.13.0",
     "tailwindcss": "^0.6.0"
   }
 }

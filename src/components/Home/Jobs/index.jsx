@@ -47,7 +47,7 @@ export default class Jobs extends Component {
 
           <div>
             {sortedCertifications.map(cert => (
-              <Certification certification={cert} />
+              <Certification key={cert.startedAt} certification={cert} />
             ))}
           </div>
         </div>

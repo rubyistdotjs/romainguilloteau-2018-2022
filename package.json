@@ -1,6 +1,7 @@
 {
   "name": "romainguilloteau",
   "version": "0.1.0",
+  "homepage": "https://www.romainguilloteau.com",
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",

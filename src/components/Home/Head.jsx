@@ -17,14 +17,14 @@ export default function Head() {
         property="og:description"
         content="Développeur full stack, principalement Ruby on Rails et JavaScript (Node.js, React et Vue.js), basé à Annecy, Haute-Savoie, France."
       />
-      <meta property="og:url" content={process.env.PUBLIC_URL} />
+      <meta property="og:url" content="https://www.romainguilloteau.com" />
       <meta property="og:type" content="profile" />
       <meta property="profile:first_name" content="Romain" />
       <meta property="profile:last_name" content="Guilloteau" />
       <meta property="profile:gender" content="male" />
       <meta
         property="og:image"
-        content={`${process.env.PUBLIC_URL}/images/mugshot.jpg`}
+        content="https://www.romainguilloteau.com/images/mugshot.jpg"
       />
       <meta property="og:image:type" content="image/jpeg" />
       <meta property="og:image:width" content="1256" />
@@ -41,7 +41,7 @@ export default function Head() {
         "name": "Romain Guilloteau",
         "givenName": "Romain",
         "familyName": "Guilloteau",
-        "image": "${process.env.PUBLIC_URL}/images/mugshot.jpg",
+        "image": "https://www.romainguilloteau.com/images/mugshot.jpg",
         "jobTitle": "Lead developer & Software architect",
         "description": "Développeur full stack, principalement Ruby on Rails et JavaScript (Node.js, React et Vue.js), basé à Annecy, Haute-Savoie, France.",
         "gender": "Male",
@@ -61,7 +61,7 @@ export default function Head() {
           "addressLocality": "Annecy",
           "postalCode": "74000"
         },
-        "url": "${process.env.PUBLIC_URL}",
+        "url": "https://www.romainguilloteau.com/",
         "sameAs": [
           "https://www.linkedin.com/in/romainguilloteau",
           "https://twitter.com/rubyistdotjs",

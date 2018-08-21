@@ -1,7 +1,7 @@
 import React from 'react';
-import mugshotJpg from '../../../images/avatars/mugshot.jpg';
-import mugshotWebp from '../../../images/avatars/mugshot.webp';
-import mugshotJp2 from '../../../images/avatars/mugshot.jp2';
+import mugshotJpg from '../../../images/avatars/mugshot-thumbnail.jpg';
+import mugshotWebp from '../../../images/avatars/mugshot-thumbnail.webp';
+import mugshotJp2 from '../../../images/avatars/mugshot-thumbnail.jp2';
 
 export default function Me() {
   return (

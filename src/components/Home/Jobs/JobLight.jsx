@@ -13,10 +13,10 @@ export default function JobLight({ job }) {
   return (
       <div className="w-full md:w-1/2 p-8">
         <div>
-          <h2 className="text-dark text-3xl font-heading font-bold leading-none">
+          <h2 className="text-dark text-3xl font-heading font-bold tracking-tight antialiased leading-none">
             {job.title}
           </h2>
-          <span className="block text-grey-darkest text-2xl font-semibold leading-normal mt-2">
+          <span className="block text-grey-darkest text-2xl font-semibold leading-tight mt-2">
             de <strong>{startYear}</strong> à <strong>{endYear}</strong>
             {job.company && (
               <span>

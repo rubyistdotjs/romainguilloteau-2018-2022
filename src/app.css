@@ -5881,11 +5881,11 @@ table {
 }
 
 .text-6xl {
-  font-size: 3.5rem;
+  font-size: 3.875rem;
 }
 
 .text-xxl {
-  font-size: 4.5rem;
+  font-size: 4.625rem;
 }
 
 .italic {
@@ -6027,7 +6027,7 @@ table {
 }
 
 .tracking-tight {
-  letter-spacing: -0.05em;
+  letter-spacing: -0.01em;
 }
 
 .tracking-normal {
@@ -6361,14 +6361,15 @@ strong {
 }
 
 .btn-outline-grey {
-  color: #606f7b;
-  border-color: #b8c2cc;
+  color: #b8c2cc;
+  border-color: #8795a1;
 }
 
 .btn-outline-grey:hover,
 .btn-outline-grey:focus {
-  color: #22292f;
-  background-color: #b8c2cc;
+  color: #fff;
+  background-color: #606f7b;
+  border-color: #606f7b;
 }
 
 .external-link {
@@ -6378,10 +6379,10 @@ strong {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
+  color: #dae1e7;
   width: 2.5rem;
   height: 2.5rem;
-  background-color: #b8c2cc;
+  background-color: #3d4852;
   border-radius: 9999px;
   margin: .5rem;
 }
@@ -6389,7 +6390,8 @@ strong {
 .external-link:hover,
 .external-link:focus,
 .external-link:active {
-  background-color: #3d4852;
+  color: #fff;
+  background-color: #606f7b;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .12), 0 2px 4px 0 rgba(0, 0, 0, .08);
 }
 
@@ -11732,11 +11734,11 @@ strong {
   }
 
   .sm\:text-6xl {
-    font-size: 3.5rem;
+    font-size: 3.875rem;
   }
 
   .sm\:text-xxl {
-    font-size: 4.5rem;
+    font-size: 4.625rem;
   }
 
   .sm\:italic {
@@ -11878,7 +11880,7 @@ strong {
   }
 
   .sm\:tracking-tight {
-    letter-spacing: -0.05em;
+    letter-spacing: -0.01em;
   }
 
   .sm\:tracking-normal {
@@ -17348,11 +17350,11 @@ strong {
   }
 
   .md\:text-6xl {
-    font-size: 3.5rem;
+    font-size: 3.875rem;
   }
 
   .md\:text-xxl {
-    font-size: 4.5rem;
+    font-size: 4.625rem;
   }
 
   .md\:italic {
@@ -17494,7 +17496,7 @@ strong {
   }
 
   .md\:tracking-tight {
-    letter-spacing: -0.05em;
+    letter-spacing: -0.01em;
   }
 
   .md\:tracking-normal {
@@ -22964,11 +22966,11 @@ strong {
   }
 
   .lg\:text-6xl {
-    font-size: 3.5rem;
+    font-size: 3.875rem;
   }
 
   .lg\:text-xxl {
-    font-size: 4.5rem;
+    font-size: 4.625rem;
   }
 
   .lg\:italic {
@@ -23110,7 +23112,7 @@ strong {
   }
 
   .lg\:tracking-tight {
-    letter-spacing: -0.05em;
+    letter-spacing: -0.01em;
   }
 
   .lg\:tracking-normal {
@@ -28580,11 +28582,11 @@ strong {
   }
 
   .xl\:text-6xl {
-    font-size: 3.5rem;
+    font-size: 3.875rem;
   }
 
   .xl\:text-xxl {
-    font-size: 4.5rem;
+    font-size: 4.625rem;
   }
 
   .xl\:italic {
@@ -28726,7 +28728,7 @@ strong {
   }
 
   .xl\:tracking-tight {
-    letter-spacing: -0.05em;
+    letter-spacing: -0.01em;
   }
 
   .xl\:tracking-normal {

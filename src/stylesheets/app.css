@@ -37,11 +37,11 @@ strong {
 }
 
 .btn-blue {
-  @apply .bg-indigo-dark;
+  @apply .bg-blue-dark;
 }
 
 .btn-blue:hover, .btn-blue:focus {
-  @apply .bg-indigo .shadow-md;
+  @apply .bg-blue .shadow-md;
 }
 
 .btn-outline-grey {

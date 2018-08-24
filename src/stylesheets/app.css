@@ -42,22 +42,22 @@ strong {
 }
 
 .btn-outline-grey {
-  @apply .text-grey-darker .border-grey;
+  @apply .text-grey .border-grey-dark;
 }
 
 .btn-outline-grey:hover, .btn-outline-grey:focus {
-  @apply .text-black .bg-grey;
+  @apply .text-white .bg-grey-darker .border-grey-darker;
 }
 
 .external-link {
   transition-property: color, background-color, box-shadow;
   transition-duration: 320ms;
   transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  @apply .flex .items-center .justify-center .text-white .w-10 .h-10 .bg-grey .rounded-full .m-2;
+  @apply .flex .items-center .justify-center .text-grey-light .w-10 .h-10 .bg-grey-darkest .rounded-full .m-2;
 }
 
 .external-link:hover, .external-link:focus, .external-link:active {
-  @apply .bg-grey-darkest .shadow-md;
+  @apply .text-white .bg-grey-darker .shadow-md;
 }
 
 .transition {

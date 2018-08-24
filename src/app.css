@@ -6130,10 +6130,13 @@ strong {
   border-radius: .25rem;
 }
 
-.btn {
-  transition-property: color, background-color, border-color;
+.btn-transition {
+  transition-property: color, background-color, border-color, opacity;
   transition-duration: 320ms;
   transition-timing-function: cubic-bezier(.25, .46, .45, .94);
+}
+
+.btn {
   display: inline-block;
   font-size: .875rem;
   color: #fff;
@@ -6148,6 +6151,9 @@ strong {
   border-width: 2px;
   border-color: transparent;
   border-radius: .35rem;
+  transition-property: color, background-color, border-color, opacity;
+  transition-duration: 320ms;
+  transition-timing-function: cubic-bezier(.25, .46, .45, .94);
 }
 
 @media (min-width: 768px) {
@@ -6171,7 +6177,8 @@ strong {
 
 .btn-blue:hover,
 .btn-blue:focus {
-  background-color: #1c3d5a;
+  background-color: #3490dc;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .12), 0 2px 4px 0 rgba(0, 0, 0, .08);
 }
 
 .btn-outline-grey {
@@ -6184,12 +6191,10 @@ strong {
   color: #fff;
   background-color: #606f7b;
   border-color: #606f7b;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .12), 0 2px 4px 0 rgba(0, 0, 0, .08);
 }
 
 .external-link {
-  transition-property: color, background-color, box-shadow;
-  transition-duration: 320ms;
-  transition-timing-function: cubic-bezier(.25, .46, .45, .94);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -6199,6 +6204,9 @@ strong {
   background-color: #3d4852;
   border-radius: 9999px;
   margin: .5rem;
+  transition-property: color, background-color, border-color, opacity;
+  transition-duration: 320ms;
+  transition-timing-function: cubic-bezier(.25, .46, .45, .94);
 }
 
 .external-link:hover,

@@ -49,7 +49,7 @@ export default function ApplicationScreenshots({
               url={appUrl}
             />
           </div>
-          <div className="bg-grey-darkest w-full h-4 lg:h-6 flex flex-row flex-no-shrink justify-center items-center shadow">
+          <div className="bg-grey-darkest w-full h-4 lg:h-6 flex flex-row flex-no-shrink justify-center items-center">
             <div className="w-4 h-2 lg:w-6 lg:h-3 bg-grey-darker rounded-full" />
           </div>
         </div>

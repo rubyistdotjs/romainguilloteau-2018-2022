@@ -14,11 +14,14 @@ strong {
   @apply .inline-block .text-grey-darkest .text-xs .font-semibold .mr-2 .mb-2 .px-2 .py-1 .bg-grey-light .rounded-sm;
 }
 
-.btn {
-  transition-property: color, background-color, border-color;
+.btn-transition {
+  transition-property: color, background-color, border-color, opacity;
   transition-duration: 320ms;
   transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  @apply .inline-block .text-sm .text-white .font-semibold .no-underline .py-2 .px-2 .mr-2 .mb-2 border-2 .border-transparent .rounded;
+}
+
+.btn {
+  @apply .inline-block .text-sm .text-white .font-semibold .no-underline .py-2 .px-2 .mr-2 .mb-2 border-2 .border-transparent .rounded .btn-transition;
 }
 
 @screen md {
@@ -34,11 +37,11 @@ strong {
 }
 
 .btn-blue {
-  @apply .bg-blue-dark;
+  @apply .bg-indigo-dark;
 }
 
 .btn-blue:hover, .btn-blue:focus {
-  @apply .bg-blue-darker;
+  @apply .bg-indigo .shadow-md;
 }
 
 .btn-outline-grey {
@@ -46,14 +49,11 @@ strong {
 }
 
 .btn-outline-grey:hover, .btn-outline-grey:focus {
-  @apply .text-white .bg-grey-darker .border-grey-darker;
+  @apply .text-white .bg-grey-darker .border-grey-darker .shadow-md;
 }
 
 .external-link {
-  transition-property: color, background-color, box-shadow;
-  transition-duration: 320ms;
-  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  @apply .flex .items-center .justify-center .text-grey-light .w-10 .h-10 .bg-grey-darkest .rounded-full .m-2;
+  @apply .flex .items-center .justify-center .text-grey-light .w-10 .h-10 .bg-grey-darkest .rounded-full .m-2 .btn-transition;
 }
 
 .external-link:hover, .external-link:focus, .external-link:active {

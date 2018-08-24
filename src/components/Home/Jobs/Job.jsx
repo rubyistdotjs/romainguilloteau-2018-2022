@@ -69,7 +69,7 @@ export default class Job extends React.Component {
           </div>
           <button
             type="button"
-            className="shadow-md flex flex-no-shrink items-center justify-center w-10 h-10 bg-grey-lighter border-none md:bg-white md:ml-4 rounded opacity-75 md:opacity-50 hover:opacity-100 focus:outline-none"
+            className="flex flex-no-shrink items-center justify-center w-10 h-10 bg-grey-lighter border-none md:bg-white md:ml-4 rounded opacity-75 md:opacity-50 shadow-md hover:shadow-lg hover:opacity-100 focus:outline-none btn-transition"
             onClick={this.handleClick}
             aria-label="Voir la prochaine application"
           >

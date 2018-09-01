@@ -39,16 +39,18 @@ export default class Jobs extends Component {
     }
 
     return (
-      <section className="bg-grey-lightest py-8">
-        {sortedJobs.slice(0, -1).map(job => jobComponent(job))}
+      <section className="bg-grey-lightest">
+        <div className="container">
+          {sortedJobs.slice(0, -1).map(job => jobComponent(job))}
 
-        <div className="flex flex-col md:flex-row">
-          {lastJob && <JobLight key={lastJob.startedAt} job={lastJob} />}
+          <div className="flex flex-col lg:flex-row">
+            {lastJob && <JobLight key={lastJob.startedAt} job={lastJob} />}
 
-          <div>
-            {sortedCertifications.map(cert => (
-              <Certification key={cert.startedAt} certification={cert} />
-            ))}
+            <div className="lg:pl-4">
+              {sortedCertifications.map(cert => (
+                <Certification key={cert.startedAt} certification={cert} />
+              ))}
+            </div>
           </div>
         </div>
       </section>

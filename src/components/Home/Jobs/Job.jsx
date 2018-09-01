@@ -38,13 +38,13 @@ export default class Job extends React.Component {
     ));
 
     return (
-      <div className="relative p-8">
+      <div className="relative py-8">
         <div
-          className="hidden md:block absolute pin-r pin-b pin-t w-24 w-2/5 mt-8 transition transition-bg z-0"
+          className="hidden lg:block absolute pin-r pin-b pin-t w-24 w-2/5 mt-8 transition transition-bg z-0"
           style={{ backgroundColor: brandColor }}
         />
 
-        <div className="w-full md:w-1/2 mb-6">
+        <div className="w-full lg:w-1/2 mb-6">
           <h2 className="text-dark text-3xl font-heading font-bold tracking-tight antialiased leading-none">
             {job.title}
           </h2>
@@ -56,10 +56,10 @@ export default class Job extends React.Component {
 
         <div className="relative flex flex-row items-center mx-auto z-10">
           <div className="flex-1 flex flex-row flex-no-wrap overflow-hidden">
-            <div className="w-full md:w-1/2 mr-4 flex flex-row flex-no-wrap overflow-hidden">
+            <div className="w-full lg:w-1/2 mr-4 flex flex-row flex-no-wrap overflow-hidden">
               {applications}
             </div>
-            <div className="hidden md:block w-1/2 pb-8 px-4">
+            <div className="hidden lg:block w-1/2 pb-8 px-4">
               <ApplicationScreenshots
                 appName={name}
                 appUrl={url}
@@ -69,12 +69,12 @@ export default class Job extends React.Component {
           </div>
           <button
             type="button"
-            className="flex flex-no-shrink items-center justify-center w-10 h-10 bg-grey-lighter border-none md:bg-white md:ml-4 rounded opacity-75 md:opacity-50 shadow-md hover:shadow-lg hover:opacity-100 focus:outline-none btn-transition"
+            className="flex flex-no-shrink items-center justify-center w-10 h-10 bg-grey-lighter border-none lg:bg-white lg:ml-4 mr-4 rounded-full opacity-75 lg:opacity-50 shadow-md hover:shadow-lg hover:opacity-100 focus:outline-none btn-transition"
             onClick={this.handleClick}
             aria-label="Voir la prochaine application"
           >
             <ChevronRight
-              size={38}
+              size={34}
               className="block transition transition-color"
               style={{ color: brandColor }}
             />

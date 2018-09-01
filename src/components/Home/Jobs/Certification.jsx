@@ -7,7 +7,7 @@ export default function Certification({ certification }) {
   const endYear = endedAt ? new Date(endedAt).getFullYear() : 'présent';
 
   return (
-    <div className="p-8">
+    <div className="py-8">
       <h2 className="text-dark text-3xl font-heading font-bold tracking-tight antialiased leading-none">
         {name}
       </h2>

@@ -28,7 +28,7 @@ export default class ExternalLinkList extends React.Component {
     ));
 
     return (
-      <div className="flex flex-row sm:flex-col">
+      <div className="flex flex-row md:flex-col">
         {links}
       </div>
     );

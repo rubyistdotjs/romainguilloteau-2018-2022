@@ -6264,6 +6264,10 @@ table {
 
 .container {
   width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 2rem;
+  padding-left: 2rem;
 }
 
 @media (min-width: 576px) {
@@ -6317,7 +6321,7 @@ strong {
 }
 
 .btn-transition {
-  transition-property: color, background-color, border-color, opacity;
+  transition-property: color, background-color, border-color, box-shadow, opacity;
   transition-duration: 320ms;
   transition-timing-function: cubic-bezier(.25, .46, .45, .94);
 }
@@ -6327,9 +6331,10 @@ strong {
   font-size: .875rem;
   color: #fff;
   font-weight: 600;
+  line-height: 1;
   text-decoration: none;
-  padding-top: .5rem;
-  padding-bottom: .5rem;
+  padding-top: .75rem;
+  padding-bottom: .75rem;
   padding-left: .5rem;
   padding-right: .5rem;
   margin-right: .5rem;
@@ -6337,7 +6342,7 @@ strong {
   border-width: 2px;
   border-color: transparent;
   border-radius: .35rem;
-  transition-property: color, background-color, border-color, opacity;
+  transition-property: color, background-color, border-color, box-shadow, opacity;
   transition-duration: 320ms;
   transition-timing-function: cubic-bezier(.25, .46, .45, .94);
 }
@@ -6363,20 +6368,21 @@ strong {
 
 .btn-blue:hover,
 .btn-blue:focus {
-  background-color: #3490dc;
+  background-color: #1c3d5a;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .12), 0 2px 4px 0 rgba(0, 0, 0, .08);
 }
 
 .btn-outline-grey {
-  color: #b8c2cc;
+  color: #606f7b;
+  background-color: #fff;
   border-color: #8795a1;
 }
 
 .btn-outline-grey:hover,
 .btn-outline-grey:focus {
-  color: #fff;
-  background-color: #606f7b;
-  border-color: #606f7b;
+  color: #22292f;
+  background-color: #b8c2cc;
+  border-color: #b8c2cc;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .12), 0 2px 4px 0 rgba(0, 0, 0, .08);
 }
 
@@ -6384,13 +6390,13 @@ strong {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #dae1e7;
+  color: #606f7b;
   width: 2.5rem;
   height: 2.5rem;
-  background-color: #3d4852;
+  background-color: #dae1e7;
   border-radius: 9999px;
   margin: .5rem;
-  transition-property: color, background-color, border-color, opacity;
+  transition-property: color, background-color, border-color, box-shadow, opacity;
   transition-duration: 320ms;
   transition-timing-function: cubic-bezier(.25, .46, .45, .94);
 }
@@ -6398,8 +6404,8 @@ strong {
 .external-link:hover,
 .external-link:focus,
 .external-link:active {
-  color: #fff;
-  background-color: #606f7b;
+  color: #22292f;
+  background-color: #b8c2cc;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .12), 0 2px 4px 0 rgba(0, 0, 0, .08);
 }
 

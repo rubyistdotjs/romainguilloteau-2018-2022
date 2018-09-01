@@ -15,13 +15,13 @@ strong {
 }
 
 .btn-transition {
-  transition-property: color, background-color, border-color, opacity;
+  transition-property: color, background-color, border-color, box-shadow, opacity;
   transition-duration: 320ms;
   transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .btn {
-  @apply .inline-block .text-sm .text-white .font-semibold .no-underline .py-2 .px-2 .mr-2 .mb-2 border-2 .border-transparent .rounded .btn-transition;
+  @apply .inline-block .text-sm .text-white .font-semibold .leading-none .no-underline .py-3 .px-2 .mr-2 .mb-2 border-2 .border-transparent .rounded .btn-transition;
 }
 
 @screen md {
@@ -41,23 +41,23 @@ strong {
 }
 
 .btn-blue:hover, .btn-blue:focus {
-  @apply .bg-blue .shadow-md;
+  @apply .bg-blue-darker .shadow-md;
 }
 
 .btn-outline-grey {
-  @apply .text-grey .border-grey-dark;
+  @apply .text-grey-darker .bg-white .border-grey-dark;
 }
 
 .btn-outline-grey:hover, .btn-outline-grey:focus {
-  @apply .text-white .bg-grey-darker .border-grey-darker .shadow-md;
+  @apply .text-black .bg-grey .border-grey .shadow-md;
 }
 
 .external-link {
-  @apply .flex .items-center .justify-center .text-grey-light .w-10 .h-10 .bg-grey-darkest .rounded-full .m-2 .btn-transition;
+  @apply .flex .items-center .justify-center .text-grey-darker .w-10 .h-10 .bg-grey-light .rounded-full .m-2 .btn-transition;
 }
 
 .external-link:hover, .external-link:focus, .external-link:active {
-  @apply .text-white .bg-grey-darker .shadow-md;
+  @apply .text-black .bg-grey .shadow-md;
 }
 
 .transition {

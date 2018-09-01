@@ -272,7 +272,7 @@ module.exports = {
     'lg': '1.125rem',   // 18px
     'xl': '1.25rem',    // 20px
     '2xl': '1.5rem',    // 24px
-    '3xl': '2rem',      // 32px
+    '3xl': '2rem',      // 30px
     '4xl': '2.375rem',  // 38px
     '5xl': '3rem',      // 48px
     '6xl': '3.875rem',  // 62px
@@ -947,8 +947,8 @@ module.exports = {
 
   plugins: [
     require('tailwindcss/plugins/container')({
-      // center: true,
-      // padding: '1rem',
+      center: true,
+      padding: '2rem',
     }),
   ],
 

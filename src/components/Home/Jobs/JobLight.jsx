@@ -11,7 +11,7 @@ export default function JobLight({ job }) {
   ));
 
   return (
-      <div className="w-full md:w-1/2 p-8">
+      <div className="w-full lg:w-1/2 py-8 lg:pr-4">
         <div>
           <h2 className="text-dark text-3xl font-heading font-bold tracking-tight antialiased leading-none">
             {job.title}

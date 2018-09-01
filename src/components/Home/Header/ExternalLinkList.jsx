@@ -19,7 +19,8 @@ export default class ExternalLinkList extends React.Component {
   }
 
   render() {
-    const links = this.state.externalLinks.map(link => (
+    const { externalLinks } = this.state;
+    const links = externalLinks.map(link => (
       <ExternalLink
         key={camelCase(link.name)}
         name={link.name}

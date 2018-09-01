@@ -23,13 +23,12 @@ export default class Jobs extends Component {
   }
 
   render() {
-    const sortedJobs = this.state.jobs.sort(
-      (a, b) => b.startedAt - a.startedAt,
-    );
-    const sortedCertifications = this.state.certifications.sort(
-      (a, b) => b.startedAt - a.startedAt,
-    );
+    const { jobs, certifications } = this.state;
+    const sortedJobs = jobs.sort((a, b) => b.startedAt - a.startedAt);
     const lastJob = sortedJobs[sortedJobs.length - 1] || null;
+    const sortedCertifications = certifications.sort(
+      (a, b) => b.startedAt - a.startedAt,
+    );
 
     function jobComponent(job) {
       if (job.applications && job.applications.length > 0) {

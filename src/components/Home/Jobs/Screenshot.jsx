@@ -3,7 +3,12 @@ import PropTypes from 'prop-types';
 import { ExternalLink } from 'react-feather';
 import ProgressiveImage from 'react-progressive-image';
 
-export default function Screenshot({ filename, thumbnail, alt, url }) {
+export default function Screenshot({
+  filename,
+  thumbnail,
+  alt,
+  url,
+}) {
   const screenshots = require.context('../../../images/screenshots', false, /\.jpg$/);
   const largeScreenshot = screenshots(`./${filename}`, true);
 
@@ -27,6 +32,7 @@ export default function Screenshot({ filename, thumbnail, alt, url }) {
 
 Screenshot.propTypes = {
   filename: PropTypes.string.isRequired,
+  thumbnail: PropTypes.string.isRequired,
   alt: PropTypes.string,
   url: PropTypes.string,
 };

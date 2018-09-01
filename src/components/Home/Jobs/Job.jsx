@@ -9,32 +9,44 @@ export default class Job extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      step: 0,
-      steps: this.props.job.applications.length,
-    };
-
+    this.state = { currentStep: 0 };
     this.handleClick = this.handleClick.bind(this);
+  }
+
+  steps() {
+    const { job } = this.props;
+    if (!job || !job.applications) return 0;
+    return job.applications.length;
   }
 
   handleClick() {
     this.setState((prevState) => {
-      const nextStep = prevState.step + 1;
-      return { step: nextStep >= prevState.steps ? 0 : nextStep };
+      const nextStep = prevState.currentStep + 1;
+      return { currentStep: nextStep >= this.steps() ? 0 : nextStep };
     });
   }
 
   render() {
     const { job } = this.props;
-    const { step } = this.state;
+    const { currentStep } = this.state;
     const startYear = new Date(job.startedAt).getFullYear();
     const endYear = job.endedAt
       ? new Date(job.endedAt).getFullYear()
       : 'présent';
 
-    const { name, url, screenshots, brandColor } = job.applications[step];
+    const {
+      name,
+      url,
+      screenshots,
+      brandColor,
+    } = job.applications[currentStep];
+
     const applications = job.applications.map(app => (
-      <Application key={camelCase(app.name)} application={app} step={step} />
+      <Application
+        key={camelCase(app.name)}
+        application={app}
+        offset={currentStep}
+      />
     ));
 
     return (

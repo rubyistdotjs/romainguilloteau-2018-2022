@@ -2,7 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export default function Certification({ certification }) {
-  const { name, school, startedAt, endedAt } = certification;
+  const {
+    name,
+    school,
+    startedAt,
+    endedAt,
+  } = certification;
   const startYear = new Date(startedAt).getFullYear();
   const endYear = endedAt ? new Date(endedAt).getFullYear() : 'présent';
 
@@ -30,4 +35,4 @@ Certification.propTypes = {
     startedAt: PropTypes.number.isRequired,
     endedAt: PropTypes.number,
   }).isRequired,
-}
+};

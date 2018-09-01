@@ -4,7 +4,7 @@ import { kebabCase } from 'lodash';
 import Tag from './Tag';
 import ApplicationChallenges from './ApplicationChallenges';
 
-export default function Application({ application, step }) {
+export default function Application({ application, offset }) {
   const tags = application.tags.map(tag => (
     <Tag key={kebabCase(tag.name)} tag={tag} />
   ));
@@ -12,7 +12,7 @@ export default function Application({ application, step }) {
   return (
     <div
       className="w-full flex-no-shrink flex flex-col transition transition-transform"
-      style={{ transform: `translateX(-${step * 100}%)` }}
+      style={{ transform: `translateX(-${offset * 100}%)` }}
     >
       <h4
         className="text-2xl font-heading font-bold leading-tight mb-1"
@@ -32,11 +32,11 @@ export default function Application({ application, step }) {
 }
 
 Application.propTypes = {
-  step: PropTypes.number.isRequired,
+  offset: PropTypes.number.isRequired,
   application: PropTypes.shape({
-    brandColor: PropTypes.string,
-    name: PropTypes.string,
-    description: PropTypes.string,
+    brandColor: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
     challenges: PropTypes.array,
     tags: PropTypes.array,
   }).isRequired,

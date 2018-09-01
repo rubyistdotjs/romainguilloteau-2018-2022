@@ -11,29 +11,29 @@ export default function JobLight({ job }) {
   ));
 
   return (
-      <div className="w-full lg:w-1/2 py-8 lg:pr-4">
-        <div>
-          <h2 className="text-dark text-3xl font-heading font-bold tracking-tight antialiased leading-none">
-            {job.title}
-          </h2>
-          <span className="block text-grey-darkest text-2xl font-semibold leading-tight mt-2">
-            de <strong>{startYear}</strong> à <strong>{endYear}</strong>
-            {job.company && (
-              <span>
-                {' '}chez <strong>{job.company}</strong>
-              </span>
-            )}
-          </span>
-        </div>
-        <p className="text-grey-darkest py-2">
-          {job.description}
-        </p>
-        {tags && (
-          <div className="mt-4">
-            {tags}
-          </div>
-        )}
+    <div className="w-full lg:w-1/2 py-8 lg:pr-4">
+      <div>
+        <h2 className="text-dark text-3xl font-heading font-bold tracking-tight antialiased leading-none">
+          {job.title}
+        </h2>
+        <span className="block text-grey-darkest text-2xl font-semibold leading-tight mt-2">
+          de <strong>{startYear}</strong> à <strong>{endYear}</strong>
+          {job.company && (
+            <span>
+              {' '}chez <strong>{job.company}</strong>
+            </span>
+          )}
+        </span>
       </div>
+      <p className="text-grey-darkest py-2">
+        {job.description}
+      </p>
+      {tags && (
+        <div className="mt-4">
+          {tags}
+        </div>
+      )}
+    </div>
   );
 }
 

@@ -98,7 +98,7 @@ export default class Contact extends React.Component {
             Contact
           </h2>
 
-          <form className="w-full max-w-md" onSubmit={this.handleSubmit}>
+          <form id="contact-form" className="w-full max-w-md" onSubmit={this.handleSubmit}>
             <input
               placeholder="Adresse email"
               type="email"

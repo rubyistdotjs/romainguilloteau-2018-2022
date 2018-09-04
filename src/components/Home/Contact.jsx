@@ -1,92 +1,145 @@
 import React from 'react';
 import axios from 'axios';
-import { isEmail, isLength } from 'validator';
+import Recaptcha from 'react-recaptcha';
+import { pickBy, isString } from 'lodash';
+import { isEmail, isLength, escape } from 'validator';
 
 export default class Contact extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      email: '',
-      emailValid: false,
-      message: '',
-      messageValid: false,
+      message: {
+        email: '',
+        content: '',
+        captcha: null,
+      },
+      messageErrors: {},
+      _loading: false,
     };
 
-    this.handleEmailChanged = this.handleEmailChanged.bind(this);
-    this.handleMessageChanged = this.handleMessageChanged.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+    this.handeRecaptchaVerify = this.handeRecaptchaVerify.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  componentDidMount() {
-
+  validateEmail(email) {
+    if (!email) return 'Veuillez entrer votre adresse email.';
+    if (!isEmail(email)) return "L'adresse email n'est pas valide";
+    return null;
   }
 
-  handleEmailChanged(event) {
-    const email = event.target.value;
-    this.setState({
-      emailValid: isEmail(email),
-      email,
+  validateContent(content) {
+    if (!isLength(content, { min: 42 })) return 'Votre message est trop court';
+    if (!isLength(content, { max: 42000 })) {
+      return 'Votre message est trop long';
+    }
+    return null;
+  }
+
+  validate(message) {
+    return {
+      email: this.validateEmail(message.email),
+      content: this.validateContent(message.content),
+    };
+  }
+
+  handleChange(event) {
+    const { name, value } = event.target;
+
+    this.setState((prevState) => {
+      const message = Object.assign({}, prevState.message);
+      message[name] = value;
+      return { message };
     });
   }
 
-  handleMessageChanged(event) {
-    const message = event.target.value;
-    this.setState({
-      messageValid: isLength(message, { min: 6 }),
-      message,
-    });
+  handeRecaptchaVerify(hash) {
+    this.setState({ captcha: hash });
   }
 
   handleSubmit(event) {
-    if (!this.state.emailValid || !this.state.messageValid) return false;
+    event.preventDefault();
+    const { message } = this.state;
+    const errors = this.validate(message);
 
-    axios.post('', {
-      email: this.state.email,
-      message: this.state.message,
-    }).then((res) => {
+    if (errors.email !== null || errors.content !== null) {
+      this.setState({ messageErrors: pickBy(errors, isString) });
+      return false;
+    }
 
-    }).catch((error) => {
+    this.setState({ _loading: true });
+    setTimeout(() => {
+      this.setState({ _loading: false });
+    }, 2000);
 
-    });
+    // axios.post('https://www.romainguilloteau.com/messages', {
+    //   email: message.email,
+    //   message: message.content,
+    //   captcha: message.captcha,
+    // }).then((res) => {
+
+    // }).catch((error) => {
+
+    // });
   }
 
   render() {
-    const { email, emailValid, message, messageValid } = this.state;
-    const validityClass = (attr, valid) => {
-      if (attr.length <= 0) return '';
-      return valid ? 'valid' : 'invalid';
-    };
+    const { message, messageErrors, _loading } = this.state;
+    const { email, content } = message;
+
+    const emailValid = this.validateEmail(email) === null;
+    const contentValid = this.validateContent(content) === null;
 
     return (
       <section className="bg-white py-8">
         <div className="container py-8 mx-auto flex flex-col align-center">
-          <h2 className="font-heading text-5xl text-black pb-8 antialiased font-extrabold">
+          <h2 className="text-dark text-4xl font-heading font-bold tracking-tight antialiased leading-none mb-12">
             Contact
           </h2>
-          <p className="text-lg text-green-dark">
-            Votre message a bien été envoyé
-          </p>
 
           <form className="w-full max-w-md" onSubmit={this.handleSubmit}>
             <input
               placeholder="Adresse email"
               type="email"
+              name="email"
               value={email}
-              onChange={this.handleEmailChanged}
-              className={`field ${validityClass(email, emailValid)}`}
+              onChange={this.handleChange}
+              className={`field ${email.length > 0 && !emailValid ? 'invalid' : ''}`}
+              disabled={_loading}
             />
+            {messageErrors.email && (
+              <p className="field-error">
+                {messageErrors.email}
+              </p>
+            )}
             <textarea
               placeholder="Message"
               rows="8"
-              value={message}
-              onChange={this.handleMessageChanged}
-              className={`field ${validityClass(message, messageValid)}`}
+              name="content"
+              value={content}
+              onChange={this.handleChange}
+              className={`field ${content.length > 0 && !contentValid ? 'invalid' : ''}`}
+              disabled={_loading}
             />
+            {messageErrors.content && (
+              <p className="field-error">
+                {messageErrors.content}
+              </p>
+            )}
+
+            <div className="mb-3">
+              <Recaptcha
+                sitekey="6Le5um0UAAAAALXeSUOT_O61sOmseb1VXICcvGXk"
+                render="explicit"
+                verifyCallback={this.handeRecaptchaVerify}
+              />
+            </div>
             <input
               type="submit"
-              value="Envoyer le message"
-              className="btn btn-indigo"
+              value="Envoyer"
+              className="btn btn-blue"
+              disabled={_loading}
             />
           </form>
         </div>

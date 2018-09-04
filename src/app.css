@@ -6487,11 +6487,14 @@ strong {
 }
 
 .field {
+  transition-property: color, background-color, border-color;
+  transition-duration: 320ms;
+  transition-timing-function: cubic-bezier(.25, .46, .45, .94);
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
   display: block;
-  color: #606f7b;
+  color: #22292f;
   width: 100%;
   padding: 1rem;
   margin-bottom: .75rem;
@@ -6501,8 +6504,29 @@ strong {
   border-radius: .35rem;
 }
 
+.field::-webkit-input-placeholder {
+  color: #8795a1;
+  opacity: 1;
+}
+
+.field:-ms-input-placeholder {
+  color: #8795a1;
+  opacity: 1;
+}
+
+.field::-ms-input-placeholder {
+  color: #8795a1;
+  opacity: 1;
+}
+
+.field::placeholder {
+  color: #8795a1;
+  opacity: 1;
+}
+
 .field:focus {
   outline: 0;
+  background-color: #f8fafc;
   border-color: #7886d7;
 }
 
@@ -6512,6 +6536,16 @@ strong {
 
 .field.invalid {
   border-color: #ef5753;
+}
+
+.field-error {
+  font-size: .875rem;
+  color: #cc1f1a;
+  font-weight: 600;
+  margin-top: -0.5rem;
+  margin-bottom: .75rem;
+  padding-left: .25rem;
+  padding-right: .25rem;
 }
 
 @media (min-width: 576px) {

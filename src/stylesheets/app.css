@@ -109,11 +109,18 @@ strong {
 }
 
 .field {
-  @apply .appearance-none .block .text-grey-darker .w-full .p-4 .mb-3 .bg-grey-lighter .border-b-2 .border-grey-light .rounded;
+  transition-property: color, background-color, border-color;
+  transition-duration: 320ms;
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  @apply .appearance-none .block .text-black .w-full .p-4 .mb-3 .bg-grey-lighter .border-b-2 .border-grey-light .rounded;
+}
+
+.field::placeholder {
+  @apply .text-grey-dark .opacity-100;
 }
 
 .field:focus {
-  @apply .outline-none .border-indigo-light;
+  @apply .outline-none .bg-grey-lightest .border-indigo-light;
 }
 
 .field.valid {
@@ -122,4 +129,8 @@ strong {
 
 .field.invalid {
   @apply .border-red-light;
+}
+
+.field-error {
+  @apply .text-sm .text-red-dark .font-semibold .-mt-2 .mb-3 .px-1;
 }

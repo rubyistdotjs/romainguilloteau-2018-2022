@@ -17,7 +17,7 @@ export default function Header() {
             <p className="text-grey-darker text-base md:text-base w-full md:w-4/5 lg:w-2/3 xl:w-3/5 mb-4">
               Développeur passionné depuis l’adolescence, professionnel depuis
               plus de 6 ans, toujours soucieux de livrer un code lisible, stable
-              et performant. J’ai eu l’occasion d’endossé tous les rôles
+              et performant. J’ai eu l’occasion d’endosser tous les rôles
               nécessaires à la création et mise en production d’applications
               ambitieuses : front-end, back-end, SEO, design, architecture
               serveur, …

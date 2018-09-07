@@ -9,11 +9,16 @@ export default function Screenshot({
   alt,
   url,
 }) {
-  const screenshots = require.context('../../../images/screenshots', false, /\.jpg$/);
+  const screenshots = require.context(
+    '../../../../images/screenshots',
+    false,
+    /\.jpg$/,
+  );
+
   const largeScreenshot = screenshots(`./${filename}`, true);
 
   return (
-    <div className="screenshot relative w-full h-full bg-grey-lightest overflow-hidden">
+    <div className="screenshot relative w-full h-full bg-grey-lightest border-grey-light border-l-2 border-r-2 border-b-2 overflow-hidden">
       {url && (
         <div className="screenshot-overlay">
           <a href={url} title="Visiter le site" className="text-white hover:text-blue-light" target="_blank" rel="noopener noreferrer nofollow">

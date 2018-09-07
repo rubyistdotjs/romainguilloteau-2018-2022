@@ -1,6 +1,6 @@
 /* Core ----------------------------------------------------------------------- */
 
 .label {
-  @apply .inline-block .text-grey-darkest .text-xs .font-semibold .mr-2 .mb-2
-         .px-2 .py-1 .bg-grey-light .rounded-sm;
+  @apply .inline-block .text-grey-darker .text-xs .font-semibold .mr-3 .mb-3
+         px-1 .py-1 .border-b .border-grey;
 }

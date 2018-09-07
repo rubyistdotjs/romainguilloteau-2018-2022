@@ -3,7 +3,7 @@ import { camelCase } from 'lodash';
 import externalLinksJSON from '../../../database/external-links.json';
 import ExternalLink from './ExternalLink';
 
-export default class ExternalLinkList extends React.Component {
+export default class ExternalLinkList extends React.PureComponent {
   constructor(props) {
     super(props);
 
@@ -29,7 +29,7 @@ export default class ExternalLinkList extends React.Component {
     ));
 
     return (
-      <div className="flex flex-row md:flex-col">
+      <div className="flex flex-row">
         {links}
       </div>
     );

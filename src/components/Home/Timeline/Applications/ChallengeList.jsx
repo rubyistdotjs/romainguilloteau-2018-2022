@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function ApplicationChallenges({ challenges }) {
+export default function ChallengeList({ challenges }) {
   if (!challenges || challenges.length === 0) return '';
 
   const listItems = challenges.map((challenge, index) => (
@@ -11,12 +11,12 @@ export default function ApplicationChallenges({ challenges }) {
   ));
 
   return (
-    <ul className="list-reset text-grey-darker text-sm hidden lg:block xl:block">
+    <ul className="list-reset text-grey-darkest text-sm hidden lg:block xl:block">
       {listItems}
     </ul>
   );
 }
 
-ApplicationChallenges.propTypes = {
+ChallengeList.propTypes = {
   challenges: PropTypes.arrayOf(PropTypes.string).isRequired,
 };

@@ -56,3 +56,16 @@ strong {
 .challenge {
   @apply .block .text-grey-darkest .text-base .leading-tight .px-6 .py-4 .border-grey-lighter .border-solid .border-t;
 }
+
+.step {
+  @apply .appearance-none .block .w-4 .h-4 .ml-1 .mr-1 .border-2
+         .border-grey-light .cursor-pointer;
+}
+
+.step.active {
+  @apply .bg-grey-dark .border-grey-dark .cursor-default;
+}
+
+.step:focus:not(.active), .step:hover:not(.active) {
+  @apply .bg-grey .border-grey;
+}

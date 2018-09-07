@@ -2,8 +2,8 @@
 
 .btn {
   @apply .inline-block .text-sm .text-white .font-semibold .leading-none
-         .no-underline .p-3 .mr-2 .mb-2 .border-2 .border-transparent
-         .rounded .btn-transition .cursor-pointer;
+         .no-underline .p-3 .mr-2 .mb-2 .border .border-transparent
+         .btn-transition .cursor-pointer;
 }
 
 .btn:hover, .btn:focus {
@@ -35,5 +35,5 @@
 }
 
 .btn-outline-grey:hover, .btn-outline-grey:focus {
-  @apply .text-black .bg-grey .border-grey;
+  @apply .text-black .bg-grey-light .border-grey-light;
 }

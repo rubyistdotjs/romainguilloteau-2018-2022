@@ -11,7 +11,7 @@ export default function Me() {
         <source srcSet={mugshotWebp} type="image/webp" className="w-full" />
         <img src={mugshotJpg} alt="Romain Guilloteau" className="w-full" />
       </picture>
-      <span className="text-grey-darkest text-base md:text-xl font-bold antialiased">
+      <span className="text-black text-base md:text-xl font-bold">
         Romain Guilloteau
       </span>
     </div>

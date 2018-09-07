@@ -2,7 +2,7 @@ import React from 'react';
 
 import Head from './Head';
 import Header from './Header';
-import Jobs from './Jobs';
+import Timeline from './Timeline';
 import Contact from './Contact';
 
 export default function Home() {
@@ -10,7 +10,7 @@ export default function Home() {
     <div className="Home">
       <Head />
       <Header />
-      <Jobs />
+      <Timeline />
       <Contact />
     </div>
   );

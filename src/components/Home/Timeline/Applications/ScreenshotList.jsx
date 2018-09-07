@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Screenshot from './Screenshot';
 
-export default function ApplicationScreenshots({
+export default function ScreenshotList({
   appName,
   appUrl,
   screenshots,
@@ -19,7 +19,7 @@ export default function ApplicationScreenshots({
   return (
     <div className="relative w-full h-full">
       {desktopScreenshot && (
-        <div className="flex-1 h-full rounded shadow-md overflow-hidden">
+        <div className="flex-1 h-full">
           <div className="bg-grey-light w-full h-6 px-2 flex flex-row items-center">
             <div className="w-2 h-2 bg-red mr-1 rounded-full" />
             <div className="w-2 h-2 bg-orange mr-1 rounded-full" />
@@ -58,7 +58,7 @@ export default function ApplicationScreenshots({
   );
 }
 
-ApplicationScreenshots.propTypes = {
+ScreenshotList.propTypes = {
   appName: PropTypes.string.isRequired,
   appUrl: PropTypes.string,
   screenshots: PropTypes.arrayOf(PropTypes.shape({
@@ -69,6 +69,6 @@ ApplicationScreenshots.propTypes = {
   })).isRequired,
 };
 
-ApplicationScreenshots.defaultProps = {
+ScreenshotList.defaultProps = {
   appUrl: null,
 };

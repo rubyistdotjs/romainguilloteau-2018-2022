@@ -12,7 +12,8 @@ export default function Header() {
           <div className="pr-1 my-auto">
             <Me />
             <h1 className="text-black font-heading text-5xl sm:text-6xl md:text-xxl font-bold tracking-tight antialiased leading-none mt-6 mb-4">
-              Développeur <span className="block">Full Stack</span>
+              Développeur
+              <span className="block">Full Stack</span>
             </h1>
             <p className="text-grey-darker text-base w-full md:w-4/5 lg:w-2/3 xl:w-3/5 mb-4">
               Développeur passionné depuis l’adolescence, professionnel depuis
@@ -23,9 +24,10 @@ export default function Header() {
               serveur, …
             </p>
             <p className="text-grey-darker text-base w-full md:w-4/5 lg:w-2/3 xl:w-1/2">
-              Aujourd'hui je développe principalement avec
+              Aujourd&apos;hui je développe principalement avec
               <strong className="text-red-dark"> Ruby on Rails </strong>
-              et <strong className="text-yellow-dark">JavaScript </strong>
+              et
+              <strong className="text-yellow-dark"> JavaScript </strong>
               (React, Vue.js et Node.js).
             </p>
             <div className="mt-8">

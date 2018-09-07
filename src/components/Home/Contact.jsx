@@ -1,8 +1,8 @@
 import React from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 import Recaptcha from 'react-recaptcha';
 import { pickBy, isString } from 'lodash';
-import { isEmail, isLength, escape } from 'validator';
+import { isEmail, isLength } from 'validator';
 
 export default class Contact extends React.Component {
   constructor(props) {
@@ -23,13 +23,15 @@ export default class Contact extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  validateEmail(email) {
+  validateMessageEmail() {
+    const { email } = this.state.message;
     if (!email) return 'Veuillez entrer votre adresse email.';
     if (!isEmail(email)) return "L'adresse email n'est pas valide";
     return null;
   }
 
-  validateContent(content) {
+  validateMessageContent() {
+    const { content } = this.state.message;
     if (!isLength(content, { min: 42 })) return 'Votre message est trop court';
     if (!isLength(content, { max: 42000 })) {
       return 'Votre message est trop long';
@@ -37,10 +39,10 @@ export default class Contact extends React.Component {
     return null;
   }
 
-  validate(message) {
+  validateMessage() {
     return {
-      email: this.validateEmail(message.email),
-      content: this.validateContent(message.content),
+      email: this.validateMessageEmail(),
+      content: this.validateMessageContent(),
     };
   }
 
@@ -61,7 +63,7 @@ export default class Contact extends React.Component {
   handleSubmit(event) {
     event.preventDefault();
     const { message } = this.state;
-    const errors = this.validate(message);
+    const errors = this.validateMessage();
 
     if (errors.email !== null || errors.content !== null) {
       this.setState({ messageErrors: pickBy(errors, isString) });
@@ -88,8 +90,8 @@ export default class Contact extends React.Component {
     const { message, messageErrors, _loading } = this.state;
     const { email, content } = message;
 
-    const emailValid = this.validateEmail(email) === null;
-    const contentValid = this.validateContent(content) === null;
+    const emailValid = this.validateMessageEmail() === null;
+    const contentValid = this.validateMessageContent() === null;
 
     return (
       <section className="bg-white py-8">

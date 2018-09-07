@@ -6,8 +6,10 @@ import Home from './components/Home';
 
 import './app.css';
 
-ReactGA.initialize(process.env.REACT_APP_ANALYTICS_TRACKING_ID);
-ReactGA.pageview(window.location.pathname + window.location.search);
+if (process.env.NODE_ENV === 'production') {
+  ReactGA.initialize(process.env.REACT_APP_ANALYTICS_TRACKING_ID);
+  ReactGA.pageview(window.location.pathname + window.location.search);
+}
 
 export default function App() {
   return (

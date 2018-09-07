@@ -1,0 +1,10 @@
+/* Core ----------------------------------------------------------------------- */
+
+.badge {
+  @apply .flex .justify-center .items-center .text-grey-darker .w-10 .h-10
+         .bg-grey-light .rounded-full .m-2 .btn-transition;
+}
+
+.badge:hover, .badge:focus, .badge:active {
+  @apply .text-black .bg-grey .shadow-md;
+}

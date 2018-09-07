@@ -14,7 +14,7 @@ export default function Header() {
             <h1 className="text-black font-heading text-5xl sm:text-6xl md:text-xxl font-bold tracking-tight antialiased leading-none mt-6 mb-4">
               Développeur <span className="block">Full Stack</span>
             </h1>
-            <p className="text-grey-darker text-base md:text-base w-full md:w-4/5 lg:w-2/3 xl:w-3/5 mb-4">
+            <p className="text-grey-darker text-base w-full md:w-4/5 lg:w-2/3 xl:w-3/5 mb-4">
               Développeur passionné depuis l’adolescence, professionnel depuis
               plus de 6 ans, toujours soucieux de livrer un code lisible, stable
               et performant. J’ai eu l’occasion d’endosser tous les rôles
@@ -22,7 +22,7 @@ export default function Header() {
               ambitieuses : front-end, back-end, SEO, design, architecture
               serveur, …
             </p>
-            <p className="text-grey-darker text-base md:text-base w-full md:w-4/5 lg:w-2/3 xl:w-1/2">
+            <p className="text-grey-darker text-base w-full md:w-4/5 lg:w-2/3 xl:w-1/2">
               Aujourd'hui je développe principalement avec
               <strong className="text-red-dark"> Ruby on Rails </strong>
               et <strong className="text-yellow-dark">JavaScript </strong>

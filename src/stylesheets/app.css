@@ -1,6 +1,14 @@
-@tailwind preflight;
-@tailwind utilities;
-@tailwind components;
+@import "tailwindcss/preflight";
+@import "tailwindcss/utilities";
+
+@import "_badges.css";
+@import "_buttons.css";
+@import "_forms.css";
+@import "_labels.css";
+
+@import "tailwindcss/components";
+
+/* Sections ------------------------------------------------------------------- */
 
 body {
   @apply .font-sans .leading-normal .subpixel-antialiased;
@@ -10,54 +18,11 @@ strong {
   @apply .font-bold;
 }
 
-.tag {
-  @apply .inline-block .text-grey-darkest .text-xs .font-semibold .mr-2 .mb-2 .px-2 .py-1 .bg-grey-light .rounded-sm;
-}
 
 .btn-transition {
   transition-property: color, background-color, border-color, box-shadow, opacity;
   transition-duration: 320ms;
   transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.btn {
-  @apply .inline-block .text-sm .text-white .font-semibold .leading-none .no-underline .py-3 .px-2 .mr-2 .mb-2 border-2 .border-transparent .rounded .btn-transition;
-}
-
-@screen md {
-  .btn {
-    @apply .text-base .px-4;
-  }
-}
-
-@screen lg {
-  .btn {
-    @apply .px-4;
-  }
-}
-
-.btn-blue {
-  @apply .bg-blue-dark;
-}
-
-.btn-blue:hover, .btn-blue:focus {
-  @apply .bg-blue-darker .shadow-md;
-}
-
-.btn-outline-grey {
-  @apply .text-grey-darker .bg-white .border-grey-dark;
-}
-
-.btn-outline-grey:hover, .btn-outline-grey:focus {
-  @apply .text-black .bg-grey .border-grey .shadow-md;
-}
-
-.external-link {
-  @apply .flex .items-center .justify-center .text-grey-darker .w-10 .h-10 .bg-grey-light .rounded-full .m-2 .btn-transition;
-}
-
-.external-link:hover, .external-link:focus, .external-link:active {
-  @apply .text-black .bg-grey .shadow-md;
 }
 
 .transition {
@@ -90,47 +55,4 @@ strong {
 
 .challenge {
   @apply .block .text-grey-darkest .text-base .leading-tight .px-6 .py-4 .border-grey-lighter .border-solid .border-t;
-}
-
-.hobbies div:not(:last-child) {
-  @apply .mr-8;
-}
-
-.hobby {
-  @apply .block .text-white .text-base .leading-tight .py-3 .border-blue-darker .border-solid .border-t .overflow-hidden;
-}
-
-.media-cols > div:first-child {
-  @apply .pt-32;
-}
-
-.media-cols > div:last-child {
-  @apply .pt-24;
-}
-
-.field {
-  transition-property: color, background-color, border-color;
-  transition-duration: 320ms;
-  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  @apply .appearance-none .block .text-black .w-full .p-4 .mb-3 .bg-grey-lighter .border-b-2 .border-grey-light .rounded;
-}
-
-.field::placeholder {
-  @apply .text-grey-dark .opacity-100;
-}
-
-.field:focus {
-  @apply .outline-none .bg-grey-lightest .border-indigo-light;
-}
-
-.field.valid {
-  @apply .border-green-light;
-}
-
-.field.invalid {
-  @apply .border-red-light;
-}
-
-.field-error {
-  @apply .text-sm .text-red-dark .font-semibold .-mt-2 .mb-3 .px-1;
 }

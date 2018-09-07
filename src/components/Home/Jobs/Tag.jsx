@@ -11,7 +11,7 @@ export default function Tag({ tag }) {
   );
 
   return (
-    <span className="tag">
+    <span className="label">
       {tag.name} {small}
     </span>
   );

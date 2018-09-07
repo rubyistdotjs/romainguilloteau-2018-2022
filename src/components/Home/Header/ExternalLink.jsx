@@ -13,7 +13,7 @@ export default function ExternalLink({ name, url }) {
     <a
       href={url}
       title={`Visiter mon profil sur ${name}`}
-      className="external-link"
+      className="badge"
       target="_blank"
       rel="noopener noreferrer"
     >

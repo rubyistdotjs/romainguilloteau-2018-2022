@@ -12,15 +12,15 @@ export default function Header() {
         <ExternalLinkList />
       </div>
       <div className="container mb-32">
-        <div className="w-full md:w-4/5 lg:w-2/3 xl:w-4/5">
-          <h1 className="text-black font-heading text-5xl font-bold tracking-tight leading-tight mt-8 mb-6">
+        <div className="w-full lg:w-2/3 xl:w-4/5">
+          <h1 className="text-black font-heading sm:text-4xl md:text-5xl font-bold tracking-tight leading-tight mt-8 mb-6">
             Développeur Full Stack Ruby on Rails & JavaScript
             {' '}
-            <span className="text-4xl align-middle font-normal">
+            <span className="hidden xl:inline xl:text-4xl align-middle font-normal">
               (React, Vue.js et Node.js)
             </span>
           </h1>
-          <p className="text-black text-xl font-semibold mb-6">
+          <p className="text-black text-base md:text-xl font-semibold mb-6">
             Passionné depuis l’adolescence, professionnel depuis plus de 6
             ans, toujours soucieux de livrer un code lisible, stable et
             performant. J’ai eu l’occasion d’endosser tous les rôles

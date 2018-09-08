@@ -6269,13 +6269,17 @@ table {
   justify-content: center;
   align-items: center;
   color: #606f7b;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2rem;
+  height: 2rem;
   border-radius: 9999px;
   margin: .5rem;
   transition-property: color, background-color, border-color, box-shadow, opacity;
   transition-duration: 320ms;
   transition-timing-function: cubic-bezier(.25, .46, .45, .94);
+}
+
+.badge:last-child {
+  margin-right: 0;
 }
 
 .badge:hover,
@@ -6284,6 +6288,44 @@ table {
   color: #0a0f13;
   background-color: #dae1e7;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .12), 0 2px 4px 0 rgba(0, 0, 0, .08);
+}
+
+@media (min-width: 768px) {
+  .badge {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-right: .75rem;
+  }
+}
+
+/* Colors --------------------------------------------------------------------- */
+
+.badge-github:hover,
+.badge-github:focus,
+.badge-github:active {
+  color: white;
+  background-color: #333;
+}
+
+.badge-gitlab:hover,
+.badge-gitlab:focus,
+.badge-gitlab:active {
+  color: white;
+  background-color: #fc6d26;
+}
+
+.badge-linkedin:hover,
+.badge-linkedin:focus,
+.badge-linkedin:active {
+  color: white;
+  background-color: #0077b5;
+}
+
+.badge-twitter:hover,
+.badge-twitter:focus,
+.badge-twitter:active {
+  color: white;
+  background-color: #1da1f2;
 }
 
 /* Core ----------------------------------------------------------------------- */

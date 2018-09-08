@@ -29,7 +29,7 @@ export default class ExternalLinkList extends React.PureComponent {
     ));
 
     return (
-      <div className="flex flex-row">
+      <div className="hidden sm:flex flex-row">
         {links}
       </div>
     );

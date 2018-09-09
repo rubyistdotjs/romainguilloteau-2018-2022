@@ -49,7 +49,7 @@ strong {
   z-index: 1;
 }
 
-.screenshot:hover .screenshot-overlay {
+.screenshot:hover .screenshot-overlay, .screenshot-overlay:focus-within {
   @apply .opacity-100;
 }
 

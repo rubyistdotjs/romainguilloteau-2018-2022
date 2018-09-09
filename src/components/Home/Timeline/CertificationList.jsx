@@ -24,7 +24,7 @@ export default class Certification extends React.PureComponent {
     return (
       <div>
         {certifications.map(certification => (
-          <div className="py-4">
+          <div key={certification.startedAt} className="py-12">
             <Title
               title={certification.name}
               fromDate={certification.startedAt}

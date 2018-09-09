@@ -6553,7 +6553,8 @@ strong {
   z-index: 1;
 }
 
-.screenshot:hover .screenshot-overlay {
+.screenshot:hover .screenshot-overlay,
+.screenshot-overlay:focus-within {
   opacity: 1;
 }
 
@@ -6576,13 +6577,20 @@ strong {
      -moz-appearance: none;
           appearance: none;
   display: block;
-  width: 1rem;
-  height: 1rem;
+  width: 2rem;
+  height: .5rem;
   margin-left: .25rem;
   margin-right: .25rem;
   border-width: 2px;
   border-color: #dae1e7;
   cursor: pointer;
+}
+
+@media (min-width: 992px) {
+  .step {
+    width: 1rem;
+    height: 1rem;
+  }
 }
 
 .step.active {

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { kebabCase } from 'lodash';
+import { camelCase } from 'lodash';
 import ChallengeList from './ChallengeList';
 import Tag from './Tag';
 
@@ -17,12 +17,12 @@ export default function Application({
       className="w-full flex-no-shrink flex flex-col transition transition-transform"
       style={{ transform: `translateX(-${offset * 100}%)` }}
     >
-      <h4 className="text-black text-2xl font-heading font-bold leading-tight mb-1">
+      <h4 className="text-black text-xl md:text-2xl font-heading font-bold leading-tight mb-1">
         {name}
       </h4>
       <div
         style={{ backgroundColor: brandColor }}
-        className="w-16 h-1 my-2"
+        className="hidden lg:block w-16 h-1 my-2"
       />
       <p className="text-black font-semibold py-2">
         {description}
@@ -30,7 +30,7 @@ export default function Application({
       <ChallengeList challenges={challenges} />
       <div className="mt-4">
         {tags.map(tag => (
-          <Tag key={kebabCase(tag.name)} tag={tag} />
+          <Tag key={camelCase(tag.name)} tag={tag} />
         ))}
       </div>
     </div>
@@ -42,7 +42,7 @@ Application.propTypes = {
   name: PropTypes.string.isRequired,
   brandColor: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  challenges: PropTypes.arrayOf(PropTypes.shape(PropTypes.string)),
+  challenges: PropTypes.arrayOf(PropTypes.string),
   tags: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string.isRequired,
     legacy: PropTypes.bool,

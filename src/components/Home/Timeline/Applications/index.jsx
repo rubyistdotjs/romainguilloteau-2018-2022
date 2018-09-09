@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { camelCase } from 'lodash';
 import Application from './Application';
 import ScreenshotList from './ScreenshotList';
-import Steps from './Steps';
+import ApplicationsNavigation from './ApplicationsNavigation';
 
 export default class Applications extends React.PureComponent {
   constructor(props) {
@@ -29,8 +29,15 @@ export default class Applications extends React.PureComponent {
     const selectedApplication = applications[selectedApplicationIndex];
 
     return (
-      <div className="flex-1 flex flex-row flex-no-wrap">
-        <div className="w-full lg:w-3/5 mr-4 flex flex-row flex-no-wrap overflow-hidden">
+      <div className="flex flex-col lg:flex-row">
+        <div className="block lg:hidden -mt-6 mb-6">
+          <ApplicationsNavigation
+            selectedApplicationIndex={selectedApplicationIndex}
+            applications={applications}
+            onChange={this.handleSelectApplication}
+          />
+        </div>
+        <div className="flex flex-row flex-no-wrap lg:w-3/5 lg:mr-4 overflow-x-hidden">
           {applications.map(app => (
             <Application
               key={camelCase(app.name)}
@@ -43,12 +50,14 @@ export default class Applications extends React.PureComponent {
             />
           ))}
         </div>
-        <div className="hidden lg:block w-2/5 pb-8 px-4">
-          <Steps
-            current={selectedApplicationIndex}
-            total={applications.length}
-            onChange={this.handleSelectApplication}
-          />
+        <div className="hidden flex-col lg:flex w-2/5 pb-4 pl-4">
+          <div className="pt-2 pb-8 mx-auto">
+            <ApplicationsNavigation
+              selectedApplicationIndex={selectedApplicationIndex}
+              applications={applications}
+              onChange={this.handleSelectApplication}
+            />
+          </div>
           <ScreenshotList
             appName={selectedApplication.name}
             appUrl={selectedApplication.url}

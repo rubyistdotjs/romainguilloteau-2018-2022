@@ -25,11 +25,11 @@ export default class JobList extends React.PureComponent {
     return (
       <div>
         {jobs.map(job => (
-          <div className="py-8">
+          <div key={job.startedAt} className="py-24">
             <Title
               title={job.title}
               fromDate={job.startedAt}
-              toDate={job.ndedAt}
+              toDate={job.endedAt}
               atPlace={job.company}
             />
             <ApplicationList applications={job.applications} />

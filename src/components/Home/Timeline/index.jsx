@@ -4,7 +4,7 @@ import CertificationList from './CertificationList';
 
 export default function Timeline() {
   return (
-    <section className="container">
+    <section className="container py-12">
       <JobList />
       <CertificationList />
     </section>

@@ -11,7 +11,7 @@ export default function ChallengeList({ challenges }) {
   ));
 
   return (
-    <ul className="list-reset text-grey-darkest text-sm hidden lg:block xl:block">
+    <ul className="list-reset text-grey-darkest text-sm">
       {listItems}
     </ul>
   );

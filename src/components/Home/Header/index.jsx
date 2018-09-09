@@ -1,5 +1,4 @@
 import React from 'react';
-import { Info } from 'react-feather';
 import Me from './Me';
 import ExternalLinkList from './ExternalLinkList';
 import resume from '../../../documents/resume.pdf';

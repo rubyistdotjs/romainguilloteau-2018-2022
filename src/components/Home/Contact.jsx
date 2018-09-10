@@ -132,7 +132,7 @@ export default class Contact extends React.Component {
 
             <div className="mb-3">
               <Recaptcha
-                sitekey="6Le5um0UAAAAALXeSUOT_O61sOmseb1VXICcvGXk"
+                sitekey={process.env.REACT_APP_RECAPTCHA_KEY}
                 render="explicit"
                 verifyCallback={this.handeRecaptchaVerify}
               />

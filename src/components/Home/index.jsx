@@ -2,14 +2,14 @@ import React from 'react';
 
 import Head from './Head';
 import Header from './Header';
-import Jobs from './Jobs';
+import Timeline from './Timeline';
 
 export default function Home() {
   return (
     <div className="Home">
       <Head />
       <Header />
-      <Jobs />
+      <Timeline />
     </div>
-  )
+  );
 }

@@ -3,7 +3,7 @@ import { camelCase } from 'lodash';
 import externalLinksJSON from '../../../database/external-links.json';
 import ExternalLink from './ExternalLink';
 
-export default class ExternalLinkList extends React.Component {
+export default class ExternalLinkList extends React.PureComponent {
   constructor(props) {
     super(props);
 
@@ -19,7 +19,8 @@ export default class ExternalLinkList extends React.Component {
   }
 
   render() {
-    const links = this.state.externalLinks.map(link => (
+    const { externalLinks } = this.state;
+    const links = externalLinks.map(link => (
       <ExternalLink
         key={camelCase(link.name)}
         name={link.name}
@@ -28,7 +29,7 @@ export default class ExternalLinkList extends React.Component {
     ));
 
     return (
-      <div className="flex flex-row sm:flex-col">
+      <div className="hidden sm:flex flex-row">
         {links}
       </div>
     );

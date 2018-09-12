@@ -34,43 +34,45 @@ export default function Head() {
       <meta name="twitter:creator" content="rubyistdotjs" />
       <meta name="robots" content="nofollow, noarchive" />
 
-      <script type="application/ld+json">{`
-      {
-        "@context": "http://schema.org",
-        "@type": "Person",
-        "name": "Romain Guilloteau",
-        "givenName": "Romain",
-        "familyName": "Guilloteau",
-        "image": "https://www.romainguilloteau.com/images/mugshot.jpg",
-        "jobTitle": "Lead developer & Software architect",
-        "description": "Développeur full stack, principalement Ruby on Rails et JavaScript (Node.js, React et Vue.js), basé à Annecy, Haute-Savoie, France.",
-        "gender": "Male",
-        "nationality": "FR",
-        "birthDate": "1992-08-13",
-        "birthPlace": {
-          "@type": "Place",
-          "address": {
-            "@type": "PostalAddress",
-            "addressCountry": "FR",
-            "addressLocality": "Amiens"
+      <script type="application/ld+json">
+        {`
+          {
+            "@context": "http://schema.org",
+            "@type": "Person",
+            "name": "Romain Guilloteau",
+            "givenName": "Romain",
+            "familyName": "Guilloteau",
+            "image": "${process.env.PUBLIC_URL}/images/mugshot.jpg",
+            "jobTitle": "Lead developer & Software architect",
+            "description": "Développeur full stack, principalement Ruby on Rails et JavaScript (Node.js, React et Vue.js), basé à Annecy, Haute-Savoie, France.",
+            "gender": "Male",
+            "nationality": "FR",
+            "birthDate": "1992-08-13",
+            "birthPlace": {
+              "@type": "Place",
+              "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "FR",
+                "addressLocality": "Amiens"
+              }
+            },
+            "address": {
+              "@type": "PostalAddress",
+              "addressCountry": "FR",
+              "addressLocality": "Annecy",
+              "postalCode": "74000"
+            },
+            "url": "${process.env.PUBLIC_URL}",
+            "sameAs": [
+              "https://www.linkedin.com/in/romainguilloteau",
+              "https://twitter.com/rubyistdotjs",
+              "https://plus.google.com/110337874986223414450",
+              "https://github.com/rubyistdotjs",
+              "https://gitlab.com/rubyistdotjs"
+            ]
           }
-        },
-        "address": {
-          "@type": "PostalAddress",
-          "addressCountry": "FR",
-          "addressLocality": "Annecy",
-          "postalCode": "74000"
-        },
-        "url": "https://www.romainguilloteau.com/",
-        "sameAs": [
-          "https://www.linkedin.com/in/romainguilloteau",
-          "https://twitter.com/rubyistdotjs",
-          "https://plus.google.com/110337874986223414450",
-          "https://github.com/rubyistdotjs",
-          "https://gitlab.com/rubyistdotjs"
-        ]
-      }
-    `}</script>
+        `}
+      </script>
     </Helmet>
   );
 }

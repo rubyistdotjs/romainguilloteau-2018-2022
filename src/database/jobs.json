@@ -367,43 +367,6 @@
     "startedAt": 1338501600000,
     "endedAt": 1359673200000,
     "company": null,
-    "description": "Appuyé par un graphiste, conception et développement d'applications et d'outils intranet pour diverses entreprises et startups parisiennes.",
-    "tags": [{
-        "name": "Ruby on Rails",
-        "legacy": false
-      },
-      {
-        "name": "CoffeeScript",
-        "legacy": false
-      },
-      {
-        "name": "jQuery",
-        "legacy": false
-      },
-      {
-        "name": "Haml",
-        "legacy": false
-      },
-      {
-        "name": "Sass",
-        "legacy": false
-      },
-      {
-        "name": "Bootstrap",
-        "legacy": false
-      },
-      {
-        "name": "PostgreSQL",
-        "legacy": false
-      },
-      {
-        "name": "Heroku",
-        "legacy": false
-      },
-      {
-        "name": "Amazon S3",
-        "legacy": false
-      }
-    ]
+    "applications": []
   }
 ]

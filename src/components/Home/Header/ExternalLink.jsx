@@ -13,11 +13,11 @@ export default function ExternalLink({ name, url }) {
     <a
       href={url}
       title={`Visiter mon profil sur ${name}`}
-      className="external-link"
+      className={`badge badge-${name.toLowerCase()}`}
       target="_blank"
       rel="noopener noreferrer"
     >
-      <Icon size={24} />
+      <Icon size={20} />
     </a>
   );
 }

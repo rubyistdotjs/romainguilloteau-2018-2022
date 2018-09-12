@@ -1,0 +1,39 @@
+/* Core ----------------------------------------------------------------------- */
+
+.btn {
+  @apply .inline-block .text-sm .text-white .font-semibold .leading-none
+         .no-underline .p-3 .mr-2 .mb-2 .border .border-transparent
+         .btn-transition .cursor-pointer;
+}
+
+.btn:hover, .btn:focus {
+  @apply .shadow-md;
+}
+
+@screen md {
+  .btn {
+    @apply .text-base .px-4;
+  }
+}
+
+
+/* Plain colors ----------------------------------------------------------------*/
+
+.btn-blue {
+  @apply .bg-blue-dark;
+}
+
+.btn-blue:hover, .btn-blue:focus {
+  @apply .bg-blue-darker;
+}
+
+
+/* Outline colors ------------------------------------------------------------- */
+
+.btn-outline-grey {
+  @apply .text-grey-darker .bg-transparent .border-grey-dark;
+}
+
+.btn-outline-grey:hover, .btn-outline-grey:focus {
+  @apply .text-black .bg-grey-light .border-grey-light;
+}

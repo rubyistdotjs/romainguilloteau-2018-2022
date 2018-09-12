@@ -1,0 +1,43 @@
+/* Core ----------------------------------------------------------------------- */
+
+.badge {
+  @apply .flex .justify-center .items-center .text-grey-darker .w-8 .h-8
+         .rounded-full .m-2 .btn-transition;
+}
+
+.badge:last-child {
+  @apply .mr-0;
+}
+
+.badge:hover, .badge:focus, .badge:active {
+  @apply .text-black .bg-grey-light .shadow-md;
+}
+
+@screen md {
+  .badge {
+    @apply .w-10 .h-10 .mr-3;
+  }
+}
+
+
+/* Colors --------------------------------------------------------------------- */
+
+.badge-github:hover, .badge-github:focus, .badge-github:active {
+  color: white;
+  background-color: #333;
+}
+
+.badge-gitlab:hover, .badge-gitlab:focus, .badge-gitlab:active {
+  color: white;
+  background-color: #fc6d26;
+}
+
+.badge-linkedin:hover, .badge-linkedin:focus, .badge-linkedin:active {
+  color: white;
+  background-color: #0077b5;
+}
+
+.badge-twitter:hover, .badge-twitter:focus, .badge-twitter:active {
+  color: white;
+  background-color: #1da1f2;
+}

@@ -17,6 +17,10 @@ export default function App() {
       <Helmet>
         <html lang="fr" />
         <meta property="og:locale" content="fr_FR" />
+        <meta
+          name="google-site-verification"
+          content={process.env.REACT_APP_GOOGLE_SITE_VERIFICATION_KEY}
+        />
       </Helmet>
       <Home />
     </div>

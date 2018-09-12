@@ -42,7 +42,7 @@ export default function Head() {
             "name": "Romain Guilloteau",
             "givenName": "Romain",
             "familyName": "Guilloteau",
-            "image": "${process.env.PUBLIC_URL}/images/mugshot.jpg",
+            "image": "https://www.romainguilloteau.com/images/mugshot.jpg",
             "jobTitle": "Lead developer & Software architect",
             "description": "Développeur full stack, principalement Ruby on Rails et JavaScript (Node.js, React et Vue.js), basé à Annecy, Haute-Savoie, France.",
             "gender": "Male",
@@ -62,7 +62,7 @@ export default function Head() {
               "addressLocality": "Annecy",
               "postalCode": "74000"
             },
-            "url": "${process.env.PUBLIC_URL}",
+            "url": "https://www.romainguilloteau.com/",
             "sameAs": [
               "https://www.linkedin.com/in/romainguilloteau",
               "https://twitter.com/rubyistdotjs",

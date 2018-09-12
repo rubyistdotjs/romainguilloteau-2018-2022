@@ -880,7 +880,7 @@ module.exports = {
   */
 
   modules: {
-    appearance: false, // ['responsive'],
+    appearance: [], // ['responsive'],
     backgroundAttachment: false, // ['responsive'],
     backgroundColors: ['responsive', 'hover', 'focus'],
     backgroundPosition: false, // ['responsive'],
@@ -891,7 +891,7 @@ module.exports = {
     borderRadius: [],
     borderStyle: [],
     borderWidths: [],
-    cursor: false, // ['responsive'],
+    cursor: [], // ['responsive'],
     display: ['responsive'],
     flexbox: ['responsive'],
     float: false, // ['responsive'],

@@ -6396,12 +6396,11 @@ table {
   display: block;
   color: #0a0f13;
   width: 100%;
-  margin-bottom: .75rem;
+  margin-bottom: 1.5rem;
   padding: 1rem;
-  background-color: #f1f5f8;
-  border-bottom-width: 2px;
+  background-color: transparent;
+  border-width: 2px;
   border-color: #dae1e7;
-  border-radius: .35rem;
   transition-property: color, background-color, border-color;
   transition-duration: 320ms;
   transition-timing-function: cubic-bezier(.25, .46, .45, .94);
@@ -6429,8 +6428,8 @@ table {
 
 .field:focus {
   outline: 0;
-  background-color: #f8fafc;
-  border-color: #6cb2eb;
+  background-color: #fff;
+  border-color: #3490dc;
 }
 
 .field.valid {
@@ -6438,15 +6437,14 @@ table {
 }
 
 .field.invalid {
-  border-color: #ef5753;
+  border-color: #e3342f;
 }
 
 .field-error {
-  font-size: .875rem;
   color: #cc1f1a;
   font-weight: 600;
-  margin-top: -0.5rem;
-  margin-bottom: .75rem;
+  margin-top: -1rem;
+  margin-bottom: 1.5rem;
   padding-left: .25rem;
   padding-right: .25rem;
 }

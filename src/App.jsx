@@ -4,7 +4,7 @@ import ReactGA from 'react-ga';
 
 import Home from './components/Home';
 
-import './app.css';
+import './application.css';
 
 if (process.env.NODE_ENV === 'production') {
   ReactGA.initialize(process.env.REACT_APP_ANALYTICS_TRACKING_ID);

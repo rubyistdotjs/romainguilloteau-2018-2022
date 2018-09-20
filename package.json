@@ -1,7 +1,10 @@
 {
   "name": "romainguilloteau",
-  "version": "0.1.0",
+  "version": "1.0.0-beta.1",
   "homepage": "https://www.romainguilloteau.com",
+  "author": "Romain GUILLOTEAU (https://www.romainguilloteau.com/)",
+  "repository": "https://gitlab.com/rubyistdotjs/romainguilloteau",
+  "license": "ISC",
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",

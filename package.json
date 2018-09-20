@@ -20,8 +20,8 @@
     "validator": "^10.5.0"
   },
   "scripts": {
-    "start": "npm run watch:css & react-scripts start",
-    "build": "npm run build:css && react-scripts build && node sitemap.js && react-snapshot",
+    "start": "yarn watch:css & react-scripts start",
+    "build": "yarn build:css && react-scripts build && node sitemap.js && react-snapshot",
     "build:css": "postcss src/stylesheets/application.css -o src/application.css",
     "watch:css": "postcss src/stylesheets/application.css -o src/application.css -w",
     "test": "react-scripts test --env=jsdom",

@@ -36,7 +36,7 @@ ApplicationsNavigation.propTypes = {
     PropTypes.shape({
       name: PropTypes.string.isRequired,
       brandColor: PropTypes.string,
-    })
+    }),
   ).isRequired,
   onChange: PropTypes.func.isRequired,
 };

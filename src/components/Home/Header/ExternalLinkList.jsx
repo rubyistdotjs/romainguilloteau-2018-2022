@@ -14,11 +14,11 @@ class ExternalLinkList extends React.PureComponent {
 
   async fetchExternalLinks() {
     const { intl } = this.props;
-    return await import(`../../../database/${intl.locale}/external-links.json`);
+    return import(`../../../database/${intl.locale}/external-links.json`);
   }
 
   componentDidMount() {
-    this.fetchExternalLinks().then((json) => {
+    this.fetchExternalLinks().then(({ default: json }) => {
       this.setState({ externalLinks: json });
     });
   }

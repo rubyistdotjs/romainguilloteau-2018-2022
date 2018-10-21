@@ -14,11 +14,11 @@ class JobList extends React.PureComponent {
 
   async fetchJobs() {
     const { intl } = this.props;
-    return await import(`../../../database/${intl.locale}/jobs.json`);
+    return import(`../../../database/${intl.locale}/jobs.json`);
   }
 
   componentDidMount() {
-    this.fetchJobs().then((json) => {
+    this.fetchJobs().then(({ default: json }) => {
       this.setState({ jobs: json });
     });
   }

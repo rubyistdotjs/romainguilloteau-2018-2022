@@ -17,7 +17,7 @@ class CertificationList extends React.PureComponent {
   }
 
   componentDidMount() {
-    this.fetchCertifications().then((json) => {
+    this.fetchCertifications().then(({ default: json }) => {
       this.setState({ certifications: json });
     });
   }

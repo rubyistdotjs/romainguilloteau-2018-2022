@@ -5,7 +5,7 @@ import Header from './Header';
 import Timeline from './Timeline';
 import Contact from './Contact';
 
-export default function Home() {
+function Home() {
   return (
     <div className="Home">
       <Head />
@@ -15,3 +15,5 @@ export default function Home() {
     </div>
   );
 }
+
+export default Home;

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function Tag({ tag }) {
+function Tag({ tag }) {
   const small = tag.legacy ? (
     <small className="align-middle leading-none">
       (legacy)
@@ -23,3 +23,5 @@ Tag.propTypes = {
     legacy: PropTypes.bool,
   }).isRequired,
 };
+
+export default Tag;

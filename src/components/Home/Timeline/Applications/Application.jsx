@@ -4,7 +4,7 @@ import { camelCase } from 'lodash';
 import ChallengeList from './ChallengeList';
 import Tag from './Tag';
 
-export default function Application({
+function Application({
   name,
   brandColor,
   description,
@@ -52,3 +52,5 @@ Application.propTypes = {
 Application.defaultProps = {
   challenges: [],
 };
+
+export default Application;

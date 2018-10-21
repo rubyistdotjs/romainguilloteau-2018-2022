@@ -1,9 +1,10 @@
 import React from 'react';
+import { FormattedMessage } from 'react-intl';
 import Me from './Me';
 import ExternalLinkList from './ExternalLinkList';
 import resume from '../../../documents/resume.pdf';
 
-export default function Header() {
+function Header() {
   return (
     <header className="bg-white">
       <div className="container flex justify-between align-center mt-8 mb-24">
@@ -13,30 +14,41 @@ export default function Header() {
       <div className="container mb-32">
         <div className="w-full lg:w-2/3 xl:w-4/5">
           <h1 className="text-black font-heading sm:text-4xl md:text-5xl font-bold tracking-tight leading-tight mt-8 mb-6">
-            Développeur Full Stack Ruby on Rails & JavaScript
+            <FormattedMessage
+              id="home.header.title"
+              defaultMessage="Full Stack Web Developer, Ruby on Rails & JavaScript"
+            />
             {' '}
             <span className="hidden xl:inline xl:text-4xl align-middle font-normal">
-              (React, Vue.js et Node.js)
+              (React, Vue.js & Node.js)
             </span>
           </h1>
           <p className="text-black text-base md:text-xl font-semibold mb-6">
-            Passionné depuis l’adolescence, professionnel depuis plus de 6
-            ans, toujours soucieux de livrer un code lisible, stable et
-            performant. J’ai eu l’occasion d’endosser tous les rôles
-            nécessaires à la création et mise en production d’applications
-            ambitieuses : front-end, back-end, SEO, design, architecture
-            serveur, …
+            <FormattedMessage
+              id="home.header.introduction"
+              defaultMessage="An obsession in my teenage years, a profession for
+                now more than 6 years, during this time I had the opportunity to
+                take on all the roles necessary to build and deploy ambitious
+                applications (front-end, back-end, SEO, design, server
+                architecture, …)."
+            />
           </p>
           <div className="mt-12">
             <a href="#contact-form" className="btn btn-blue">
-              Envoyer moi un message
+              <FormattedMessage
+                id="home.header.getInTouchBtn"
+                defaultMessage="Get in touch"
+              />
             </a>
             <a
               href={resume}
               className="btn btn-outline-grey"
               download="romain-guilloteau.pdf"
             >
-              Télécharger mon CV
+              <FormattedMessage
+                id="home.header.downloadResumeBtn"
+                defaultMessage="Download my resume"
+              />
             </a>
           </div>
         </div>
@@ -44,3 +56,5 @@ export default function Header() {
     </header>
   );
 }
+
+export default Header;

@@ -1,0 +1,122 @@
+[
+  {
+    "id": "home.contact.title",
+    "defaultMessage": "Contact",
+    "filepath": "src/components/Home/Contact.jsx"
+  },
+  {
+    "id": "home.contact.placeholders.emailAddress",
+    "defaultMessage": "Email address",
+    "filepath": "src/components/Home/Contact.jsx"
+  },
+  {
+    "id": "home.contact.errors.emailAddress.empty",
+    "defaultMessage": "Please specify your email address.",
+    "filepath": "src/components/Home/Contact.jsx"
+  },
+  {
+    "id": "home.contact.errors.emailAddress.invalid",
+    "defaultMessage": "The email address is invalid.",
+    "filepath": "src/components/Home/Contact.jsx"
+  },
+  {
+    "id": "home.contact.placeholders.messageContent",
+    "defaultMessage": "Message",
+    "filepath": "src/components/Home/Contact.jsx"
+  },
+  {
+    "id": "home.contact.errors.content.tooShort",
+    "defaultMessage": "Your message is too short.",
+    "filepath": "src/components/Home/Contact.jsx"
+  },
+  {
+    "id": "home.contact.errors.content.tooLong",
+    "defaultMessage": "Your message is too long, keep it under 42000 characters.",
+    "filepath": "src/components/Home/Contact.jsx"
+  },
+  {
+    "id": "home.contact.sendMessageBtn",
+    "defaultMessage": "Send",
+    "filepath": "src/components/Home/Contact.jsx"
+  },
+  {
+    "id": "home.meta.title",
+    "defaultMessage": "Romain Guilloteau - Full Stack Web Developer",
+    "filepath": "src/components/Home/Head.jsx"
+  },
+  {
+    "id": "home.meta.description",
+    "defaultMessage": "Full Stack Web Developer, mainly Ruby on Rails and JavaScript (Node.js, React et Vue.js), currently living in Montpellier, Hérault, France.",
+    "filepath": "src/components/Home/Head.jsx"
+  },
+  {
+    "id": "home.jsonld.jobTitle",
+    "defaultMessage": "Full Stack Web Developer",
+    "filepath": "src/components/Home/Head.jsx"
+  },
+  {
+    "id": "home.jsonld.description",
+    "defaultMessage": "Full Stack Web Developer, mainly Ruby on Rails and JavaScript (Node.js, React et Vue.js), currently living in Montpellier, Hérault, France.",
+    "filepath": "src/components/Home/Head.jsx"
+  },
+  {
+    "id": "home.header.externalLink.visitProfileOn",
+    "defaultMessage": "Check out my profile on {socialNetwork}",
+    "filepath": "src/components/Home/Header/ExternalLink.jsx"
+  },
+  {
+    "id": "home.header.title",
+    "defaultMessage": "Full Stack Web Developer, Ruby on Rails & JavaScript",
+    "filepath": "src/components/Home/Header/index.jsx"
+  },
+  {
+    "id": "home.header.introduction",
+    "defaultMessage": "An obsession in my teenage years, a profession for\n                now more than 6 years, during this time I had the opportunity to\n                take on all the roles necessary to build and deploy ambitious\n                applications (front-end, back-end, SEO, design, server\n                architecture, …).",
+    "filepath": "src/components/Home/Header/index.jsx"
+  },
+  {
+    "id": "home.header.getInTouchBtn",
+    "defaultMessage": "Get in touch",
+    "filepath": "src/components/Home/Header/index.jsx"
+  },
+  {
+    "id": "home.header.downloadResumeBtn",
+    "defaultMessage": "Download my resume",
+    "filepath": "src/components/Home/Header/index.jsx"
+  },
+  {
+    "id": "home.timeline.applications.switchTo",
+    "defaultMessage": "Switch to {appName}",
+    "filepath": "src/components/Home/Timeline/Applications/ApplicationsNavigation.jsx"
+  },
+  {
+    "id": "home.timeline.applications.visit",
+    "defaultMessage": "Go to this website",
+    "filepath": "src/components/Home/Timeline/Applications/Screenshot.jsx"
+  },
+  {
+    "id": "home.timeline.applications.desktopScreenshotAlt",
+    "defaultMessage": "Screenshot of {appName}",
+    "filepath": "src/components/Home/Timeline/Applications/ScreenshotList.jsx"
+  },
+  {
+    "id": "home.timeline.applications.mobileScreenshotAlt",
+    "defaultMessage": "Mobile screenshot of {appName}",
+    "filepath": "src/components/Home/Timeline/Applications/ScreenshotList.jsx"
+  },
+  {
+    "id": "timeline.today",
+    "defaultMessage": "today",
+    "filepath": "src/components/Home/Timeline/Title.jsx"
+  },
+  {
+    "id": "home.timeline.dateFrom",
+    "defaultMessage": "from",
+    "filepath": "src/components/Home/Timeline/Title.jsx"
+  },
+  {
+    "id": "home.timeline.dateTo",
+    "defaultMessage": "to",
+    "filepath": "src/components/Home/Timeline/Title.jsx"
+  }
+]

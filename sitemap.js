@@ -14,7 +14,7 @@ const sitemap = sm.createSitemap({
           url: 'https://www.romainguilloteau.com/images/mugshot.jpg',
           caption: 'Romain Guilloteau',
           title: 'Romain Guilloteau - Développeur full stack',
-          geoLocation: 'Annecy, France',
+          geoLocation: 'Montpellier, France',
           license: 'https://creativecommons.org/licenses/by-nc-nd/4.0/',
         },
       ],

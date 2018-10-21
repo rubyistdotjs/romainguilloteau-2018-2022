@@ -1,9 +1,9 @@
 import React from 'react';
 import { camelCase } from 'lodash';
-import externalLinksJSON from '../../../database/external-links.json';
+import { injectIntl, intlShape } from 'react-intl';
 import ExternalLink from './ExternalLink';
 
-export default class ExternalLinkList extends React.PureComponent {
+class ExternalLinkList extends React.PureComponent {
   constructor(props) {
     super(props);
 
@@ -12,9 +12,14 @@ export default class ExternalLinkList extends React.PureComponent {
     };
   }
 
+  async fetchExternalLinks() {
+    const { intl } = this.props;
+    return await import(`../../../database/${intl.locale}/external-links.json`);
+  }
+
   componentDidMount() {
-    this.setState({
-      externalLinks: externalLinksJSON,
+    this.fetchExternalLinks().then((json) => {
+      this.setState({ externalLinks: json });
     });
   }
 
@@ -35,3 +40,9 @@ export default class ExternalLinkList extends React.PureComponent {
     );
   }
 }
+
+ExternalLinkList.propTypes = {
+  intl: intlShape.isRequired,
+};
+
+export default injectIntl(ExternalLinkList);

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function ChallengeList({ challenges }) {
+function ChallengeList({ challenges }) {
   if (!challenges || challenges.length === 0) return '';
 
   const listItems = challenges.map((challenge, index) => (
@@ -20,3 +20,5 @@ export default function ChallengeList({ challenges }) {
 ChallengeList.propTypes = {
   challenges: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
+
+export default ChallengeList;

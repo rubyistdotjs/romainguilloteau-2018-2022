@@ -1,12 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { injectIntl, intlShape, defineMessages } from 'react-intl';
 import Screenshot from './Screenshot';
 
-export default function ScreenshotList({
+const i18n = defineMessages({
+  desktopScreenshotAlt: {
+    id: 'home.timeline.applications.desktopScreenshotAlt',
+    defaultMessage: 'Screenshot of {appName}',
+  },
+  mobileScreenshotAlt: {
+    id: 'home.timeline.applications.mobileScreenshotAlt',
+    defaultMessage: 'Mobile screenshot of {appName}',
+  },
+});
+
+function ScreenshotList({
+  intl,
   appName,
   appUrl,
   screenshots,
 }) {
+  const { formatMessage } = intl;
+
   function lastScreenshot(devise) {
     return screenshots
       .filter(s => s.devise === devise)
@@ -29,7 +44,7 @@ export default function ScreenshotList({
             <Screenshot
               filename={desktopScreenshot.filename}
               thumbnail={desktopScreenshot.thumbnail}
-              alt={`Capture d'écran du site ${appName}`}
+              alt={formatMessage(i18n.desktopScreenshotAlt, { appName })}
               url={appUrl}
             />
           </div>
@@ -47,7 +62,7 @@ export default function ScreenshotList({
             <Screenshot
               filename={mobileScreenshot.filename}
               thumbnail={mobileScreenshot.thumbnail}
-              alt={`Capture d'écran sur smartphone du site ${appName}`}
+              alt={formatMessage(i18n.mobileScreenshotAlt, { appName })}
               url={appUrl}
             />
           </div>
@@ -61,6 +76,7 @@ export default function ScreenshotList({
 }
 
 ScreenshotList.propTypes = {
+  intl: intlShape.isRequired,
   appName: PropTypes.string.isRequired,
   appUrl: PropTypes.string,
   screenshots: PropTypes.arrayOf(PropTypes.shape({
@@ -74,3 +90,5 @@ ScreenshotList.propTypes = {
 ScreenshotList.defaultProps = {
   appUrl: null,
 };
+
+export default injectIntl(ScreenshotList);

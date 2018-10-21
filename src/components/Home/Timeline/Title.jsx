@@ -1,14 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { FormattedMessage } from 'react-intl';
 
-export default function Title({
+function Title({
   title,
   fromDate,
   toDate,
   atPlace,
 }) {
   const from = new Date(fromDate).getFullYear();
-  const to = toDate ? new Date(toDate).getFullYear() : "aujourd'hui";
+  const to = toDate
+    ? new Date(toDate).getFullYear()
+    : (<FormattedMessage id="timeline.today" defaultMessage="today" />);
 
   return (
     <div className="mb-12">
@@ -16,9 +19,12 @@ export default function Title({
         {title}
       </h2>
       <span className="block text-dark text-xl md:text-2xl lg:text-3xl font-semibold leading-tight mt-1">
-        {'de '}
+        <FormattedMessage id="home.timeline.dateFrom" defaultMessage="from" />
+        {' '}
         <strong>{from}</strong>
-        {' à '}
+        {' '}
+        <FormattedMessage id="home.timeline.dateTo" defaultMessage="to" />
+        {' '}
         <strong>{to}</strong>
         {atPlace && (
           <span>
@@ -42,3 +48,5 @@ Title.defaultProps = {
   toDate: null,
   atPlace: null,
 };
+
+export default Title;

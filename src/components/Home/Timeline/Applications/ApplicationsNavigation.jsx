@@ -1,12 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { camelCase } from 'lodash';
+import { injectIntl, intlShape, defineMessages } from 'react-intl';
 
-export default function ApplicationsNavigation({
+const i18n = defineMessages({
+  switchTo: {
+    id: 'home.timeline.applications.switchTo',
+    defaultMessage: 'Switch to {appName}',
+  },
+});
+
+function ApplicationsNavigation({
+  intl,
   selectedApplicationIndex,
   applications,
   onChange,
 }) {
+  const { formatMessage } = intl;
   const list = applications.map((application, index) => {
     const { name, brandColor } = application;
     const selected = index === selectedApplicationIndex;
@@ -19,7 +29,7 @@ export default function ApplicationsNavigation({
       <button
         key={camelCase(name)}
         type="button"
-        title={`Voir ${name}`}
+        title={formatMessage(i18n.switchTo, { appName: name })}
         className={`step ${klass}`}
         style={style}
         onClick={() => onChange(index)}
@@ -31,6 +41,7 @@ export default function ApplicationsNavigation({
 }
 
 ApplicationsNavigation.propTypes = {
+  intl: intlShape.isRequired,
   selectedApplicationIndex: PropTypes.number.isRequired,
   applications: PropTypes.arrayOf(
     PropTypes.shape({
@@ -40,3 +51,5 @@ ApplicationsNavigation.propTypes = {
   ).isRequired,
   onChange: PropTypes.func.isRequired,
 };
+
+export default injectIntl(ApplicationsNavigation);

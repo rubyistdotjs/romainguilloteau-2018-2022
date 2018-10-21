@@ -1,9 +1,8 @@
 import React from 'react';
+import { injectIntl, intlShape } from 'react-intl';
 import Title from './Title';
 
-import certificationsJSON from '../../../database/certifications.json';
-
-export default class Certification extends React.PureComponent {
+class CertificationList extends React.PureComponent {
   constructor(props) {
     super(props);
 
@@ -12,9 +11,14 @@ export default class Certification extends React.PureComponent {
     };
   }
 
+  async fetchCertifications() {
+    const { intl } = this.props;
+    return await import(`../../../database/${intl.locale}/certifications.json`);
+  }
+
   componentDidMount() {
-    this.setState({
-      certifications: certificationsJSON,
+    this.fetchCertifications().then((json) => {
+      this.setState({ certifications: json });
     });
   }
 
@@ -37,3 +41,9 @@ export default class Certification extends React.PureComponent {
     );
   }
 }
+
+CertificationList.propTypes = {
+  intl: intlShape.isRequired,
+};
+
+export default injectIntl(CertificationList);

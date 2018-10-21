@@ -1,0 +1,6 @@
+# CRA boilerplate files
+src/registerServiceWorker.js
+
+# Config files
+postcss.config.js
+tailwind.js

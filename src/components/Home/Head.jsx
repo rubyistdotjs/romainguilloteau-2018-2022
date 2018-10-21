@@ -1,21 +1,37 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import { injectIntl, intlShape, defineMessages } from 'react-intl';
 
-export default function Head() {
+const i18n = defineMessages({
+  metaTitle: {
+    id: 'home.meta.title',
+    defaultMessage: 'Romain Guilloteau - Full Stack Web Developer',
+  },
+  metaDescription: {
+    id: 'home.meta.description',
+    defaultMessage: 'Full Stack Web Developer, mainly Ruby on Rails and JavaScript (Node.js, React et Vue.js), currently living in Montpellier, Hérault, France.',
+  },
+  jsonldJobTitle: {
+    id: 'home.jsonld.jobTitle',
+    defaultMessage: 'Full Stack Web Developer',
+  },
+  jsonldDescription: {
+    id: 'home.jsonld.description',
+    defaultMessage: 'Full Stack Web Developer, mainly Ruby on Rails and JavaScript (Node.js, React et Vue.js), currently living in Montpellier, Hérault, France.',
+  },
+});
+
+function Head({ intl }) {
+  const { formatMessage } = intl;
+
   return (
     <Helmet>
-      <title>Romain Guilloteau - Développeur full stack</title>
-      <meta
-        name="description"
-        content="Développeur full stack, principalement Ruby on Rails et JavaScript (Node.js, React et Vue.js), basé à Annecy, Haute-Savoie, France."
-      />
-      <meta
-        property="og:title"
-        content="Romain Guilloteau - Développeur full stack"
-      />
+      <title>{formatMessage(i18n.metaTitle)}</title>
+      <meta name="description" content={formatMessage(i18n.metaDescription)} />
+      <meta property="og:title" content={formatMessage(i18n.metaTitle)} />
       <meta
         property="og:description"
-        content="Développeur full stack, principalement Ruby on Rails et JavaScript (Node.js, React et Vue.js), basé à Annecy, Haute-Savoie, France."
+        content={formatMessage(i18n.metaDescription)}
       />
       <meta property="og:url" content="https://www.romainguilloteau.com" />
       <meta property="og:type" content="profile" />
@@ -30,9 +46,6 @@ export default function Head() {
       <meta property="og:image:width" content="1256" />
       <meta property="og:image:height" content="1256" />
       <meta property="og:image:user_generated" content="false" />
-      <meta name="twitter:card" content="summary" />
-      <meta name="twitter:creator" content="rubyistdotjs" />
-      <meta name="robots" content="nofollow, noarchive" />
 
       <script type="application/ld+json">
         {`
@@ -43,8 +56,8 @@ export default function Head() {
             "givenName": "Romain",
             "familyName": "Guilloteau",
             "image": "https://www.romainguilloteau.com/images/mugshot.jpg",
-            "jobTitle": "Lead developer & Software architect",
-            "description": "Développeur full stack, principalement Ruby on Rails et JavaScript (Node.js, React et Vue.js), basé à Annecy, Haute-Savoie, France.",
+            "jobTitle": "${formatMessage(i18n.jsonldJobTitle)}",
+            "description": "${formatMessage(i18n.jsonldDescription)}",
             "gender": "Male",
             "nationality": "FR",
             "birthDate": "1992-08-13",
@@ -76,3 +89,9 @@ export default function Head() {
     </Helmet>
   );
 }
+
+Head.propTypes = {
+  intl: intlShape.isRequired,
+};
+
+export default injectIntl(Head);

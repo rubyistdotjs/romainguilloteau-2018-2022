@@ -5,7 +5,7 @@ import Application from './Application';
 import ScreenshotList from './ScreenshotList';
 import ApplicationsNavigation from './ApplicationsNavigation';
 
-export default class Applications extends React.PureComponent {
+class Applications extends React.PureComponent {
   constructor(props) {
     super(props);
 
@@ -81,3 +81,5 @@ Applications.propTypes = {
     })),
   })).isRequired,
 };
+
+export default Applications;

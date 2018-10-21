@@ -1,10 +1,9 @@
 import React from 'react';
+import { injectIntl, intlShape } from 'react-intl';
 import Title from './Title';
 import ApplicationList from './Applications';
 
-import jobsJSON from '../../../database/jobs.json';
-
-export default class JobList extends React.PureComponent {
+class JobList extends React.PureComponent {
   constructor(props) {
     super(props);
 
@@ -13,9 +12,14 @@ export default class JobList extends React.PureComponent {
     };
   }
 
+  async fetchJobs() {
+    const { intl } = this.props;
+    return import(`../../../database/${intl.locale}/jobs.json`);
+  }
+
   componentDidMount() {
-    this.setState({
-      jobs: jobsJSON,
+    this.fetchJobs().then(({ default: json }) => {
+      this.setState({ jobs: json });
     });
   }
 
@@ -39,3 +43,9 @@ export default class JobList extends React.PureComponent {
     );
   }
 }
+
+JobList.propTypes = {
+  intl: intlShape.isRequired,
+};
+
+export default injectIntl(JobList);

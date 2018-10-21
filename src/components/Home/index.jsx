@@ -4,7 +4,7 @@ import Head from './Head';
 import Header from './Header';
 import Timeline from './Timeline';
 
-export default function Home() {
+function Home() {
   return (
     <div className="Home">
       <Head />
@@ -13,3 +13,5 @@ export default function Home() {
     </div>
   );
 }
+
+export default Home;

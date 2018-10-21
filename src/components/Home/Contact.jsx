@@ -3,8 +3,44 @@ import React from 'react';
 import Recaptcha from 'react-recaptcha';
 import { pickBy, isString } from 'lodash';
 import { isEmail, isLength } from 'validator';
+import { injectIntl, intlShape, defineMessages } from 'react-intl';
 
-export default class Contact extends React.Component {
+const i18n = defineMessages({
+  title: {
+    id: 'home.contact.title',
+    defaultMessage: 'Contact',
+  },
+  emailAddressPlaceholder: {
+    id: 'home.contact.placeholders.emailAddress',
+    defaultMessage: 'Email address',
+  },
+  emailAddressEmpty: {
+    id: 'home.contact.errors.emailAddress.empty',
+    defaultMessage: 'Please specify your email address.',
+  },
+  emailAddressInvalid: {
+    id: 'home.contact.errors.emailAddress.invalid',
+    defaultMessage: 'The email address is invalid.',
+  },
+  contentPlaceholder: {
+    id: 'home.contact.placeholders.messageContent',
+    defaultMessage: 'Message',
+  },
+  contentTooShort: {
+    id: 'home.contact.errors.content.tooShort',
+    defaultMessage: 'Your message is too short.',
+  },
+  contentTooLong: {
+    id: 'home.contact.errors.content.tooLong',
+    defaultMessage: 'Your message is too long, keep it under 42000 characters.',
+  },
+  submitMessageBtn: {
+    id: 'home.contact.sendMessageBtn',
+    defaultMessage: 'Send',
+  },
+});
+
+class Contact extends React.Component {
   constructor(props) {
     super(props);
 
@@ -24,17 +60,21 @@ export default class Contact extends React.Component {
   }
 
   validateMessageEmail() {
+    const { formatMessage } = this.props.intl;
     const { email } = this.state.message;
-    if (!email) return 'Veuillez entrer votre adresse email.';
-    if (!isEmail(email)) return "L'adresse email n'est pas valide";
+    if (!email) return formatMessage(i18n.emailAddressEmpty);
+    if (!isEmail(email)) return formatMessage(i18n.emailAddressInvalid);
     return null;
   }
 
   validateMessageContent() {
+    const { formatMessage } = this.props.intl;
     const { content } = this.state.message;
-    if (!isLength(content, { min: 42 })) return 'Votre message est trop court';
+    if (!isLength(content, { min: 42 })) {
+      return formatMessage(i18n.contentTooShort);
+    }
     if (!isLength(content, { max: 42000 })) {
-      return 'Votre message est trop long';
+      return formatMessage(i18n.contentTooLong);
     }
     return null;
   }
@@ -87,6 +127,7 @@ export default class Contact extends React.Component {
   }
 
   render() {
+    const { formatMessage } = this.props.intl;
     const { message, messageErrors, _loading } = this.state;
     const { email, content } = message;
 
@@ -97,12 +138,12 @@ export default class Contact extends React.Component {
       <section className="bg-white py-8">
         <div className="container py-8 mx-auto flex flex-col align-center">
           <h2 className="text-dark text-4xl font-heading font-bold tracking-tight antialiased leading-none mb-12">
-            Contact
+            {formatMessage(i18n.title)}
           </h2>
 
           <form id="contact-form" className="w-full max-w-md" onSubmit={this.handleSubmit}>
             <input
-              placeholder="Adresse email"
+              placeholder={formatMessage(i18n.emailAddressPlaceholder)}
               type="email"
               name="email"
               value={email}
@@ -116,7 +157,7 @@ export default class Contact extends React.Component {
               </p>
             )}
             <textarea
-              placeholder="Message"
+              placeholder={formatMessage(i18n.contentPlaceholder)}
               rows="8"
               name="content"
               value={content}
@@ -139,7 +180,7 @@ export default class Contact extends React.Component {
             </div>
             <input
               type="submit"
-              value="Envoyer"
+              value={formatMessage(i18n.submitMessageBtn)}
               className="btn btn-blue"
               disabled={_loading}
             />
@@ -149,3 +190,9 @@ export default class Contact extends React.Component {
     );
   }
 }
+
+Contact.propTypes = {
+  intl: intlShape.isRequired,
+};
+
+export default injectIntl(Contact);

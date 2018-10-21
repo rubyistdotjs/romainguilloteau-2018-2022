@@ -31,8 +31,8 @@
   "scripts": {
     "start": "yarn watch:css & react-scripts start",
     "build": "yarn build:css && react-scripts build && node sitemap.js && react-snapshot",
-    "build:css": "postcss src/stylesheets/app.css -o src/app.css",
-    "watch:css": "postcss src/stylesheets/app.css -o src/app.css -w",
+    "build:css": "postcss src/stylesheets/application.css -o src/application.css",
+    "watch:css": "postcss src/stylesheets/application.css -o src/application.css -w",
     "i18n": "npm run i18n:extractMessages && npm run i18n:updateLocales && npm run i18n:updateDatabaseLocales",
     "i18n:extractMessages": "react-intl-cra 'src/**/*.{js,jsx}' -o 'src/i18n/messages/messages.json'",
     "i18n:updateLocales": "node ./scripts/translationRunner.js",

@@ -12,7 +12,8 @@ const i18n = defineMessages({
 });
 
 function ExternalLink({ intl, name, url }) {
-  const iconName = capitalize(name);
+  // Component naming inconsistency in react-feather 1.1.4
+  const iconName = name === 'GitHub' ? name : capitalize(name);
   if (!Object.keys(Icons).includes(iconName)) return '';
 
   const Icon = Icons[iconName];

@@ -17,7 +17,7 @@
     "react-ga": "^2.4.1",
     "react-helmet": "^5.2.0",
     "react-intl": "^2.4.0",
-    "react-progressive-image": "^0.3.0",
+    "react-progressive-image": "^0.6.0",
     "react-recaptcha": "^2.3.10",
     "react-scripts": "1.1.5",
     "validator": "^10.5.0"

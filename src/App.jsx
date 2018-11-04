@@ -10,7 +10,6 @@ import './application.css';
 
 if (process.env.NODE_ENV === 'production') {
   ReactGA.initialize(process.env.REACT_APP_ANALYTICS_TRACKING_ID);
-  // eslint-disable-next-line no-undef
   ReactGA.pageview(window.location.pathname + window.location.search);
 }
 

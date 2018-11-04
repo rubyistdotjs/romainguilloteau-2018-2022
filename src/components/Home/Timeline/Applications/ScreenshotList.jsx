@@ -14,12 +14,7 @@ const i18n = defineMessages({
   },
 });
 
-function ScreenshotList({
-  intl,
-  appName,
-  appUrl,
-  screenshots,
-}) {
+function ScreenshotList({ intl, appName, appUrl, screenshots }) {
   const { formatMessage } = intl;
 
   function lastScreenshot(devise) {
@@ -79,12 +74,14 @@ ScreenshotList.propTypes = {
   intl: intlShape.isRequired,
   appName: PropTypes.string.isRequired,
   appUrl: PropTypes.string,
-  screenshots: PropTypes.arrayOf(PropTypes.shape({
-    devise: PropTypes.oneOf(['desktop', 'mobile']),
-    filename: PropTypes.string,
-    thumbnail: PropTypes.string,
-    takenAt: PropTypes.number,
-  })).isRequired,
+  screenshots: PropTypes.arrayOf(
+    PropTypes.shape({
+      devise: PropTypes.oneOf(['desktop', 'mobile']),
+      filename: PropTypes.string,
+      thumbnail: PropTypes.string,
+      takenAt: PropTypes.number,
+    })
+  ).isRequired,
 };
 
 ScreenshotList.defaultProps = {

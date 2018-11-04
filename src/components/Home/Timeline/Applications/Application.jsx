@@ -24,9 +24,7 @@ function Application({
         style={{ backgroundColor: brandColor }}
         className="hidden lg:block w-16 h-1 my-2"
       />
-      <p className="text-black font-semibold py-2">
-        {description}
-      </p>
+      <p className="text-black font-semibold py-2">{description}</p>
       <ChallengeList challenges={challenges} />
       <div className="mt-4">
         {tags.map(tag => (
@@ -43,10 +41,12 @@ Application.propTypes = {
   brandColor: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   challenges: PropTypes.arrayOf(PropTypes.string),
-  tags: PropTypes.arrayOf(PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    legacy: PropTypes.bool,
-  })).isRequired,
+  tags: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      legacy: PropTypes.bool,
+    })
+  ).isRequired,
 };
 
 Application.defaultProps = {

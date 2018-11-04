@@ -89,7 +89,7 @@ class Contact extends React.Component {
   handleChange(event) {
     const { name, value } = event.target;
 
-    this.setState((prevState) => {
+    this.setState(prevState => {
       const message = Object.assign({}, prevState.message);
       message[name] = value;
       return { message };
@@ -141,20 +141,24 @@ class Contact extends React.Component {
             {formatMessage(i18n.title)}
           </h2>
 
-          <form id="contact-form" className="w-full max-w-md" onSubmit={this.handleSubmit}>
+          <form
+            id="contact-form"
+            className="w-full max-w-md"
+            onSubmit={this.handleSubmit}
+          >
             <input
               placeholder={formatMessage(i18n.emailAddressPlaceholder)}
               type="email"
               name="email"
               value={email}
               onChange={this.handleChange}
-              className={`field ${email.length > 0 && !emailValid ? 'invalid' : ''}`}
+              className={`field ${
+                email.length > 0 && !emailValid ? 'invalid' : ''
+              }`}
               disabled={_loading}
             />
             {messageErrors.email && (
-              <p className="field-error">
-                {messageErrors.email}
-              </p>
+              <p className="field-error">{messageErrors.email}</p>
             )}
             <textarea
               placeholder={formatMessage(i18n.contentPlaceholder)}
@@ -162,13 +166,13 @@ class Contact extends React.Component {
               name="content"
               value={content}
               onChange={this.handleChange}
-              className={`field ${content.length > 0 && !contentValid ? 'invalid' : ''}`}
+              className={`field ${
+                content.length > 0 && !contentValid ? 'invalid' : ''
+              }`}
               disabled={_loading}
             />
             {messageErrors.content && (
-              <p className="field-error">
-                {messageErrors.content}
-              </p>
+              <p className="field-error">{messageErrors.content}</p>
             )}
 
             <div className="mb-3">

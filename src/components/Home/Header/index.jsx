@@ -17,8 +17,7 @@ function Header() {
             <FormattedMessage
               id="home.header.title"
               defaultMessage="Full Stack Web Developer, Ruby on Rails & JavaScript"
-            />
-            {' '}
+            />{' '}
             <span className="hidden xl:inline xl:text-4xl align-middle font-normal">
               (React, Vue.js & Node.js)
             </span>

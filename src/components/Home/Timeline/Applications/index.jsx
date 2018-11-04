@@ -70,16 +70,20 @@ class Applications extends React.PureComponent {
 }
 
 Applications.propTypes = {
-  applications: PropTypes.arrayOf(PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    brandColor: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    challenges: PropTypes.arrayOf(PropTypes.string),
-    tags: PropTypes.arrayOf(PropTypes.shape({
+  applications: PropTypes.arrayOf(
+    PropTypes.shape({
       name: PropTypes.string.isRequired,
-      legacy: PropTypes.bool,
-    })),
-  })).isRequired,
+      brandColor: PropTypes.string.isRequired,
+      description: PropTypes.string.isRequired,
+      challenges: PropTypes.arrayOf(PropTypes.string),
+      tags: PropTypes.arrayOf(
+        PropTypes.shape({
+          name: PropTypes.string.isRequired,
+          legacy: PropTypes.bool,
+        })
+      ),
+    })
+  ).isRequired,
 };
 
 export default Applications;

@@ -17,12 +17,10 @@ function extractI18n(object, lang) {
 }
 
 function inspectObject(obj, lang) {
-  // eslint-disable-next-line no-use-before-define
   return mapValues(obj, val => inspect(val, lang));
 }
 
 function inspectArray(arr, lang) {
-  // eslint-disable-next-line no-use-before-define
   return arr.map(val => inspect(val, lang));
 }
 
@@ -35,7 +33,7 @@ function inspect(val, lang) {
 
 async function createLocaleFolder(lang) {
   const folder = path.join(databaseFolder, lang);
-  await fsPromises.mkdir(folder).catch((err) => {
+  await fsPromises.mkdir(folder).catch(err => {
     if (err.code === 'EEXIST') return;
     throw err;
   });
@@ -59,7 +57,7 @@ async function localizeFile(filename) {
 }
 
 createLocaleFolders().then(() => {
-  fsPromises.readdir(rawFolder).then((file) => {
+  fsPromises.readdir(rawFolder).then(file => {
     file.forEach(localizeFile);
   });
 });

@@ -9,7 +9,8 @@ const i18n = defineMessages({
   },
   metaDescription: {
     id: 'home.meta.description',
-    defaultMessage: 'Full Stack Web Developer, mainly Ruby on Rails and JavaScript (Node.js, React et Vue.js), currently living in Montpellier, Hérault, France.',
+    defaultMessage:
+      'Full Stack Web Developer, mainly Ruby on Rails and JavaScript (Node.js, React et Vue.js), currently living in Montpellier, Hérault, France.',
   },
   jsonldJobTitle: {
     id: 'home.jsonld.jobTitle',
@@ -17,7 +18,8 @@ const i18n = defineMessages({
   },
   jsonldDescription: {
     id: 'home.jsonld.description',
-    defaultMessage: 'Full Stack Web Developer, mainly Ruby on Rails and JavaScript (Node.js, React et Vue.js), currently living in Montpellier, Hérault, France.',
+    defaultMessage:
+      'Full Stack Web Developer, mainly Ruby on Rails and JavaScript (Node.js, React et Vue.js), currently living in Montpellier, Hérault, France.',
   },
 });
 

@@ -3,9 +3,7 @@ import PropTypes from 'prop-types';
 
 function Tag({ tag }) {
   const small = tag.legacy ? (
-    <small className="align-middle leading-none">
-      (legacy)
-    </small>
+    <small className="align-middle leading-none">(legacy)</small>
   ) : (
     ''
   );

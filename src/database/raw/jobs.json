@@ -1,5 +1,15 @@
 [{
     "title": {
+      "fr": "Développeur full stack",
+      "en": "Full stack developer"
+    },
+    "startedAt": 1539554400000,
+    "endedAt": null,
+    "company": "Lunchr",
+    "applications": []
+  },
+  {
+    "title": {
       "fr": "Lead developer & Software architect",
       "en": "Lead developer & Software architect"
     },

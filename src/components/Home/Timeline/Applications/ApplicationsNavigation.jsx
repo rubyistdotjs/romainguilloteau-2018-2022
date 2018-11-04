@@ -21,9 +21,10 @@ function ApplicationsNavigation({
     const { name, brandColor } = application;
     const selected = index === selectedApplicationIndex;
     const klass = selected ? 'active' : '';
-    const style = selected && brandColor
-      ? { backgroundColor: brandColor, borderColor: brandColor }
-      : {};
+    const style =
+      selected && brandColor
+        ? { backgroundColor: brandColor, borderColor: brandColor }
+        : {};
 
     return (
       <button
@@ -47,7 +48,7 @@ ApplicationsNavigation.propTypes = {
     PropTypes.shape({
       name: PropTypes.string.isRequired,
       brandColor: PropTypes.string,
-    }),
+    })
   ).isRequired,
   onChange: PropTypes.func.isRequired,
 };

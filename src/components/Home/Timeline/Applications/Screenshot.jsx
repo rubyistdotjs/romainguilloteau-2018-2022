@@ -11,19 +11,13 @@ const i18n = defineMessages({
   },
 });
 
-function Screenshot({
-  intl,
-  filename,
-  thumbnail,
-  alt,
-  url,
-}) {
+function Screenshot({ intl, filename, thumbnail, alt, url }) {
   const { formatMessage } = intl;
 
   const screenshots = require.context(
     '../../../../images/screenshots',
     false,
-    /\.jpg$/,
+    /\.jpg$/
   );
 
   const largeScreenshot = screenshots(`./${filename}`, true);
@@ -47,9 +41,7 @@ function Screenshot({
         src={largeScreenshot}
         placeholder={`data:image/svg+xml;utf8,${thumbnail}`}
       >
-        {src => (
-          <img src={src} alt={alt} className="absolute w-full pin-t" />
-        )}
+        {src => <img src={src} alt={alt} className="absolute w-full pin-t" />}
       </ProgressiveImage>
     </div>
   );

@@ -3,6 +3,8 @@
   "home.contact.errors.content.tooShort": "Your message is too short.",
   "home.contact.errors.emailAddress.empty": "Please specify your email address.",
   "home.contact.errors.emailAddress.invalid": "The email address is invalid.",
+  "home.contact.errors.recaptcha.empty": "Robot !",
+  "home.contact.messageSentThe": "The following message was send the {date}.",
   "home.contact.placeholders.emailAddress": "Email address",
   "home.contact.placeholders.messageContent": "Message",
   "home.contact.sendMessageBtn": "Send",

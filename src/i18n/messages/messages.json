@@ -35,8 +35,18 @@
     "filepath": "src/components/Home/Contact.jsx"
   },
   {
+    "id": "home.contact.errors.recaptcha.empty",
+    "defaultMessage": "Robot !",
+    "filepath": "src/components/Home/Contact.jsx"
+  },
+  {
     "id": "home.contact.sendMessageBtn",
     "defaultMessage": "Send",
+    "filepath": "src/components/Home/Contact.jsx"
+  },
+  {
+    "id": "home.contact.messageSentThe",
+    "defaultMessage": "The following message was send the {date}.",
     "filepath": "src/components/Home/Contact.jsx"
   },
   {

@@ -3,6 +3,8 @@
   "home.contact.errors.content.tooShort": "Votre message est trop court.",
   "home.contact.errors.emailAddress.empty": "Veuillez renseigner votre adresse email.",
   "home.contact.errors.emailAddress.invalid": "L'adresse email n'est pas valide.",
+  "home.contact.errors.recaptcha.empty": "Robot !",
+  "home.contact.messageSentThe": "Le message suivant a été envoyé le {date}.",
   "home.contact.placeholders.emailAddress": "Adresse email",
   "home.contact.placeholders.messageContent": "Message",
   "home.contact.sendMessageBtn": "Envoyer",

@@ -16,6 +16,10 @@
   @apply .outline-none .bg-white .border-blue;
 }
 
+.field:disabled {
+  @apply .bg-grey-lightest .cursor-not-allowed;
+}
+
 .field.valid {
   @apply .border-green-light;
 }

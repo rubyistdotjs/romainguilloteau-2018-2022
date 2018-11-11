@@ -130,7 +130,7 @@ class Contact extends React.Component {
     const { message } = this.state;
     this.setState({ _loading: true });
     axios
-      .post(process.env.REACT_APP_CONTACT_ENDPOINT, {
+      .post(process.env.REACT_APP_CREATE_MESSAGE_ENDPOINT, {
         email: message.email,
         content: message.content,
         recaptcha: message.recaptcha,
@@ -145,7 +145,7 @@ class Contact extends React.Component {
       })
       .catch(error => {
         console.log(error);
-        this.setState({ _loading: false })
+        this.setState({ _loading: false });
         this.recaptchaInstance.reset();
       });
   }
@@ -161,9 +161,9 @@ class Contact extends React.Component {
   }
 
   handeRecaptchaVerify(hash) {
-    this.setState(prevState => ({
-      message: { ...prevState.message, recaptcha: hash },
-    }));
+    this.setState(prevState => {
+      return { message: { ...prevState.message, recaptcha: hash } };
+    });
   }
 
   handleSubmit(event) {

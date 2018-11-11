@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import Recaptcha from 'react-recaptcha';
+import Reaptcha from 'reaptcha';
 import { pickBy, isString } from 'lodash';
 import { isEmail, isLength } from 'validator';
 import { Send } from 'react-feather';
@@ -146,7 +146,7 @@ class Contact extends React.Component {
       .catch(error => {
         console.log(error);
         this.setState({ _loading: false });
-        this.recaptchaInstance.reset();
+        this.recaptchaRef.reset();
       });
   }
 
@@ -243,11 +243,10 @@ class Contact extends React.Component {
             {!message.createdAt && (
               <div>
                 <div className="mb-4">
-                  <Recaptcha
-                    ref={e => (this.recaptchaInstance = e)}
+                  <Reaptcha
+                    ref={e => (this.recaptchaRef = e)}
                     sitekey={process.env.REACT_APP_RECAPTCHA_KEY}
-                    render="explicit"
-                    verifyCallback={this.handeRecaptchaVerify}
+                    onVerify={this.handeRecaptchaVerify}
                   />
                 </div>
                 {messageErrors.recaptcha && (

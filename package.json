@@ -25,8 +25,8 @@
     "react-helmet": "^5.2.0",
     "react-intl": "^2.4.0",
     "react-progressive-image": "^0.6.0",
-    "react-recaptcha": "^2.3.10",
     "react-scripts": "^2.0.0",
+    "reaptcha": "^1.4.0",
     "validator": "^10.5.0"
   },
   "scripts": {

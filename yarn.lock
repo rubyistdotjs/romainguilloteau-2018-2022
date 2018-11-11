@@ -8964,11 +8964,6 @@ react-progressive-image@^0.6.0:
   resolved "https://registry.yarnpkg.com/react-progressive-image/-/react-progressive-image-0.6.0.tgz#56b1c7153a6e1ebbe2a3bbf8f98c37410fbc67c2"
   integrity sha512-/yc8N3lHskPQkubm+QH5RIQHA89Sigv7p9UkvbHzKVE2OBb6njhmquk7GW/f2Y//mzk5DesFHN/hV5RWhd6IXA==
 
-react-recaptcha@^2.3.10:
-  version "2.3.10"
-  resolved "https://registry.yarnpkg.com/react-recaptcha/-/react-recaptcha-2.3.10.tgz#1f7a001f24ab7e1a323fcf1fd8644afecb56f7da"
-  integrity sha512-IyanbozsYCuHvTYDuskZTIEcRAMG/sdvAu5b29iQWoC8Kd3Zk9WGCv2oNxh6RfGHvSvgHAyaLjmC6ei/yMsJ7g==
-
 react-scripts@^2.0.0:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/react-scripts/-/react-scripts-2.1.1.tgz#c2959a756b0b61d3090adece0d7aedd324dff8a5"
@@ -9141,6 +9136,11 @@ realpath-native@^1.0.0:
   integrity sha512-+S3zTvVt9yTntFrBpm7TQmQ3tzpCrnA1a/y+3cUHAc9ZR6aIjG0WNLR+Rj79QpJktY+VeW/TQtFlQ1bzsehI8g==
   dependencies:
     util.promisify "^1.0.0"
+
+reaptcha@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/reaptcha/-/reaptcha-1.4.0.tgz#458caf653da31c4919117bad082f5cdc5f9851d6"
+  integrity sha512-E5m/fLlcqSb1UkbgmaYbXV0JOG0SUVjZT7ZMGy52twvF3eNMhiE5ZjDXMbPjhXcsTCjVPi95kUIKbmOZwy1ETg==
 
 recursive-readdir@2.2.2:
   version "2.2.2"

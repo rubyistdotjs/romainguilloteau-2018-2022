@@ -24,7 +24,12 @@ function Application({
         style={{ backgroundColor: brandColor }}
         className="hidden lg:block w-16 h-1 my-2"
       />
-      <p className="text-black font-semibold py-2">{description}</p>
+      {description &&
+        description.split('\n').map((p, i) => (
+          <p key={`description-${i}`} className="text-black font-semibold py-2">
+            {p}
+          </p>
+        ))}
       <ChallengeList challenges={challenges} />
       <div className="mt-4">
         {tags.map(tag => (

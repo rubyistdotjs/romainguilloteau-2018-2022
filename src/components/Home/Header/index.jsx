@@ -33,9 +33,15 @@ function Header() {
             />
           </p>
           <div className="mt-12">
+            <a href="#contact-form" className="btn btn-blue">
+              <FormattedMessage
+                id="home.header.getInTouchBtn"
+                defaultMessage="Get in touch"
+              />
+            </a>
             <a
               href={resume}
-              className="btn btn-blue"
+              className="btn btn-outline-grey"
               download="romain-guilloteau.pdf"
             >
               <FormattedMessage

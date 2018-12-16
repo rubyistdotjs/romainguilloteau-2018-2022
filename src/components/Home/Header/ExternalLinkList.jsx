@@ -4,23 +4,18 @@ import { injectIntl, intlShape } from 'react-intl';
 import ExternalLink from './ExternalLink';
 
 class ExternalLinkList extends React.PureComponent {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      externalLinks: [],
-    };
-  }
+  state = {
+    externalLinks: [],
+  };
 
   async fetchExternalLinks() {
     const { intl } = this.props;
     return import(`../../../database/${intl.locale}/external-links.json`);
   }
 
-  componentDidMount() {
-    this.fetchExternalLinks().then(({ default: json }) => {
-      this.setState({ externalLinks: json });
-    });
+  async componentDidMount() {
+    const { default: externalLinks } = await this.fetchExternalLinks();
+    this.setState({ externalLinks });
   }
 
   render() {

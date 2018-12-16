@@ -3,23 +3,18 @@ import { injectIntl, intlShape } from 'react-intl';
 import Title from './Title';
 
 class CertificationList extends React.PureComponent {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      certifications: [],
-    };
-  }
+  state = {
+    certifications: [],
+  };
 
   async fetchCertifications() {
     const { intl } = this.props;
     return await import(`../../../database/${intl.locale}/certifications.json`);
   }
 
-  componentDidMount() {
-    this.fetchCertifications().then(({ default: json }) => {
-      this.setState({ certifications: json });
-    });
+  async componentDidMount() {
+    const { default: certifications } = await this.fetchCertifications();
+    this.setState({ certifications });
   }
 
   render() {

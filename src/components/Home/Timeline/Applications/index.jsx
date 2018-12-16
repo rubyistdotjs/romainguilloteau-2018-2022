@@ -6,19 +6,13 @@ import ScreenshotList from './ScreenshotList';
 import ApplicationsNavigation from './ApplicationsNavigation';
 
 class Applications extends React.PureComponent {
-  constructor(props) {
-    super(props);
+  state = {
+    selectedApplicationIndex: 0,
+  };
 
-    this.state = {
-      selectedApplicationIndex: 0,
-    };
-
-    this.handleSelectApplication = this.handleSelectApplication.bind(this);
-  }
-
-  handleSelectApplication(index) {
+  handleSelectApplication = index => {
     this.setState({ selectedApplicationIndex: index });
-  }
+  };
 
   render() {
     const { selectedApplicationIndex } = this.state;

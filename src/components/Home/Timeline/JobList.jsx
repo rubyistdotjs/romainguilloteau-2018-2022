@@ -4,23 +4,18 @@ import Title from './Title';
 import ApplicationList from './Applications';
 
 class JobList extends React.PureComponent {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      jobs: [],
-    };
-  }
+  state = {
+    jobs: [],
+  };
 
   async fetchJobs() {
     const { intl } = this.props;
     return import(`../../../database/${intl.locale}/jobs.json`);
   }
 
-  componentDidMount() {
-    this.fetchJobs().then(({ default: json }) => {
-      this.setState({ jobs: json });
-    });
+  async componentDidMount() {
+    const { default: jobs } = await this.fetchJobs();
+    this.setState({ jobs });
   }
 
   render() {

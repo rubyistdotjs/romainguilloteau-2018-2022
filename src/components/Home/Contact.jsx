@@ -54,24 +54,16 @@ const i18n = defineMessages({
 });
 
 class Contact extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      message: {
-        email: '',
-        content: '',
-        recaptcha: null,
-        createdAt: null,
-      },
-      messageErrors: {},
-      _loading: false,
-    };
-
-    this.handleChange = this.handleChange.bind(this);
-    this.handeRecaptchaVerify = this.handeRecaptchaVerify.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
+  state = {
+    message: {
+      email: '',
+      content: '',
+      recaptcha: null,
+      createdAt: null,
+    },
+    messageErrors: {},
+    _loading: false,
+  };
 
   componentDidMount() {
     storage.getItem(MESSAGE_STORAGE_KEY).then(storedMessage => {
@@ -150,7 +142,7 @@ class Contact extends React.Component {
       });
   }
 
-  handleChange(event) {
+  handleChange = event => {
     const { name, value } = event.target;
 
     this.setState(prevState => {
@@ -158,15 +150,15 @@ class Contact extends React.Component {
       message[name] = value;
       return { message };
     });
-  }
+  };
 
-  handeRecaptchaVerify(hash) {
+  handeRecaptchaVerify = hash => {
     this.setState(prevState => {
       return { message: { ...prevState.message, recaptcha: hash } };
     });
-  }
+  };
 
-  handleSubmit(event) {
+  handleSubmit = event => {
     event.preventDefault();
 
     this.setState({ messageErrors: {} });
@@ -178,7 +170,7 @@ class Contact extends React.Component {
     }
 
     this.sendMessage();
-  }
+  };
 
   render() {
     const { formatMessage, formatDate } = this.props.intl;

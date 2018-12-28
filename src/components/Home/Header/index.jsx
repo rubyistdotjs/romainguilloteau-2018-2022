@@ -6,8 +6,8 @@ import resume from '../../../documents/resume.pdf';
 
 function Header() {
   return (
-    <header className="bg-white">
-      <div className="container flex justify-between align-center mt-8 mb-24">
+    <header>
+      <div className="container flex justify-between align-center pt-8 pb-24">
         <Me />
         <ExternalLinkList />
       </div>

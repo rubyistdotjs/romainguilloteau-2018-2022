@@ -7,7 +7,7 @@ import Contact from './Contact';
 
 function Home() {
   return (
-    <div className="Home">
+    <div>
       <Head />
       <Header />
       <Timeline />

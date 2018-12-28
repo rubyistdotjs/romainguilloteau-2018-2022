@@ -181,79 +181,77 @@ class Contact extends React.Component {
     const contentValid = this.validateMessageContent() === null;
 
     return (
-      <section className="bg-white py-8">
-        <div className="container py-8 mx-auto flex flex-col align-center">
-          <h2 className="text-dark text-4xl font-heading font-bold tracking-tight antialiased leading-none mb-12">
-            {formatMessage(i18n.title)}
-          </h2>
+      <section className="container py-12">
+        <h2 className="text-dark text-4xl font-heading font-bold tracking-tight antialiased leading-none mb-12">
+          {formatMessage(i18n.title)}
+        </h2>
 
-          {message.createdAt && (
-            <p className="alert alert-teal w-full max-w-md">
-              <Send size={16} className="mr-4 flex-no-shrink" />
-              {formatMessage(i18n.messageSentThe, {
-                date: formatDate(message.createdAt, {
-                  day: 'numeric',
-                  month: 'long',
-                  hour: 'numeric',
-                }),
-              })}
-            </p>
+        {message.createdAt && (
+          <p className="alert alert-teal w-full max-w-md">
+            <Send size={16} className="mr-4 flex-no-shrink" />
+            {formatMessage(i18n.messageSentThe, {
+              date: formatDate(message.createdAt, {
+                day: 'numeric',
+                month: 'long',
+                hour: 'numeric',
+              }),
+            })}
+          </p>
+        )}
+        <form
+          id="contact-form"
+          className="w-full max-w-md"
+          onSubmit={this.handleSubmit}
+        >
+          <input
+            placeholder={formatMessage(i18n.emailAddressPlaceholder)}
+            type="email"
+            name="email"
+            value={message.email}
+            onChange={this.handleChange}
+            className={`field ${
+              message.email.length > 0 && !emailValid ? 'invalid' : ''
+            }`}
+            disabled={inputsDisabled}
+          />
+          {messageErrors.email && (
+            <p className="field-error">{messageErrors.email}</p>
           )}
-          <form
-            id="contact-form"
-            className="w-full max-w-md"
-            onSubmit={this.handleSubmit}
-          >
-            <input
-              placeholder={formatMessage(i18n.emailAddressPlaceholder)}
-              type="email"
-              name="email"
-              value={message.email}
-              onChange={this.handleChange}
-              className={`field ${
-                message.email.length > 0 && !emailValid ? 'invalid' : ''
-              }`}
-              disabled={inputsDisabled}
-            />
-            {messageErrors.email && (
-              <p className="field-error">{messageErrors.email}</p>
-            )}
-            <textarea
-              placeholder={formatMessage(i18n.contentPlaceholder)}
-              rows="8"
-              name="content"
-              value={message.content}
-              onChange={this.handleChange}
-              className={`field ${
-                message.content.length > 0 && !contentValid ? 'invalid' : ''
-              }`}
-              disabled={inputsDisabled}
-            />
-            {messageErrors.content && (
-              <p className="field-error">{messageErrors.content}</p>
-            )}
-            {!message.createdAt && (
-              <div>
-                <div className="mb-4">
-                  <Reaptcha
-                    ref={e => (this.recaptchaRef = e)}
-                    sitekey={process.env.REACT_APP_RECAPTCHA_KEY}
-                    onVerify={this.handeRecaptchaVerify}
-                  />
-                </div>
-                {messageErrors.recaptcha && (
-                  <p className="field-error">{messageErrors.recaptcha}</p>
-                )}
-                <input
-                  type="submit"
-                  value={formatMessage(i18n.submitMessageBtn)}
-                  className="btn btn-blue"
-                  disabled={inputsDisabled}
+          <textarea
+            placeholder={formatMessage(i18n.contentPlaceholder)}
+            rows="8"
+            name="content"
+            value={message.content}
+            onChange={this.handleChange}
+            className={`field ${
+              message.content.length > 0 && !contentValid ? 'invalid' : ''
+            }`}
+            disabled={inputsDisabled}
+          />
+          {messageErrors.content && (
+            <p className="field-error">{messageErrors.content}</p>
+          )}
+          {!message.createdAt && (
+            <div>
+              <div className="mb-4">
+                <Reaptcha
+                  ref={e => (this.recaptchaRef = e)}
+                  sitekey={process.env.REACT_APP_RECAPTCHA_KEY}
+                  onVerify={this.handeRecaptchaVerify}
                 />
               </div>
-            )}
-          </form>
-        </div>
+              {messageErrors.recaptcha && (
+                <p className="field-error">{messageErrors.recaptcha}</p>
+              )}
+              <input
+                type="submit"
+                value={formatMessage(i18n.submitMessageBtn)}
+                className="btn btn-blue"
+                disabled={inputsDisabled}
+              />
+            </div>
+          )}
+        </form>
       </section>
     );
   }

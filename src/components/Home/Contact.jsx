@@ -6,6 +6,8 @@ import { isEmail, isLength } from 'validator';
 import { Send } from 'react-feather';
 import { injectIntl, intlShape, defineMessages } from 'react-intl';
 
+import Section from './Section';
+
 import storage from '../../services/storage';
 
 const MESSAGE_STORAGE_KEY = 'home.contact.message';
@@ -181,11 +183,7 @@ class Contact extends React.Component {
     const contentValid = this.validateMessageContent() === null;
 
     return (
-      <section className="container py-12">
-        <h2 className="text-dark text-4xl font-heading font-bold tracking-tight antialiased leading-none mb-12">
-          {formatMessage(i18n.title)}
-        </h2>
-
+      <Section emoji="✉️" title={formatMessage(i18n.title)}>
         {message.createdAt && (
           <p className="alert alert-teal w-full max-w-md">
             <Send size={16} className="mr-4 flex-no-shrink" />
@@ -252,7 +250,7 @@ class Contact extends React.Component {
             </div>
           )}
         </form>
-      </section>
+      </Section>
     );
   }
 }

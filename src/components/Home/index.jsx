@@ -2,7 +2,9 @@ import React from 'react';
 
 import Head from './Head';
 import Header from './Header';
-import Timeline from './Timeline';
+import Jobs from './Jobs';
+import Diplomas from './Diplomas';
+import BookShelves from './BookShelves';
 import Contact from './Contact';
 
 function Home() {
@@ -10,7 +12,9 @@ function Home() {
     <div>
       <Head />
       <Header />
-      <Timeline />
+      <Jobs />
+      <Diplomas />
+      <BookShelves />
       <Contact />
     </div>
   );

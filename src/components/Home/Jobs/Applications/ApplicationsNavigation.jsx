@@ -5,7 +5,7 @@ import { injectIntl, intlShape, defineMessages } from 'react-intl';
 
 const i18n = defineMessages({
   switchTo: {
-    id: 'home.timeline.applications.switchTo',
+    id: 'home.jobs.applications.switchTo',
     defaultMessage: 'Switch to {appName}',
   },
 });

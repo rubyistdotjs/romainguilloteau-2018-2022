@@ -1,9 +1,18 @@
 import React from 'react';
-import { injectIntl, intlShape } from 'react-intl';
-import Title from './Title';
+import { injectIntl, intlShape, defineMessages } from 'react-intl';
+
+import Section from '../Section';
+import Title from '../Title';
 import ApplicationList from './Applications';
 
-class JobList extends React.PureComponent {
+const i18n = defineMessages({
+  title: {
+    id: 'home.jobs.title',
+    defaultMessage: 'Experience',
+  },
+});
+
+class Jobs extends React.PureComponent {
   state = {
     jobs: [],
   };
@@ -20,11 +29,12 @@ class JobList extends React.PureComponent {
 
   render() {
     const { jobs } = this.state;
+    const { formatMessage } = this.props.intl;
 
     return (
-      <div>
+      <Section emoji="💼" title={formatMessage(i18n.title)}>
         {jobs.map(job => (
-          <div key={job.startedAt} className="py-24">
+          <div key={job.startedAt} className="pb-16">
             <Title
               title={job.title}
               fromDate={job.startedAt}
@@ -34,13 +44,13 @@ class JobList extends React.PureComponent {
             <ApplicationList applications={job.applications} />
           </div>
         ))}
-      </div>
+      </Section>
     );
   }
 }
 
-JobList.propTypes = {
+Jobs.propTypes = {
   intl: intlShape.isRequired,
 };
 
-export default injectIntl(JobList);
+export default injectIntl(Jobs);

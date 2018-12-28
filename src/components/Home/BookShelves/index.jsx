@@ -31,12 +31,15 @@ class BookShelves extends React.PureComponent {
 
     return (
       <Section emoji="📖" title={formatMessage(i18n.title)}>
-        <div className="flex flex-row -mx-4">
+        <div className="flex flex-col lg:flex-row lg:-mx-4">
           {shelves.map(shelf => (
-            <div className="w-1/3" key={`shelf-${shelf.name}`}>
+            <div
+              key={`shelf-${shelf.name}`}
+              className="w-full lg:w-1/3 mb-8 lg:mb-0 lg:px-4"
+            >
               <Shelf
                 name={shelf.name}
-                booksCount={shelf.books_count}
+                booksCount={parseInt(shelf.books_count, 10)}
                 books={shelf.books}
               />
             </div>

@@ -14,7 +14,7 @@ function Book({ intl, title, author, url }) {
 
   return (
     <div className="pb-4">
-      <h4 className="text-black text-lg font-semibold tracking-tight leading-tight">
+      <span className="block text-black text-lg font-bold tracking-tight leading-tight">
         <a
           href={url}
           title={formatMessage(i18n.seeBookOnGoodreads, { bookTitle: title })}
@@ -24,8 +24,8 @@ function Book({ intl, title, author, url }) {
         >
           {title}
         </a>
-      </h4>
-      <span className="text-grey-dark">{author}</span>
+      </span>
+      <span className="text-base text-grey-dark">{author}</span>
     </div>
   );
 }

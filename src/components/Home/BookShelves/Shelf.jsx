@@ -24,7 +24,7 @@ function Shelf({ intl, name, booksCount, books }) {
   const { formatMessage } = intl;
 
   return (
-    <div className="px-4">
+    <div>
       <h3 className="text-black text-2xl lg:text-2xl font-bold tracking-tight leading-none mb-6 flex flex-row items-center">
         {formatMessage(i18n[camelCase(name)])}
         <span className="inline-block text-grey-darkest text-sm font-semibold bg-grey-light py-1 px-2 ml-2 rounded-full">

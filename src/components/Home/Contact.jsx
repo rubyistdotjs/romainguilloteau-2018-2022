@@ -1,7 +1,8 @@
 import React from 'react';
 import Reaptcha from 'reaptcha';
-import { pickBy, isString } from 'lodash';
-import { isEmail, isLength } from 'validator';
+import pickBy from 'lodash/pickBy';
+import isString from 'lodash/isString';
+import isEmail from 'validator/lib/isEmail';
 import { Send } from 'react-feather';
 import { injectIntl, intlShape, defineMessages } from 'react-intl';
 
@@ -96,13 +97,12 @@ class Contact extends React.Component {
   validateMessageContent() {
     const { formatMessage } = this.props.intl;
     const { content } = this.state.message;
-    if (!isLength(content, { min: 42 })) {
-      return formatMessage(i18n.contentTooShort);
-    }
-    if (!isLength(content, { max: 42000 })) {
-      return formatMessage(i18n.contentTooLong);
-    }
-    return null;
+
+    return content.length < 42
+      ? formatMessage(i18n.contentTooShort)
+      : content.length > 42000
+      ? formatMessage(i18n.contentTooLong)
+      : null;
   }
 
   validateRecaptcha() {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import ReactGA from 'react-ga';
-import { omit } from 'lodash';
+import omit from 'lodash/omit';
 import { injectIntl, intlShape } from 'react-intl';
 
 import Home from './components/Home';

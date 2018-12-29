@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import * as Icons from 'react-feather';
-import { capitalize } from 'lodash';
+import capitalize from 'lodash/capitalize';
 import { injectIntl, intlShape, defineMessages } from 'react-intl';
 
 const i18n = defineMessages({

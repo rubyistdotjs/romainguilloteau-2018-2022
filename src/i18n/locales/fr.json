@@ -1,7 +1,7 @@
 {
   "home.bookShelves.currentlyReading": "En cours",
   "home.bookShelves.read": "Lus",
-  "home.bookShelves.shelf.seeBookOnGoodreads": "\"{bookTitle}\"",
+  "home.bookShelves.shelf.seeBookOnGoodreads": "Voir ce livre sur Goodreads",
   "home.bookShelves.title": "Book shelves",
   "home.bookShelves.toRead": "Bientôt",
   "home.contact.errors.content.tooLong": "Votre message est trop long, maximum 42 000 caractères.",

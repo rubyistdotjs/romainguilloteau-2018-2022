@@ -33,7 +33,7 @@ class Diplomas extends React.PureComponent {
     return (
       <Section emoji="🎓" title={formatMessage(i18n.title)}>
         {diplomas.map(diploma => (
-          <div key={diploma.startedAt} className="pb-16">
+          <div key={diploma.startedAt} className="mb-16">
             <Title
               title={diploma.name}
               fromDate={diploma.startedAt}

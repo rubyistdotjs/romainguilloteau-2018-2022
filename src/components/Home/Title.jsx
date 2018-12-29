@@ -7,11 +7,11 @@ function Title({ title, fromDate, toDate, atPlace }) {
   const to = toDate ? new Date(toDate).getFullYear() : null;
 
   return (
-    <div className="mb-12">
-      <h3 className="text-black text-2xl lg:text-3xl font-bold tracking-tight leading-none">
+    <div className="mb-8 md:mb-12">
+      <h3 className="text-black text-2xl md:text-3xl font-bold tracking-tight leading-none">
         {title}
       </h3>
-      <span className="block text-black text-xl lg:text-2xl font-semibold leading-tight mt-1">
+      <span className="block text-black text-xl md:text-2xl font-semibold leading-tight mt-1">
         {to ? (
           <React.Fragment>
             <FormattedMessage

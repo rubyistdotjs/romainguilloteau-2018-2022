@@ -1,7 +1,7 @@
 [
   {
     "id": "home.bookShelves.shelf.seeBookOnGoodreads",
-    "defaultMessage": "\"{bookTitle}\"",
+    "defaultMessage": "Check out this book on Goodreads",
     "filepath": "src/components/Home/BookShelves/Book.jsx"
   },
   {

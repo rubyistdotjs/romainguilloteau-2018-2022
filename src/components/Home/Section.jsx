@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 function Section({ emoji, title, children }) {
   return (
-    <section className="container py-16">
+    <section className="container my-24 md:my-32">
       <h2 className="text-4xl mb-16">
         <span role="img" aria-label={title}>
           {emoji}

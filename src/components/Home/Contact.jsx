@@ -1,5 +1,4 @@
 import React from 'react';
-import axios from 'axios';
 import Reaptcha from 'reaptcha';
 import { pickBy, isString } from 'lodash';
 import { isEmail, isLength } from 'validator';
@@ -8,6 +7,7 @@ import { injectIntl, intlShape, defineMessages } from 'react-intl';
 
 import Section from './Section';
 
+import api from '../../services/api';
 import storage from '../../services/storage';
 
 const MESSAGE_STORAGE_KEY = 'home.contact.message';
@@ -123,8 +123,8 @@ class Contact extends React.Component {
   sendMessage() {
     const { message } = this.state;
     this.setState({ _loading: true });
-    axios
-      .post(process.env.REACT_APP_CREATE_MESSAGE_ENDPOINT, {
+    api
+      .post('/createMessage', {
         email: message.email,
         content: message.content,
         recaptcha: message.recaptcha,

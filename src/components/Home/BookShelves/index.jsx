@@ -4,7 +4,7 @@ import { injectIntl, intlShape, defineMessages } from 'react-intl';
 import Section from '../Section';
 import Shelf from './Shelf';
 
-import shelvesJSON from '../../../database/shelves.json';
+import api from '../../../services/api';
 
 const i18n = defineMessages({
   title: {
@@ -19,10 +19,13 @@ class BookShelves extends React.PureComponent {
     loading: false,
   };
 
+  async fetchShelves() {
+    const { data: shelves } = await api.get('/getBookShelves');
+    this.setState({ shelves });
+  }
+
   componentDidMount() {
-    this.setState({
-      shelves: shelvesJSON,
-    });
+    this.fetchShelves();
   }
 
   render() {

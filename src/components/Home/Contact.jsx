@@ -124,7 +124,7 @@ class Contact extends React.Component {
     const { message } = this.state;
     this.setState({ _loading: true });
     api
-      .post('/createMessage', {
+      .post('/createMessage/', {
         email: message.email,
         content: message.content,
         recaptcha: message.recaptcha,

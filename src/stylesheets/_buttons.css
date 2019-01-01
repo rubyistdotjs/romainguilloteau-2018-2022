@@ -2,7 +2,7 @@
 
 .btn {
   @apply .inline-block .text-sm .text-white .font-semibold .leading-none
-         .no-underline .p-3 .mr-2 .mb-2 .border .border-transparent
+         .no-underline .py-4 .px-6 .mr-2 .mb-2 .border .border-transparent
          .btn-transition .cursor-pointer;
 }
 
@@ -16,7 +16,7 @@
 
 @screen md {
   .btn {
-    @apply .text-base .px-4;
+    @apply .text-base .px-6;
   }
 }
 

@@ -7,7 +7,7 @@ import resume from '../../../documents/resume.pdf';
 function Header() {
   return (
     <header>
-      <div className="container flex justify-between align-center pt-8 pb-24">
+      <div className="container flex justify-between align-center pt-8 pb-20">
         <Me />
         <ExternalLinkList />
       </div>

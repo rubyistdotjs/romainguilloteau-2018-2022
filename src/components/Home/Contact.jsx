@@ -1,11 +1,14 @@
 import React from 'react';
-import axios from 'axios';
 import Reaptcha from 'reaptcha';
-import { pickBy, isString } from 'lodash';
-import { isEmail, isLength } from 'validator';
+import pickBy from 'lodash/pickBy';
+import isString from 'lodash/isString';
+import isEmail from 'validator/lib/isEmail';
 import { Send } from 'react-feather';
 import { injectIntl, intlShape, defineMessages } from 'react-intl';
 
+import Section from './Section';
+
+import api from '../../services/api';
 import storage from '../../services/storage';
 
 const MESSAGE_STORAGE_KEY = 'home.contact.message';
@@ -94,13 +97,12 @@ class Contact extends React.Component {
   validateMessageContent() {
     const { formatMessage } = this.props.intl;
     const { content } = this.state.message;
-    if (!isLength(content, { min: 42 })) {
-      return formatMessage(i18n.contentTooShort);
-    }
-    if (!isLength(content, { max: 42000 })) {
-      return formatMessage(i18n.contentTooLong);
-    }
-    return null;
+
+    return content.length < 42
+      ? formatMessage(i18n.contentTooShort)
+      : content.length > 42000
+      ? formatMessage(i18n.contentTooLong)
+      : null;
   }
 
   validateRecaptcha() {
@@ -121,8 +123,8 @@ class Contact extends React.Component {
   sendMessage() {
     const { message } = this.state;
     this.setState({ _loading: true });
-    axios
-      .post(process.env.REACT_APP_CREATE_MESSAGE_ENDPOINT, {
+    api
+      .post('/createMessage/', {
         email: message.email,
         content: message.content,
         recaptcha: message.recaptcha,
@@ -181,80 +183,74 @@ class Contact extends React.Component {
     const contentValid = this.validateMessageContent() === null;
 
     return (
-      <section className="bg-white py-8">
-        <div className="container py-8 mx-auto flex flex-col align-center">
-          <h2 className="text-dark text-4xl font-heading font-bold tracking-tight antialiased leading-none mb-12">
-            {formatMessage(i18n.title)}
-          </h2>
-
-          {message.createdAt && (
-            <p className="alert alert-teal w-full max-w-md">
-              <Send size={16} className="mr-4 flex-no-shrink" />
-              {formatMessage(i18n.messageSentThe, {
-                date: formatDate(message.createdAt, {
-                  day: 'numeric',
-                  month: 'long',
-                  hour: 'numeric',
-                }),
-              })}
-            </p>
+      <Section emoji="✉️" title={formatMessage(i18n.title)}>
+        {message.createdAt && (
+          <p className="alert alert-teal w-full max-w-md">
+            <Send size={16} className="mr-4 flex-no-shrink" />
+            {formatMessage(i18n.messageSentThe, {
+              date: formatDate(message.createdAt, {
+                day: 'numeric',
+                month: 'long',
+                hour: 'numeric',
+              }),
+            })}
+          </p>
+        )}
+        <form
+          id="contact-form"
+          className="w-full max-w-md"
+          onSubmit={this.handleSubmit}
+        >
+          <input
+            placeholder={formatMessage(i18n.emailAddressPlaceholder)}
+            type="email"
+            name="email"
+            value={message.email}
+            onChange={this.handleChange}
+            className={`field ${
+              message.email.length > 0 && !emailValid ? 'invalid' : ''
+            }`}
+            disabled={inputsDisabled}
+          />
+          {messageErrors.email && (
+            <p className="field-error">{messageErrors.email}</p>
           )}
-          <form
-            id="contact-form"
-            className="w-full max-w-md"
-            onSubmit={this.handleSubmit}
-          >
-            <input
-              placeholder={formatMessage(i18n.emailAddressPlaceholder)}
-              type="email"
-              name="email"
-              value={message.email}
-              onChange={this.handleChange}
-              className={`field ${
-                message.email.length > 0 && !emailValid ? 'invalid' : ''
-              }`}
-              disabled={inputsDisabled}
-            />
-            {messageErrors.email && (
-              <p className="field-error">{messageErrors.email}</p>
-            )}
-            <textarea
-              placeholder={formatMessage(i18n.contentPlaceholder)}
-              rows="8"
-              name="content"
-              value={message.content}
-              onChange={this.handleChange}
-              className={`field ${
-                message.content.length > 0 && !contentValid ? 'invalid' : ''
-              }`}
-              disabled={inputsDisabled}
-            />
-            {messageErrors.content && (
-              <p className="field-error">{messageErrors.content}</p>
-            )}
-            {!message.createdAt && (
-              <div>
-                <div className="mb-4">
-                  <Reaptcha
-                    ref={e => (this.recaptchaRef = e)}
-                    sitekey={process.env.REACT_APP_RECAPTCHA_KEY}
-                    onVerify={this.handeRecaptchaVerify}
-                  />
-                </div>
-                {messageErrors.recaptcha && (
-                  <p className="field-error">{messageErrors.recaptcha}</p>
-                )}
-                <input
-                  type="submit"
-                  value={formatMessage(i18n.submitMessageBtn)}
-                  className="btn btn-blue"
-                  disabled={inputsDisabled}
+          <textarea
+            placeholder={formatMessage(i18n.contentPlaceholder)}
+            rows="8"
+            name="content"
+            value={message.content}
+            onChange={this.handleChange}
+            className={`field ${
+              message.content.length > 0 && !contentValid ? 'invalid' : ''
+            }`}
+            disabled={inputsDisabled}
+          />
+          {messageErrors.content && (
+            <p className="field-error">{messageErrors.content}</p>
+          )}
+          {!message.createdAt && (
+            <div>
+              <div className="mb-4">
+                <Reaptcha
+                  ref={e => (this.recaptchaRef = e)}
+                  sitekey={process.env.REACT_APP_RECAPTCHA_KEY}
+                  onVerify={this.handeRecaptchaVerify}
                 />
               </div>
-            )}
-          </form>
-        </div>
-      </section>
+              {messageErrors.recaptcha && (
+                <p className="field-error">{messageErrors.recaptcha}</p>
+              )}
+              <input
+                type="submit"
+                value={formatMessage(i18n.submitMessageBtn)}
+                className="btn btn-blue"
+                disabled={inputsDisabled}
+              />
+            </div>
+          )}
+        </form>
+      </Section>
     );
   }
 }

@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { camelCase } from 'lodash';
+import camelCase from 'lodash/camelCase';
 import { injectIntl, intlShape, defineMessages } from 'react-intl';
 
 const i18n = defineMessages({
   switchTo: {
-    id: 'home.timeline.applications.switchTo',
+    id: 'home.jobs.applications.switchTo',
     defaultMessage: 'Switch to {appName}',
   },
 });

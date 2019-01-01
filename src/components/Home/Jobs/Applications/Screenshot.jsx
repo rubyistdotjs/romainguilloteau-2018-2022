@@ -6,7 +6,7 @@ import { injectIntl, intlShape, defineMessages } from 'react-intl';
 
 const i18n = defineMessages({
   visit: {
-    id: 'home.timeline.applications.visit',
+    id: 'home.jobs.applications.visit',
     defaultMessage: 'Go to this website',
   },
 });

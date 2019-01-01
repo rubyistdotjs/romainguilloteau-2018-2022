@@ -1,5 +1,5 @@
 import React from 'react';
-import { camelCase } from 'lodash';
+import camelCase from 'lodash/camelCase';
 import { injectIntl, intlShape } from 'react-intl';
 import ExternalLink from './ExternalLink';
 

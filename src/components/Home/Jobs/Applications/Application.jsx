@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { camelCase } from 'lodash';
+import camelCase from 'lodash/camelCase';
 import ChallengeList from './ChallengeList';
 import Tag from './Tag';
 
@@ -17,12 +17,12 @@ function Application({
       className="w-full flex-no-shrink flex flex-col transition transition-transform"
       style={{ transform: `translateX(-${offset * 100}%)` }}
     >
-      <h4 className="text-black text-xl md:text-2xl font-heading font-bold leading-tight mb-1">
+      <h4 className="text-black text-lg lg:text-xl font-semibold leading-tight mb-1">
         {name}
       </h4>
       <div
         style={{ backgroundColor: brandColor }}
-        className="hidden lg:block w-16 h-1 my-2"
+        className="hidden lg:block w-12 h-1 my-2"
       />
       {description &&
         description.split('\n').map((p, i) => (

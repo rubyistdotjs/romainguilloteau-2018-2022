@@ -5,11 +5,11 @@ import Screenshot from './Screenshot';
 
 const i18n = defineMessages({
   desktopScreenshotAlt: {
-    id: 'home.timeline.applications.desktopScreenshotAlt',
+    id: 'home.jobs.applications.desktopScreenshotAlt',
     defaultMessage: 'Screenshot of {appName}',
   },
   mobileScreenshotAlt: {
-    id: 'home.timeline.applications.mobileScreenshotAlt',
+    id: 'home.jobs.applications.mobileScreenshotAlt',
     defaultMessage: 'Mobile screenshot of {appName}',
   },
 });

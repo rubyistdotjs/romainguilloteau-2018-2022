@@ -28,7 +28,7 @@
         }],
         "description": {
           "fr": "Développement et design de la nouvelle version du site en faisant table rase de l'ancienne. Le site a pour objectif de faciliter la mise en relation et les échanges entre graphistes freelance et porteurs de project.",
-          "en" : "Starting from scratch, development and design of the new version of Graphiste.com. This website goal's is to facilitate contacts and exhanges between freelance graphic designers and project leaders."
+          "en" : "Starting from scratch, development and design of the new version of Graphiste.com. This website goal is to facilitate contacts and exhanges between freelance graphic designers and project leaders."
         },
         "challenges": {
           "fr": [
@@ -208,8 +208,8 @@
           "takenAt": 1533129660000
         }],
         "description": {
-          "fr": "Développement et design d'une application simple permettant d'éditer une FAQ. Celle-ci peut être dupliquée puis personnalisée pour chaque site, actuellement Codeur utilise 5 différente instances.",
-          "en": ""
+          "fr": "Développement et design d'une application simple permettant aux administrateurs d'éditer une FAQ. Celle-ci peut être dupliquée puis personnalisée pour chaque site.",
+          "en": "Starting from scratch, development and design of a simple Rails app allowing admins to create and maintain a knowledge base. The app can easily be duplicated and customized to fit a particular website."
         },
         "challenges": {
           "fr": [],
@@ -252,8 +252,8 @@
           "takenAt": 1533129660000
         }],
         "description": {
-          "fr": "Développement d'une application Vue.js permettant de générer simplemenent un nuage de mot grâce à plusieurs paramètres prédéfinis. Le nuage peut être télécharger en PNG (avec transparence), JPG ou WebP.",
-          "en": ""
+          "fr": "Développement d'une application Vue.js permettant de générer simplemenent un nuage de mot grâce à plusieurs paramètres prédéfinis. Le nuage peut être télécharger en PNG (avec transparence), JPG ou WebP.\nC'est une des nombreuses applications marketing que j'ai créé pour Codeur. Le but est de faire de la publicité pour les plateformes de la société et attraper des adresses email.",
+          "en": "Development of a Vue.js app allowing users to easily create a word cloud with a few parameters to customize it. In one click, the result can be downloaded in PNG (with transparency), JPG or WebP.\nThis is only one of several small marketing app I made for Codeur. Every once in a while the marketing team looked at which articles were the most popular on the blogs and came up with app ideas like this one. The goals were to advertise the different services provided by the company and catch a few email addresses."
         },
         "challenges": {
           "fr": [],
@@ -293,7 +293,7 @@
         }],
         "description": {
           "fr": "Développement d'une Gem permettant à une application Rails d'envoyer des emails via Amazon SES. La gem maintient automatiquement un registre de tous les destinataires et intercepte immédiatement les emails à destination d'une adresse non existante ou ayant précédemment signalé un spam. Un log des emails est également conservé pour une période de 14 jours (par défaut).",
-          "en": ""
+          "en": "Development of a Ruby gem used by all the company's app to send emails through Amazon SES. The gem maintains a register of all the recipients we ever sent an email to and flags them if we previously had an issue with them (bounces, complaints, ...). The gem silently intercept emails outgoing to a flagged recipient. With it you can also attach a view tracker on demand and handle incoming emails."
         },
         "challenges": {
           "fr": [],

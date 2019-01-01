@@ -1,5 +1,30 @@
 [
   {
+    "id": "home.bookShelves.shelf.seeBookOnGoodreads",
+    "defaultMessage": "Check out this book on Goodreads",
+    "filepath": "src/components/Home/BookShelves/Book.jsx"
+  },
+  {
+    "id": "home.bookShelves.title",
+    "defaultMessage": "Book shelves",
+    "filepath": "src/components/Home/BookShelves/index.jsx"
+  },
+  {
+    "id": "home.bookShelves.currentlyReading",
+    "defaultMessage": "Reading",
+    "filepath": "src/components/Home/BookShelves/Shelf.jsx"
+  },
+  {
+    "id": "home.bookShelves.toRead",
+    "defaultMessage": "On deck",
+    "filepath": "src/components/Home/BookShelves/Shelf.jsx"
+  },
+  {
+    "id": "home.bookShelves.read",
+    "defaultMessage": "Read",
+    "filepath": "src/components/Home/BookShelves/Shelf.jsx"
+  },
+  {
     "id": "home.contact.title",
     "defaultMessage": "Contact",
     "filepath": "src/components/Home/Contact.jsx"
@@ -50,6 +75,11 @@
     "filepath": "src/components/Home/Contact.jsx"
   },
   {
+    "id": "home.diplomas.title",
+    "defaultMessage": "Diplomas",
+    "filepath": "src/components/Home/Diplomas.jsx"
+  },
+  {
     "id": "home.meta.title",
     "defaultMessage": "Romain Guilloteau - Full Stack Web Developer",
     "filepath": "src/components/Home/Head.jsx"
@@ -95,38 +125,43 @@
     "filepath": "src/components/Home/Header/index.jsx"
   },
   {
-    "id": "home.timeline.applications.switchTo",
+    "id": "home.jobs.applications.switchTo",
     "defaultMessage": "Switch to {appName}",
-    "filepath": "src/components/Home/Timeline/Applications/ApplicationsNavigation.jsx"
+    "filepath": "src/components/Home/Jobs/Applications/ApplicationsNavigation.jsx"
   },
   {
-    "id": "home.timeline.applications.visit",
+    "id": "home.jobs.applications.visit",
     "defaultMessage": "Go to this website",
-    "filepath": "src/components/Home/Timeline/Applications/Screenshot.jsx"
+    "filepath": "src/components/Home/Jobs/Applications/Screenshot.jsx"
   },
   {
-    "id": "home.timeline.applications.desktopScreenshotAlt",
+    "id": "home.jobs.applications.desktopScreenshotAlt",
     "defaultMessage": "Screenshot of {appName}",
-    "filepath": "src/components/Home/Timeline/Applications/ScreenshotList.jsx"
+    "filepath": "src/components/Home/Jobs/Applications/ScreenshotList.jsx"
   },
   {
-    "id": "home.timeline.applications.mobileScreenshotAlt",
+    "id": "home.jobs.applications.mobileScreenshotAlt",
     "defaultMessage": "Mobile screenshot of {appName}",
-    "filepath": "src/components/Home/Timeline/Applications/ScreenshotList.jsx"
+    "filepath": "src/components/Home/Jobs/Applications/ScreenshotList.jsx"
   },
   {
-    "id": "timeline.today",
-    "defaultMessage": "today",
-    "filepath": "src/components/Home/Timeline/Title.jsx"
+    "id": "home.jobs.title",
+    "defaultMessage": "Experience",
+    "filepath": "src/components/Home/Jobs/index.jsx"
   },
   {
     "id": "home.timeline.dateFrom",
     "defaultMessage": "from",
-    "filepath": "src/components/Home/Timeline/Title.jsx"
+    "filepath": "src/components/Home/Title.jsx"
   },
   {
     "id": "home.timeline.dateTo",
     "defaultMessage": "to",
-    "filepath": "src/components/Home/Timeline/Title.jsx"
+    "filepath": "src/components/Home/Title.jsx"
+  },
+  {
+    "id": "home.timeline.dateSince",
+    "defaultMessage": "since",
+    "filepath": "src/components/Home/Title.jsx"
   }
 ]

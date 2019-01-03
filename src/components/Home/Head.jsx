@@ -82,6 +82,7 @@ function Head({ intl }) {
               "https://www.linkedin.com/in/romainguilloteau",
               "https://twitter.com/rubyistdotjs",
               "https://plus.google.com/110337874986223414450",
+              "https://www.crunchbase.com/person/romain-guilloteau",
               "https://github.com/rubyistdotjs",
               "https://gitlab.com/rubyistdotjs"
             ]

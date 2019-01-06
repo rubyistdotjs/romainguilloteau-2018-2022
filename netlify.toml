@@ -6,7 +6,11 @@
 [[redirects]]
   from = "https://romainguilloteau.netlify.com/*"
   to = "https://www.romainguilloteau.com/:splat"
+  status = 301
+  force = true
 
 [[redirects]]
   from = "http://romainguilloteau.netlify.com/*"
   to = "https://www.romainguilloteau.com/:splat"
+  status = 301
+  force = true

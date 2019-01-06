@@ -23,7 +23,7 @@ function Book({ intl, title, author, url }) {
       >
         {title}
       </a>
-      <span className="text-base text-grey-dark">{author}</span>
+      <span className="text-base text-grey-darker">{author}</span>
     </div>
   );
 }

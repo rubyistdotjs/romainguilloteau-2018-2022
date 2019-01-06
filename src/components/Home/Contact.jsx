@@ -130,16 +130,17 @@ class Contact extends React.Component {
         recaptcha: message.recaptcha,
       })
       .then(res => {
+        const message = {
+          ...res.data,
+          sentAt: new Date().toISOString()
+        };
+
         this.setState(prevState => ({
-          message: {
-            ...prevState.message,
-            ...res.data,
-            sentAt: new Date(),
-          },
+          message: { ...prevState.message, ...message },
           _loading: false,
         }));
 
-        storage.setItem(MESSAGE_STORAGE_KEY, res.data);
+        storage.setItem(MESSAGE_STORAGE_KEY, message);
       })
       .catch(error => {
         console.log(error);

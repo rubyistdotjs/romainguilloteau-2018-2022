@@ -62,7 +62,7 @@ class Contact extends React.Component {
       email: '',
       content: '',
       recaptcha: null,
-      createdAt: null,
+      sentAt: null,
     },
     messageErrors: {},
     _loading: false,
@@ -72,7 +72,7 @@ class Contact extends React.Component {
     storage.getItem(MESSAGE_STORAGE_KEY).then(storedMessage => {
       if (!storedMessage) return;
       const now = new Date();
-      const expiresAt = new Date(storedMessage.createdAt);
+      const expiresAt = new Date(storedMessage.sentAt);
       expiresAt.setDate(expiresAt.getDate() + 1);
 
       if (expiresAt <= now) {
@@ -124,14 +124,18 @@ class Contact extends React.Component {
     const { message } = this.state;
     this.setState({ _loading: true });
     api
-      .post('/createMessage/', {
+      .post('/sendMessage', {
         email: message.email,
         content: message.content,
         recaptcha: message.recaptcha,
       })
       .then(res => {
         this.setState(prevState => ({
-          message: { ...prevState.message, ...res.data },
+          message: {
+            ...prevState.message,
+            ...res.data,
+            sentAt: new Date(),
+          },
           _loading: false,
         }));
 
@@ -177,18 +181,18 @@ class Contact extends React.Component {
   render() {
     const { formatMessage, formatDate } = this.props.intl;
     const { message, messageErrors, _loading } = this.state;
-    const inputsDisabled = _loading || message.createdAt;
+    const inputsDisabled = _loading || message.sentAt;
 
     const emailValid = this.validateMessageEmail() === null;
     const contentValid = this.validateMessageContent() === null;
 
     return (
       <Section emoji="✉️" title={formatMessage(i18n.title)}>
-        {message.createdAt && (
+        {message.sentAt && (
           <p className="alert alert-teal w-full max-w-md">
             <Send size={16} className="mr-4 flex-no-shrink" />
             {formatMessage(i18n.messageSentThe, {
-              date: formatDate(message.createdAt, {
+              date: formatDate(message.sentAt, {
                 day: 'numeric',
                 month: 'long',
                 hour: 'numeric',
@@ -229,7 +233,7 @@ class Contact extends React.Component {
           {messageErrors.content && (
             <p className="field-error">{messageErrors.content}</p>
           )}
-          {!message.createdAt && (
+          {!message.sentAt && (
             <div>
               <div className="mb-4">
                 <Reaptcha

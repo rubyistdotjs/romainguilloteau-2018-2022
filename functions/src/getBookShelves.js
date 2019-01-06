@@ -1,4 +1,4 @@
-require('../services/dotenv');
+require('dotenv').config();
 
 const { getShelves, getShelfBooks } = require('../services/goodreads');
 

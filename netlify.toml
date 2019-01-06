@@ -2,3 +2,6 @@
   Command = "yarn build"
   Functions = "lambda"
   Publish = "build"
+[[redirects]]
+  from = "romainguilloteau.netlify.com/*"
+  to = "www.romainguilloteau.com/:splat"

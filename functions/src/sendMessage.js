@@ -1,4 +1,4 @@
-require('../services/dotenv');
+require('dotenv').config();
 
 const Recaptcha = require('recaptcha2');
 const mailer = require('@sendgrid/mail');

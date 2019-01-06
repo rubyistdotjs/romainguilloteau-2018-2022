@@ -14,7 +14,6 @@
   ],
   "dependencies": {
     "axios": "^0.18.0",
-    "firebase": "^5.3.0",
     "localforage": "^1.7.3",
     "lodash": "^4.17.5",
     "prop-types": "^15.6.2",
@@ -30,10 +29,12 @@
     "validator": "^10.5.0"
   },
   "scripts": {
-    "start": "yarn watch:css & react-scripts start",
-    "build": "yarn build:css && react-scripts build && node sitemap.js && react-snapshot",
-    "build:css": "postcss src/stylesheets/application.css -o src/application.css",
+    "start": "yarn run watch:css & yarn run start:server & react-scripts start",
+    "start:server": "netlify-lambda serve functions/src",
     "watch:css": "postcss src/stylesheets/application.css -o src/application.css -w",
+    "build": "yarn run build:server && yarn run build:css && react-scripts build && node sitemap.js && react-snapshot",
+    "build:css": "postcss src/stylesheets/application.css -o src/application.css",
+    "build:server": "netlify-lambda build functions/src",
     "i18n": "npm run i18n:extractMessages && npm run i18n:updateLocales && npm run i18n:updateDatabaseLocales",
     "i18n:extractMessages": "react-intl-cra 'src/**/*.{js,jsx}' -o 'src/i18n/messages/messages.json'",
     "i18n:updateLocales": "node ./scripts/translationRunner.js",
@@ -41,9 +42,11 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
+  "proxy": "http://localhost:9000",
   "devDependencies": {
     "autoprefixer": "^9.0.0",
     "eslint-plugin-prettier": "^3.0.0",
+    "netlify-lambda": "^1.1.1",
     "postcss-cli": "^6.0.0",
     "postcss-color-function": "^4.0.1",
     "postcss-import": "^12.0.0",

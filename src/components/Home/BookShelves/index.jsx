@@ -20,7 +20,7 @@ class BookShelves extends React.PureComponent {
   };
 
   async fetchShelves() {
-    const { data: shelves } = await api.get('/getBookShelves/');
+    const { data: shelves } = await api.get('/getBookShelves');
     this.setState({ shelves });
   }
 

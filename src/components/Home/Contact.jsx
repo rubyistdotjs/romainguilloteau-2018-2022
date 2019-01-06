@@ -207,6 +207,7 @@ class Contact extends React.Component {
           onSubmit={this.handleSubmit}
         >
           <input
+            aria-label={formatMessage(i18n.emailAddressPlaceholder)}
             placeholder={formatMessage(i18n.emailAddressPlaceholder)}
             type="email"
             name="email"
@@ -221,6 +222,7 @@ class Contact extends React.Component {
             <p className="field-error">{messageErrors.email}</p>
           )}
           <textarea
+            aria-label={formatMessage(i18n.contentPlaceholder)}
             placeholder={formatMessage(i18n.contentPlaceholder)}
             rows="8"
             name="content"

@@ -68,7 +68,7 @@ exports.handler = async function(event, context, callback) {
 
   const message = buildMessage(payload);
 
-  mailer.send({
+  await mailer.send({
     from: process.env.MAILER_SENDER_EMAIL,
     to: process.env.MAILER_RECIPIENT_EMAIL,
     subject: 'Nouveau message',

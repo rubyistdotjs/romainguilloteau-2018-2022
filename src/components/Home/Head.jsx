@@ -74,8 +74,8 @@ function Head({ intl }) {
             "address": {
               "@type": "PostalAddress",
               "addressCountry": "FR",
-              "addressLocality": "Annecy",
-              "postalCode": "74000"
+              "addressLocality": "Montpellier",
+              "postalCode": "34000"
             },
             "url": "https://www.romainguilloteau.com/",
             "sameAs": [

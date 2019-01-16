@@ -18,7 +18,7 @@ function Book({ intl, title, author, url }) {
         href={url}
         title={formatMessage(i18n.seeBookOnGoodreads)}
         target="_blank"
-        rel="noopener noreferrer"
+        rel="noopener noreferrer nofollow"
         className="text-black text-lg font-bold tracking-tight leading-tight no-underline hover:text-blue-dark focus:text-blue-dark"
       >
         {title}

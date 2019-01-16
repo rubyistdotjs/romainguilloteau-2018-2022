@@ -80,6 +80,7 @@ function Head({ intl }) {
             "url": "https://www.romainguilloteau.com/",
             "sameAs": [
               "https://www.linkedin.com/in/romainguilloteau",
+              "https://www.xing.com/profile/romain_guilloteau",
               "https://twitter.com/rubyistdotjs",
               "https://plus.google.com/110337874986223414450",
               "https://www.crunchbase.com/person/romain-guilloteau",

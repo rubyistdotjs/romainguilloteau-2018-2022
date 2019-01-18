@@ -79,6 +79,7 @@ function Head({ intl }) {
             },
             "url": "https://www.romainguilloteau.com/",
             "sameAs": [
+              "https://about.me/romainguilloteau",
               "https://www.linkedin.com/in/romainguilloteau",
               "https://angel.co/rubyistdotjs",
               "https://twitter.com/rubyistdotjs",

@@ -10,6 +10,11 @@
     "filepath": "src/components/Home/BookShelves/index.jsx"
   },
   {
+    "id": "home.bookShelves.dataFromGoodreadsAPI",
+    "defaultMessage": "Data collected from {goodreadsLink} API",
+    "filepath": "src/components/Home/BookShelves/index.jsx"
+  },
+  {
     "id": "home.bookShelves.currentlyReading",
     "defaultMessage": "Reading",
     "filepath": "src/components/Home/BookShelves/Shelf.jsx"

@@ -1,5 +1,6 @@
 {
   "home.bookShelves.currentlyReading": "Reading",
+  "home.bookShelves.dataFromGoodreadsAPI": "Data collected from {goodreadsLink} API",
   "home.bookShelves.read": "Read",
   "home.bookShelves.shelf.seeBookOnGoodreads": "\"{bookTitle}\"",
   "home.bookShelves.title": "Book shelves",

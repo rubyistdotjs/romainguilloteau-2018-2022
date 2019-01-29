@@ -1,5 +1,10 @@
 import React from 'react';
-import { injectIntl, intlShape, defineMessages } from 'react-intl';
+import {
+  injectIntl,
+  intlShape,
+  defineMessages,
+  FormattedMessage,
+} from 'react-intl';
 
 import Section from '../Section';
 import Shelf from './Shelf';
@@ -47,6 +52,24 @@ class BookShelves extends React.PureComponent {
               />
             </div>
           ))}
+        </div>
+        <div className="text-grey-dark text-xs my-8">
+          <FormattedMessage
+            id="home.bookShelves.dataFromGoodreadsAPI"
+            defaultMessage="Data collected from {goodreadsLink} API"
+            values={{
+              goodreadsLink: (
+                <a
+                  href="https://www.goodreads.com/user/show/87055544-romain-guilloteau"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  className="text-blue-dark no-underline hover:text-blue-darker focus:text-blue-darker"
+                >
+                  Goodreads
+                </a>
+              )
+            }}
+          />
         </div>
       </Section>
     );

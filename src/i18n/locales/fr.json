@@ -1,5 +1,6 @@
 {
   "home.bookShelves.currentlyReading": "En cours",
+  "home.bookShelves.dataFromGoodreadsAPI": "Données obtenues depuis l'API {goodreadsLink}",
   "home.bookShelves.read": "Lus",
   "home.bookShelves.shelf.seeBookOnGoodreads": "Voir ce livre sur Goodreads",
   "home.bookShelves.title": "Book shelves",

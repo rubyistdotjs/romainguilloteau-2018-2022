@@ -57,6 +57,7 @@ function Head({ intl }) {
             "name": "Romain Guilloteau",
             "givenName": "Romain",
             "familyName": "Guilloteau",
+            "alternateName": "rubyistdotjs",
             "image": "https://www.romainguilloteau.com/images/mugshot.jpg",
             "jobTitle": "${formatMessage(i18n.jsonldJobTitle)}",
             "description": "${formatMessage(i18n.jsonldDescription)}",
@@ -68,7 +69,8 @@ function Head({ intl }) {
               "address": {
                 "@type": "PostalAddress",
                 "addressCountry": "FR",
-                "addressLocality": "Amiens"
+                "addressLocality": "Amiens",
+                "postalCode": "80000"
               }
             },
             "address": {

@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { injectIntl, intlShape, defineMessages } from 'react-intl';
 
+import ExternalLink from '../../ExternalLink';
+
 const i18n = defineMessages({
   seeBookOnGoodreads: {
     id: 'home.bookShelves.shelf.seeBookOnGoodreads',
@@ -14,15 +16,14 @@ function Book({ intl, title, author, url }) {
 
   return (
     <div className="flex flex-col items-start pb-4">
-      <a
+      <ExternalLink
         href={url}
         title={formatMessage(i18n.seeBookOnGoodreads)}
-        target="_blank"
-        rel="noopener noreferrer nofollow"
+        rel="nofollow"
         className="text-black text-lg font-bold tracking-tight leading-tight no-underline hover:text-blue-dark focus:text-blue-dark"
       >
         {title}
-      </a>
+      </ExternalLink>
       <span className="text-base text-grey-darker">{author}</span>
     </div>
   );

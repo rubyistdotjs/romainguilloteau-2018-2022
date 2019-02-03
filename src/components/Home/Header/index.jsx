@@ -1,7 +1,9 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
+
 import Me from './Me';
-import ExternalLinkList from './ExternalLinkList';
+import SocialLinkList from './SocialLinkList';
+
 import resume from '../../../documents/resume.pdf';
 
 function Header() {
@@ -9,7 +11,7 @@ function Header() {
     <header>
       <div className="container flex justify-between align-center pt-8 pb-20">
         <Me />
-        <ExternalLinkList />
+        <SocialLinkList />
       </div>
       <div className="container mb-32">
         <div className="w-full lg:w-2/3 xl:w-4/5">

@@ -17,74 +17,6 @@
     "endedAt": 1538517600000,
     "company": "Codeur",
     "applications": [{
-        "name": "Graphiste.com",
-        "url": "https://graphiste.com/",
-        "brandColor": "#EF4347",
-        "screenshots": [{
-          "devise": "desktop",
-          "filename": "graphiste.jpg",
-          "thumbnail": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1280 1280'><path fill='%23b5acaa' d='M0 0h1280v1280H0z'/><g fill-opacity='.5'><path fill='%232f1a15' d='M2.5 2.5h1270v630H2.5z'/><path fill='%23fff8ee' d='M652.5 67.5h590v285h-590z'/><path fill='%23fff' d='M2.5 632.5h1280v650H2.5z'/><path fill='%23400000' d='M877.5 382.5h405v205h-405z'/><path d='M2.5 2.5h860v70H2.5z'/><path fill='%23fff' d='M2.5 632.5h1280v650H2.5z'/><path fill='%230d1515' d='M2.5 467.5h475v160H2.5z'/><path fill='%23a1a6a3' d='M567.5 67.5h325v405h-325z'/><path fill='%23f60000' d='M1027.5 682.5h190v40h-190z'/><path d='M1032.5 2.5h250v65h-250z'/><path fill='%23212521' d='M2.5 47.5h495v135H2.5z'/><path fill='%23985a3f' d='M972.5 102.5h125v285h-125z'/><path fill='%23fff' d='M402.5 632.5h645v650h-645z'/><path fill='%23fdfefd' d='M1122.5 72.5h120v245h-120z'/><path fill='%23ff4c4a' d='M72.5 422.5h260v50h-260z'/><path fill='%2327020d' d='M1132.5 452.5h150v175h-150z'/><path fill='%23fff' d='M1267.5 67.5h15v380h-15z'/><path fill='%23ff9f70' d='M902.5 577.5h250v55h-250z'/><path fill='%23a28d83' d='M77.5 867.5h545v30h-545z'/><path fill='%232f3c3e' d='M2.5 287.5h410v135H2.5z'/><path fill='%23acb5b2' d='M82.5 182.5h595v45h-595z'/><path fill='%23190714' d='M72.5 1037.5h70v30h-70z'/><path fill='%23d8d7d2' d='M807.5 67.5h170v250h-170z'/><path fill='%23ff403d' d='M877.5 22.5h165v35h-165z'/><path fill='%23d3baba' d='M67.5 27.5h175v20h-175z'/><path fill='%23f50f09' d='M1107.5 937.5h110v20h-110z'/><path fill='%23c2c5c0' d='M57.5 502.5h560v10h-560z'/><path fill='%2362000e' d='M1102.5 327.5h75v285h-75z'/><path fill='%237b7a78' d='M607.5 72.5h120v275h-120z'/><path fill='%23757d75' d='M92.5 692.5h310v20h-310z'/><path fill='%232d2d29' d='M2.5 177.5h70v420h-70z'/><path fill='%23a1aead' d='M77.5 242.5h320v45h-320z'/></g></svg>",
-          "takenAt": 1534516200000
-        }],
-        "description": {
-          "fr": "Développement et design de la nouvelle version du site en faisant table rase de l'ancienne. Le site a pour objectif de faciliter la mise en relation et les échanges entre graphistes freelance et porteurs de project.",
-          "en" : "Starting from scratch, development and design of the new version of Graphiste.com. This website goal is to facilitate contacts and exhanges between freelance graphic designers and project leaders."
-        },
-        "challenges": {
-          "fr": [
-            "Système de paiement complet (facturation, exports comptables, paiements récurrents) par carte bancaire ou PayPal.",
-            "Chat permettant des échanges en direct entre clients et prestataires ainsi que des conversions groupés.",
-            "Messagerie (de type Slack) utilisée lors du suivis des prestations pour les échanges en direct (messages et tous type de fichier) entre le prestataire et le client ."
-          ],
-          "en": [
-            "A complet payment system (billing, accounting exports, recurring payments, refunds, ...) by debit cards or PayPal.",
-            "Direct messaging allowing clients to easily start a converstion with selected freelances. On the other end the freelances can chat between each other in chat rooms.",
-            "A separate, more advance, messaging app (kinda like Slack) allowing both end to share and easily preview all types of documents and exchange in real time."
-          ]
-        },
-        "tags": [{
-            "name": "Ruby on Rails",
-            "legacy": false
-          },
-          {
-            "name": "PostgreSQL",
-            "legacy": false
-          },
-          {
-            "name": "Redis",
-            "legacy": false
-          },
-          {
-            "name": "Bootstrap",
-            "legacy": false
-          },
-          {
-            "name": "Slim",
-            "legacy": false
-          },
-          {
-            "name": "Sass",
-            "legacy": false
-          },
-          {
-            "name": "Vue.js",
-            "legacy": false
-          },
-          {
-            "name": "Braintree",
-            "legacy": false
-          },
-          {
-            "name": "Amazon Machine Learning",
-            "legacy": false
-          },
-          {
-            "name": "AngularJS",
-            "legacy": true
-          }
-        ]
-      },
-      {
         "name": "Facture.net",
         "url": "https://www.facture.net/",
         "brandColor": "#516AA7",
@@ -142,6 +74,73 @@
           {
             "name": "Amazon Glacier",
             "legacy": false
+          }
+        ]
+      }, {
+        "name": "Graphiste.com",
+        "url": "https://graphiste.com/",
+        "brandColor": "#EF4347",
+        "screenshots": [{
+          "devise": "desktop",
+          "filename": "graphiste.jpg",
+          "thumbnail": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1280 1280'><path fill='%23b5acaa' d='M0 0h1280v1280H0z'/><g fill-opacity='.5'><path fill='%232f1a15' d='M2.5 2.5h1270v630H2.5z'/><path fill='%23fff8ee' d='M652.5 67.5h590v285h-590z'/><path fill='%23fff' d='M2.5 632.5h1280v650H2.5z'/><path fill='%23400000' d='M877.5 382.5h405v205h-405z'/><path d='M2.5 2.5h860v70H2.5z'/><path fill='%23fff' d='M2.5 632.5h1280v650H2.5z'/><path fill='%230d1515' d='M2.5 467.5h475v160H2.5z'/><path fill='%23a1a6a3' d='M567.5 67.5h325v405h-325z'/><path fill='%23f60000' d='M1027.5 682.5h190v40h-190z'/><path d='M1032.5 2.5h250v65h-250z'/><path fill='%23212521' d='M2.5 47.5h495v135H2.5z'/><path fill='%23985a3f' d='M972.5 102.5h125v285h-125z'/><path fill='%23fff' d='M402.5 632.5h645v650h-645z'/><path fill='%23fdfefd' d='M1122.5 72.5h120v245h-120z'/><path fill='%23ff4c4a' d='M72.5 422.5h260v50h-260z'/><path fill='%2327020d' d='M1132.5 452.5h150v175h-150z'/><path fill='%23fff' d='M1267.5 67.5h15v380h-15z'/><path fill='%23ff9f70' d='M902.5 577.5h250v55h-250z'/><path fill='%23a28d83' d='M77.5 867.5h545v30h-545z'/><path fill='%232f3c3e' d='M2.5 287.5h410v135H2.5z'/><path fill='%23acb5b2' d='M82.5 182.5h595v45h-595z'/><path fill='%23190714' d='M72.5 1037.5h70v30h-70z'/><path fill='%23d8d7d2' d='M807.5 67.5h170v250h-170z'/><path fill='%23ff403d' d='M877.5 22.5h165v35h-165z'/><path fill='%23d3baba' d='M67.5 27.5h175v20h-175z'/><path fill='%23f50f09' d='M1107.5 937.5h110v20h-110z'/><path fill='%23c2c5c0' d='M57.5 502.5h560v10h-560z'/><path fill='%2362000e' d='M1102.5 327.5h75v285h-75z'/><path fill='%237b7a78' d='M607.5 72.5h120v275h-120z'/><path fill='%23757d75' d='M92.5 692.5h310v20h-310z'/><path fill='%232d2d29' d='M2.5 177.5h70v420h-70z'/><path fill='%23a1aead' d='M77.5 242.5h320v45h-320z'/></g></svg>",
+          "takenAt": 1534516200000
+        }],
+        "description": {
+          "fr": "Développement et design de la nouvelle version du site en faisant table rase de l'ancienne. Le site a pour objectif de faciliter la mise en relation et les échanges entre graphistes freelance et porteurs de project.",
+          "en": "Starting from scratch, development and design of the new version of Graphiste.com. This website goal is to facilitate contacts and exhanges between freelance graphic designers and project leaders."
+        },
+        "challenges": {
+          "fr": [
+            "Système de paiement complet (facturation, exports comptables, paiements récurrents) par carte bancaire ou PayPal.",
+            "Chat permettant des échanges en direct entre clients et prestataires ainsi que des conversions groupés.",
+            "Messagerie (de type Slack) utilisée lors du suivis des prestations pour les échanges en direct (messages et tous type de fichier) entre le prestataire et le client ."
+          ],
+          "en": [
+            "A complet payment system (billing, accounting exports, recurring payments, refunds, ...) by debit cards or PayPal.",
+            "Direct messaging allowing clients to easily start a converstion with selected freelances. On the other end the freelances can chat between each other in chat rooms.",
+            "A separate, more advance, messaging app (kinda like Slack) allowing both end to share and easily preview all types of documents and exchange in real time."
+          ]
+        },
+        "tags": [{
+            "name": "Ruby on Rails",
+            "legacy": false
+          },
+          {
+            "name": "PostgreSQL",
+            "legacy": false
+          },
+          {
+            "name": "Redis",
+            "legacy": false
+          },
+          {
+            "name": "Bootstrap",
+            "legacy": false
+          },
+          {
+            "name": "Slim",
+            "legacy": false
+          },
+          {
+            "name": "Sass",
+            "legacy": false
+          },
+          {
+            "name": "Vue.js",
+            "legacy": false
+          },
+          {
+            "name": "Braintree",
+            "legacy": false
+          },
+          {
+            "name": "Amazon Machine Learning",
+            "legacy": false
+          },
+          {
+            "name": "AngularJS",
+            "legacy": true
           }
         ]
       },

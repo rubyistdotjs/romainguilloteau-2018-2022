@@ -105,11 +105,6 @@
     "filepath": "src/components/Home/Head.jsx"
   },
   {
-    "id": "home.header.externalLink.visitProfileOn",
-    "defaultMessage": "Check out my profile on {socialNetwork}",
-    "filepath": "src/components/Home/Header/ExternalLink.jsx"
-  },
-  {
     "id": "home.header.title",
     "defaultMessage": "Full Stack Web Developer, Ruby on Rails & JavaScript",
     "filepath": "src/components/Home/Header/index.jsx"
@@ -128,6 +123,11 @@
     "id": "home.header.downloadResumeBtn",
     "defaultMessage": "Download my resume",
     "filepath": "src/components/Home/Header/index.jsx"
+  },
+  {
+    "id": "home.header.socialLink.visitProfileOn",
+    "defaultMessage": "Check out my profile on {socialNetwork}",
+    "filepath": "src/components/Home/Header/SocialLink.jsx"
   },
   {
     "id": "home.jobs.applications.switchTo",

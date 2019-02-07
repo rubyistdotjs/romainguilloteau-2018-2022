@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ExternalLink } from 'react-feather';
+import { ExternalLink as ExternalLinkIcon } from 'react-feather';
 import ProgressiveImage from 'react-progressive-image';
 import { injectIntl, intlShape, defineMessages } from 'react-intl';
+
+import ExternalLink from '../../../ExternalLink';
 
 const i18n = defineMessages({
   visit: {
@@ -26,15 +28,14 @@ function Screenshot({ intl, filename, thumbnail, alt, url }) {
     <div className="screenshot relative flex-grow bg-grey-lightest">
       {url && (
         <div className="screenshot-overlay">
-          <a
+          <ExternalLink
             href={url}
             title={formatMessage(i18n.visit)}
             className="text-white hover:text-blue-light"
-            target="_blank"
-            rel="noopener noreferrer nofollow"
+            rel="nofollow"
           >
-            <ExternalLink size={42} />
-          </a>
+            <ExternalLinkIcon size={42} />
+          </ExternalLink>
         </div>
       )}
       <ProgressiveImage

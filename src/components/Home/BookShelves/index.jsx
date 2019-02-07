@@ -7,6 +7,7 @@ import {
 } from 'react-intl';
 
 import Section from '../Section';
+import ExternalLink from '../../ExternalLink';
 import Shelf from './Shelf';
 
 import api from '../../../services/api';
@@ -59,15 +60,13 @@ class BookShelves extends React.PureComponent {
             defaultMessage="Data collected from {goodreadsLink} API"
             values={{
               goodreadsLink: (
-                <a
+                <ExternalLink
                   href="https://www.goodreads.com/user/show/87055544-romain-guilloteau"
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
                   className="text-blue-dark no-underline hover:text-blue-darker focus:text-blue-darker"
                 >
                   Goodreads
-                </a>
-              )
+                </ExternalLink>
+              ),
             }}
           />
         </div>

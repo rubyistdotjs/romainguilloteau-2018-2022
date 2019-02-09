@@ -55,6 +55,7 @@ function getShelfBooks({
   sort = 'date_read',
   order = 'd',
   per_page = 6,
+  page = 1,
 }) {
   return new Promise((resolve, reject) => {
     api
@@ -64,6 +65,7 @@ function getShelfBooks({
           shelf,
           sort,
           order,
+          page,
           per_page,
           id: GOODREADS_USER_ID,
         },

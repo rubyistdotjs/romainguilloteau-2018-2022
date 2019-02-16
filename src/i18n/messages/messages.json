@@ -1,5 +1,10 @@
 [
   {
+    "id": "home.bookShelves.shelf.coverOf",
+    "defaultMessage": "Cover of the book {title}",
+    "filepath": "src/components/Home/BookShelves/Book.jsx"
+  },
+  {
     "id": "home.bookShelves.shelf.seeBookOnGoodreads",
     "defaultMessage": "Check out this book on Goodreads",
     "filepath": "src/components/Home/BookShelves/Book.jsx"

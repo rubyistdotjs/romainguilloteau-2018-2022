@@ -2,6 +2,7 @@
   "home.bookShelves.currentlyReading": "En cours",
   "home.bookShelves.dataFromGoodreadsAPI": "Données obtenues depuis l'API {goodreadsLink}",
   "home.bookShelves.read": "Lus",
+  "home.bookShelves.shelf.coverOf": "Couverture du livre {title}",
   "home.bookShelves.shelf.seeBookOnGoodreads": "Voir ce livre sur Goodreads",
   "home.bookShelves.title": "Livres",
   "home.bookShelves.toRead": "Bientôt",

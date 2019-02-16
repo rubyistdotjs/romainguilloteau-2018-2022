@@ -47,7 +47,7 @@ function BookShelves({ intl }) {
             key={`shelf-${shelf.name}`}
             className="w-full lg:w-1/3 mb-8 lg:mb-0 lg:px-4"
           >
-            <Shelf name={shelf.name} booksCount={shelf.books_count} />
+            <Shelf name={shelf.name} totalBooksCount={shelf.books_count} />
           </div>
         ))}
       </div>

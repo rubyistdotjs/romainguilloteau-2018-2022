@@ -1,7 +1,7 @@
 import React from 'react';
 import { injectIntl, intlShape, defineMessages } from 'react-intl';
 
-import Section from './Section';
+import Section from '../../components/Section';
 import Title from './Title';
 
 const i18n = defineMessages({

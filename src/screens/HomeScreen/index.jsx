@@ -7,7 +7,7 @@ import Diplomas from './Diplomas';
 import BookShelves from './BookShelves';
 import Contact from './Contact';
 
-function Home() {
+function HomeScreen() {
   return (
     <div>
       <Head />
@@ -20,4 +20,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default HomeScreen;

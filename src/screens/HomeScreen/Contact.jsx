@@ -6,7 +6,7 @@ import isEmail from 'validator/lib/isEmail';
 import { Send } from 'react-feather';
 import { injectIntl, intlShape, defineMessages } from 'react-intl';
 
-import Section from './Section';
+import Section from '../../components/Section';
 
 import api from '../../services/api';
 import storage from '../../services/storage';

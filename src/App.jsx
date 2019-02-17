@@ -3,8 +3,9 @@ import { Helmet } from 'react-helmet';
 import ReactGA from 'react-ga';
 import omit from 'lodash/omit';
 import { injectIntl, intlShape } from 'react-intl';
+import { Route } from 'react-router-dom';
 
-import Home from './components/Home';
+import HomeScreen from './screens/HomeScreen';
 
 import './application.css';
 
@@ -35,7 +36,7 @@ function App({ intl }) {
           content={process.env.REACT_APP_GOOGLE_SITE_VERIFICATION_KEY}
         />
       </Helmet>
-      <Home />
+      <Route component={HomeScreen} />
     </div>
   );
 }

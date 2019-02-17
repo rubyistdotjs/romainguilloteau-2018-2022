@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { injectIntl, intlShape, defineMessages } from 'react-intl';
 
-import ExternalLink from '../../ExternalLink';
+import ExternalLink from '../../../components/ExternalLink';
 
 const i18n = defineMessages({
   coverOf: {

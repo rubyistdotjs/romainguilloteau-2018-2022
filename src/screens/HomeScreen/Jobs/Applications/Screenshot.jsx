@@ -4,7 +4,7 @@ import { ExternalLink as ExternalLinkIcon } from 'react-feather';
 import ProgressiveImage from 'react-progressive-image';
 import { injectIntl, intlShape, defineMessages } from 'react-intl';
 
-import ExternalLink from '../../../ExternalLink';
+import ExternalLink from '../../../../components/ExternalLink';
 
 const i18n = defineMessages({
   visit: {

@@ -6,8 +6,8 @@ import {
   FormattedMessage,
 } from 'react-intl';
 
-import Section from '../Section';
-import ExternalLink from '../../ExternalLink';
+import Section from '../../../components/Section';
+import ExternalLink from '../../../components/ExternalLink';
 import Shelf from './Shelf';
 
 import api from '../../../services/api';

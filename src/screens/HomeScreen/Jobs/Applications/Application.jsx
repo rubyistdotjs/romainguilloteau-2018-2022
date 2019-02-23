@@ -17,7 +17,7 @@ function Application({
       className="w-full flex-no-shrink flex flex-col transition transition-transform"
       style={{ transform: `translateX(-${offset * 100}%)` }}
     >
-      <h4 className="text-black text-lg lg:text-xl font-semibold leading-tight mb-1">
+      <h4 className="text-black text-lg lg:text-2xl font-semibold leading-tight mb-1">
         {name}
       </h4>
       <div

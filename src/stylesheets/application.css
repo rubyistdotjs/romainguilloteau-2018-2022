@@ -62,8 +62,8 @@ h1, h2, h3, h4 {
 }
 
 .step {
-  @apply .appearance-none .block .w-8 .h-2 .ml-1 .mr-1 .border-2
-         .border-grey-light .cursor-pointer;
+  @apply .appearance-none .block .w-8 .h-3 .ml-1 .mr-1 .border-2
+         .border-grey-light .rounded-full .cursor-pointer;
 }
 
 @screen lg {
@@ -73,9 +73,9 @@ h1, h2, h3, h4 {
 }
 
 .step.active {
-  @apply .bg-grey-dark .border-grey-dark .cursor-default;
+  @apply .bg-grey-dark .border-grey-dark .cursor-default .outline-none;
 }
 
 .step:focus:not(.active), .step:hover:not(.active) {
-  @apply .bg-grey .border-grey;
+  @apply .bg-grey .border-grey .outline-none;
 }

@@ -34,7 +34,7 @@ class Jobs extends React.PureComponent {
     return (
       <Section emoji="💼" title={formatMessage(i18n.title)}>
         {jobs.map(job => (
-          <div key={job.startedAt} className="mb-16">
+          <div key={job.startedAt} className="mb-20 md:mb-24">
             <Title
               title={job.title}
               fromDate={job.startedAt}

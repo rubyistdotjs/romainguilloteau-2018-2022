@@ -11,9 +11,13 @@ const i18n = defineMessages({
     id: 'home.jobs.applications.visit',
     defaultMessage: 'Go to this website',
   },
+  screenshotAlt: {
+    id: 'home.jobs.applications.screenshotAlt',
+    defaultMessage: 'Screenshot of {appName}',
+  },
 });
 
-function Screenshot({ intl, filename, thumbnail, alt, url }) {
+function Screenshot({ intl, appName, filename, thumbnail, alt, url }) {
   const { formatMessage } = intl;
 
   const screenshots = require.context(
@@ -42,7 +46,13 @@ function Screenshot({ intl, filename, thumbnail, alt, url }) {
         src={largeScreenshot}
         placeholder={`data:image/svg+xml;utf8,${thumbnail}`}
       >
-        {src => <img src={src} alt={alt} className="absolute w-full pin-t" />}
+        {src => (
+          <img
+            src={src}
+            alt={formatMessage(i18n.screenshotAlt, { appName })}
+            className="absolute w-full pin-t"
+          />
+        )}
       </ProgressiveImage>
     </div>
   );
@@ -50,14 +60,13 @@ function Screenshot({ intl, filename, thumbnail, alt, url }) {
 
 Screenshot.propTypes = {
   intl: intlShape.isRequired,
+  appName: PropTypes.string.isRequired,
   filename: PropTypes.string.isRequired,
   thumbnail: PropTypes.string.isRequired,
-  alt: PropTypes.string,
   url: PropTypes.string,
 };
 
 Screenshot.defaultProps = {
-  alt: '',
   url: null,
 };
 

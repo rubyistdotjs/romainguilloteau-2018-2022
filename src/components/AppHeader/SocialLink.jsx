@@ -4,7 +4,7 @@ import * as Icons from 'react-feather';
 import capitalize from 'lodash/capitalize';
 import { injectIntl, intlShape, defineMessages } from 'react-intl';
 
-import ExternalLink from '../../../components/ExternalLink';
+import ExternalLink from '../ExternalLink';
 
 const i18n = defineMessages({
   visitProfile: {

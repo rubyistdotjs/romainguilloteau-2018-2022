@@ -11,7 +11,7 @@ class SocialLinkList extends React.PureComponent {
 
   async fetchSocialLinks() {
     const { intl } = this.props;
-    return import(`../../../database/${intl.locale}/social-links.json`);
+    return import(`../../database/${intl.locale}/social-links.json`);
   }
 
   async componentDidMount() {

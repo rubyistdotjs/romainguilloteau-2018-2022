@@ -2,8 +2,8 @@
 
 .btn {
   @apply .inline-block .text-sm .text-white .font-semibold .leading-none
-         .no-underline .py-4 .px-6 .mr-2 .mb-2 .border .border-transparent
-         .btn-transition .cursor-pointer;
+         .no-underline .py-4 .px-4 .mr-2 .mb-2 .border .border-transparent
+         .rounded-sm .btn-transition .cursor-pointer;
 }
 
 .btn:hover:not(:disabled), .btn:focus:not(:disabled) {

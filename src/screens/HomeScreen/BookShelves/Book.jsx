@@ -19,12 +19,12 @@ function Book({ intl, title, author, url, coverUrl }) {
   const { formatMessage } = intl;
 
   return (
-    <div className="flex flex-row mb-4">
-      <div className="w-10 h-full mr-2 flex-no-shrink">
+    <div className="flex flex-row mb-5">
+      <div className="w-10 h-full mr-3 flex-no-shrink">
         <img
           src={coverUrl}
           alt={formatMessage(i18n.coverOf, { title })}
-          className="block w-full h-auto"
+          className="block w-full h-auto rounded-sm shadow"
         />
       </div>
       <div className="flex flex-col items-start">

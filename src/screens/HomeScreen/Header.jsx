@@ -24,7 +24,7 @@ function Header() {
             />
           </p>
           <div className="mt-12">
-            <a href="#contact-form" className="btn btn-blue">
+            <a href="#contact-form" className="btn btn-teal">
               <FormattedMessage
                 id="home.header.getInTouchBtn"
                 defaultMessage="Get in touch"

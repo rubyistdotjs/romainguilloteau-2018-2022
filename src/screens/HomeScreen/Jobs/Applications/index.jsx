@@ -45,7 +45,7 @@ function Applications({ applications }) {
         </div>
         <div className="relative flex-1 flex-grow">
           {selectedApp.screenshot && (
-            <div className="flex flex-grow w-full h-full rounded shadow-lg overflow-hidden">
+            <div className="flex flex-grow w-full h-full rounded-lg shadow-lg overflow-hidden">
               <Screenshot
                 appName={selectedApp.name}
                 filename={selectedApp.screenshot.filename}

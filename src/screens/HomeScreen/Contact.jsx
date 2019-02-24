@@ -251,7 +251,7 @@ class Contact extends React.Component {
               <input
                 type="submit"
                 value={formatMessage(i18n.submitMessageBtn)}
-                className="btn btn-blue"
+                className="btn btn-teal"
                 disabled={inputsDisabled}
               />
             </div>

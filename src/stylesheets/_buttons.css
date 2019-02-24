@@ -3,7 +3,7 @@
 .btn {
   @apply .inline-block .text-sm .text-white .font-semibold .leading-none
          .no-underline .py-4 .px-4 .mr-2 .mb-2 .border .border-transparent
-         .rounded-sm .btn-transition .cursor-pointer;
+         .rounded .btn-transition .cursor-pointer;
 }
 
 .btn:hover:not(:disabled), .btn:focus:not(:disabled) {
@@ -23,12 +23,12 @@
 
 /* Plain colors ----------------------------------------------------------------*/
 
-.btn-blue {
-  @apply .bg-blue-dark;
+.btn-teal {
+  @apply .bg-teal-dark;
 }
 
-.btn-blue:hover:not(:disabled), .btn-blue:focus:not(:disabled) {
-  @apply .bg-blue-darker;
+.btn-teal:hover:not(:disabled), .btn-teal:focus:not(:disabled) {
+  @apply .bg-teal-darker;
 }
 
 

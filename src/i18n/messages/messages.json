@@ -1,177 +1,212 @@
 [
   {
+    "id": "home.header.socialLink.visitProfileOn",
+    "defaultMessage": "Check out my profile on {socialNetwork}",
+    "filepath": "src/components/AppHeader/SocialLink.jsx"
+  },
+  {
     "id": "home.bookShelves.shelf.coverOf",
     "defaultMessage": "Cover of the book {title}",
-    "filepath": "src/components/Home/BookShelves/Book.jsx"
+    "filepath": "src/screens/BooksScreen/BookShelves/Book.jsx"
   },
   {
     "id": "home.bookShelves.shelf.seeBookOnGoodreads",
     "defaultMessage": "Check out this book on Goodreads",
-    "filepath": "src/components/Home/BookShelves/Book.jsx"
+    "filepath": "src/screens/BooksScreen/BookShelves/Book.jsx"
   },
   {
     "id": "home.bookShelves.title",
     "defaultMessage": "Book shelves",
-    "filepath": "src/components/Home/BookShelves/index.jsx"
+    "filepath": "src/screens/BooksScreen/BookShelves/index.jsx"
   },
   {
     "id": "home.bookShelves.dataFromGoodreadsAPI",
     "defaultMessage": "Data collected from {goodreadsLink} API",
-    "filepath": "src/components/Home/BookShelves/index.jsx"
+    "filepath": "src/screens/BooksScreen/BookShelves/index.jsx"
   },
   {
     "id": "home.bookShelves.currentlyReading",
     "defaultMessage": "Reading",
-    "filepath": "src/components/Home/BookShelves/Shelf.jsx"
+    "filepath": "src/screens/BooksScreen/BookShelves/Shelf.jsx"
   },
   {
     "id": "home.bookShelves.toRead",
     "defaultMessage": "On deck",
-    "filepath": "src/components/Home/BookShelves/Shelf.jsx"
+    "filepath": "src/screens/BooksScreen/BookShelves/Shelf.jsx"
   },
   {
     "id": "home.bookShelves.read",
     "defaultMessage": "Read",
-    "filepath": "src/components/Home/BookShelves/Shelf.jsx"
+    "filepath": "src/screens/BooksScreen/BookShelves/Shelf.jsx"
+  },
+  {
+    "id": "home.bookShelves.shelf.coverOf",
+    "defaultMessage": "Cover of the book {title}",
+    "filepath": "src/screens/HomeScreen/BookShelves/Book.jsx"
+  },
+  {
+    "id": "home.bookShelves.shelf.seeBookOnGoodreads",
+    "defaultMessage": "Check out this book on Goodreads",
+    "filepath": "src/screens/HomeScreen/BookShelves/Book.jsx"
+  },
+  {
+    "id": "home.bookShelves.title",
+    "defaultMessage": "Book shelves",
+    "filepath": "src/screens/HomeScreen/BookShelves/index.jsx"
+  },
+  {
+    "id": "home.bookShelves.dataFromGoodreadsAPI",
+    "defaultMessage": "Data collected from {goodreadsLink} API",
+    "filepath": "src/screens/HomeScreen/BookShelves/index.jsx"
+  },
+  {
+    "id": "home.bookShelves.currentlyReading",
+    "defaultMessage": "Reading",
+    "filepath": "src/screens/HomeScreen/BookShelves/Shelf.jsx"
+  },
+  {
+    "id": "home.bookShelves.toRead",
+    "defaultMessage": "On deck",
+    "filepath": "src/screens/HomeScreen/BookShelves/Shelf.jsx"
+  },
+  {
+    "id": "home.bookShelves.read",
+    "defaultMessage": "Read",
+    "filepath": "src/screens/HomeScreen/BookShelves/Shelf.jsx"
   },
   {
     "id": "home.contact.title",
     "defaultMessage": "Contact",
-    "filepath": "src/components/Home/Contact.jsx"
+    "filepath": "src/screens/HomeScreen/Contact.jsx"
   },
   {
     "id": "home.contact.placeholders.emailAddress",
     "defaultMessage": "Email address",
-    "filepath": "src/components/Home/Contact.jsx"
+    "filepath": "src/screens/HomeScreen/Contact.jsx"
   },
   {
     "id": "home.contact.errors.emailAddress.empty",
     "defaultMessage": "Please specify your email address.",
-    "filepath": "src/components/Home/Contact.jsx"
+    "filepath": "src/screens/HomeScreen/Contact.jsx"
   },
   {
     "id": "home.contact.errors.emailAddress.invalid",
     "defaultMessage": "The email address is invalid.",
-    "filepath": "src/components/Home/Contact.jsx"
+    "filepath": "src/screens/HomeScreen/Contact.jsx"
   },
   {
     "id": "home.contact.placeholders.messageContent",
     "defaultMessage": "Message",
-    "filepath": "src/components/Home/Contact.jsx"
+    "filepath": "src/screens/HomeScreen/Contact.jsx"
   },
   {
     "id": "home.contact.errors.content.tooShort",
     "defaultMessage": "Your message is too short.",
-    "filepath": "src/components/Home/Contact.jsx"
+    "filepath": "src/screens/HomeScreen/Contact.jsx"
   },
   {
     "id": "home.contact.errors.content.tooLong",
     "defaultMessage": "Your message is too long, keep it under 42000 characters.",
-    "filepath": "src/components/Home/Contact.jsx"
+    "filepath": "src/screens/HomeScreen/Contact.jsx"
   },
   {
     "id": "home.contact.errors.recaptcha.empty",
     "defaultMessage": "Robot !",
-    "filepath": "src/components/Home/Contact.jsx"
+    "filepath": "src/screens/HomeScreen/Contact.jsx"
   },
   {
     "id": "home.contact.sendMessageBtn",
     "defaultMessage": "Send",
-    "filepath": "src/components/Home/Contact.jsx"
+    "filepath": "src/screens/HomeScreen/Contact.jsx"
   },
   {
     "id": "home.contact.messageSentThe",
     "defaultMessage": "The following message was send the {date}.",
-    "filepath": "src/components/Home/Contact.jsx"
+    "filepath": "src/screens/HomeScreen/Contact.jsx"
   },
   {
     "id": "home.diplomas.title",
     "defaultMessage": "Diplomas",
-    "filepath": "src/components/Home/Diplomas.jsx"
+    "filepath": "src/screens/HomeScreen/Diplomas.jsx"
   },
   {
     "id": "home.meta.title",
     "defaultMessage": "Romain Guilloteau - Full Stack Web Developer",
-    "filepath": "src/components/Home/Head.jsx"
+    "filepath": "src/screens/HomeScreen/Head.jsx"
   },
   {
     "id": "home.meta.description",
     "defaultMessage": "Full Stack Web Developer, mainly Ruby on Rails and JavaScript (Node.js, React et Vue.js), currently living in Montpellier, Hérault, France.",
-    "filepath": "src/components/Home/Head.jsx"
+    "filepath": "src/screens/HomeScreen/Head.jsx"
   },
   {
     "id": "home.jsonld.jobTitle",
     "defaultMessage": "Full Stack Web Developer",
-    "filepath": "src/components/Home/Head.jsx"
+    "filepath": "src/screens/HomeScreen/Head.jsx"
   },
   {
     "id": "home.jsonld.description",
     "defaultMessage": "Full Stack Web Developer, mainly Ruby on Rails and JavaScript (Node.js, React et Vue.js), currently living in Montpellier, Hérault, France.",
-    "filepath": "src/components/Home/Head.jsx"
+    "filepath": "src/screens/HomeScreen/Head.jsx"
   },
   {
     "id": "home.header.title",
-    "defaultMessage": "Full Stack Web Developer, Ruby on Rails & JavaScript",
-    "filepath": "src/components/Home/Header/index.jsx"
+    "defaultMessage": "👋 I'm Romain Guilloteau aka rubyistdotjs a self-taught full stack web developer.",
+    "filepath": "src/screens/HomeScreen/Header.jsx"
   },
   {
     "id": "home.header.introduction",
-    "defaultMessage": "An obsession in my teenage years, a profession for\n                now more than 6 years, during this time I had the opportunity to\n                take on all the roles necessary to build and deploy ambitious\n                applications (front-end, back-end, SEO, design, server\n                architecture, …).",
-    "filepath": "src/components/Home/Header/index.jsx"
+    "defaultMessage": "Currently working for Lunchr, previously Codeur and 1Year1Book. I have more than 7 years of professional experience during which I had the opportunity to take all the roles necessary to launch ambitious applications including SEO, web design and server architecture.",
+    "filepath": "src/screens/HomeScreen/Header.jsx"
   },
   {
     "id": "home.header.getInTouchBtn",
     "defaultMessage": "Get in touch",
-    "filepath": "src/components/Home/Header/index.jsx"
+    "filepath": "src/screens/HomeScreen/Header.jsx"
   },
   {
     "id": "home.header.downloadResumeBtn",
     "defaultMessage": "Download my resume",
-    "filepath": "src/components/Home/Header/index.jsx"
-  },
-  {
-    "id": "home.header.socialLink.visitProfileOn",
-    "defaultMessage": "Check out my profile on {socialNetwork}",
-    "filepath": "src/components/Home/Header/SocialLink.jsx"
+    "filepath": "src/screens/HomeScreen/Header.jsx"
   },
   {
     "id": "home.jobs.applications.switchTo",
     "defaultMessage": "Switch to {appName}",
-    "filepath": "src/components/Home/Jobs/Applications/ApplicationsNavigation.jsx"
+    "filepath": "src/screens/HomeScreen/Jobs/Applications/ApplicationsNavigation.jsx"
   },
   {
     "id": "home.jobs.applications.visit",
     "defaultMessage": "Go to this website",
-    "filepath": "src/components/Home/Jobs/Applications/Screenshot.jsx"
+    "filepath": "src/screens/HomeScreen/Jobs/Applications/Screenshot.jsx"
   },
   {
-    "id": "home.jobs.applications.desktopScreenshotAlt",
+    "id": "home.jobs.applications.screenshotAlt",
     "defaultMessage": "Screenshot of {appName}",
-    "filepath": "src/components/Home/Jobs/Applications/ScreenshotList.jsx"
-  },
-  {
-    "id": "home.jobs.applications.mobileScreenshotAlt",
-    "defaultMessage": "Mobile screenshot of {appName}",
-    "filepath": "src/components/Home/Jobs/Applications/ScreenshotList.jsx"
+    "filepath": "src/screens/HomeScreen/Jobs/Applications/Screenshot.jsx"
   },
   {
     "id": "home.jobs.title",
     "defaultMessage": "Experience",
-    "filepath": "src/components/Home/Jobs/index.jsx"
+    "filepath": "src/screens/HomeScreen/Jobs/index.jsx"
+  },
+  {
+    "id": "home.knowledges.title",
+    "defaultMessage": "Knowledge",
+    "filepath": "src/screens/HomeScreen/Knowledges.jsx"
   },
   {
     "id": "home.timeline.dateFrom",
     "defaultMessage": "from",
-    "filepath": "src/components/Home/Title.jsx"
+    "filepath": "src/screens/HomeScreen/Title.jsx"
   },
   {
     "id": "home.timeline.dateTo",
     "defaultMessage": "to",
-    "filepath": "src/components/Home/Title.jsx"
+    "filepath": "src/screens/HomeScreen/Title.jsx"
   },
   {
     "id": "home.timeline.dateSince",
     "defaultMessage": "since",
-    "filepath": "src/components/Home/Title.jsx"
+    "filepath": "src/screens/HomeScreen/Title.jsx"
   }
 ]

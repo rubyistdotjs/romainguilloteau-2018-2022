@@ -34,6 +34,11 @@ h1, h2, h3, h4 {
   transition-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
 }
 
+.transition-fast {
+  transition-duration: 120ms;
+  transition-timing-function: linear;
+}
+
 .transition-bg {
   transition-property: background-color;
 }
@@ -48,7 +53,7 @@ h1, h2, h3, h4 {
 
 .screenshot-overlay {
   @apply .absolute .pin .flex .justify-center .items-center .opacity-0;
-  background-color: color(config('colors.black') a(80%));
+  background-color: color(config('colors.white') a(90%));
   transition: opacity 260ms ease-in-out;
   z-index: 1;
 }
@@ -63,7 +68,7 @@ h1, h2, h3, h4 {
 
 .step {
   @apply .appearance-none .block .w-8 .h-3 .ml-1 .mr-1 .border-2
-         .border-grey-light .rounded-full .cursor-pointer;
+         .border-grey-light .rounded-full .cursor-pointer .btn-transition;
 }
 
 @screen lg {
@@ -73,7 +78,7 @@ h1, h2, h3, h4 {
 }
 
 .step.active {
-  @apply .bg-grey-dark .border-grey-dark .cursor-default .outline-none;
+  @apply .bg-teal .border-teal .cursor-default .outline-none;
 }
 
 .step:focus:not(.active), .step:hover:not(.active) {

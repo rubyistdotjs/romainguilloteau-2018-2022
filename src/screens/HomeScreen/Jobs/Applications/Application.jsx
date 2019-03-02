@@ -4,26 +4,15 @@ import camelCase from 'lodash/camelCase';
 import ChallengeList from './ChallengeList';
 import Tag from './Tag';
 
-function Application({
-  name,
-  brandColor,
-  description,
-  challenges,
-  tags,
-  offset,
-}) {
+function Application({ name, description, challenges, tags, offset }) {
   return (
     <div
       className="w-full flex-no-shrink flex flex-col transition transition-transform"
       style={{ transform: `translateX(-${offset * 100}%)` }}
     >
-      <h4 className="text-black text-lg lg:text-2xl font-semibold leading-tight mb-1">
+      <h4 className="text-black text-lg lg:text-2xl font-semibold leading-tight mb-3">
         {name}
       </h4>
-      <div
-        style={{ backgroundColor: brandColor }}
-        className="hidden lg:block w-12 h-1 my-2"
-      />
       {description &&
         description.split('\n').map((p, i) => (
           <p key={`description-${i}`} className="text-black font-semibold py-2">
@@ -43,7 +32,6 @@ function Application({
 Application.propTypes = {
   offset: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
-  brandColor: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   challenges: PropTypes.arrayOf(PropTypes.string),
   tags: PropTypes.arrayOf(

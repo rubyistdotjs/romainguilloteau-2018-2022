@@ -59,7 +59,7 @@ function BookShelves({ intl }) {
             goodreadsLink: (
               <ExternalLink
                 href="https://www.goodreads.com/user/show/87055544-romain-guilloteau"
-                className="text-blue-dark no-underline hover:text-blue-darker focus:text-blue-darker"
+                className="text-teal-dark no-underline hover:text-teal-darker focus:text-teal-darker"
               >
                 Goodreads
               </ExternalLink>

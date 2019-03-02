@@ -27,7 +27,6 @@ function Applications({ applications }) {
           <Application
             key={camelCase(app.name)}
             name={app.name}
-            brandColor={app.brandColor}
             description={app.description}
             challenges={app.challenges}
             tags={app.tags}
@@ -65,7 +64,6 @@ Applications.propTypes = {
     PropTypes.shape({
       name: PropTypes.string.isRequired,
       url: PropTypes.string,
-      brandColor: PropTypes.string.isRequired,
       description: PropTypes.string.isRequired,
       challenges: PropTypes.arrayOf(PropTypes.string),
       screenshot: PropTypes.shape({

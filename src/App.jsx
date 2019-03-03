@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { IntlProvider } from 'react-intl';
-import { Route } from 'react-router-dom';
 import ReactGA from 'react-ga';
 import omit from 'lodash/omit';
 
@@ -43,7 +42,7 @@ function App({ match }) {
             content={process.env.REACT_APP_GOOGLE_SITE_VERIFICATION_KEY}
           />
         </Helmet>
-        <Route component={HomeScreen} />
+        <HomeScreen />
       </div>
     </IntlProvider>
   );

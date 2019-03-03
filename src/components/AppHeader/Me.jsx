@@ -6,7 +6,7 @@ import mugshotJpg from '../../images/avatars/mugshot-thumbnail.jpg';
 import mugshotWebp from '../../images/avatars/mugshot-thumbnail.webp';
 import mugshotJp2 from '../../images/avatars/mugshot-thumbnail.jp2';
 
-function Me({ intl, hideName }) {
+function Me({ intl }) {
   const { locale } = intl;
 
   return (

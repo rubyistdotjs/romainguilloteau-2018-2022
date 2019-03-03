@@ -13,7 +13,7 @@
 }
 
 .field:focus {
-  @apply .outline-none .bg-white .border-blue;
+  @apply .outline-none .bg-white .border-teal;
 }
 
 .field:disabled {

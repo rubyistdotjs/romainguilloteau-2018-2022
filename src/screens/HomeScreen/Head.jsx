@@ -5,21 +5,30 @@ import { injectIntl, intlShape, defineMessages } from 'react-intl';
 const i18n = defineMessages({
   metaTitle: {
     id: 'home.meta.title',
-    defaultMessage: 'Romain Guilloteau - Full Stack Web Developer',
+    defaultMessage: 'Romain Guilloteau - Senior Full Stack Developer',
   },
   metaDescription: {
     id: 'home.meta.description',
     defaultMessage:
-      'Full Stack Web Developer, mainly Ruby on Rails and JavaScript (Node.js, React et Vue.js), currently living in Montpellier, Hérault, France.',
+      "Aka rubyistdotjs, I'm a self-taught Full Stack Developer, with 7 years of professional experiences, currently working for Lunchr in Montpellier, France.",
+  },
+  openGraphTitle: {
+    id: 'home.og.title',
+    defaultMessage: 'Romain Guilloteau - Senior Full Stack Developer',
+  },
+  openGraphDescription: {
+    id: 'home.og.description',
+    defaultMessage:
+      "Also known as rubyistdotjs, I'm a self-taught Full Stack Developer, mainly Ruby on Rails and JavaScript (Node.js and React), with 7 years of professional experiences, currently working for Lunchr in Montpellier, Hérault, France.",
   },
   jsonldJobTitle: {
     id: 'home.jsonld.jobTitle',
-    defaultMessage: 'Full Stack Web Developer',
+    defaultMessage: 'Senior Full Stack Developer',
   },
   jsonldDescription: {
     id: 'home.jsonld.description',
     defaultMessage:
-      'Full Stack Web Developer, mainly Ruby on Rails and JavaScript (Node.js, React et Vue.js), currently living in Montpellier, Hérault, France.',
+      "Also known as rubyistdotjs, I'm a self-taught Full Stack Developer, mainly Ruby on Rails and JavaScript (Node.js and React), with 7 years of professional experiences, currently working for Lunchr in Montpellier, Hérault, France.",
   },
 });
 
@@ -30,10 +39,10 @@ function Head({ intl }) {
     <Helmet>
       <title>{formatMessage(i18n.metaTitle)}</title>
       <meta name="description" content={formatMessage(i18n.metaDescription)} />
-      <meta property="og:title" content={formatMessage(i18n.metaTitle)} />
+      <meta property="og:title" content={formatMessage(i18n.openGraphTitle)} />
       <meta
         property="og:description"
-        content={formatMessage(i18n.metaDescription)}
+        content={formatMessage(i18n.openGraphDescription)}
       />
       <meta property="og:url" content="https://www.romainguilloteau.com" />
       <meta property="og:type" content="profile" />

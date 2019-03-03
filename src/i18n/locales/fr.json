@@ -1,4 +1,6 @@
 {
+  "english": "English (UK)",
+  "french": "Français",
   "home.bookShelves.currentlyReading": "En cours",
   "home.bookShelves.dataFromGoodreadsAPI": "Données obtenues depuis l'API {goodreadsLink}",
   "home.bookShelves.read": "Lus",
@@ -26,12 +28,15 @@
   "home.jobs.applications.switchTo": "Voir {appName}",
   "home.jobs.applications.visit": "Visiter le site",
   "home.jobs.title": "Expérience",
-  "home.jsonld.description": "Développeur web full stack, principalement Ruby on Rails et JavaScript (Node.js, React et Vue.js), basé à Montpellier, Hérault, France.",
-  "home.jsonld.jobTitle": "Développeur Full Stack",
+  "home.jsonld.description": "Alias rubyistdotjs, je suis un développeur full stack autodidacte, principalement Ruby on Rails et JavaScript (Node.js et React), avec plus de 7 années d'expériences professionnelles, actuellement en poste chez Lunchr à Montpellier, France.",
+  "home.jsonld.jobTitle": "Développeur Full Stack Senior",
   "home.knowledges.title": "Knowledge",
-  "home.meta.description": "Développeur web full stack, principalement Ruby on Rails et JavaScript (Node.js, React et Vue.js), basé à Montpellier, Hérault, France.",
-  "home.meta.title": "Romain Guilloteau - Développeur web full stack",
+  "home.meta.description": "Alias rubyistdotjs, développeur full stack autodidacte, avec 7 années d'expériences professionnelles, actuellement chez Lunchr à Montpellier, France.",
+  "home.meta.title": "Romain Guilloteau - Développeur full stack senior",
+  "home.og.description": "Alias rubyistdotjs, je suis un développeur full stack autodidacte, principalement Ruby on Rails et JavaScript (Node.js et React), avec plus de 7 années d'expériences professionnelles, actuellement en poste chez Lunchr à Montpellier, France.",
+  "home.og.title": "Romain Guilloteau - Développeur full stack senior",
   "home.timeline.dateFrom": "de",
   "home.timeline.dateSince": "depuis",
-  "home.timeline.dateTo": "à"
+  "home.timeline.dateTo": "à",
+  "language": "Français"
 }

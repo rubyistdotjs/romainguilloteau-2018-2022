@@ -1,4 +1,6 @@
 {
+  "english": "English (UK)",
+  "french": "Français",
   "home.bookShelves.currentlyReading": "Reading",
   "home.bookShelves.dataFromGoodreadsAPI": "Data collected from {goodreadsLink} API",
   "home.bookShelves.read": "Read",
@@ -21,17 +23,20 @@
   "home.header.getInTouchBtn": "Get in touch",
   "home.header.introduction": "Currently working for Lunchr, previously Codeur and 1Year1Book. I have more than 7 years of professional experiences during which I had the opportunity to take on all the roles necessary to launch ambitious applications, most notably web designer 👨‍🎨.",
   "home.header.socialLink.visitProfileOn": "Check out my profile on {socialNetwork}",
-  "home.header.title": "👋 I'm Romain Guilloteau aka rubyistdotjs a self-taught full stack web developer.",
+  "home.header.title": "👋 I'm Romain Guilloteau aka rubyistdotjs a self-taught full stack developer.",
   "home.jobs.applications.screenshotAlt": "Screenshot of {appName}",
   "home.jobs.applications.switchTo": "Switch to {appName}",
   "home.jobs.applications.visit": "Go to this website",
   "home.jobs.title": "Experience",
-  "home.jsonld.description": "Full Stack Web Developer, mainly Ruby on Rails and JavaScript (Node.js, React et Vue.js), currently living in Montpellier, Hérault, France.",
-  "home.jsonld.jobTitle": "Full Stack Web Developer",
+  "home.jsonld.description": "Also known as rubyistdotjs, I'm a self-taught full stack developer, mainly Ruby on Rails and JavaScript (Node.js and React), with 7 years of professional experiences, currently working for Lunchr in Montpellier, Hérault, France.",
+  "home.jsonld.jobTitle": "Full Stack Developer",
   "home.knowledges.title": "Knowledge",
-  "home.meta.description": "Full Stack Web Developer, mainly Ruby on Rails and JavaScript (Node.js, React et Vue.js), currently living in Montpellier, Hérault, France.",
-  "home.meta.title": "Romain Guilloteau - Full Stack Web Developer",
+  "home.meta.description": "Aka rubyistdotjs, I'm a self-taught full stack developer, with 7 years of professional experiences, currently working for Lunchr in Montpellier, France.",
+  "home.meta.title": "Romain Guilloteau - Senior Full Stack Developer",
+  "home.og.description": "Also known as rubyistdotjs, I'm a self-taught full stack developer, mainly Ruby on Rails and JavaScript (Node.js and React), with 7 years of professional experiences, currently working for Lunchr in Montpellier, Hérault, France.",
+  "home.og.title": "Romain Guilloteau - Senior Full Stack Developer",
   "home.timeline.dateFrom": "from",
   "home.timeline.dateSince": "since",
-  "home.timeline.dateTo": "to"
+  "home.timeline.dateTo": "to",
+  "language": "English (UK)"
 }

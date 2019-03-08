@@ -132,7 +132,7 @@ class Contact extends React.Component {
       .then(res => {
         const message = {
           ...res.data,
-          sentAt: new Date().toISOString()
+          sentAt: new Date().toISOString(),
         };
 
         this.setState(prevState => ({
@@ -180,7 +180,7 @@ class Contact extends React.Component {
   };
 
   render() {
-    const { formatMessage, formatDate } = this.props.intl;
+    const { formatMessage, formatDate, locale } = this.props.intl;
     const { message, messageErrors, _loading } = this.state;
     const inputsDisabled = _loading || message.sentAt;
 
@@ -243,6 +243,7 @@ class Contact extends React.Component {
                   ref={e => (this.recaptchaRef = e)}
                   sitekey={process.env.REACT_APP_RECAPTCHA_KEY}
                   onVerify={this.handeRecaptchaVerify}
+                  hl={locale}
                 />
               </div>
               {messageErrors.recaptcha && (

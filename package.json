@@ -37,9 +37,10 @@
     "start": "yarn run watch:css & yarn run start:server & react-scripts start",
     "start:server": "netlify-lambda serve functions/src",
     "watch:css": "postcss src/stylesheets/application.css -o src/application.css -w",
-    "build": "yarn run build:server && yarn run build:css && react-scripts build && node sitemap.js && react-snapshot",
+    "build": "yarn run build:server && yarn run build:css && react-scripts build && node sitemap.js",
     "build:css": "postcss src/stylesheets/application.css -o src/application.css",
     "build:server": "netlify-lambda build functions/src",
+    "postbuild": "react-snap",
     "i18n": "npm run i18n:extractMessages && npm run i18n:updateLocales && npm run i18n:updateDatabaseLocales",
     "i18n:extractMessages": "react-intl-cra 'src/**/*.{js,jsx}' -o 'src/i18n/messages/messages.json'",
     "i18n:updateLocales": "node ./scripts/translationRunner.js",
@@ -47,7 +48,7 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "reactSnapshot": {
+  "reactSnap": {
     "include": ["/en", "/fr"],
     "snapshotDelay": 500
   },
@@ -62,7 +63,7 @@
     "prettier": "^1.15.3",
     "react-intl-cra": "^0.3.3",
     "react-intl-translations-manager": "^5.0.3",
-    "react-snapshot": "^1.3.0",
+    "react-snap": "^1.23.0",
     "sitemap": "^2.0.0",
     "tailwindcss": "^0.7.0"
   }

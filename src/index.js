@@ -1,19 +1,25 @@
 import React from 'react';
-import { render } from 'react-snapshot';
+import { hydrate, render } from 'react-dom';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 
 import App from './App';
 import { availableLocales, detectBrowserLocale } from './utils/locales';
 import * as serviceWorker from './serviceWorker';
 
-render(
+const rootDOMElement = document.getElementById('root');
+const root = (
   <BrowserRouter>
     <Switch>
       <Route path={`/:locale(${availableLocales.join('|')})`} component={App} />
       <Redirect to={detectBrowserLocale()} />
     </Switch>
-  </BrowserRouter>,
-  document.getElementById('root')
+  </BrowserRouter>
 );
+
+if (rootDOMElement.hasChildNodes()) {
+  hydrate(root, rootDOMElement);
+} else {
+  render(root, rootDOMElement);
+}
 
 serviceWorker.register();

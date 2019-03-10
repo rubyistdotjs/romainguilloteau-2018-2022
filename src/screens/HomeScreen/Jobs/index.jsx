@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { injectIntl, intlShape, defineMessages } from 'react-intl';
+
+import fetchDatabaseFile from '../../../services/database';
 
 import Section from '../../../components/Section';
 import Title from '../Title';
@@ -12,41 +14,33 @@ const i18n = defineMessages({
   },
 });
 
-class Jobs extends React.PureComponent {
-  state = {
-    jobs: [],
-  };
+function Jobs({ intl }) {
+  const [jobs, setJobs] = useState([]);
+  const { locale, formatMessage } = intl;
 
-  async fetchJobs() {
-    const { intl } = this.props;
-    return import(`../../../database/${intl.locale}/jobs.json`);
-  }
+  useEffect(() => {
+    fetchDatabaseFile({
+      filename: 'jobs',
+      locale: locale,
+      setState: setJobs,
+    });
+  }, [locale]);
 
-  async componentDidMount() {
-    const { default: jobs } = await this.fetchJobs();
-    this.setState({ jobs });
-  }
-
-  render() {
-    const { jobs } = this.state;
-    const { formatMessage } = this.props.intl;
-
-    return (
-      <Section emoji="💼" title={formatMessage(i18n.title)}>
-        {jobs.map(job => (
-          <div key={job.startedAt} className="mb-20 md:mb-24">
-            <Title
-              title={job.title}
-              fromDate={job.startedAt}
-              toDate={job.endedAt}
-              atPlace={job.company}
-            />
-            <ApplicationList applications={job.applications} />
-          </div>
-        ))}
-      </Section>
-    );
-  }
+  return (
+    <Section emoji="💼" title={formatMessage(i18n.title)}>
+      {jobs.map(job => (
+        <div key={job.startedAt} className="mb-20 md:mb-24">
+          <Title
+            title={job.title}
+            fromDate={job.startedAt}
+            toDate={job.endedAt}
+            atPlace={job.company}
+          />
+          <ApplicationList applications={job.applications} />
+        </div>
+      ))}
+    </Section>
+  );
 }
 
 Jobs.propTypes = {

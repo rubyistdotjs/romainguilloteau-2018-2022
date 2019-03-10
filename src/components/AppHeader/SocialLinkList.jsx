@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import camelCase from 'lodash/camelCase';
 import { injectIntl, intlShape } from 'react-intl';
 
-import fectchDatabaseFile from '../../services/database';
+import fetchDatabaseFile from '../../services/database';
 
 import SocialLink from './SocialLink';
 
@@ -10,7 +10,7 @@ function SocialLinkList({ intl }) {
   const [socialLinks, setSocialLinks] = useState([]);
 
   useEffect(() => {
-    fectchDatabaseFile({
+    fetchDatabaseFile({
       filename: 'social-links',
       locale: intl.locale,
       setState: setSocialLinks,

@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { injectIntl, intlShape, defineMessages } from 'react-intl';
+
+import fetchDatabaseFile from '../../services/database';
 
 import Section from '../../components/Section';
 import Title from './Title';
@@ -11,40 +13,32 @@ const i18n = defineMessages({
   },
 });
 
-class Diplomas extends React.PureComponent {
-  state = {
-    diplomas: [],
-  };
+function Diplomas({ intl }) {
+  const [diplomas, setDiplomas] = useState([]);
+  const { locale, formatMessage } = intl;
 
-  async fetchDiplomas() {
-    const { intl } = this.props;
-    return await import(`../../database/${intl.locale}/diplomas.json`);
-  }
+  useEffect(() => {
+    fetchDatabaseFile({
+      filename: 'diplomas',
+      locale: locale,
+      setState: setDiplomas,
+    });
+  }, [locale]);
 
-  async componentDidMount() {
-    const { default: diplomas } = await this.fetchDiplomas();
-    this.setState({ diplomas });
-  }
-
-  render() {
-    const { diplomas } = this.state;
-    const { formatMessage } = this.props.intl;
-
-    return (
-      <Section emoji="🎓" title={formatMessage(i18n.title)}>
-        {diplomas.map(diploma => (
-          <div key={diploma.startedAt} className="mb-20 md:mb-24">
-            <Title
-              title={diploma.name}
-              fromDate={diploma.startedAt}
-              toDate={diploma.endedAt}
-              atPlace={diploma.school}
-            />
-          </div>
-        ))}
-      </Section>
-    );
-  }
+  return (
+    <Section emoji="🎓" title={formatMessage(i18n.title)}>
+      {diplomas.map(diploma => (
+        <div key={diploma.startedAt} className="mb-20 md:mb-24">
+          <Title
+            title={diploma.name}
+            fromDate={diploma.startedAt}
+            toDate={diploma.endedAt}
+            atPlace={diploma.school}
+          />
+        </div>
+      ))}
+    </Section>
+  );
 }
 
 Diplomas.propTypes = {

@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { injectIntl, intlShape, defineMessages } from 'react-intl';
 
-import fetchDatabaseFile from '../../services/database';
+import { useDatabaseFile } from '../../services/database';
 
 import Section from '../../components/Section';
 import Title from './Title';
@@ -14,16 +14,8 @@ const i18n = defineMessages({
 });
 
 function Diplomas({ intl }) {
-  const [diplomas, setDiplomas] = useState([]);
   const { locale, formatMessage } = intl;
-
-  useEffect(() => {
-    fetchDatabaseFile({
-      filename: 'diplomas',
-      locale: locale,
-      setState: setDiplomas,
-    });
-  }, [locale]);
+  const diplomas = useDatabaseFile({ filename: 'diplomas', locale });
 
   return (
     <Section emoji="🎓" title={formatMessage(i18n.title)}>

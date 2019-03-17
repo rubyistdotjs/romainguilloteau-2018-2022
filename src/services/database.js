@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
 
-export async function fetchDatabaseFile({ locale, filename, setState }) {
+export async function fetchDatabaseFile({ locale, filename, onSuccess }) {
   const {
     default: data,
   } = await import(`../database/${locale}/${filename}.json`);
 
-  setState(data);
+  onSuccess(data);
 }
 
 export function useDatabaseFile({ filename, locale }) {
@@ -13,9 +13,9 @@ export function useDatabaseFile({ filename, locale }) {
 
   useEffect(() => {
     fetchDatabaseFile({
-      filename: filename,
-      locale: locale,
-      setState: setData,
+      filename,
+      locale,
+      onSuccess: setData,
     });
   }, [filename, locale]);
 

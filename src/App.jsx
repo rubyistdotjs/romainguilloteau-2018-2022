@@ -36,7 +36,7 @@ function App({ match }) {
           {alternates}
           <meta name="twitter:card" content="summary" />
           <meta name="twitter:creator" content="rubyistdotjs" />
-          <meta name="robots" content="nofollow, noarchive" />
+          <meta name="robots" content="noarchive" />
           <meta
             name="google-site-verification"
             content={process.env.REACT_APP_GOOGLE_SITE_VERIFICATION_KEY}

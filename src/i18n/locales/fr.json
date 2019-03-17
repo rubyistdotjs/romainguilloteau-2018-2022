@@ -1,4 +1,9 @@
 {
+  "NotFoundScreen.backToHome": "Aller à l'accueil",
+  "NotFoundScreen.metaDescription": "404 - La page que vous cherchez n'existe pas.",
+  "NotFoundScreen.metaTitle": "Page introuvable",
+  "NotFoundScreen.raisedEyebrownEmoji": "Emoji avec un sourcil relevé",
+  "NotFoundScreen.title": "La page que vous cherchez n'existe pas.",
   "english": "English (UK)",
   "french": "Français",
   "home.bookShelves.currentlyReading": "En cours",

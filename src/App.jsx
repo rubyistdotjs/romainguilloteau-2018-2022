@@ -1,13 +1,15 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { IntlProvider } from 'react-intl';
+import { Switch, Route, Redirect } from 'react-router-dom';
 import ReactGA from 'react-ga';
 import omit from 'lodash/omit';
 
-import HomeScreen from './screens/HomeScreen';
-
 import { addLocaleData } from './utils/locales';
 import messages from './i18n/locales';
+
+import HomeScreen from './screens/HomeScreen';
+import NotFoundScreen from './screens/NotFoundScreen';
 
 import './application.css';
 
@@ -42,7 +44,11 @@ function App({ match }) {
             content={process.env.REACT_APP_GOOGLE_SITE_VERIFICATION_KEY}
           />
         </Helmet>
-        <HomeScreen />
+        <Switch>
+          <Route path="/:locale" exact component={HomeScreen} />
+          <Route path="/:locale/404" component={NotFoundScreen} />
+          <Redirect to="/:locale/404" />
+        </Switch>
       </div>
     </IntlProvider>
   );

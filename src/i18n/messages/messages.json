@@ -233,5 +233,30 @@
     "id": "home.timeline.dateSince",
     "defaultMessage": "since",
     "filepath": "src/screens/HomeScreen/Title.jsx"
+  },
+  {
+    "id": "NotFoundScreen.metaTitle",
+    "defaultMessage": "Page not found",
+    "filepath": "src/screens/NotFoundScreen/index.jsx"
+  },
+  {
+    "id": "NotFoundScreen.metaDescription",
+    "defaultMessage": "404 - The page you're looking for does not exist.",
+    "filepath": "src/screens/NotFoundScreen/index.jsx"
+  },
+  {
+    "id": "NotFoundScreen.raisedEyebrownEmoji",
+    "defaultMessage": "Emoji with one eyebrow raised",
+    "filepath": "src/screens/NotFoundScreen/index.jsx"
+  },
+  {
+    "id": "NotFoundScreen.title",
+    "defaultMessage": "The page you're looking for does not exist.",
+    "filepath": "src/screens/NotFoundScreen/index.jsx"
+  },
+  {
+    "id": "NotFoundScreen.backToHome",
+    "defaultMessage": "Go to the home page",
+    "filepath": "src/screens/NotFoundScreen/index.jsx"
   }
 ]

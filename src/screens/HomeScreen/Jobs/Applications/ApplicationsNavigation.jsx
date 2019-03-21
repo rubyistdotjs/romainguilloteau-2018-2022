@@ -20,14 +20,14 @@ function ApplicationsNavigation({
   const list = applications.map((application, index) => {
     const { name } = application;
     const selected = index === selectedApplicationIndex;
-    const klass = selected ? 'active' : '';
+    const activeClassName = selected ? 'active' : '';
 
     return (
       <button
         key={camelCase(name)}
         type="button"
         title={formatMessage(i18n.switchTo, { appName: name })}
-        className={`step ${klass}`}
+        className={`step ${activeClassName}`}
         onClick={() => onChange(index)}
       />
     );

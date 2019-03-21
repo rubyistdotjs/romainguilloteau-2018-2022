@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
 
@@ -13,7 +13,7 @@ function Title({ title, fromDate, toDate, atPlace }) {
       </h3>
       <span className="block text-black text-xl md:text-2xl font-semibold leading-tight mt-1">
         {to ? (
-          <React.Fragment>
+          <Fragment>
             <FormattedMessage
               id="home.timeline.dateFrom"
               defaultMessage="from"
@@ -21,15 +21,15 @@ function Title({ title, fromDate, toDate, atPlace }) {
             <strong>{from}</strong>{' '}
             <FormattedMessage id="home.timeline.dateTo" defaultMessage="to" />{' '}
             <strong>{to}</strong>
-          </React.Fragment>
+          </Fragment>
         ) : (
-          <React.Fragment>
+          <Fragment>
             <FormattedMessage
               id="home.timeline.dateSince"
               defaultMessage="since"
             />{' '}
             <strong>{from}</strong>
-          </React.Fragment>
+          </Fragment>
         )}
         {atPlace && (
           <span>

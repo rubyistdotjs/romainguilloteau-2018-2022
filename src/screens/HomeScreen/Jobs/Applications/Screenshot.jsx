@@ -17,7 +17,7 @@ const i18n = defineMessages({
   },
 });
 
-function Screenshot({ intl, appName, filename, thumbnail, alt, url }) {
+function Screenshot({ intl, appName, filename, thumbnail, url }) {
   const { formatMessage } = intl;
 
   const screenshots = require.context(

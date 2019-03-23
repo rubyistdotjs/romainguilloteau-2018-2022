@@ -6,8 +6,8 @@ import {
   FormattedMessage,
 } from 'react-intl';
 
-import Section from '../Section';
-import ExternalLink from '../../ExternalLink';
+import Section from '../../../components/Section';
+import ExternalLink from '../../../components/ExternalLink';
 import Shelf from './Shelf';
 
 import api from '../../../services/api';
@@ -47,7 +47,7 @@ function BookShelves({ intl }) {
             key={`shelf-${shelf.name}`}
             className="w-full lg:w-1/3 mb-8 lg:mb-0 lg:px-4"
           >
-            <Shelf name={shelf.name} booksCount={shelf.books_count} />
+            <Shelf name={shelf.name} totalBooksCount={shelf.books_count} />
           </div>
         ))}
       </div>
@@ -59,7 +59,7 @@ function BookShelves({ intl }) {
             goodreadsLink: (
               <ExternalLink
                 href="https://www.goodreads.com/user/show/87055544-romain-guilloteau"
-                className="text-blue-dark no-underline hover:text-blue-darker focus:text-blue-darker"
+                className="text-teal-darker no-underline hover:text-teal-darkest focus:text-teal-darkest"
               >
                 Goodreads
               </ExternalLink>

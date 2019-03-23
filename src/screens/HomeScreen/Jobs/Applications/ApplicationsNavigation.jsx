@@ -18,21 +18,16 @@ function ApplicationsNavigation({
 }) {
   const { formatMessage } = intl;
   const list = applications.map((application, index) => {
-    const { name, brandColor } = application;
+    const { name } = application;
     const selected = index === selectedApplicationIndex;
-    const klass = selected ? 'active' : '';
-    const style =
-      selected && brandColor
-        ? { backgroundColor: brandColor, borderColor: brandColor }
-        : {};
+    const activeClassName = selected ? 'active' : '';
 
     return (
       <button
         key={camelCase(name)}
         type="button"
         title={formatMessage(i18n.switchTo, { appName: name })}
-        className={`step ${klass}`}
-        style={style}
+        className={`step ${activeClassName}`}
         onClick={() => onChange(index)}
       />
     );
@@ -47,7 +42,6 @@ ApplicationsNavigation.propTypes = {
   applications: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string.isRequired,
-      brandColor: PropTypes.string,
     })
   ).isRequired,
   onChange: PropTypes.func.isRequired,

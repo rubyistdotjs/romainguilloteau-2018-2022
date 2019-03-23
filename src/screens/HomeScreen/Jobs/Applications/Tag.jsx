@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function Tag({ tag }) {
-  const small = tag.legacy ? (
+  const legacy = tag.legacy ? (
     <small className="align-middle leading-none">(legacy)</small>
   ) : (
     ''
@@ -10,7 +10,7 @@ function Tag({ tag }) {
 
   return (
     <span className="label">
-      {tag.name} {small}
+      {tag.name} {legacy}
     </span>
   );
 }

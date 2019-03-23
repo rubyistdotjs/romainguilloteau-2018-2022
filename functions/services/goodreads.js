@@ -42,6 +42,7 @@ function formatBook(review) {
 
   return {
     id: book.id,
+    cover_url: book.image_url,
     title: book.title_without_series,
     description: book.description,
     author: author.name,

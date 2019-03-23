@@ -2,7 +2,7 @@
 
 .field {
   @apply .appearance-none .block .text-black .w-full .mb-6 .p-4 .bg-transparent
-         .border-2 .border-grey-light;
+         .border-2 .border-grey-light .rounded;
   transition-property: color, background-color, border-color;
   transition-duration: 320ms;
   transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -13,7 +13,7 @@
 }
 
 .field:focus {
-  @apply .outline-none .bg-white .border-blue;
+  @apply .outline-none .bg-white .border-teal;
 }
 
 .field:disabled {

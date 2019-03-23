@@ -22,28 +22,28 @@ const i18n = defineMessages({
   },
 });
 
-async function fetchBooks(shelfName, setBooks) {
+async function fetchBooks(shelfName, perPage, setBooks) {
   const { data } = await api.get('/shelfBooks', {
-    params: { shelf: shelfName },
+    params: { shelf: shelfName, per_page: perPage },
   });
 
   setBooks(data);
 }
 
-function Shelf({ intl, name, booksCount }) {
+function Shelf({ intl, name, displayedBooksCount, totalBooksCount }) {
   const { formatMessage } = intl;
   const [books, setBooks] = useState([]);
 
   useEffect(() => {
-    fetchBooks(name, setBooks);
+    fetchBooks(name, displayedBooksCount, setBooks);
   }, [name]);
 
   return (
     <div>
-      <h3 className="text-black text-2xl lg:text-2xl font-bold tracking-tight leading-none mb-6 flex flex-row items-center">
+      <h3 className="text-black text-2xl lg:text-2xl font-bold tracking-tight leading-none mb-8 flex flex-row items-center">
         {formatMessage(i18n[camelCase(name)])}
         <span className="inline-block text-grey-darkest text-xs font-semibold leading-none bg-grey-light py-1 px-2 ml-3 rounded-full">
-          {booksCount}
+          {totalBooksCount}
         </span>
       </h3>
       {books.map(book => (
@@ -52,6 +52,7 @@ function Shelf({ intl, name, booksCount }) {
           title={book.title}
           author={book.author}
           url={book.link}
+          coverUrl={book.cover_url}
         />
       ))}
     </div>
@@ -61,7 +62,12 @@ function Shelf({ intl, name, booksCount }) {
 Shelf.propTypes = {
   intl: intlShape.isRequired,
   name: PropTypes.string.isRequired,
-  booksCount: PropTypes.number.isRequired,
+  displayedBooksCount: PropTypes.number,
+  totalBooksCount: PropTypes.number.isRequired,
+};
+
+Shelf.defaultProps = {
+  displayedBooksCount: 6,
 };
 
 export default injectIntl(Shelf);

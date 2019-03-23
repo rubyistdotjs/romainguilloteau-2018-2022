@@ -4,16 +4,20 @@ import { ExternalLink as ExternalLinkIcon } from 'react-feather';
 import ProgressiveImage from 'react-progressive-image';
 import { injectIntl, intlShape, defineMessages } from 'react-intl';
 
-import ExternalLink from '../../../ExternalLink';
+import ExternalLink from '../../../../components/ExternalLink';
 
 const i18n = defineMessages({
   visit: {
     id: 'home.jobs.applications.visit',
     defaultMessage: 'Go to this website',
   },
+  screenshotAlt: {
+    id: 'home.jobs.applications.screenshotAlt',
+    defaultMessage: 'Screenshot of {appName}',
+  },
 });
 
-function Screenshot({ intl, filename, thumbnail, alt, url }) {
+function Screenshot({ intl, appName, filename, thumbnail, url }) {
   const { formatMessage } = intl;
 
   const screenshots = require.context(
@@ -31,7 +35,7 @@ function Screenshot({ intl, filename, thumbnail, alt, url }) {
           <ExternalLink
             href={url}
             title={formatMessage(i18n.visit)}
-            className="text-white hover:text-blue-light"
+            className="text-teal-dark hover:text-teal-darker btn-transition"
             rel="nofollow"
           >
             <ExternalLinkIcon size={42} />
@@ -42,7 +46,13 @@ function Screenshot({ intl, filename, thumbnail, alt, url }) {
         src={largeScreenshot}
         placeholder={`data:image/svg+xml;utf8,${thumbnail}`}
       >
-        {src => <img src={src} alt={alt} className="absolute w-full pin-t" />}
+        {src => (
+          <img
+            src={src}
+            alt={formatMessage(i18n.screenshotAlt, { appName })}
+            className="absolute w-full pin-t"
+          />
+        )}
       </ProgressiveImage>
     </div>
   );
@@ -50,14 +60,13 @@ function Screenshot({ intl, filename, thumbnail, alt, url }) {
 
 Screenshot.propTypes = {
   intl: intlShape.isRequired,
+  appName: PropTypes.string.isRequired,
   filename: PropTypes.string.isRequired,
   thumbnail: PropTypes.string.isRequired,
-  alt: PropTypes.string,
   url: PropTypes.string,
 };
 
 Screenshot.defaultProps = {
-  alt: '',
   url: null,
 };
 

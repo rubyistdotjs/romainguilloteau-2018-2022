@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Emoji({ name, symbol }) {
+function Emoji({ name, symbol, ...props }) {
   return (
-    <span role="img" aria-label={name}>
+    <span role="img" aria-label={name} {...props}>
       {symbol}
     </span>
   );

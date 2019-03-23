@@ -36,7 +36,9 @@ function BookShelves({ intl }) {
   const [shelves, setShelves] = useState([]);
 
   useEffect(() => {
-    fetchShelves(setShelves);
+    if (navigator.userAgent !== 'ReactSnap') {
+      fetchShelves(setShelves);
+    }
   }, []);
 
   return (

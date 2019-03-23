@@ -148,7 +148,7 @@
         },
         "description": {
           "fr": "Assurer la maintenance et l'evolution du site existant dont l'objectif est la mise en relation entre rédacteurs freelance et porteurs de projets et le suivis des rédactions.",
-          "en": ""
+          "en": "Maintain and develop new features for the existing website, with which you can order texts for your website, blogs, press releases, anything really, then choose one or more freelance writers that better suit the style your looking for and receive the texts through the app."
         },
         "challenges": {
           "fr": [],
@@ -316,7 +316,10 @@
     "endedAt": 1409436000000,
     "company": "1Year1Book",
     "applications": [{
-      "name": "Réseau Social",
+      "name": {
+        "fr": "Réseau Social",
+        "en": "Social network"
+      },
       "url": "http://demo.1year1book.com/",
       "brandColor": "#2B3B8E",
       "screenshot": {
@@ -326,14 +329,17 @@
       },
       "description": {
         "fr": "Développement et design d'un réseau social privé dont l'objectif premier est le partage de photographies. Les utilisateurs peuvent également échanger des messages, commenter et voter (j'aime, je n'aime pas) les photographies. Les votes permettent à l'échéance d'une période donnée de générer automatiquement un Yearbook.",
-        "en": ""
+        "en": "Starting from scratch, development and design of the new version of a private social network whose primary objective is the sharing of pictures. Users can also exchange messages, comment and vote on the pictures. Votes allowed us to automatically generate a Yearbook at the end of a given period."
       },
       "challenges": {
         "fr": [
           "Envoi, traitement (redimensionnement, compression, ...)  et stockage d'images volumineuses et généralement envoyées par paquets.",
           "Les réseaux sociaux peuvent être générés automatiquement via de nombreux paramètres, il faut donc un système d'autorisation complexe, la quasi-totalité des fonctionnalités peuvent être désactivées ou bloquées pour être uniquement utilisable par les administrateurs."
         ],
-        "en": []
+        "en": [
+          "Upload, processing (resizing, compression,...) and storage of very large images which are usually sent in bulk.",
+          "Social networks can be automatically generated via many settings, so a complex authorization system was required, almost all features can be disabled or restricted so that only administrators can use them."
+        ]
       },
       "tags": [{
           "name": "Ruby on Rails",
@@ -378,13 +384,15 @@
       "url": null,
       "description": {
         "fr": "Développement et design d'une interface permettant aux employés de, entre autres, créé automatiquement un réseau social personnalisé grâce à de nombreux paramètres, suivre l'état de santé des réseaux sociaux via de multiple graphique et une checklist prédéfini, créé et suivre les commandes, créé et maintenir des fiches clients.",
-        "en": ""
+        "en": "Development and design of an interface allowing employees to, among other things, automatically create a customized social network using numerous parameters, monitor their health status via multiple graphs and a predefined checklist, create and track orders, create and maintain customer records."
       },
       "challenges": {
         "fr": [
           "Génération de statistiques et rapports pour plusieurs centaines de réseaux sociaux."
         ],
-        "en": []
+        "en": [
+          "Generation of statistics and reports for several hundred social networks."
+        ]
       },
       "screenshot": null,
       "tags": [{

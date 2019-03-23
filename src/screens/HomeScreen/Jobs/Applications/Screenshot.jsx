@@ -18,6 +18,8 @@ const i18n = defineMessages({
 });
 
 function Screenshot({ intl, appName, filename, thumbnail, url }) {
+  if (navigator.userAgent === 'ReactSnap') return '';
+
   const { formatMessage } = intl;
 
   const screenshots = require.context(

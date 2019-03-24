@@ -53,7 +53,7 @@
       "/en",
       "/fr"
     ],
-    "snapshotDelay": 500
+    "skipThirdPartyRequests": true
   },
   "proxy": "http://localhost:9000",
   "devDependencies": {

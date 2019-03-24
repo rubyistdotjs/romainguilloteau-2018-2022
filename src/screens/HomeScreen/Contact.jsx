@@ -191,7 +191,7 @@ class Contact extends React.Component {
       <Section emoji="✉️" title={formatMessage(i18n.title)}>
         {message.sentAt && (
           <p className="alert alert-teal w-full max-w-md">
-            <Send size={16} className="mr-4 flex-no-shrink" />
+            <Send size={16} className="mr-4 flex-shrink-0" />
             {formatMessage(i18n.messageSentThe, {
               date: formatDate(message.sentAt, {
                 day: 'numeric',

@@ -8,10 +8,10 @@ function Title({ title, fromDate, toDate, atPlace }) {
 
   return (
     <div className="mb-8 md:mb-12">
-      <h3 className="text-black text-2xl md:text-3xl font-bold tracking-tight leading-none">
+      <h3 className="text-gray-900 text-2xl md:text-3xl font-bold tracking-tight leading-none">
         {title}
       </h3>
-      <span className="block text-black text-xl md:text-2xl font-semibold leading-tight mt-1">
+      <span className="block text-gray-900 text-xl md:text-2xl font-semibold leading-tight mt-1">
         {to ? (
           <Fragment>
             <FormattedMessage

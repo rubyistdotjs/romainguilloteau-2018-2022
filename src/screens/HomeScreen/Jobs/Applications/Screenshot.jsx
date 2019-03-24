@@ -52,7 +52,7 @@ function Screenshot({ intl, appName, filename, thumbnail, url }) {
           <img
             src={src}
             alt={formatMessage(i18n.screenshotAlt, { appName })}
-            className="absolute w-full pin-t"
+            className="absolute w-full top"
           />
         )}
       </ProgressiveImage>

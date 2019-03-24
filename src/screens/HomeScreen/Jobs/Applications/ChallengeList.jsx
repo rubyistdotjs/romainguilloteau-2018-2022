@@ -10,7 +10,7 @@ function ChallengeList({ challenges }) {
     </li>
   ));
 
-  return <ul className="list-reset text-grey-darkest text-sm">{listItems}</ul>;
+  return <ul className="text-grey-darkest text-sm">{listItems}</ul>;
 }
 
 ChallengeList.propTypes = {

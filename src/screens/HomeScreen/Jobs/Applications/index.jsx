@@ -15,7 +15,7 @@ function Applications({ applications }) {
 
   return (
     <div className="flex flex-col lg:flex-row">
-      <div className="block lg:hidden -mt-3 md:-mt-6 mb-6">
+      <div className="lg:hidden -mt-3 md:-mt-6 mb-6">
         <ApplicationsNavigation
           selectedApplicationIndex={selectedAppIndex}
           applications={applications}

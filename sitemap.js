@@ -10,7 +10,7 @@ const sitemap = sm.createSitemap({
 const url = ({ path, changefreq, priority }) => {
   locales.forEach(locale => {
     sitemap.add({
-      url: `/${locale}${path ? `/${path}` : ''}`,
+      url: `/${locale}/${path}`,
       changefreq: 'monthly',
       priority: 1,
       links: links({ path }),
@@ -21,10 +21,10 @@ const url = ({ path, changefreq, priority }) => {
 const links = ({ path }) => {
   return locales.map(locale => ({
     lang: locale,
-    url: `${locale}${path ? `/${path}` : ''}`,
+    url: `${locale}/${path}`,
   }));
 };
 
-url({ path: null, changefreq: 'monthly', priority: 1 });
+url({ path: '/', changefreq: 'monthly', priority: 1 });
 
 fs.writeFileSync('build/sitemap.xml', sitemap.toString());

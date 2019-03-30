@@ -49,7 +49,7 @@ function NotFoundScreen({ intl }) {
                 defaultMessage="The page you're looking for does not exist."
               />
             </h1>
-            <Link to={`/${locale}`} className="btn btn-teal">
+            <Link to={`/${locale}/`} className="btn btn-teal">
               <FormattedMessage
                 id="NotFoundScreen.backToHome"
                 defaultMessage="Go to the home page"

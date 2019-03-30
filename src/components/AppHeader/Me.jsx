@@ -10,7 +10,10 @@ function Me({ intl }) {
   const { locale } = intl;
 
   return (
-    <Link to={`/${locale}`} className="flex flex-row items-center no-underline">
+    <Link
+      to={`/${locale}/`}
+      className="flex flex-row items-center no-underline"
+    >
       <picture className="w-10 h-10 md:w-12 md:h-12 mr-2 rounded-full overflow-hidden">
         <source srcSet={mugshotJp2} type="image/jp2" className="w-full" />
         <source srcSet={mugshotWebp} type="image/webp" className="w-full" />

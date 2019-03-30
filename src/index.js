@@ -12,6 +12,7 @@ const root = (
   <BrowserRouter>
     <Switch>
       <Route path={`/:locale(${availableLocales.join('|')})`} component={App} />
+      <Redirect from="/" exact to={`/${detectBrowserLocale()}`} />
       <Redirect from="/*" to={`/${detectBrowserLocale()}/*`} />
     </Switch>
   </BrowserRouter>

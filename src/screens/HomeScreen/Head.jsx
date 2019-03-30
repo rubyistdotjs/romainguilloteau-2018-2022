@@ -57,6 +57,10 @@ function Head({ intl }) {
       <meta property="og:image:width" content="1256" />
       <meta property="og:image:height" content="1256" />
       <meta property="og:image:user_generated" content="false" />
+      <link
+        rel="canonical"
+        content={`https://www.romainguilloteau.com/${intl.locale}`}
+      />
 
       <script type="application/ld+json">
         {`

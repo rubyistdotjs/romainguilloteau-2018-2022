@@ -42,7 +42,7 @@ function BookShelves({ intl }) {
   }, []);
 
   return (
-    <Section emoji="📖" title={formatMessage(i18n.title)}>
+    <Section emoji="open-book" title={formatMessage(i18n.title)}>
       <div className="flex flex-col lg:flex-row lg:-mx-4">
         {shelves.map(shelf => (
           <div

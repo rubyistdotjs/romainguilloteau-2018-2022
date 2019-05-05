@@ -24,7 +24,7 @@ function Knowledges({ intl }) {
   const learningItems = extractItems({ knowledges, state: 'learning' });
 
   return (
-    <Section emoji="👨‍💻" title={formatMessage(i18n.title)}>
+    <Section emoji="man-tipping" title={formatMessage(i18n.title)}>
       <h3 className="text-black text-2xl lg:text-2xl font-bold tracking-tight leading-none mb-8">
         Stuff I know
       </h3>

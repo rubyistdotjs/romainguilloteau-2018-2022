@@ -188,7 +188,7 @@ class Contact extends React.Component {
     const contentValid = this.validateMessageContent() === null;
 
     return (
-      <Section emoji="✉️" title={formatMessage(i18n.title)}>
+      <Section emoji="envelope" title={formatMessage(i18n.title)}>
         {message.sentAt && (
           <p className="alert alert-teal w-full max-w-md">
             <Send size={16} className="mr-4 flex-shrink-0" />

@@ -45,6 +45,7 @@
     "i18n:extractMessages": "react-intl-cra 'src/**/*.{js,jsx}' -o 'src/i18n/messages/messages.json'",
     "i18n:updateLocales": "node ./scripts/translationRunner.js",
     "i18n:updateDatabaseLocales": "node ./scripts/updateDatabaseLocales.js",
+    "lint": "$(yarn bin)/eslint src/",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },

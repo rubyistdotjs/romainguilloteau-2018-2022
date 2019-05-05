@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 
 export async function fetchDatabaseFile({ locale, filename, onSuccess }) {
-  const {
-    default: data,
-  } = await import(`../database/${locale}/${filename}.json`);
+  const { default: data } = await import(
+    `../database/${locale}/${filename}.json`
+  );
 
   onSuccess(data);
 }

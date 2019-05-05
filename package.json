@@ -3,7 +3,7 @@
   "version": "1.0.0-beta.1",
   "homepage": "https://www.romainguilloteau.com",
   "author": "Romain GUILLOTEAU (https://www.romainguilloteau.com/)",
-  "repository": "https://gitlab.com/rubyistdotjs/romainguilloteau",
+  "repository": "https://github.com/rubyistdotjs/romainguilloteau",
   "license": "ISC",
   "private": true,
   "browserslist": [

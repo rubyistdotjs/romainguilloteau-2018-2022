@@ -5,12 +5,12 @@
 
 [[redirects]]
   from = "https://romainguilloteau.netlify.com/*"
-  to = "https://www.romainguilloteau.com/:splat"
+  to = "https://www.romainguilloteau.dev/:splat"
   status = 301
   force = true
 
 [[redirects]]
   from = "http://romainguilloteau.netlify.com/*"
-  to = "https://www.romainguilloteau.com/:splat"
+  to = "https://www.romainguilloteau.dev/:splat"
   status = 301
   force = true

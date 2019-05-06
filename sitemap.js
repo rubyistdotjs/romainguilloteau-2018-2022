@@ -4,7 +4,7 @@ const sm = require('sitemap');
 const locales = ['en', 'fr'];
 
 const sitemap = sm.createSitemap({
-  hostname: 'https://www.romainguilloteau.com/',
+  hostname: 'https://www.romainguilloteau.dev/',
 });
 
 const url = ({ path, changefreq, priority }) => {

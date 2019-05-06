@@ -1,6 +1,6 @@
 # www.robotstxt.org/
 
-Sitemap: https://www.romainguilloteau.com/sitemap.xml
+Sitemap: https://www.romainguilloteau.dev/sitemap.xml
 
 # Allow crawling of all content
 User-agent: *

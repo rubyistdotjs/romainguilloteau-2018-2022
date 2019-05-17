@@ -7,17 +7,17 @@
   {
     "id": "language",
     "defaultMessage": "English (UK)",
-    "filepath": "src/components/Footer/index.jsx"
+    "filepath": "src/components/Footer/Footer.jsx"
   },
   {
-    "id": "english",
-    "defaultMessage": "English (UK)",
-    "filepath": "src/components/Footer/index.jsx"
-  },
-  {
-    "id": "french",
+    "id": "Footer.locales.fr",
     "defaultMessage": "Français",
-    "filepath": "src/components/Footer/index.jsx"
+    "filepath": "src/components/Footer/Footer.messages.js"
+  },
+  {
+    "id": "Footer.locales.en",
+    "defaultMessage": "English (US)",
+    "filepath": "src/components/Footer/Footer.messages.js"
   },
   {
     "id": "home.bookShelves.shelf.coverOf",
@@ -176,12 +176,12 @@
   },
   {
     "id": "home.header.title",
-    "defaultMessage": "👋 I'm Romain Guilloteau aka rubyistdotjs a self-taught full stack web developer.",
+    "defaultMessage": "I'm Romain Guilloteau aka rubyistdotjs a self-taught full stack developer.",
     "filepath": "src/screens/HomeScreen/Header.jsx"
   },
   {
     "id": "home.header.introduction",
-    "defaultMessage": "Currently working for Lunchr, previously Codeur and 1Year1Book. I have more than 7 years of professional experience during which I had the opportunity to take all the roles necessary to launch ambitious applications including SEO, web design and server architecture.",
+    "defaultMessage": "Currently working for Lunchr, previously Codeur and 1Year1Book. I have more than 7 years of professional experiences during which I had the opportunity to take on all the roles necessary to launch ambitious applications, most notably web designer {manArtistEmoji}.",
     "filepath": "src/screens/HomeScreen/Header.jsx"
   },
   {
@@ -242,11 +242,6 @@
   {
     "id": "NotFoundScreen.metaDescription",
     "defaultMessage": "404 - The page you're looking for does not exist.",
-    "filepath": "src/screens/NotFoundScreen/index.jsx"
-  },
-  {
-    "id": "NotFoundScreen.raisedEyebrownEmoji",
-    "defaultMessage": "Emoji with one eyebrow raised",
     "filepath": "src/screens/NotFoundScreen/index.jsx"
   },
   {

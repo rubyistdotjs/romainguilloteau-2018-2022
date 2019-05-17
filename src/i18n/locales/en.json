@@ -1,11 +1,10 @@
 {
+  "Footer.locales.en": "English",
+  "Footer.locales.fr": "Français",
   "NotFoundScreen.backToHome": "Go to the home page",
   "NotFoundScreen.metaDescription": "The page you're looking for does not exist.",
   "NotFoundScreen.metaTitle": "404 - Page not found",
-  "NotFoundScreen.raisedEyebrownEmoji": "Emoji with one eyebrow raised",
   "NotFoundScreen.title": "The page you're looking for does not exist.",
-  "english": "English (UK)",
-  "french": "Français",
   "home.bookShelves.currentlyReading": "Reading",
   "home.bookShelves.dataFromGoodreadsAPI": "Data collected from {goodreadsLink} API",
   "home.bookShelves.read": "Read",
@@ -43,5 +42,5 @@
   "home.timeline.dateFrom": "from",
   "home.timeline.dateSince": "since",
   "home.timeline.dateTo": "to",
-  "language": "English (UK)"
+  "language": "English"
 }

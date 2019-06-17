@@ -1,5 +1,4 @@
 import React from 'react';
-import Reaptcha from 'reaptcha';
 import pickBy from 'lodash/pickBy';
 import isString from 'lodash/isString';
 import isEmail from 'validator/lib/isEmail';
@@ -42,10 +41,6 @@ const i18n = defineMessages({
     id: 'home.contact.errors.content.tooLong',
     defaultMessage: 'Your message is too long, keep it under 42000 characters.',
   },
-  recaptchaEmpty: {
-    id: 'home.contact.errors.recaptcha.empty',
-    defaultMessage: 'Robot !',
-  },
   submitMessageBtn: {
     id: 'home.contact.sendMessageBtn',
     defaultMessage: 'Send',
@@ -61,7 +56,6 @@ class Contact extends React.Component {
     message: {
       email: '',
       content: '',
-      recaptcha: null,
       sentAt: null,
     },
     messageErrors: {},
@@ -105,18 +99,10 @@ class Contact extends React.Component {
       : null;
   }
 
-  validateRecaptcha() {
-    const { formatMessage } = this.props.intl;
-    const { recaptcha } = this.state.message;
-    if (!recaptcha) return formatMessage(i18n.recaptchaEmpty);
-    return null;
-  }
-
   validateMessage() {
     return {
       email: this.validateMessageEmail(),
       content: this.validateMessageContent(),
-      recaptcha: this.validateRecaptcha(),
     };
   }
 
@@ -127,7 +113,6 @@ class Contact extends React.Component {
       .post('/sendMessage', {
         email: message.email,
         content: message.content,
-        recaptcha: message.recaptcha,
       })
       .then(res => {
         const message = {
@@ -145,7 +130,6 @@ class Contact extends React.Component {
       .catch(error => {
         console.log(error);
         this.setState({ _loading: false });
-        this.recaptchaRef.reset();
       });
   }
 
@@ -156,12 +140,6 @@ class Contact extends React.Component {
       const message = Object.assign({}, prevState.message);
       message[name] = value;
       return { message };
-    });
-  };
-
-  handeRecaptchaVerify = hash => {
-    this.setState(prevState => {
-      return { message: { ...prevState.message, recaptcha: hash } };
     });
   };
 
@@ -180,7 +158,7 @@ class Contact extends React.Component {
   };
 
   render() {
-    const { formatMessage, formatDate, locale } = this.props.intl;
+    const { formatMessage, formatDate } = this.props.intl;
     const { message, messageErrors, _loading } = this.state;
     const inputsDisabled = _loading || message.sentAt;
 
@@ -190,7 +168,7 @@ class Contact extends React.Component {
     return (
       <Section emoji="envelope" title={formatMessage(i18n.title)}>
         {message.sentAt && (
-          <p className="alert alert-teal w-full max-w-md">
+          <p className="alert alert-teal w-full max-w-xl">
             <Send size={16} className="mr-4 flex-shrink-0" />
             {formatMessage(i18n.messageSentThe, {
               date: formatDate(message.sentAt, {
@@ -203,7 +181,7 @@ class Contact extends React.Component {
         )}
         <form
           id="contact-form"
-          className="w-full max-w-md"
+          className="w-full max-w-xl"
           onSubmit={this.handleSubmit}
         >
           <input
@@ -237,25 +215,12 @@ class Contact extends React.Component {
             <p className="field-error">{messageErrors.content}</p>
           )}
           {!message.sentAt && (
-            <div>
-              <div className="mb-4">
-                <Reaptcha
-                  ref={e => (this.recaptchaRef = e)}
-                  sitekey={process.env.REACT_APP_RECAPTCHA_KEY}
-                  onVerify={this.handeRecaptchaVerify}
-                  hl={locale}
-                />
-              </div>
-              {messageErrors.recaptcha && (
-                <p className="field-error">{messageErrors.recaptcha}</p>
-              )}
-              <input
-                type="submit"
-                value={formatMessage(i18n.submitMessageBtn)}
-                className="btn btn-teal"
-                disabled={inputsDisabled}
-              />
-            </div>
+            <input
+              type="submit"
+              value={formatMessage(i18n.submitMessageBtn)}
+              className="btn btn-teal"
+              disabled={inputsDisabled}
+            />
           )}
         </form>
       </Section>

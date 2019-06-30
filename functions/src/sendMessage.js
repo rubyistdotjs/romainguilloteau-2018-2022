@@ -1,6 +1,5 @@
 require('dotenv').config();
 
-const Recaptcha = require('recaptcha2');
 const mailer = require('@sendgrid/mail');
 const isEmail = require('validator/lib/isEmail');
 const isEmpty = require('validator/lib/isEmpty');
@@ -20,29 +19,8 @@ function validateContent(content) {
   return contentLength >= 42 && contentLength <= 42000;
 }
 
-async function validateRecaptchaToken(token) {
-  if (!token) return false;
-
-  const recaptcha = new Recaptcha({
-    siteKey: process.env.RECAPTCHA_SITE_KEY,
-    secretKey: process.env.RECAPTCHA_SECRET_KEY,
-  });
-
-  try {
-    await recaptcha.validate(token);
-    return true;
-  } catch (errorCodes) {
-    console.warn('Invalid recaptcha token.');
-    return false;
-  }
-}
-
 function validate(payload) {
-  return (
-    validateEmail(payload.email) &&
-    validateContent(payload.content) &&
-    validateRecaptchaToken(payload.recaptcha)
-  );
+  return validateEmail(payload.email) && validateContent(payload.content);
 }
 
 function buildMessage(payload) {

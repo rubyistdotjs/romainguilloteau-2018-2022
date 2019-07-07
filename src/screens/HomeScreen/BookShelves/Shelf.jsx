@@ -36,7 +36,7 @@ function Shelf({ intl, name, displayedBooksCount, totalBooksCount }) {
 
   useEffect(() => {
     fetchBooks(name, displayedBooksCount, setBooks);
-  }, [name]);
+  }, [name, displayedBooksCount]);
 
   return (
     <div>

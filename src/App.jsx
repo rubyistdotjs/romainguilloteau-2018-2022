@@ -2,7 +2,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { IntlProvider } from 'react-intl';
 import { Switch, Route, Redirect } from 'react-router-dom';
-import ReactGA from 'react-ga';
 import omit from 'lodash/omit';
 
 import { addLocaleData } from './utils/locales';
@@ -14,11 +13,6 @@ import NotFoundScreen from './screens/NotFoundScreen';
 import './application.css';
 
 addLocaleData();
-
-if (process.env.NODE_ENV === 'production') {
-  ReactGA.initialize(process.env.REACT_APP_ANALYTICS_TRACKING_ID);
-  ReactGA.pageview(window.location.pathname + window.location.search);
-}
 
 function App({ match }) {
   const locale = match.params.locale;

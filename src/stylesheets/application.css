@@ -1,10 +1,8 @@
 @import "tailwindcss/base";
 @import "tailwindcss/utilities";
 
-@import "_alerts.css";
 @import "_badges.css";
 @import "_buttons.css";
-@import "_forms.css";
 @import "_labels.css";
 
 @import "tailwindcss/components";

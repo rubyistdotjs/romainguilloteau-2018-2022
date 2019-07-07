@@ -1,7 +1,0 @@
-.alert {
-  @apply .flex .flex-row .items-center .font-semibold .p-4 .mb-6 .border-l-3;
-}
-
-.alert-teal {
-  @apply .text-teal-900 .bg-teal-300 .border-teal-500;
-}

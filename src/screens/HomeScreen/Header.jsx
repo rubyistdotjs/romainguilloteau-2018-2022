@@ -39,12 +39,6 @@ function Header() {
             />
           </p>
           <div className="mt-12">
-            <a href="#contact-form" className="btn btn-teal">
-              <FormattedMessage
-                id="home.header.getInTouchBtn"
-                defaultMessage="Get in touch"
-              />
-            </a>
             <a
               href={resume}
               className="btn btn-outline-grey"

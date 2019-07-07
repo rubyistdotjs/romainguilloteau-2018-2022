@@ -22,41 +22,6 @@
   {
     "id": "home.bookShelves.shelf.coverOf",
     "defaultMessage": "Cover of the book {title}",
-    "filepath": "src/screens/BooksScreen/BookShelves/Book.jsx"
-  },
-  {
-    "id": "home.bookShelves.shelf.seeBookOnGoodreads",
-    "defaultMessage": "Check out this book on Goodreads",
-    "filepath": "src/screens/BooksScreen/BookShelves/Book.jsx"
-  },
-  {
-    "id": "home.bookShelves.title",
-    "defaultMessage": "Book shelves",
-    "filepath": "src/screens/BooksScreen/BookShelves/index.jsx"
-  },
-  {
-    "id": "home.bookShelves.dataFromGoodreadsAPI",
-    "defaultMessage": "Data collected from {goodreadsLink} API",
-    "filepath": "src/screens/BooksScreen/BookShelves/index.jsx"
-  },
-  {
-    "id": "home.bookShelves.currentlyReading",
-    "defaultMessage": "Reading",
-    "filepath": "src/screens/BooksScreen/BookShelves/Shelf.jsx"
-  },
-  {
-    "id": "home.bookShelves.toRead",
-    "defaultMessage": "On deck",
-    "filepath": "src/screens/BooksScreen/BookShelves/Shelf.jsx"
-  },
-  {
-    "id": "home.bookShelves.read",
-    "defaultMessage": "Read",
-    "filepath": "src/screens/BooksScreen/BookShelves/Shelf.jsx"
-  },
-  {
-    "id": "home.bookShelves.shelf.coverOf",
-    "defaultMessage": "Cover of the book {title}",
     "filepath": "src/screens/HomeScreen/BookShelves/Book.jsx"
   },
   {
@@ -88,56 +53,6 @@
     "id": "home.bookShelves.read",
     "defaultMessage": "Read",
     "filepath": "src/screens/HomeScreen/BookShelves/Shelf.jsx"
-  },
-  {
-    "id": "home.contact.title",
-    "defaultMessage": "Contact",
-    "filepath": "src/screens/HomeScreen/Contact.jsx"
-  },
-  {
-    "id": "home.contact.placeholders.emailAddress",
-    "defaultMessage": "Email address",
-    "filepath": "src/screens/HomeScreen/Contact.jsx"
-  },
-  {
-    "id": "home.contact.errors.emailAddress.empty",
-    "defaultMessage": "Please specify your email address.",
-    "filepath": "src/screens/HomeScreen/Contact.jsx"
-  },
-  {
-    "id": "home.contact.errors.emailAddress.invalid",
-    "defaultMessage": "The email address is invalid.",
-    "filepath": "src/screens/HomeScreen/Contact.jsx"
-  },
-  {
-    "id": "home.contact.placeholders.messageContent",
-    "defaultMessage": "Message",
-    "filepath": "src/screens/HomeScreen/Contact.jsx"
-  },
-  {
-    "id": "home.contact.errors.content.tooShort",
-    "defaultMessage": "Your message is too short.",
-    "filepath": "src/screens/HomeScreen/Contact.jsx"
-  },
-  {
-    "id": "home.contact.errors.content.tooLong",
-    "defaultMessage": "Your message is too long, keep it under 42000 characters.",
-    "filepath": "src/screens/HomeScreen/Contact.jsx"
-  },
-  {
-    "id": "home.contact.errors.recaptcha.empty",
-    "defaultMessage": "Robot !",
-    "filepath": "src/screens/HomeScreen/Contact.jsx"
-  },
-  {
-    "id": "home.contact.sendMessageBtn",
-    "defaultMessage": "Send",
-    "filepath": "src/screens/HomeScreen/Contact.jsx"
-  },
-  {
-    "id": "home.contact.messageSentThe",
-    "defaultMessage": "The following message was send the {date}.",
-    "filepath": "src/screens/HomeScreen/Contact.jsx"
   },
   {
     "id": "home.diplomas.title",
@@ -182,11 +97,6 @@
   {
     "id": "home.header.introduction",
     "defaultMessage": "Currently working for Lunchr, previously Codeur and 1Year1Book. I have more than 7 years of professional experiences during which I had the opportunity to take on all the roles necessary to launch ambitious applications, most notably web designer {manArtistEmoji}.",
-    "filepath": "src/screens/HomeScreen/Header.jsx"
-  },
-  {
-    "id": "home.header.getInTouchBtn",
-    "defaultMessage": "Get in touch",
     "filepath": "src/screens/HomeScreen/Header.jsx"
   },
   {

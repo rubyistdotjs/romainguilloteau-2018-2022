@@ -5,7 +5,6 @@ import Header from './Header';
 import Jobs from './Jobs';
 import Diplomas from './Diplomas';
 import BookShelves from './BookShelves';
-import Contact from './Contact';
 
 function HomeScreen() {
   return (
@@ -15,7 +14,6 @@ function HomeScreen() {
       <Jobs />
       <Diplomas />
       <BookShelves />
-      <Contact />
     </div>
   );
 }

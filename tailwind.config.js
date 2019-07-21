@@ -149,7 +149,7 @@ module.exports = {
     },
     fontFamily: {
       sans: [
-        'Muli',
+        'HelveticaText',
         '-apple-system',
         'BlinkMacSystemFont',
         '"Segoe UI"',
@@ -164,7 +164,7 @@ module.exports = {
         '"Noto Color Emoji"',
       ],
       heading: [
-        'Montserrat',
+        'HelveticaDisplay',
         '-apple-system',
         'BlinkMacSystemFont',
         '"Segoe UI"',
@@ -198,7 +198,7 @@ module.exports = {
       '3xl': '2rem',
       '4xl': '2.375rem',
       '5xl': '3rem',
-      '6xl': '3.875rem',
+      '6xl': '3.5rem',
     },
     fontWeight: {
       hairline: '100',

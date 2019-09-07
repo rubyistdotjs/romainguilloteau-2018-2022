@@ -1,6 +1,6 @@
 {
-  "Footer.locales.en": "English",
-  "Footer.locales.fr": "Français",
+  "Footer.madeWith": "Made with React & Tailwind CSS, hosted on Netlify.",
+  "Footer.noDataCollection": "This website doesn't collect any data whatsoever.",
   "NotFoundScreen.backToHome": "Aller à l'accueil",
   "NotFoundScreen.metaDescription": "La page que vous cherchez n'existe pas.",
   "NotFoundScreen.metaTitle": "404 - Page introuvable",
@@ -13,10 +13,10 @@
   "home.bookShelves.title": "Livres",
   "home.bookShelves.toRead": "Bientôt",
   "home.diplomas.title": "Diplômes",
-  "home.header.downloadResumeBtn": "Télécharger mon CV",
   "home.header.introduction": "Actuellement en poste chez Lunchr, précédemment Codeur et 1Year1book. J'ai plus de 7 années d'expériences professionnelles pendant lesquels, en plus du développement front et back, j'ai eu l'occasion d'endosser tous les rôles nécessaires au lancement d'applications ambitieuses, notamment celui de web designer {manArtistEmoji}.",
+  "home.header.job": "A Senior Full Stack Developer",
+  "home.header.name": "I'm Romain Guilloteau",
   "home.header.socialLink.visitProfileOn": "Visiter mon profil sur {socialNetwork}",
-  "home.header.title": "Je suis Romain Guilloteau alias rubyistdotjs, développeur full stack autodidacte.",
   "home.jobs.applications.screenshotAlt": "Capture d'écran du site {appName}",
   "home.jobs.applications.switchTo": "Voir {appName}",
   "home.jobs.applications.visit": "Visiter le site",
@@ -28,8 +28,6 @@
   "home.meta.title": "Romain Guilloteau - Développeur full stack senior",
   "home.og.description": "Alias rubyistdotjs, je suis un développeur full stack autodidacte, principalement Ruby on Rails et JavaScript (Node.js et React), avec plus de 7 années d'expériences professionnelles, actuellement en poste chez Lunchr à Montpellier, France.",
   "home.og.title": "Romain Guilloteau - Développeur full stack senior",
-  "home.timeline.dateFrom": "de",
-  "home.timeline.dateSince": "depuis",
-  "home.timeline.dateTo": "à",
-  "language": "Français"
+  "home.timeline.dateFrom": "de {fromYear} à {toYear}",
+  "home.timeline.dateSince": "depuis {fromYear}"
 }

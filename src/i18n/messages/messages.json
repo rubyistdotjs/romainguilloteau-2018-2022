@@ -5,19 +5,14 @@
     "filepath": "src/components/AppHeader/SocialLink.jsx"
   },
   {
-    "id": "language",
-    "defaultMessage": "English (UK)",
+    "id": "Footer.madeWith",
+    "defaultMessage": "Made with React & Tailwind CSS, hosted on Netlify.",
     "filepath": "src/components/Footer/Footer.jsx"
   },
   {
-    "id": "Footer.locales.fr",
-    "defaultMessage": "Français",
-    "filepath": "src/components/Footer/Footer.messages.js"
-  },
-  {
-    "id": "Footer.locales.en",
-    "defaultMessage": "English (US)",
-    "filepath": "src/components/Footer/Footer.messages.js"
+    "id": "Footer.noDataCollection",
+    "defaultMessage": "This website doesn't collect any data whatsoever.",
+    "filepath": "src/components/Footer/Footer.jsx"
   },
   {
     "id": "home.bookShelves.shelf.coverOf",
@@ -90,18 +85,18 @@
     "filepath": "src/screens/HomeScreen/Head.jsx"
   },
   {
-    "id": "home.header.title",
-    "defaultMessage": "I'm Romain Guilloteau aka rubyistdotjs a self-taught full stack developer.",
+    "id": "home.header.name",
+    "defaultMessage": "I'm Romain Guilloteau",
+    "filepath": "src/screens/HomeScreen/Header.jsx"
+  },
+  {
+    "id": "home.header.job",
+    "defaultMessage": "A Senior Full Stack Developer",
     "filepath": "src/screens/HomeScreen/Header.jsx"
   },
   {
     "id": "home.header.introduction",
-    "defaultMessage": "Currently working for Lunchr, previously Codeur and 1Year1Book. I have more than 7 years of professional experiences during which I had the opportunity to take on all the roles necessary to launch ambitious applications, most notably web designer {manArtistEmoji}.",
-    "filepath": "src/screens/HomeScreen/Header.jsx"
-  },
-  {
-    "id": "home.header.downloadResumeBtn",
-    "defaultMessage": "Download my resume",
+    "defaultMessage": "Currently working at Lunchr, previously Codeur and 1Year1Book. I have more than 8 years of professional experiences during which I had the opportunity to take on all the roles necessary to launch ambitious applications, including web designer {manArtistEmoji}.",
     "filepath": "src/screens/HomeScreen/Header.jsx"
   },
   {
@@ -131,17 +126,12 @@
   },
   {
     "id": "home.timeline.dateFrom",
-    "defaultMessage": "from",
-    "filepath": "src/screens/HomeScreen/Title.jsx"
-  },
-  {
-    "id": "home.timeline.dateTo",
-    "defaultMessage": "to",
+    "defaultMessage": "from {fromYear} to {toYear}",
     "filepath": "src/screens/HomeScreen/Title.jsx"
   },
   {
     "id": "home.timeline.dateSince",
-    "defaultMessage": "since",
+    "defaultMessage": "since {fromYear}",
     "filepath": "src/screens/HomeScreen/Title.jsx"
   },
   {

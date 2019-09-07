@@ -1,6 +1,6 @@
 {
-  "Footer.locales.en": "English",
-  "Footer.locales.fr": "Français",
+  "Footer.madeWith": "Made with React & Tailwind CSS, hosted on Netlify.",
+  "Footer.noDataCollection": "This website doesn't collect any data whatsoever.",
   "NotFoundScreen.backToHome": "Go to the home page",
   "NotFoundScreen.metaDescription": "The page you're looking for does not exist.",
   "NotFoundScreen.metaTitle": "404 - Page not found",
@@ -13,10 +13,10 @@
   "home.bookShelves.title": "Book shelves",
   "home.bookShelves.toRead": "On deck",
   "home.diplomas.title": "Diplomas",
-  "home.header.downloadResumeBtn": "Download my resume",
-  "home.header.introduction": "Currently working for Lunchr, previously Codeur and 1Year1Book. I have more than 7 years of professional experiences during which I had the opportunity to take on all the roles necessary to launch ambitious applications, most notably web designer {manArtistEmoji}.",
+  "home.header.introduction": "Currently working at Lunchr, previously Codeur and 1Year1Book. I have more than 8 years of professional experiences during which I had the opportunity to take on all the roles required to launch ambitious applications, including web designer.",
+  "home.header.job": "A Senior Full Stack Developer",
+  "home.header.name": "I'm Romain Guilloteau",
   "home.header.socialLink.visitProfileOn": "Check out my profile on {socialNetwork}",
-  "home.header.title": "I'm Romain Guilloteau aka rubyistdotjs a self-taught full stack developer.",
   "home.jobs.applications.screenshotAlt": "Screenshot of {appName}",
   "home.jobs.applications.switchTo": "Switch to {appName}",
   "home.jobs.applications.visit": "Go to this website",
@@ -28,8 +28,6 @@
   "home.meta.title": "Romain Guilloteau - Senior Full Stack Developer",
   "home.og.description": "Also known as rubyistdotjs, I'm a self-taught full stack developer, mainly Ruby on Rails and JavaScript (Node.js and React), with 7 years of professional experiences, currently working for Lunchr in Montpellier, Hérault, France.",
   "home.og.title": "Romain Guilloteau - Senior Full Stack Developer",
-  "home.timeline.dateFrom": "from",
-  "home.timeline.dateSince": "since",
-  "home.timeline.dateTo": "to",
-  "language": "English"
+  "home.timeline.dateFrom": "from {fromYear} to {toYear}",
+  "home.timeline.dateSince": "since {fromYear}"
 }

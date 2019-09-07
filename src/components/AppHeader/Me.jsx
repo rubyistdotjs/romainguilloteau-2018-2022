@@ -3,22 +3,20 @@ import { injectIntl, intlShape } from 'react-intl';
 import { Link } from 'react-router-dom';
 
 import mugshotJpg from '../../images/avatars/mugshot-thumbnail.jpg';
-import mugshotWebp from '../../images/avatars/mugshot-thumbnail.webp';
-import mugshotJp2 from '../../images/avatars/mugshot-thumbnail.jp2';
 
 function Me({ intl }) {
   const { locale } = intl;
 
   return (
     <Link to={`/${locale}/`} className="flex flex-row items-center">
-      <picture className="w-10 h-10 md:w-12 md:h-12 mr-2 rounded-full overflow-hidden">
-        <source srcSet={mugshotJp2} type="image/jp2" className="w-full" />
-        <source srcSet={mugshotWebp} type="image/webp" className="w-full" />
-        <img src={mugshotJpg} alt="Romain Guilloteau" className="w-full" />
-      </picture>
-      <span className="flex flex-col text-gray-900 text-base md:text-xl font-bold leading-tight">
+      <img
+        src={mugshotJpg}
+        alt="Romain Guilloteau"
+        className="w-10 h-10 md:w-12 md:h-12 mr-2 rounded-full overflow-hidden"
+      />
+      <span className="flex flex-col text-white text-base md:text-xl font-medium leading-tight">
         Romain Guilloteau
-        <span className="text-gray-700 text-sm md:text-base font-semibold">
+        <span className="text-gray-500 text-sm md:text-base font-normal">
           rubyistdotjs
         </span>
       </span>

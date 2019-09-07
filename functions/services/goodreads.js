@@ -5,8 +5,9 @@ const { GOODREADS_API_KEY, GOODREADS_USER_ID } = process.env;
 
 const api = axios.create({
   baseURL: 'https://www.goodreads.com/',
-  params: { key: GOODREADS_API_KEY },
 });
+
+const authParams = { key: GOODREADS_API_KEY };
 
 function parseResponse(res, callback) {
   return parseString(
@@ -23,7 +24,9 @@ function parseResponse(res, callback) {
 function getShelves() {
   return new Promise((resolve, reject) => {
     api
-      .get('shelf/list.xml', { params: { user_id: GOODREADS_USER_ID } })
+      .get('shelf/list.xml', {
+        params: { ...authParams, user_id: GOODREADS_USER_ID },
+      })
       .then(res =>
         parseResponse(res, (err, json) => {
           if (err) reject(err);
@@ -62,6 +65,7 @@ function getShelfBooks({
     api
       .get('review/list', {
         params: {
+          ...authParams,
           v: '2',
           shelf,
           sort,
@@ -75,7 +79,7 @@ function getShelfBooks({
         parseResponse(res, (err, json) => {
           if (err) reject(err);
           const { review } = json.reviews;
-          const reviews = Array.isArray(review) ? review : [review]
+          const reviews = Array.isArray(review) ? review : [review];
           const books = reviews.map(r => formatBook(r));
           resolve(books);
         })

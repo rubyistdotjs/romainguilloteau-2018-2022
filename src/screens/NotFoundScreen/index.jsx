@@ -39,7 +39,7 @@ function NotFoundScreen({ intl }) {
               alt="🤨"
               className="text-2xl md:text-3xl"
             />
-            <h1 className="text-black font-heading text-3xl md:text-5xl font-bold tracking-tight leading-tight mt-4 mb-10 mb-16 lg:mb-20">
+            <h1 className="text-black font-heading text-3xl md:text-5xl font-bold leading-tight mt-4 mb-10 mb-16 lg:mb-20">
               <FormattedMessage
                 id="NotFoundScreen.title"
                 defaultMessage="The page you're looking for does not exist."

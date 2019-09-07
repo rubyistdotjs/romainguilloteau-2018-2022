@@ -1,13 +1,9 @@
 /* Core ----------------------------------------------------------------------- */
 
 .btn {
-  @apply .inline-block .text-sm .text-white .font-semibold .leading-none
+  @apply .inline-block .text-sm .text-white .font-medium .leading-none
          .py-4 .px-4 .mr-2 .mb-2 .border .border-transparent
          .rounded .btn-transition .cursor-pointer;
-}
-
-.btn:hover:not(:disabled), .btn:focus:not(:disabled) {
-  @apply .shadow-lg;
 }
 
 .btn:disabled {
@@ -35,7 +31,7 @@
 /* Outline colors ------------------------------------------------------------- */
 
 .btn-outline-grey {
-  @apply .text-gray-700 .bg-transparent .border-gray-600;
+  @apply .text-gray-400 .bg-transparent .border-gray-500;
 }
 
 .btn-outline-grey:hover:not(:disabled), .btn-outline-grey:focus:not(:disabled) {

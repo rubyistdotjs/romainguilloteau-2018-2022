@@ -10,7 +10,7 @@ const i18n = defineMessages({
   metaDescription: {
     id: 'home.meta.description',
     defaultMessage:
-      "Aka rubyistdotjs, I'm a self-taught Full Stack Developer, with 7 years of professional experiences, currently working for Lunchr in Montpellier, France.",
+      "Aka rubyistdotjs, I'm a self-taught Full Stack Developer, with 8 years of professional experiences, currently working at Lunchr in Montpellier, France.",
   },
   openGraphTitle: {
     id: 'home.og.title',
@@ -19,7 +19,7 @@ const i18n = defineMessages({
   openGraphDescription: {
     id: 'home.og.description',
     defaultMessage:
-      "Also known as rubyistdotjs, I'm a self-taught Full Stack Developer, mainly Ruby on Rails and JavaScript (Node.js and React), with 7 years of professional experiences, currently working for Lunchr in Montpellier, Hérault, France.",
+      "Also known as rubyistdotjs, I'm a self-taught Full Stack Developer, mainly Ruby on Rails and JavaScript (Node.js and React), with 8 years of professional experiences, currently working at Lunchr in Montpellier, Hérault, France.",
   },
   jsonldJobTitle: {
     id: 'home.jsonld.jobTitle',
@@ -28,7 +28,7 @@ const i18n = defineMessages({
   jsonldDescription: {
     id: 'home.jsonld.description',
     defaultMessage:
-      "Also known as rubyistdotjs, I'm a self-taught Full Stack Developer, mainly Ruby on Rails and JavaScript (Node.js and React), with 7 years of professional experiences, currently working for Lunchr in Montpellier, Hérault, France.",
+      "Also known as rubyistdotjs, I'm a self-taught Full Stack Developer, mainly Ruby on Rails and JavaScript (Node.js and React), with 8 years of professional experiences, currently working at Lunchr in Montpellier, Hérault, France.",
   },
 });
 
@@ -54,8 +54,8 @@ function Head({ intl }) {
         content="https://www.romainguilloteau.dev/images/mugshot.jpg"
       />
       <meta property="og:image:type" content="image/jpeg" />
-      <meta property="og:image:width" content="1256" />
-      <meta property="og:image:height" content="1256" />
+      <meta property="og:image:width" content="920" />
+      <meta property="og:image:height" content="920" />
       <meta property="og:image:user_generated" content="false" />
       <link
         rel="canonical"
@@ -96,7 +96,6 @@ function Head({ intl }) {
             "sameAs": [
               "https://about.me/romainguilloteau",
               "https://www.linkedin.com/in/romainguilloteau",
-              "https://angel.co/rubyistdotjs",
               "https://twitter.com/rubyistdotjs",
               "https://www.crunchbase.com/person/romain-guilloteau",
               "https://github.com/rubyistdotjs",

@@ -53,7 +53,7 @@ function BookShelves({ intl }) {
           </div>
         ))}
       </div>
-      <div className="text-gray-700 text-sm my-8">
+      <div className="text-gray-600 text-sm my-8">
         <FormattedMessage
           id="home.bookShelves.dataFromGoodreadsAPI"
           defaultMessage="Data collected from {goodreadsLink} API"

@@ -5,6 +5,7 @@ import Header from './Header';
 import Jobs from './Jobs';
 import Diplomas from './Diplomas';
 import BookShelves from './BookShelves';
+import Footer from '../../components/Footer';
 
 function HomeScreen() {
   return (
@@ -14,6 +15,7 @@ function HomeScreen() {
       <Jobs />
       <Diplomas />
       <BookShelves />
+      <Footer />
     </div>
   );
 }

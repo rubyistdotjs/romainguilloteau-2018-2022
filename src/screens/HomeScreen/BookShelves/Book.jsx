@@ -24,19 +24,19 @@ function Book({ intl, title, author, url, coverUrl }) {
         <img
           src={coverUrl}
           alt={formatMessage(i18n.coverOf, { title })}
-          className="w-full h-auto rounded-sm shadow"
+          className="w-full h-auto rounded-sm"
         />
       </div>
-      <div className="flex flex-col items-start">
+      <div className="flex flex-col items-start -mt-1">
         <ExternalLink
           href={url}
           title={formatMessage(i18n.seeBookOnGoodreads)}
           rel="nofollow"
-          className="text-gray-900 text-lg font-bold tracking-tight leading-tight hover:text-teal-700 focus:text-teal-700 transition-fast transition-color"
+          className="text-white text-lg leading-tight hover:text-teal-500 focus:text-teal-500 transition-fast transition-color"
         >
           {title}
         </ExternalLink>
-        <span className="text-base text-gray-700">{author}</span>
+        <span className="text-base text-gray-500">{author}</span>
       </div>
     </div>
   );

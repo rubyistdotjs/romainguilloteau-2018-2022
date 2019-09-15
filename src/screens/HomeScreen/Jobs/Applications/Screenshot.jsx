@@ -37,7 +37,7 @@ function Screenshot({ intl, appName, filename, thumbnail, url }) {
           <ExternalLink
             href={url}
             title={formatMessage(i18n.visit)}
-            className="text-teal-dark hover:text-teal-darker btn-transition"
+            className="text-teal-500 hover:text-teal-800 btn-transition"
             rel="nofollow"
           >
             <ExternalLinkIcon size={42} />

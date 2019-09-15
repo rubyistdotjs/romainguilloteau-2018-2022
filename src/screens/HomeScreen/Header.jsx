@@ -9,12 +9,12 @@ function Header() {
     <header>
       <AppHeader />
       <div className="container mb-32">
-        <div className="w-full lg:w-full xl:w-8/12">
-          <h1 className="text-black text-2xl md:text-6xl font-bold leading-none mt-8 mb-6">
+        <div className="w-full md:w-full lg:w-10/12 xl:w-8/12">
+          <h1 className="text-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight md:leading-none mt-8 mb-6">
             <Emoji
               alt="👋"
               name="waving-hand"
-              className="w-12 mr-1 align-center pb-2"
+              className="hidden md:inline-block md:w-10 lg:w-12 mr-1 align-center pb-1 md:pb-2"
             />{' '}
             <FormattedMessage
               id="home.header.name"
@@ -35,7 +35,7 @@ function Header() {
           <div className="mt-12">
             <a
               href="mailto:hello@romainguilloteau.dev"
-              className="text-lg font-semibold antialiased text-teal-600 underline hover:text-teal-900"
+              className="text-base md:text-lg font-semibold antialiased text-teal-600 underline hover:text-teal-900"
             >
               hello@romainguilloteau.dev
             </a>

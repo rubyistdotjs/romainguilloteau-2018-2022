@@ -11,7 +11,7 @@ function Title({ title, fromDate, toDate, atPlace }) {
       <h3 className="text-black text-2xl md:text-4xl font-bold leading-none">
         {title}
       </h3>
-      <span className="block text-gray-700 text-2xl md:text-xl font-medium leading-tight mt-1">
+      <span className="block text-gray-700 text-lg md:text-xl lg:text-2xl font-medium leading-tight mt-1">
         {toYear ? (
           <Fragment>
             <FormattedMessage

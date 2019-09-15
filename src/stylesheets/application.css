@@ -3,7 +3,6 @@
 
 @import "_badges.css";
 @import "_buttons.css";
-@import "_fonts.css";
 @import "_labels.css";
 
 @import "tailwindcss/components";
@@ -11,7 +10,7 @@
 /* Sections ------------------------------------------------------------------- */
 
 body {
-  @apply .font-sans .leading-normal .subpixel-antialiased .bg-gray-900;
+  @apply .font-sans .leading-normal .subpixel-antialiased .bg-white;
 }
 
 strong {
@@ -19,7 +18,7 @@ strong {
 }
 
 h1, h2, h3, h4 {
-  @apply .font-heading .antialiased;
+  @apply .antialiased;
 }
 
 .btn-transition {

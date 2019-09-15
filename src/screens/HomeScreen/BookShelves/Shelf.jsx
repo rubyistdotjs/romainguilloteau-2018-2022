@@ -40,7 +40,7 @@ function Shelf({ intl, name, displayedBooksCount, totalBooksCount }) {
 
   return (
     <div>
-      <h3 className="text-white text-2xl lg:text-2xl font-bold leading-none mb-8 flex flex-row items-center">
+      <h3 className="text-gray-900 text-2xl lg:text-2xl font-bold leading-none mb-8 flex flex-row items-center">
         {formatMessage(i18n[camelCase(name)])}
         <span className="inline-block text-gray-800 text-sm font-semibold leading-none bg-gray-300 py-1 px-2 ml-3 rounded-full">
           {totalBooksCount}

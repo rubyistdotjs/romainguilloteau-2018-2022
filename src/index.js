@@ -1,8 +1,7 @@
 import React from 'react';
 import { hydrate, render } from 'react-dom';
-import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 
-import { availableLocales, detectBrowserLocale } from './utils/locales';
 import * as serviceWorker from './serviceWorker';
 
 import App from './App';
@@ -10,10 +9,7 @@ import App from './App';
 const rootDOMElement = document.getElementById('root');
 const root = (
   <BrowserRouter>
-    <Switch>
-      <Route path={`/:locale(${availableLocales.join('|')})`} component={App} />
-      <Redirect from="/*" to={`/${detectBrowserLocale()}/*`} />
-    </Switch>
+    <App />
   </BrowserRouter>
 );
 

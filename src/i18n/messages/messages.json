@@ -61,7 +61,7 @@
   },
   {
     "id": "home.meta.description",
-    "defaultMessage": "Aka rubyistdotjs, I'm a self-taught Full Stack Developer, with 7 years of professional experiences, currently working for Lunchr in Montpellier, France.",
+    "defaultMessage": "Aka rubyistdotjs, I'm a Senior Full Stack Developer, with 7 years of professional experiences, currently working at Lunchr in Montpellier, France.",
     "filepath": "src/screens/HomeScreen/Head.jsx"
   },
   {
@@ -71,7 +71,7 @@
   },
   {
     "id": "home.og.description",
-    "defaultMessage": "Also known as rubyistdotjs, I'm a self-taught Full Stack Developer, mainly Ruby on Rails and JavaScript (Node.js and React), with 7 years of professional experiences, currently working for Lunchr in Montpellier, Hérault, France.",
+    "defaultMessage": "Also known as rubyistdotjs, I'm a Senior Full Stack Developer, mainly Ruby on Rails and JavaScript (Node.js and React), with 7 years of professional experiences, currently working at Lunchr in Montpellier, Hérault, France.",
     "filepath": "src/screens/HomeScreen/Head.jsx"
   },
   {
@@ -81,7 +81,7 @@
   },
   {
     "id": "home.jsonld.description",
-    "defaultMessage": "Also known as rubyistdotjs, I'm a self-taught Full Stack Developer, mainly Ruby on Rails and JavaScript (Node.js and React), with 7 years of professional experiences, currently working for Lunchr in Montpellier, Hérault, France.",
+    "defaultMessage": "Also known as rubyistdotjs, I'm a Senior Full Stack Developer, mainly Ruby on Rails and JavaScript (Node.js and React), with 7 years of professional experiences, currently working at Lunchr in Montpellier, Hérault, France.",
     "filepath": "src/screens/HomeScreen/Head.jsx"
   },
   {
@@ -96,7 +96,7 @@
   },
   {
     "id": "home.header.introduction",
-    "defaultMessage": "Currently working at Lunchr, previously Codeur and 1Year1Book. I have more than 8 years of professional experiences during which I had the opportunity to take on all the roles necessary to launch ambitious applications, including web designer {manArtistEmoji}.",
+    "defaultMessage": "Currently working at Lunchr, previously Codeur and 1Year1Book. I have more than 7 years of professional experiences during which I had the opportunity to take on all the roles necessary to launch ambitious applications.",
     "filepath": "src/screens/HomeScreen/Header.jsx"
   },
   {

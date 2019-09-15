@@ -53,7 +53,7 @@ function BookShelves({ intl }) {
           </div>
         ))}
       </div>
-      <div className="text-gray-600 text-sm my-8">
+      <div className="text-gray-500 text-sm my-8">
         <FormattedMessage
           id="home.bookShelves.dataFromGoodreadsAPI"
           defaultMessage="Data collected from {goodreadsLink} API"
@@ -61,7 +61,7 @@ function BookShelves({ intl }) {
             goodreadsLink: (
               <ExternalLink
                 href="https://www.goodreads.com/user/show/87055544-romain-guilloteau"
-                className="text-teal-700 hover:text-teal-800 focus:text-teal-800"
+                className="text-teal-600 hover:text-teal-800 focus:text-teal-800"
               >
                 Goodreads
               </ExternalLink>

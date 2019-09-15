@@ -18,7 +18,7 @@ function Diplomas({ intl }) {
   const diplomas = useDatabaseFile({ filename: 'diplomas', locale });
 
   return (
-    <Section emoji="🎓" title={formatMessage(i18n.title)}>
+    <Section emoji="graduation-cap" title={formatMessage(i18n.title)}>
       {diplomas.map(diploma => (
         <div key={diploma.startedAt} className="mb-20 md:mb-24">
           <Title

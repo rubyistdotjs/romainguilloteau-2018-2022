@@ -19,7 +19,7 @@ function Jobs({ intl }) {
   const jobs = useDatabaseFile({ filename: 'jobs', locale });
 
   return (
-    <Section emoji="💼" title={formatMessage(i18n.title)}>
+    <Section emoji="briefcase" title={formatMessage(i18n.title)}>
       {jobs.map(job => (
         <div key={job.startedAt} className="mb-20 md:mb-24">
           <Title

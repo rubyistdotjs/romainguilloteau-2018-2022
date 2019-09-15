@@ -15,14 +15,10 @@ const i18n = defineMessages({
     id: 'NotFoundScreen.metaDescription',
     defaultMessage: "404 - The page you're looking for does not exist.",
   },
-  raisedEyebrownEmojiLabel: {
-    id: 'NotFoundScreen.raisedEyebrownEmoji',
-    defaultMessage: 'Emoji with one eyebrow raised',
-  },
 });
 
 function NotFoundScreen({ intl }) {
-  const { formatMessage, locale } = intl;
+  const { formatMessage } = intl;
 
   return (
     <div>
@@ -39,17 +35,17 @@ function NotFoundScreen({ intl }) {
         <div className="container mb-32">
           <div className="w-full lg:w-4/5 xl:w-3/5">
             <Emoji
-              name={formatMessage(i18n.raisedEyebrownEmojiLabel)}
-              symbol="🤨"
+              name="face-with-raised-eyebrow"
+              alt="🤨"
               className="text-2xl md:text-3xl"
             />
-            <h1 className="text-black font-heading text-3xl md:text-5xl font-bold tracking-tight leading-tight mt-4 mb-10 mb-16 lg:mb-20">
+            <h1 className="text-black text-3xl md:text-5xl font-bold leading-tight mt-4 mb-10 mb-16 lg:mb-20">
               <FormattedMessage
                 id="NotFoundScreen.title"
                 defaultMessage="The page you're looking for does not exist."
               />
             </h1>
-            <Link to={`/${locale}/`} className="btn btn-teal">
+            <Link to="/" className="btn btn-teal">
               <FormattedMessage
                 id="NotFoundScreen.backToHome"
                 defaultMessage="Go to the home page"

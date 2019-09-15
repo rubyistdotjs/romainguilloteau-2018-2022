@@ -7,7 +7,7 @@ function Section({ emoji, title, children }) {
   return (
     <section className="container my-24 md:my-32">
       <h2 className="text-4xl mb-16">
-        {emoji ? <Emoji name={title} symbol={emoji} /> : title}
+        {emoji ? <Emoji name={emoji} alt={title} className="w-12" /> : title}
       </h2>
       {children}
     </section>

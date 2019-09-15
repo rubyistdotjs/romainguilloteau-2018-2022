@@ -20,23 +20,23 @@ function Book({ intl, title, author, url, coverUrl }) {
 
   return (
     <div className="flex flex-row mb-5">
-      <div className="w-10 h-full mr-3 flex-no-shrink">
+      <div className="w-10 h-full mr-3 flex-shrink-0">
         <img
           src={coverUrl}
           alt={formatMessage(i18n.coverOf, { title })}
-          className="block w-full h-auto rounded-sm shadow"
+          className="w-full h-auto rounded-sm"
         />
       </div>
-      <div className="flex flex-col items-start">
+      <div className="flex flex-col items-start -mt-1">
         <ExternalLink
           href={url}
           title={formatMessage(i18n.seeBookOnGoodreads)}
           rel="nofollow"
-          className="text-black text-lg font-bold tracking-tight leading-tight no-underline hover:text-teal-dark focus:text-teal-dark transition-fast transition-color"
+          className="text-gray-900 text-lg font-semibold leading-tight hover:text-teal-500 focus:text-teal-500 transition-fast transition-color"
         >
           {title}
         </ExternalLink>
-        <span className="text-base text-grey-darker">{author}</span>
+        <span className="text-base text-gray-700">{author}</span>
       </div>
     </div>
   );

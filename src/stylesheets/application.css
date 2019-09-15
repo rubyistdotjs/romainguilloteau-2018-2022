@@ -1,10 +1,8 @@
-@import "tailwindcss/preflight";
+@import "tailwindcss/base";
 @import "tailwindcss/utilities";
 
-@import "_alerts.css";
 @import "_badges.css";
 @import "_buttons.css";
-@import "_forms.css";
 @import "_labels.css";
 
 @import "tailwindcss/components";
@@ -12,19 +10,19 @@
 /* Sections ------------------------------------------------------------------- */
 
 body {
-  @apply .font-sans .leading-normal .subpixel-antialiased;
+  @apply .font-sans .leading-normal .subpixel-antialiased .bg-white;
 }
 
 strong {
-  @apply .font-bold;
+  @apply .font-medium;
 }
 
 h1, h2, h3, h4 {
-  @apply .font-heading .antialiased;
+  @apply .antialiased;
 }
 
 .btn-transition {
-  transition-property: color, background-color, border-color, box-shadow, opacity;
+  transition-property: color, background-color, border-color, opacity;
   transition-duration: 320ms;
   transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
@@ -52,8 +50,8 @@ h1, h2, h3, h4 {
 }
 
 .screenshot-overlay {
-  @apply .absolute .pin .flex .justify-center .items-center .opacity-0;
-  background-color: color(config('colors.white') a(90%));
+  @apply .absolute .inset-0 .flex .justify-center .items-center .opacity-0;
+  background-color: color(theme('colors.white') a(90%));
   transition: opacity 260ms ease-in-out;
   z-index: 1;
 }
@@ -63,12 +61,12 @@ h1, h2, h3, h4 {
 }
 
 .challenge {
-  @apply .block .text-grey-darkest .text-base .leading-tight .px-6 .py-4 .border-grey-lighter .border-solid .border-t;
+  @apply .block .text-gray-800 .text-base .leading-tight .px-6 .py-4 .border-gray-200 .border-solid .border-t;
 }
 
 .step {
   @apply .appearance-none .block .w-8 .h-3 .ml-1 .mr-1 .border-2
-         .border-grey-light .rounded-full .cursor-pointer .btn-transition;
+         .border-gray-300 .rounded-full .cursor-pointer .btn-transition;
 }
 
 @screen lg {
@@ -78,9 +76,9 @@ h1, h2, h3, h4 {
 }
 
 .step.active {
-  @apply .bg-teal .border-teal .cursor-default .outline-none;
+  @apply .bg-teal-500 .border-teal-500 .cursor-default .outline-none;
 }
 
 .step:focus:not(.active), .step:hover:not(.active) {
-  @apply .bg-grey .border-grey .outline-none;
+  @apply .bg-gray-500 .border-gray-500 .outline-none;
 }

@@ -2,8 +2,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { IntlProvider } from 'react-intl';
 import { Switch, Route, Redirect } from 'react-router-dom';
-import ReactGA from 'react-ga';
-import omit from 'lodash/omit';
 
 import { addLocaleData } from './utils/locales';
 import messages from './i18n/locales';
@@ -15,27 +13,13 @@ import './application.css';
 
 addLocaleData();
 
-if (process.env.NODE_ENV === 'production') {
-  ReactGA.initialize(process.env.REACT_APP_ANALYTICS_TRACKING_ID);
-  ReactGA.pageview(window.location.pathname + window.location.search);
-}
-
-function App({ match }) {
-  const locale = match.params.locale;
-  const langs = { fr: 'fr_FR', en: 'en_US' };
-  const lang = langs[locale];
-
-  const alternates = Object.values(omit(langs, locale)).map(alternate => (
-    <meta key={alternate} property="og:locale:alternate" content={alternate} />
-  ));
-
+function App() {
   return (
-    <IntlProvider locale={locale} messages={messages[locale]}>
+    <IntlProvider locale="en" messages={messages['en']}>
       <div className="app">
         <Helmet>
-          <html lang={locale} />
-          <meta property="og:locale" content={lang} />
-          {alternates}
+          <html lang="en" />
+          <meta property="og:locale" content="en_US" />
           <meta name="twitter:card" content="summary" />
           <meta name="twitter:creator" content="rubyistdotjs" />
           <meta name="robots" content="noarchive" />
@@ -45,9 +29,9 @@ function App({ match }) {
           />
         </Helmet>
         <Switch>
-          <Route path="/:locale" exact component={HomeScreen} />
-          <Route path="/:locale/404" component={NotFoundScreen} />
-          <Redirect to="/:locale/404" />
+          <Route path="/" exact component={HomeScreen} />
+          <Route path="/404" component={NotFoundScreen} />
+          <Redirect to="/404" />
         </Switch>
       </div>
     </IntlProvider>

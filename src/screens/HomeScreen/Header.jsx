@@ -2,43 +2,42 @@ import React from 'react';
 import { FormattedMessage } from 'react-intl';
 
 import AppHeader from '../../components/AppHeader';
-
-import resume from '../../documents/resume.pdf';
+import Emoji from '../../components/Emoji';
 
 function Header() {
   return (
     <header>
       <AppHeader />
       <div className="container mb-32">
-        <div className="w-full lg:w-full xl:w-4/5">
-          <h1 className="text-black font-heading text-2xl md:text-4xl font-bold tracking-tight leading-tight mt-8 mb-6">
+        <div className="w-full md:w-full lg:w-10/12 xl:w-8/12">
+          <h1 className="text-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight md:leading-none mt-8 mb-6">
+            <Emoji
+              alt="👋"
+              name="waving-hand"
+              className="hidden md:inline-block md:w-10 lg:w-12 mr-1 align-center pb-1 md:pb-2"
+            />{' '}
             <FormattedMessage
-              id="home.header.title"
-              defaultMessage="👋 I'm Romain Guilloteau aka rubyistdotjs a self-taught full stack web developer."
+              id="home.header.name"
+              defaultMessage="I'm Romain Guilloteau"
+            />
+            <br />
+            <FormattedMessage
+              id="home.header.job"
+              defaultMessage="A Senior Full Stack Developer"
             />
           </h1>
-          <p className="text-base md:text-xl text-grey-darkest">
+          <p className="text-base md:text-xl mt-12 text-gray-700">
             <FormattedMessage
               id="home.header.introduction"
-              defaultMessage="Currently working for Lunchr, previously Codeur and 1Year1Book. I have more than 7 years of professional experience during which I had the opportunity to take all the roles necessary to launch ambitious applications including SEO, web design and server architecture."
+              defaultMessage="Currently working at Lunchr, previously Codeur and 1Year1Book. I have more than 7 years of professional experiences during which I had the opportunity to take on all the roles necessary to launch ambitious applications."
             />
           </p>
           <div className="mt-12">
-            <a href="#contact-form" className="btn btn-teal">
-              <FormattedMessage
-                id="home.header.getInTouchBtn"
-                defaultMessage="Get in touch"
-              />
-            </a>
             <a
-              href={resume}
-              className="btn btn-outline-grey"
-              download="romain-guilloteau.pdf"
+              href="mailto:hello@romainguilloteau.dev"
+              className="text-base md:text-lg font-semibold antialiased text-teal-600 underline hover:text-teal-900"
             >
-              <FormattedMessage
-                id="home.header.downloadResumeBtn"
-                defaultMessage="Download my resume"
-              />
+              hello@romainguilloteau.dev
             </a>
           </div>
         </div>

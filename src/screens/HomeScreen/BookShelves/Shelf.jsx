@@ -36,13 +36,13 @@ function Shelf({ intl, name, displayedBooksCount, totalBooksCount }) {
 
   useEffect(() => {
     fetchBooks(name, displayedBooksCount, setBooks);
-  }, [name]);
+  }, [name, displayedBooksCount]);
 
   return (
     <div>
-      <h3 className="text-black text-2xl lg:text-2xl font-bold tracking-tight leading-none mb-8 flex flex-row items-center">
+      <h3 className="text-gray-900 text-2xl lg:text-2xl font-bold leading-none mb-8 flex flex-row items-center">
         {formatMessage(i18n[camelCase(name)])}
-        <span className="inline-block text-grey-darkest text-xs font-semibold leading-none bg-grey-light py-1 px-2 ml-3 rounded-full">
+        <span className="inline-block text-gray-800 text-sm font-semibold leading-none bg-gray-300 py-1 px-2 ml-3 rounded-full">
           {totalBooksCount}
         </span>
       </h3>

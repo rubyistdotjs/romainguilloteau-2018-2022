@@ -37,7 +37,7 @@ function Screenshot({ intl, appName, filename, thumbnail, url }) {
           <ExternalLink
             href={url}
             title={formatMessage(i18n.visit)}
-            className="text-teal-dark hover:text-teal-darker btn-transition"
+            className="text-teal-500 hover:text-teal-800 btn-transition"
             rel="nofollow"
           >
             <ExternalLinkIcon size={42} />
@@ -52,7 +52,7 @@ function Screenshot({ intl, appName, filename, thumbnail, url }) {
           <img
             src={src}
             alt={formatMessage(i18n.screenshotAlt, { appName })}
-            className="absolute w-full pin-t"
+            className="absolute w-full top"
           />
         )}
       </ProgressiveImage>

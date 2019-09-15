@@ -7,15 +7,18 @@ import Tag from './Tag';
 function Application({ name, description, challenges, tags, offset }) {
   return (
     <div
-      className="w-full flex-no-shrink flex flex-col transition transition-transform"
+      className="w-full flex-shrink-0 flex flex-col transition transition-transform"
       style={{ transform: `translateX(-${offset * 100}%)` }}
     >
-      <h4 className="text-black text-lg lg:text-2xl font-semibold leading-tight mb-3">
+      <h4 className="text-gray-900 text-lg lg:text-2xl font-bold leading-tight mb-3">
         {name}
       </h4>
       {description &&
         description.split('\n').map((p, i) => (
-          <p key={`description-${i}`} className="text-black font-semibold py-2">
+          <p
+            key={`description-${i}`}
+            className="text-gray-700 font-medium py-2"
+          >
             {p}
           </p>
         ))}

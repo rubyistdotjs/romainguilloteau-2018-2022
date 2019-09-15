@@ -10,7 +10,7 @@ const i18n = defineMessages({
   metaDescription: {
     id: 'home.meta.description',
     defaultMessage:
-      "Aka rubyistdotjs, I'm a self-taught Full Stack Developer, with 7 years of professional experiences, currently working for Lunchr in Montpellier, France.",
+      "Aka rubyistdotjs, I'm a Senior Full Stack Developer, with 7 years of professional experiences, currently working at Lunchr in Montpellier, France.",
   },
   openGraphTitle: {
     id: 'home.og.title',
@@ -19,7 +19,7 @@ const i18n = defineMessages({
   openGraphDescription: {
     id: 'home.og.description',
     defaultMessage:
-      "Also known as rubyistdotjs, I'm a self-taught Full Stack Developer, mainly Ruby on Rails and JavaScript (Node.js and React), with 7 years of professional experiences, currently working for Lunchr in Montpellier, Hérault, France.",
+      "Also known as rubyistdotjs, I'm a Senior Full Stack Developer, mainly Ruby on Rails and JavaScript (Node.js and React), with 7 years of professional experiences, currently working at Lunchr in Montpellier, Hérault, France.",
   },
   jsonldJobTitle: {
     id: 'home.jsonld.jobTitle',
@@ -28,7 +28,7 @@ const i18n = defineMessages({
   jsonldDescription: {
     id: 'home.jsonld.description',
     defaultMessage:
-      "Also known as rubyistdotjs, I'm a self-taught Full Stack Developer, mainly Ruby on Rails and JavaScript (Node.js and React), with 7 years of professional experiences, currently working for Lunchr in Montpellier, Hérault, France.",
+      "Also known as rubyistdotjs, I'm a Senior Full Stack Developer, mainly Ruby on Rails and JavaScript (Node.js and React), with 7 years of professional experiences, currently working at Lunchr in Montpellier, Hérault, France.",
   },
 });
 
@@ -44,23 +44,20 @@ function Head({ intl }) {
         property="og:description"
         content={formatMessage(i18n.openGraphDescription)}
       />
-      <meta property="og:url" content="https://www.romainguilloteau.com" />
+      <meta property="og:url" content="https://www.romainguilloteau.dev" />
       <meta property="og:type" content="profile" />
       <meta property="profile:first_name" content="Romain" />
       <meta property="profile:last_name" content="Guilloteau" />
       <meta property="profile:gender" content="male" />
       <meta
         property="og:image"
-        content="https://www.romainguilloteau.com/images/mugshot.jpg"
+        content="https://www.romainguilloteau.dev/images/mugshot.jpg"
       />
       <meta property="og:image:type" content="image/jpeg" />
-      <meta property="og:image:width" content="1256" />
-      <meta property="og:image:height" content="1256" />
+      <meta property="og:image:width" content="920" />
+      <meta property="og:image:height" content="920" />
       <meta property="og:image:user_generated" content="false" />
-      <link
-        rel="canonical"
-        content={`https://www.romainguilloteau.com/${intl.locale}/`}
-      />
+      <link rel="canonical" content="https://www.romainguilloteau.dev" />
 
       <script type="application/ld+json">
         {`
@@ -71,7 +68,7 @@ function Head({ intl }) {
             "givenName": "Romain",
             "familyName": "Guilloteau",
             "alternateName": "rubyistdotjs",
-            "image": "https://www.romainguilloteau.com/images/mugshot.jpg",
+            "image": "https://www.romainguilloteau.dev/images/mugshot.jpg",
             "jobTitle": "${formatMessage(i18n.jsonldJobTitle)}",
             "description": "${formatMessage(i18n.jsonldDescription)}",
             "gender": "Male",
@@ -92,15 +89,13 @@ function Head({ intl }) {
               "addressLocality": "Montpellier",
               "postalCode": "34000"
             },
-            "url": "https://www.romainguilloteau.com/",
+            "url": "https://www.romainguilloteau.dev",
             "sameAs": [
               "https://about.me/romainguilloteau",
               "https://www.linkedin.com/in/romainguilloteau",
-              "https://angel.co/rubyistdotjs",
               "https://twitter.com/rubyistdotjs",
               "https://www.crunchbase.com/person/romain-guilloteau",
-              "https://github.com/rubyistdotjs",
-              "https://gitlab.com/rubyistdotjs"
+              "https://github.com/rubyistdotjs"
             ]
           }
         `}

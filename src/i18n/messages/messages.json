@@ -5,54 +5,14 @@
     "filepath": "src/components/AppHeader/SocialLink.jsx"
   },
   {
-    "id": "language",
-    "defaultMessage": "English (UK)",
-    "filepath": "src/components/Footer/index.jsx"
+    "id": "Footer.madeWith",
+    "defaultMessage": "Made with React & Tailwind CSS, hosted on Netlify.",
+    "filepath": "src/components/Footer/Footer.jsx"
   },
   {
-    "id": "english",
-    "defaultMessage": "English (UK)",
-    "filepath": "src/components/Footer/index.jsx"
-  },
-  {
-    "id": "french",
-    "defaultMessage": "Français",
-    "filepath": "src/components/Footer/index.jsx"
-  },
-  {
-    "id": "home.bookShelves.shelf.coverOf",
-    "defaultMessage": "Cover of the book {title}",
-    "filepath": "src/screens/BooksScreen/BookShelves/Book.jsx"
-  },
-  {
-    "id": "home.bookShelves.shelf.seeBookOnGoodreads",
-    "defaultMessage": "Check out this book on Goodreads",
-    "filepath": "src/screens/BooksScreen/BookShelves/Book.jsx"
-  },
-  {
-    "id": "home.bookShelves.title",
-    "defaultMessage": "Book shelves",
-    "filepath": "src/screens/BooksScreen/BookShelves/index.jsx"
-  },
-  {
-    "id": "home.bookShelves.dataFromGoodreadsAPI",
-    "defaultMessage": "Data collected from {goodreadsLink} API",
-    "filepath": "src/screens/BooksScreen/BookShelves/index.jsx"
-  },
-  {
-    "id": "home.bookShelves.currentlyReading",
-    "defaultMessage": "Reading",
-    "filepath": "src/screens/BooksScreen/BookShelves/Shelf.jsx"
-  },
-  {
-    "id": "home.bookShelves.toRead",
-    "defaultMessage": "On deck",
-    "filepath": "src/screens/BooksScreen/BookShelves/Shelf.jsx"
-  },
-  {
-    "id": "home.bookShelves.read",
-    "defaultMessage": "Read",
-    "filepath": "src/screens/BooksScreen/BookShelves/Shelf.jsx"
+    "id": "Footer.noDataCollection",
+    "defaultMessage": "This website doesn't collect any data whatsoever.",
+    "filepath": "src/components/Footer/Footer.jsx"
   },
   {
     "id": "home.bookShelves.shelf.coverOf",
@@ -88,56 +48,6 @@
     "id": "home.bookShelves.read",
     "defaultMessage": "Read",
     "filepath": "src/screens/HomeScreen/BookShelves/Shelf.jsx"
-  },
-  {
-    "id": "home.contact.title",
-    "defaultMessage": "Contact",
-    "filepath": "src/screens/HomeScreen/Contact.jsx"
-  },
-  {
-    "id": "home.contact.placeholders.emailAddress",
-    "defaultMessage": "Email address",
-    "filepath": "src/screens/HomeScreen/Contact.jsx"
-  },
-  {
-    "id": "home.contact.errors.emailAddress.empty",
-    "defaultMessage": "Please specify your email address.",
-    "filepath": "src/screens/HomeScreen/Contact.jsx"
-  },
-  {
-    "id": "home.contact.errors.emailAddress.invalid",
-    "defaultMessage": "The email address is invalid.",
-    "filepath": "src/screens/HomeScreen/Contact.jsx"
-  },
-  {
-    "id": "home.contact.placeholders.messageContent",
-    "defaultMessage": "Message",
-    "filepath": "src/screens/HomeScreen/Contact.jsx"
-  },
-  {
-    "id": "home.contact.errors.content.tooShort",
-    "defaultMessage": "Your message is too short.",
-    "filepath": "src/screens/HomeScreen/Contact.jsx"
-  },
-  {
-    "id": "home.contact.errors.content.tooLong",
-    "defaultMessage": "Your message is too long, keep it under 42000 characters.",
-    "filepath": "src/screens/HomeScreen/Contact.jsx"
-  },
-  {
-    "id": "home.contact.errors.recaptcha.empty",
-    "defaultMessage": "Robot !",
-    "filepath": "src/screens/HomeScreen/Contact.jsx"
-  },
-  {
-    "id": "home.contact.sendMessageBtn",
-    "defaultMessage": "Send",
-    "filepath": "src/screens/HomeScreen/Contact.jsx"
-  },
-  {
-    "id": "home.contact.messageSentThe",
-    "defaultMessage": "The following message was send the {date}.",
-    "filepath": "src/screens/HomeScreen/Contact.jsx"
   },
   {
     "id": "home.diplomas.title",
@@ -151,7 +61,7 @@
   },
   {
     "id": "home.meta.description",
-    "defaultMessage": "Aka rubyistdotjs, I'm a self-taught Full Stack Developer, with 7 years of professional experiences, currently working for Lunchr in Montpellier, France.",
+    "defaultMessage": "Aka rubyistdotjs, I'm a Senior Full Stack Developer, with 7 years of professional experiences, currently working at Lunchr in Montpellier, France.",
     "filepath": "src/screens/HomeScreen/Head.jsx"
   },
   {
@@ -161,7 +71,7 @@
   },
   {
     "id": "home.og.description",
-    "defaultMessage": "Also known as rubyistdotjs, I'm a self-taught Full Stack Developer, mainly Ruby on Rails and JavaScript (Node.js and React), with 7 years of professional experiences, currently working for Lunchr in Montpellier, Hérault, France.",
+    "defaultMessage": "Also known as rubyistdotjs, I'm a Senior Full Stack Developer, mainly Ruby on Rails and JavaScript (Node.js and React), with 7 years of professional experiences, currently working at Lunchr in Montpellier, Hérault, France.",
     "filepath": "src/screens/HomeScreen/Head.jsx"
   },
   {
@@ -171,27 +81,22 @@
   },
   {
     "id": "home.jsonld.description",
-    "defaultMessage": "Also known as rubyistdotjs, I'm a self-taught Full Stack Developer, mainly Ruby on Rails and JavaScript (Node.js and React), with 7 years of professional experiences, currently working for Lunchr in Montpellier, Hérault, France.",
+    "defaultMessage": "Also known as rubyistdotjs, I'm a Senior Full Stack Developer, mainly Ruby on Rails and JavaScript (Node.js and React), with 7 years of professional experiences, currently working at Lunchr in Montpellier, Hérault, France.",
     "filepath": "src/screens/HomeScreen/Head.jsx"
   },
   {
-    "id": "home.header.title",
-    "defaultMessage": "👋 I'm Romain Guilloteau aka rubyistdotjs a self-taught full stack web developer.",
+    "id": "home.header.name",
+    "defaultMessage": "I'm Romain Guilloteau",
+    "filepath": "src/screens/HomeScreen/Header.jsx"
+  },
+  {
+    "id": "home.header.job",
+    "defaultMessage": "A Senior Full Stack Developer",
     "filepath": "src/screens/HomeScreen/Header.jsx"
   },
   {
     "id": "home.header.introduction",
-    "defaultMessage": "Currently working for Lunchr, previously Codeur and 1Year1Book. I have more than 7 years of professional experience during which I had the opportunity to take all the roles necessary to launch ambitious applications including SEO, web design and server architecture.",
-    "filepath": "src/screens/HomeScreen/Header.jsx"
-  },
-  {
-    "id": "home.header.getInTouchBtn",
-    "defaultMessage": "Get in touch",
-    "filepath": "src/screens/HomeScreen/Header.jsx"
-  },
-  {
-    "id": "home.header.downloadResumeBtn",
-    "defaultMessage": "Download my resume",
+    "defaultMessage": "Currently working at Lunchr, previously Codeur and 1Year1Book. I have more than 7 years of professional experiences during which I had the opportunity to take on all the roles necessary to launch ambitious applications.",
     "filepath": "src/screens/HomeScreen/Header.jsx"
   },
   {
@@ -221,17 +126,12 @@
   },
   {
     "id": "home.timeline.dateFrom",
-    "defaultMessage": "from",
-    "filepath": "src/screens/HomeScreen/Title.jsx"
-  },
-  {
-    "id": "home.timeline.dateTo",
-    "defaultMessage": "to",
+    "defaultMessage": "from {fromYear} to {toYear}",
     "filepath": "src/screens/HomeScreen/Title.jsx"
   },
   {
     "id": "home.timeline.dateSince",
-    "defaultMessage": "since",
+    "defaultMessage": "since {fromYear}",
     "filepath": "src/screens/HomeScreen/Title.jsx"
   },
   {
@@ -242,11 +142,6 @@
   {
     "id": "NotFoundScreen.metaDescription",
     "defaultMessage": "404 - The page you're looking for does not exist.",
-    "filepath": "src/screens/NotFoundScreen/index.jsx"
-  },
-  {
-    "id": "NotFoundScreen.raisedEyebrownEmoji",
-    "defaultMessage": "Emoji with one eyebrow raised",
     "filepath": "src/screens/NotFoundScreen/index.jsx"
   },
   {

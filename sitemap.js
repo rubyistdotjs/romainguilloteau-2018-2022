@@ -1,17 +1,9 @@
 const fs = require('fs');
-const sm = require('sitemap');
+const { createSitemap } = require('sitemap');
 
-const sitemap = sm.createSitemap({
+const sitemap = createSitemap({
   hostname: 'https://www.romainguilloteau.dev',
+  urls: [{ url: '/', changefreq: 'monthly', priority: 1 }],
 });
-
-const url = ({ path, changefreq, priority }) =>
-  sitemap.add({
-    url: `/${path}`,
-    changefreq: 'monthly',
-    priority: 1,
-  });
-
-url({ path: '/', changefreq: 'monthly', priority: 1 });
 
 fs.writeFileSync('build/sitemap.xml', sitemap.toString());

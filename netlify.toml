@@ -16,19 +16,31 @@
   force = true
 
 [[redirects]]
+  from = "https://romainguilloteau.com/*"
+  to = "https://www.romainguilloteau.dev/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://romainguilloteau.fr/*"
+  to = "https://www.romainguilloteau.dev/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "https://rubyistdotjs.dev/*"
   to = "https://www.romainguilloteau.dev/:splat"
   status = 301
   force = true
 
 [[redirects]]
-  from = "https://rubyistdotjs.fr/*"
+  from = "https://rubyistdotjs.com/*"
   to = "https://www.romainguilloteau.dev/:splat"
   status = 301
   force = true
 
 [[redirects]]
-  from = "https://rubyistdotjs.com/*"
+  from = "https://rubyistdotjs.fr/*"
   to = "https://www.romainguilloteau.dev/:splat"
   status = 301
   force = true

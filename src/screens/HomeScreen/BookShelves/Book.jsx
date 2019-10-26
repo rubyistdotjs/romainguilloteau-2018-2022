@@ -11,7 +11,7 @@ const i18n = defineMessages({
   },
   seeBookOnGoodreads: {
     id: 'home.bookShelves.shelf.seeBookOnGoodreads',
-    defaultMessage: 'Check out this book on Goodreads',
+    defaultMessage: 'Check out "{title}" on Goodreads',
   },
 });
 
@@ -27,12 +27,12 @@ function Book({ intl, title, author, url, coverUrl }) {
           className="w-full h-auto rounded-sm"
         />
       </div>
-      <div className="flex flex-col items-start -mt-1">
+      <div className="flex flex-col items-start -mt-1 overflow-x-hidden">
         <ExternalLink
           href={url}
-          title={formatMessage(i18n.seeBookOnGoodreads)}
+          title={formatMessage(i18n.seeBookOnGoodreads, { title })}
           rel="nofollow"
-          className="text-gray-900 text-lg font-semibold leading-tight hover:text-teal-500 focus:text-teal-500 transition-fast transition-color"
+          className="w-full text-gray-900 text-lg font-semibold leading-tight hover:text-teal-500 focus:text-teal-500 truncate transition-fast transition-color"
         >
           {title}
         </ExternalLink>

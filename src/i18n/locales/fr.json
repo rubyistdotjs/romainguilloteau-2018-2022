@@ -9,7 +9,7 @@
   "home.bookShelves.dataFromGoodreadsAPI": "Data collected from {goodreadsLink} API",
   "home.bookShelves.read": "Read",
   "home.bookShelves.shelf.coverOf": "Cover of the book {title}",
-  "home.bookShelves.shelf.seeBookOnGoodreads": "Check out this book on Goodreads",
+  "home.bookShelves.shelf.seeBookOnGoodreads": "Check out \"{title}\" on Goodreads",
   "home.bookShelves.title": "Book shelves",
   "home.bookShelves.toRead": "On deck",
   "home.diplomas.title": "Diplomas",

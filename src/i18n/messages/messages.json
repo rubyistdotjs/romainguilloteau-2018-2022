@@ -21,7 +21,7 @@
   },
   {
     "id": "home.bookShelves.shelf.seeBookOnGoodreads",
-    "defaultMessage": "Check out this book on Goodreads",
+    "defaultMessage": "Check out \"{title}\" on Goodreads",
     "filepath": "src/screens/HomeScreen/BookShelves/Book.jsx"
   },
   {

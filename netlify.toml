@@ -4,6 +4,11 @@
   Publish = "build"
 
 [[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
   from = "https://romainguilloteau.netlify.com/*"
   to = "https://www.romainguilloteau.dev/:splat"
   status = 301

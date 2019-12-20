@@ -1,12 +1,14 @@
 import React from 'react';
 import camelCase from 'lodash/camelCase';
-import { injectIntl, intlShape } from 'react-intl';
+import { useIntl } from 'react-intl';
 
 import { useDatabaseFile } from '../../services/database';
 
 import SocialLink from './SocialLink';
 
-function SocialLinkList({ intl }) {
+function SocialLinkList() {
+  const intl = useIntl();
+
   const socialLinks = useDatabaseFile({
     filename: 'social-links',
     locale: intl.locale,
@@ -19,8 +21,4 @@ function SocialLinkList({ intl }) {
   return <div className="hidden sm:flex flex-row">{links}</div>;
 }
 
-SocialLinkList.propTypes = {
-  intl: intlShape.isRequired,
-};
-
-export default injectIntl(SocialLinkList);
+export default SocialLinkList;

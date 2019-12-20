@@ -1,5 +1,5 @@
 import React from 'react';
-import { injectIntl, intlShape, defineMessages } from 'react-intl';
+import { useIntl, defineMessages } from 'react-intl';
 
 import { useDatabaseFile } from '../../../services/database';
 
@@ -14,8 +14,8 @@ const i18n = defineMessages({
   },
 });
 
-function Jobs({ intl }) {
-  const { locale, formatMessage } = intl;
+function Jobs() {
+  const { locale, formatMessage } = useIntl();
   const jobs = useDatabaseFile({ filename: 'jobs', locale });
 
   return (
@@ -35,8 +35,4 @@ function Jobs({ intl }) {
   );
 }
 
-Jobs.propTypes = {
-  intl: intlShape.isRequired,
-};
-
-export default injectIntl(Jobs);
+export default Jobs;

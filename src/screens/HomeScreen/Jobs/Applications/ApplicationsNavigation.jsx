@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import camelCase from 'lodash/camelCase';
-import { injectIntl, intlShape, defineMessages } from 'react-intl';
+import { useIntl, defineMessages } from 'react-intl';
 
 const i18n = defineMessages({
   switchTo: {
@@ -11,12 +11,11 @@ const i18n = defineMessages({
 });
 
 function ApplicationsNavigation({
-  intl,
   selectedApplicationIndex,
   applications,
   onChange,
 }) {
-  const { formatMessage } = intl;
+  const { formatMessage } = useIntl();
   const list = applications.map((application, index) => {
     const { name } = application;
     const selected = index === selectedApplicationIndex;
@@ -37,7 +36,6 @@ function ApplicationsNavigation({
 }
 
 ApplicationsNavigation.propTypes = {
-  intl: intlShape.isRequired,
   selectedApplicationIndex: PropTypes.number.isRequired,
   applications: PropTypes.arrayOf(
     PropTypes.shape({
@@ -47,4 +45,4 @@ ApplicationsNavigation.propTypes = {
   onChange: PropTypes.func.isRequired,
 };
 
-export default injectIntl(ApplicationsNavigation);
+export default ApplicationsNavigation;

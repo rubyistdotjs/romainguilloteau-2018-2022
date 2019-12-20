@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import * as Icons from 'react-feather';
 import capitalize from 'lodash/capitalize';
-import { injectIntl, intlShape, defineMessages } from 'react-intl';
+import { useIntl, defineMessages } from 'react-intl';
 
 import ExternalLink from '../ExternalLink';
 
@@ -13,13 +13,14 @@ const i18n = defineMessages({
   },
 });
 
-function SocialLink({ intl, name, url }) {
+function SocialLink({ name, url }) {
+  const { formatMessage } = useIntl();
+
   // Component naming inconsistency in react-feather 1.1.4
   const iconName = name === 'GitHub' ? name : capitalize(name);
   if (!Object.keys(Icons).includes(iconName)) return '';
 
   const Icon = Icons[iconName];
-  const { formatMessage } = intl;
 
   return (
     <ExternalLink
@@ -33,9 +34,8 @@ function SocialLink({ intl, name, url }) {
 }
 
 SocialLink.propTypes = {
-  intl: intlShape.isRequired,
   name: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
 };
 
-export default injectIntl(SocialLink);
+export default SocialLink;

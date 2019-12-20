@@ -1,5 +1,5 @@
 import React from 'react';
-import { injectIntl, intlShape, defineMessages } from 'react-intl';
+import { useIntl, defineMessages } from 'react-intl';
 
 import { useDatabaseFile } from '../../services/database';
 
@@ -13,8 +13,8 @@ const i18n = defineMessages({
   },
 });
 
-function Diplomas({ intl }) {
-  const { locale, formatMessage } = intl;
+function Diplomas() {
+  const { locale, formatMessage } = useIntl();
   const diplomas = useDatabaseFile({ filename: 'diplomas', locale });
 
   return (
@@ -33,8 +33,4 @@ function Diplomas({ intl }) {
   );
 }
 
-Diplomas.propTypes = {
-  intl: intlShape.isRequired,
-};
-
-export default injectIntl(Diplomas);
+export default Diplomas;

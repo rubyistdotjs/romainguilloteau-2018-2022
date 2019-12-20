@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { ExternalLink as ExternalLinkIcon } from 'react-feather';
 import ProgressiveImage from 'react-progressive-image';
-import { injectIntl, intlShape, defineMessages } from 'react-intl';
+import { useIntl, defineMessages } from 'react-intl';
 
 import ExternalLink from '../../../../components/ExternalLink';
 
@@ -17,10 +17,10 @@ const i18n = defineMessages({
   },
 });
 
-function Screenshot({ intl, appName, filename, thumbnail, url }) {
-  if (navigator.userAgent === 'ReactSnap') return '';
+function Screenshot({ appName, filename, thumbnail, url }) {
+  const { formatMessage } = useIntl();
 
-  const { formatMessage } = intl;
+  if (navigator.userAgent === 'ReactSnap') return '';
 
   const screenshots = require.context(
     '../../../../images/screenshots',
@@ -61,7 +61,6 @@ function Screenshot({ intl, appName, filename, thumbnail, url }) {
 }
 
 Screenshot.propTypes = {
-  intl: intlShape.isRequired,
   appName: PropTypes.string.isRequired,
   filename: PropTypes.string.isRequired,
   thumbnail: PropTypes.string.isRequired,
@@ -72,4 +71,4 @@ Screenshot.defaultProps = {
   url: null,
 };
 
-export default injectIntl(Screenshot);
+export default Screenshot;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
-import { defineMessages, injectIntl, FormattedMessage } from 'react-intl';
+import { useIntl, defineMessages, FormattedMessage } from 'react-intl';
 
 import AppHeader from '../../components/AppHeader';
 import Emoji from '../../components/Emoji';
@@ -17,8 +17,8 @@ const i18n = defineMessages({
   },
 });
 
-function NotFoundScreen({ intl }) {
-  const { formatMessage } = intl;
+function NotFoundScreen() {
+  const { formatMessage } = useIntl();
 
   return (
     <div>
@@ -58,4 +58,4 @@ function NotFoundScreen({ intl }) {
   );
 }
 
-export default injectIntl(NotFoundScreen);
+export default NotFoundScreen;

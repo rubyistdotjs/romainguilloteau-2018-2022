@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { injectIntl, intlShape, defineMessages } from 'react-intl';
+import { useIntl, defineMessages } from 'react-intl';
 
 import ExternalLink from '../../../components/ExternalLink';
 
@@ -15,8 +15,8 @@ const i18n = defineMessages({
   },
 });
 
-function Book({ intl, title, author, url, coverUrl }) {
-  const { formatMessage } = intl;
+function Book({ title, author, url, coverUrl }) {
+  const { formatMessage } = useIntl();
 
   return (
     <div className="flex flex-row mb-5">
@@ -43,11 +43,10 @@ function Book({ intl, title, author, url, coverUrl }) {
 }
 
 Book.propTypes = {
-  intl: intlShape.isRequired,
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
   coverUrl: PropTypes.string.isRequired,
 };
 
-export default injectIntl(Book);
+export default Book;

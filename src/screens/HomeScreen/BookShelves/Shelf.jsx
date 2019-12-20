@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { injectIntl, intlShape, defineMessages } from 'react-intl';
+import { defineMessages, useIntl } from 'react-intl';
 import camelCase from 'lodash/camelCase';
 
 import Book from './Book';
@@ -30,8 +30,8 @@ async function fetchBooks(shelfName, perPage, setBooks) {
   setBooks(data);
 }
 
-function Shelf({ intl, name, displayedBooksCount, totalBooksCount }) {
-  const { formatMessage } = intl;
+function Shelf({ name, displayedBooksCount, totalBooksCount }) {
+  const { formatMessage } = useIntl();
   const [books, setBooks] = useState([]);
 
   useEffect(() => {
@@ -60,7 +60,6 @@ function Shelf({ intl, name, displayedBooksCount, totalBooksCount }) {
 }
 
 Shelf.propTypes = {
-  intl: intlShape.isRequired,
   name: PropTypes.string.isRequired,
   displayedBooksCount: PropTypes.number,
   totalBooksCount: PropTypes.number.isRequired,
@@ -70,4 +69,4 @@ Shelf.defaultProps = {
   displayedBooksCount: 6,
 };
 
-export default injectIntl(Shelf);
+export default Shelf;

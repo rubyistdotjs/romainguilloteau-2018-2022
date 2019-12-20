@@ -3,15 +3,12 @@ import { Helmet } from 'react-helmet';
 import { IntlProvider } from 'react-intl';
 import { Switch, Route, Redirect } from 'react-router-dom';
 
-import { addLocaleData } from './utils/locales';
 import messages from './i18n/locales';
 
 import HomeScreen from './screens/HomeScreen';
 import NotFoundScreen from './screens/NotFoundScreen';
 
 import './application.css';
-
-addLocaleData();
 
 function App() {
   return (

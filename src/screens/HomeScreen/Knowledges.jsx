@@ -1,5 +1,5 @@
 import React from 'react';
-import { defineMessages, injectIntl } from 'react-intl';
+import { useIntl, defineMessages } from 'react-intl';
 
 import Section from '../../components/Section';
 
@@ -16,8 +16,8 @@ function extractItems({ knowledges, state }) {
   return knowledges.filter(item => item.state === state).map(item => item.name);
 }
 
-function Knowledges({ intl }) {
-  const { locale, formatMessage } = intl;
+function Knowledges() {
+  const { locale, formatMessage } = useIntl();
   const knowledges = useDatabaseFile({ filename: 'knowledges', locale });
 
   const knownItems = extractItems({ knowledges, state: 'known' });
@@ -39,4 +39,4 @@ function Knowledges({ intl }) {
   );
 }
 
-export default injectIntl(Knowledges);
+export default Knowledges;

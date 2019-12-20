@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { injectIntl, intlShape, defineMessages } from 'react-intl';
+import { useIntl, defineMessages } from 'react-intl';
 
 const i18n = defineMessages({
   metaTitle: {
@@ -32,8 +32,8 @@ const i18n = defineMessages({
   },
 });
 
-function Head({ intl }) {
-  const { formatMessage } = intl;
+function Head() {
+  const { formatMessage } = useIntl();
 
   return (
     <Helmet>
@@ -104,8 +104,4 @@ function Head({ intl }) {
   );
 }
 
-Head.propTypes = {
-  intl: intlShape.isRequired,
-};
-
-export default injectIntl(Head);
+export default Head;

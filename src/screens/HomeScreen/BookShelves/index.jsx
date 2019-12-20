@@ -1,10 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {
-  injectIntl,
-  intlShape,
-  defineMessages,
-  FormattedMessage,
-} from 'react-intl';
+import { useIntl, defineMessages, FormattedMessage } from 'react-intl';
 
 import Section from '../../../components/Section';
 import ExternalLink from '../../../components/ExternalLink';
@@ -32,7 +27,7 @@ async function fetchShelves(setShelves) {
 }
 
 function BookShelves({ intl }) {
-  const { formatMessage } = intl;
+  const { formatMessage } = useIntl();
   const [shelves, setShelves] = useState([]);
 
   useEffect(() => {
@@ -73,8 +68,4 @@ function BookShelves({ intl }) {
   );
 }
 
-BookShelves.propTypes = {
-  intl: intlShape.isRequired,
-};
-
-export default injectIntl(BookShelves);
+export default BookShelves;

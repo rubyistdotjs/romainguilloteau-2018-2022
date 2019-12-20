@@ -1,10 +1,3 @@
-import { addLocaleData as addIntlLocale } from 'react-intl';
-import enLocaleData from 'react-intl/locale-data/en';
-import frLocaleData from 'react-intl/locale-data/fr';
-
-export const addLocaleData = () =>
-  addIntlLocale([...enLocaleData, ...frLocaleData]);
-
 export const langToLocale = language => language.split('-')[0];
 export const availableLangs = ['en-US', 'fr-FR'];
 export const defaultLang = availableLangs[0];

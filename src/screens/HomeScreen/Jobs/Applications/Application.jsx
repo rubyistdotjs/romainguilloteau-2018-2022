@@ -10,15 +10,12 @@ function Application({ name, description, challenges, tags, offset }) {
       className="w-full flex-shrink-0 flex flex-col transition transition-transform"
       style={{ transform: `translateX(-${offset * 100}%)` }}
     >
-      <h4 className="text-gray-900 text-lg lg:text-2xl font-bold leading-tight mb-3">
+      <h4 className="text-gray-900 text-lg lg:text-2xl font-medium leading-tight mb-3">
         {name}
       </h4>
       {description &&
         description.split('\n').map((p, i) => (
-          <p
-            key={`description-${i}`}
-            className="text-gray-700 font-medium py-2"
-          >
+          <p key={`description-${i}`} className="text-gray-700 py-2">
             {p}
           </p>
         ))}

@@ -9,7 +9,7 @@ function Header() {
     <header>
       <AppHeader />
       <div className="container mb-32">
-        <div className="w-full md:w-full lg:w-10/12 xl:w-8/12">
+        <div className="w-full md:w-full lg:w-11/12 xl:w-9/12">
           <h1 className="text-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight md:leading-none mt-8 mb-6">
             <Emoji
               alt="👋"
@@ -35,7 +35,7 @@ function Header() {
           <div className="mt-12">
             <a
               href="mailto:hello@romainguilloteau.dev"
-              className="text-base md:text-lg font-semibold antialiased text-teal-600 underline hover:text-teal-900"
+              className="text-base md:text-lg font-medium antialiased text-teal-600 underline hover:text-teal-900"
             >
               hello@romainguilloteau.dev
             </a>

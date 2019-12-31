@@ -30,7 +30,7 @@ function Knowledges() {
       </h3>
       <div className="w-full">
         {knownItems.map(item => (
-          <span className="inline-block text-grey-darkest text-sm font-semibold bg-grey-lighter px-3 py-1 rounded-full mr-1 mb-1">
+          <span className="inline-block text-grey-darkest text-sm font-medium bg-grey-lighter px-3 py-1 rounded-full mr-1 mb-1">
             {item}
           </span>
         ))}

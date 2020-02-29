@@ -1,9 +1,7 @@
 /* Core ----------------------------------------------------------------------- */
 
 .btn {
-  @apply .inline-block .text-sm .text-white .font-medium .leading-none
-         .py-4 .px-4 .mr-2 .mb-2 .border .border-transparent
-         .rounded .btn-transition .cursor-pointer;
+  @apply .inline-block .text-sm .text-white .font-medium .leading-none .py-4 .px-4 .mr-2 .mb-2 .border .border-transparent .rounded .transition-colors .duration-300 .cursor-pointer;
 }
 
 .btn:disabled {
@@ -23,7 +21,8 @@
   @apply .bg-teal-700;
 }
 
-.btn-teal:hover:not(:disabled), .btn-teal:focus:not(:disabled) {
+.btn-teal:hover:not(:disabled),
+.btn-teal:focus:not(:disabled) {
   @apply .bg-teal-900;
 }
 
@@ -34,6 +33,7 @@
   @apply .text-gray-400 .bg-transparent .border-gray-500;
 }
 
-.btn-outline-grey:hover:not(:disabled), .btn-outline-grey:focus:not(:disabled) {
+.btn-outline-grey:hover:not(:disabled),
+.btn-outline-grey:focus:not(:disabled) {
   @apply .text-gray-900 .bg-gray-300 .border-gray-300;
 }

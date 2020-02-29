@@ -1,15 +1,16 @@
 /* Core ----------------------------------------------------------------------- */
 
 .badge {
-  @apply .flex .justify-center .items-center .text-gray-700 .leading-none .w-8
-         .h-8 .bg-gray-200 .rounded-full .m-2 .btn-transition;
+  @apply .flex .justify-center .items-center .text-gray-700 .leading-none .w-8 .h-8 .bg-gray-200 .rounded-full .m-2 .transition-colors .duration-300;
 }
 
 .badge:last-child {
   @apply .mr-0;
 }
 
-.badge:hover, .badge:focus, .badge:active {
+.badge:hover,
+.badge:focus,
+.badge:active {
   @apply .text-black .bg-gray-400;
 }
 

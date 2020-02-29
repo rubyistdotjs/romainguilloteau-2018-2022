@@ -7,7 +7,7 @@ import Tag from './Tag';
 function Application({ name, description, challenges, tags, offset }) {
   return (
     <div
-      className="w-full flex-shrink-0 flex flex-col transition transition-transform"
+      className="w-full flex-shrink-0 flex flex-col transition-transform duration-300"
       style={{ transform: `translateX(-${offset * 100}%)` }}
     >
       <h4 className="text-gray-900 text-lg lg:text-2xl font-medium leading-tight mb-3">

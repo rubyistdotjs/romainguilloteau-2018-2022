@@ -17,36 +17,11 @@ strong {
   @apply .font-medium;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   @apply .antialiased;
-}
-
-.btn-transition {
-  transition-property: color, background-color, border-color, opacity;
-  transition-duration: 320ms;
-  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.transition {
-  transition-duration: 320ms;
-  transition-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
-}
-
-.transition-fast {
-  transition-duration: 120ms;
-  transition-timing-function: linear;
-}
-
-.transition-bg {
-  transition-property: background-color;
-}
-
-.transition-color {
-  transition-property: color;
-}
-
-.transition-transform {
-  transition-property: transform;
 }
 
 .screenshot-overlay {
@@ -56,7 +31,8 @@ h1, h2, h3, h4 {
   z-index: 1;
 }
 
-.screenshot:hover .screenshot-overlay, .screenshot-overlay:focus-within {
+.screenshot:hover .screenshot-overlay,
+.screenshot-overlay:focus-within {
   @apply .opacity-100;
 }
 
@@ -65,8 +41,7 @@ h1, h2, h3, h4 {
 }
 
 .step {
-  @apply .appearance-none .block .w-8 .h-3 .ml-1 .mr-1 .border-2
-         .border-gray-300 .rounded-full .cursor-pointer .btn-transition;
+  @apply .appearance-none .block .w-8 .h-3 .ml-1 .mr-1 .border-2 .border-gray-300 .rounded-full .cursor-pointer .transition-colors .duration-300;
 }
 
 @screen lg {
@@ -79,6 +54,7 @@ h1, h2, h3, h4 {
   @apply .bg-teal-500 .border-teal-500 .cursor-default .outline-none;
 }
 
-.step:focus:not(.active), .step:hover:not(.active) {
+.step:focus:not(.active),
+.step:hover:not(.active) {
   @apply .bg-gray-500 .border-gray-500 .outline-none;
 }

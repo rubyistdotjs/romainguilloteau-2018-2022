@@ -32,7 +32,7 @@ function Book({ title, author, url, coverUrl }) {
           href={url}
           title={formatMessage(i18n.seeBookOnGoodreads, { title })}
           rel="nofollow"
-          className="w-full text-gray-900 text-lg font-medium leading-tight hover:text-teal-500 focus:text-teal-500 truncate transition-fast transition-color"
+          className="w-full text-gray-900 text-lg font-medium leading-tight hover:text-teal-500 focus:text-teal-500 truncate transition-colors duration-150"
         >
           {title}
         </ExternalLink>

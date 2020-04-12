@@ -1,9 +1,12 @@
-const fs = require('fs');
-const { createSitemap } = require('sitemap');
+const { createWriteStream } = require('fs');
+const { SitemapStream } = require('sitemap');
 
-const sitemap = createSitemap({
+const sitemap = new SitemapStream({
   hostname: 'https://www.romainguilloteau.dev',
-  urls: [{ url: '/', changefreq: 'monthly', priority: 1 }],
 });
 
-fs.writeFileSync('build/sitemap.xml', sitemap.toString());
+const writeStream = createWriteStream('./build/sitemap.xml');
+sitemap.pipe(writeStream);
+
+sitemap.write({ url: '/', changefreq: 'monthly', priority: 1 });
+sitemap.end();

@@ -29,7 +29,7 @@ function Header() {
           <p className="text-base md:text-xl mt-12 text-gray-700">
             <FormattedMessage
               id="home.header.introduction"
-              defaultMessage="Currently working at Swile, previously Codeur and 1Year1Book. I have more than 7 years of professional experiences during which I had the opportunity to take on all the roles necessary to launch ambitious applications."
+              defaultMessage="Currently working at Swile, previously Codeur and 1Year1Book. I have more than 8 years of professional experiences during which I had the opportunity to take on all the roles necessary to launch ambitious applications."
             />
           </p>
           <div className="mt-12">

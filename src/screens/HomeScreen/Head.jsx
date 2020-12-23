@@ -10,7 +10,7 @@ const i18n = defineMessages({
   metaDescription: {
     id: 'home.meta.description',
     defaultMessage:
-      "Aka rubyistdotjs, I'm a Senior Full Stack Developer, with 7 years of professional experiences, currently working at Swile in Montpellier, France.",
+      "Aka rubyistdotjs, I'm a Senior Full Stack Developer, with 8 years of professional experiences, currently working at Swile in Montpellier, France.",
   },
   openGraphTitle: {
     id: 'home.og.title',
@@ -19,7 +19,7 @@ const i18n = defineMessages({
   openGraphDescription: {
     id: 'home.og.description',
     defaultMessage:
-      "Also known as rubyistdotjs, I'm a Senior Full Stack Developer, mainly Ruby on Rails and JavaScript (Node.js and React), with 7 years of professional experiences, currently working at Swile in Montpellier, Hérault, France.",
+      "Also known as rubyistdotjs, I'm a Senior Full Stack Developer, mainly Ruby on Rails and JavaScript (Node.js and React), with 8 years of professional experiences, currently working at Swile in Montpellier, Hérault, France.",
   },
   jsonldJobTitle: {
     id: 'home.jsonld.jobTitle',
@@ -28,7 +28,7 @@ const i18n = defineMessages({
   jsonldDescription: {
     id: 'home.jsonld.description',
     defaultMessage:
-      "Also known as rubyistdotjs, I'm a Senior Full Stack Developer, mainly Ruby on Rails and JavaScript (Node.js and React), with 7 years of professional experiences, currently working at Swile in Montpellier, Hérault, France.",
+      "Also known as rubyistdotjs, I'm a Senior Full Stack Developer, mainly Ruby on Rails and JavaScript (Node.js and React), with 8 years of professional experiences, currently working at Swile in Montpellier, Hérault, France.",
   },
 });
 

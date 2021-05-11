@@ -35,7 +35,7 @@ function Head() {
       <script type="application/ld+json">
         {`
           {
-            "@context": "http://schema.org",
+            "@context": "http://schema.org/",
             "@type": "Person",
             "name": "Romain Guilloteau",
             "givenName": "Romain",

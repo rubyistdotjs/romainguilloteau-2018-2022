@@ -1,21 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import camelCase from 'lodash/camelCase';
-import { useIntl, defineMessages } from 'react-intl';
-
-const i18n = defineMessages({
-  switchTo: {
-    id: 'home.jobs.applications.switchTo',
-    defaultMessage: 'Switch to {appName}',
-  },
-});
 
 function ApplicationsNavigation({
   selectedApplicationIndex,
   applications,
   onChange,
 }) {
-  const { formatMessage } = useIntl();
   const list = applications.map((application, index) => {
     const { name } = application;
     const selected = index === selectedApplicationIndex;
@@ -25,7 +16,7 @@ function ApplicationsNavigation({
       <button
         key={camelCase(name)}
         type="button"
-        title={formatMessage(i18n.switchTo, { appName: name })}
+        title={`Switch to ${name}`}
         className={`step ${activeClassName}`}
         onClick={() => onChange(index)}
       />

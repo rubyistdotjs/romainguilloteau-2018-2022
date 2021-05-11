@@ -1,6 +1,5 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import { FormattedMessage } from 'react-intl';
 
 function Title({ title, fromDate, toDate, atPlace }) {
   const fromYear = new Date(fromDate).getFullYear();
@@ -12,28 +11,7 @@ function Title({ title, fromDate, toDate, atPlace }) {
         {title}
       </h3>
       <span className="block text-gray-700 text-lg md:text-xl lg:text-2xl font-medium leading-tight mt-1">
-        {toYear ? (
-          <Fragment>
-            <FormattedMessage
-              id="home.timeline.dateFrom"
-              defaultMessage="from {fromYear} to {toYear}"
-              values={{
-                fromYear,
-                toYear,
-              }}
-            />
-          </Fragment>
-        ) : (
-          <Fragment>
-            <FormattedMessage
-              id="home.timeline.dateSince"
-              defaultMessage="since {fromYear}"
-              values={{
-                fromYear,
-              }}
-            />
-          </Fragment>
-        )}
+        {toYear ? `from ${fromYear} to ${toYear}` : `since ${fromYear}`}
         {atPlace && (
           <span>
             {' - '}

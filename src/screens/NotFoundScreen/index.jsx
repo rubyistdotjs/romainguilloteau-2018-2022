@@ -1,32 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
-import { useIntl, defineMessages, FormattedMessage } from 'react-intl';
 
 import AppHeader from '../../components/AppHeader';
 import Emoji from '../../components/Emoji';
 
-const i18n = defineMessages({
-  metaTitle: {
-    id: 'NotFoundScreen.metaTitle',
-    defaultMessage: 'Page not found',
-  },
-  metaDescription: {
-    id: 'NotFoundScreen.metaDescription',
-    defaultMessage: "404 - The page you're looking for does not exist.",
-  },
-});
-
 function NotFoundScreen() {
-  const { formatMessage } = useIntl();
-
   return (
     <div>
       <Helmet>
-        <title>{formatMessage(i18n.metaTitle)}</title>
+        <title>Page not found</title>
         <meta
           name="description"
-          content={formatMessage(i18n.metaDescription)}
+          content="404 - The page you're looking for does not exist."
         />
         <meta name="robots" content="none" />
       </Helmet>
@@ -40,16 +26,10 @@ function NotFoundScreen() {
               className="text-2xl md:text-3xl"
             />
             <h1 className="text-black text-3xl md:text-5xl font-bold leading-tight mt-4 mb-10 mb-16 lg:mb-20">
-              <FormattedMessage
-                id="NotFoundScreen.title"
-                defaultMessage="The page you're looking for does not exist."
-              />
+              The page you're looking for does not exist.
             </h1>
             <Link to="/" className="btn btn-teal">
-              <FormattedMessage
-                id="NotFoundScreen.backToHome"
-                defaultMessage="Go to the home page"
-              />
+              Go to the home page
             </Link>
           </div>
         </div>

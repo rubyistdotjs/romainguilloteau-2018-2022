@@ -1,5 +1,4 @@
 import React from 'react';
-import { useIntl, defineMessages } from 'react-intl';
 
 import { useDatabaseFile } from '../../../services/database';
 
@@ -7,20 +6,12 @@ import Section from '../../../components/Section';
 import Title from '../Title';
 import ApplicationList from './Applications';
 
-const i18n = defineMessages({
-  title: {
-    id: 'home.jobs.title',
-    defaultMessage: 'Experience',
-  },
-});
-
 function Jobs() {
-  const { locale, formatMessage } = useIntl();
-  const jobs = useDatabaseFile({ filename: 'jobs', locale });
+  const jobs = useDatabaseFile({ filename: 'jobs' });
 
   return (
-    <Section emoji="briefcase" title={formatMessage(i18n.title)}>
-      {jobs.map(job => (
+    <Section emoji="briefcase" title="Experience">
+      {jobs.map((job) => (
         <div key={job.startedAt} className="mb-20 md:mb-24">
           <Title
             title={job.title}

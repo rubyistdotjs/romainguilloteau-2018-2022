@@ -1,48 +1,21 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { useIntl, defineMessages } from 'react-intl';
-
-const i18n = defineMessages({
-  metaTitle: {
-    id: 'home.meta.title',
-    defaultMessage: 'Romain Guilloteau - Senior Full Stack Developer',
-  },
-  metaDescription: {
-    id: 'home.meta.description',
-    defaultMessage:
-      "Aka rubyistdotjs, I'm a Senior Full Stack Developer, with 8 years of professional experiences, currently working at Swile in Montpellier, France.",
-  },
-  openGraphTitle: {
-    id: 'home.og.title',
-    defaultMessage: 'Romain Guilloteau - Senior Full Stack Developer',
-  },
-  openGraphDescription: {
-    id: 'home.og.description',
-    defaultMessage:
-      "Also known as rubyistdotjs, I'm a Senior Full Stack Developer, mainly Ruby on Rails and JavaScript (Node.js and React), with 8 years of professional experiences, currently working at Swile in Montpellier, Hérault, France.",
-  },
-  jsonldJobTitle: {
-    id: 'home.jsonld.jobTitle',
-    defaultMessage: 'Senior Full Stack Developer',
-  },
-  jsonldDescription: {
-    id: 'home.jsonld.description',
-    defaultMessage:
-      "Also known as rubyistdotjs, I'm a Senior Full Stack Developer, mainly Ruby on Rails and JavaScript (Node.js and React), with 8 years of professional experiences, currently working at Swile in Montpellier, Hérault, France.",
-  },
-});
 
 function Head() {
-  const { formatMessage } = useIntl();
-
   return (
     <Helmet>
-      <title>{formatMessage(i18n.metaTitle)}</title>
-      <meta name="description" content={formatMessage(i18n.metaDescription)} />
-      <meta property="og:title" content={formatMessage(i18n.openGraphTitle)} />
+      <title>Romain Guilloteau - Senior Full Stack Developer</title>
+      <meta
+        name="description"
+        content="Aka rubyistdotjs, I'm a Senior Full Stack Developer, with 8 years of professional experiences, currently working at Swile in Montpellier, France."
+      />
+      <meta
+        property="og:title"
+        content="Romain Guilloteau - Senior Full Stack Developer"
+      />
       <meta
         property="og:description"
-        content={formatMessage(i18n.openGraphDescription)}
+        content="Also known as rubyistdotjs, I'm a Senior Full Stack Developer, mainly Ruby on Rails and JavaScript (Node.js and React), with 8 years of professional experiences, currently working at Swile in Montpellier, Hérault, France."
       />
       <meta property="og:url" content="https://www.romainguilloteau.dev" />
       <meta property="og:type" content="profile" />
@@ -69,8 +42,8 @@ function Head() {
             "familyName": "Guilloteau",
             "alternateName": "rubyistdotjs",
             "image": "https://www.romainguilloteau.dev/images/mugshot.jpg",
-            "jobTitle": "${formatMessage(i18n.jsonldJobTitle)}",
-            "description": "${formatMessage(i18n.jsonldDescription)}",
+            "jobTitle": "Senior Full Stack Developer",
+            "description": "Also known as rubyistdotjs, I'm a Senior Full Stack Developer, mainly Ruby on Rails and JavaScript (Node.js and React), with 8 years of professional experiences, currently working at Swile in Montpellier, Hérault, France.",
             "gender": "Male",
             "nationality": "FR",
             "birthDate": "1992-08-13",

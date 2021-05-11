@@ -21,7 +21,7 @@ function Application({ name, description, challenges, tags, offset }) {
         ))}
       <ChallengeList challenges={challenges} />
       <div className="mt-4">
-        {tags.map(tag => (
+        {tags.map((tag) => (
           <Tag key={camelCase(tag.name)} tag={tag} />
         ))}
       </div>

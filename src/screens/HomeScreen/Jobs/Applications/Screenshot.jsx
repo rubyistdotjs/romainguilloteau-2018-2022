@@ -2,24 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { ExternalLink as ExternalLinkIcon } from 'react-feather';
 import ProgressiveImage from 'react-progressive-image';
-import { useIntl, defineMessages } from 'react-intl';
 
 import ExternalLink from '../../../../components/ExternalLink';
 
-const i18n = defineMessages({
-  visit: {
-    id: 'home.jobs.applications.visit',
-    defaultMessage: 'Go to this website',
-  },
-  screenshotAlt: {
-    id: 'home.jobs.applications.screenshotAlt',
-    defaultMessage: 'Screenshot of {appName}',
-  },
-});
-
 function Screenshot({ appName, filename, thumbnail, url }) {
-  const { formatMessage } = useIntl();
-
   if (navigator.userAgent === 'ReactSnap') return '';
 
   const screenshots = require.context(
@@ -36,7 +22,7 @@ function Screenshot({ appName, filename, thumbnail, url }) {
         <div className="screenshot-overlay">
           <ExternalLink
             href={url}
-            title={formatMessage(i18n.visit)}
+            title="Go to this website"
             className="text-teal-500 hover:text-teal-800 transition-colors duration-300"
             rel="nofollow"
           >
@@ -48,10 +34,10 @@ function Screenshot({ appName, filename, thumbnail, url }) {
         src={largeScreenshot}
         placeholder={`data:image/svg+xml;utf8,${thumbnail}`}
       >
-        {src => (
+        {(src) => (
           <img
             src={src}
-            alt={formatMessage(i18n.screenshotAlt, { appName })}
+            alt={`Screenshot of ${appName}`}
             className="absolute w-full top"
           />
         )}

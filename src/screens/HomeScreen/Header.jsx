@@ -1,5 +1,4 @@
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
 
 import AppHeader from '../../components/AppHeader';
 import Emoji from '../../components/Emoji';
@@ -16,21 +15,13 @@ function Header() {
               name="waving-hand"
               className="hidden md:inline-block md:w-10 lg:w-12 mr-1 align-center pb-1 md:pb-2"
             />{' '}
-            <FormattedMessage
-              id="home.header.name"
-              defaultMessage="I'm Romain Guilloteau"
-            />
-            <br />
-            <FormattedMessage
-              id="home.header.job"
-              defaultMessage="A Senior Full Stack Developer"
-            />
+            I'm Romain Guilloteau
+            <br />A Senior Full Stack Developer
           </h1>
           <p className="text-base md:text-xl mt-12 text-gray-700">
-            <FormattedMessage
-              id="home.header.introduction"
-              defaultMessage="Currently working at Swile, previously Codeur and 1Year1Book. I have more than 8 years of professional experiences during which I had the opportunity to take on all the roles necessary to launch ambitious applications."
-            />
+            Currently working at BuyCo. I have more than 8 years of professional
+            experiences during which I had the opportunity to take on all the
+            roles necessary to launch ambitious applications.
           </p>
           <div className="mt-12">
             <a

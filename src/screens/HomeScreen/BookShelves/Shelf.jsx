@@ -1,26 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { defineMessages, useIntl } from 'react-intl';
 import camelCase from 'lodash/camelCase';
 
 import Book from './Book';
 
 import api from '../../../services/api';
-
-const i18n = defineMessages({
-  currentlyReading: {
-    id: 'home.bookShelves.currentlyReading',
-    defaultMessage: 'Reading',
-  },
-  toRead: {
-    id: 'home.bookShelves.toRead',
-    defaultMessage: 'On deck',
-  },
-  read: {
-    id: 'home.bookShelves.read',
-    defaultMessage: 'Read',
-  },
-});
 
 async function fetchBooks(shelfName, perPage, setBooks) {
   const { data } = await api.get('/shelfBooks', {
@@ -31,8 +15,13 @@ async function fetchBooks(shelfName, perPage, setBooks) {
 }
 
 function Shelf({ name, displayedBooksCount, totalBooksCount }) {
-  const { formatMessage } = useIntl();
   const [books, setBooks] = useState([]);
+
+  const titles = {
+    currentlyReading: 'Reading',
+    toRead: 'On deck',
+    read: 'Read',
+  };
 
   useEffect(() => {
     fetchBooks(name, displayedBooksCount, setBooks);
@@ -41,12 +30,12 @@ function Shelf({ name, displayedBooksCount, totalBooksCount }) {
   return (
     <div>
       <h3 className="text-gray-900 text-2xl lg:text-2xl font-bold leading-none mb-8 flex flex-row items-center">
-        {formatMessage(i18n[camelCase(name)])}
+        {titles[camelCase(name)]}
         <span className="inline-block text-gray-800 text-sm font-medium leading-none bg-gray-300 py-1 px-2 ml-3 rounded-full">
           {totalBooksCount}
         </span>
       </h3>
-      {books.map(book => (
+      {books.map((book) => (
         <Book
           key={`book-${book.id}`}
           title={book.title}

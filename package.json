@@ -24,7 +24,6 @@
     "react-dom": "^16.2.0",
     "react-feather": "^2.0.0",
     "react-helmet": "^6.0.0",
-    "react-intl": "^3.9.0",
     "react-progressive-image": "^0.6.0",
     "react-router-dom": "^5.0.0",
     "react-scripts": "^3.0.0",
@@ -38,10 +37,6 @@
     "build:css": "postcss src/stylesheets/application.css -o src/application.css",
     "build:server": "netlify-lambda build functions/src",
     "postbuild": "react-snap",
-    "i18n": "npm run i18n:extractMessages && npm run i18n:updateLocales && npm run i18n:updateDatabaseLocales",
-    "i18n:extractMessages": "react-intl-cra 'src/**/*.{js,jsx}' -o 'src/i18n/messages/messages.json'",
-    "i18n:updateLocales": "node ./scripts/translationRunner.js",
-    "i18n:updateDatabaseLocales": "node ./scripts/updateDatabaseLocales.js",
     "lint": "$(yarn bin)/eslint src/",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
@@ -59,8 +54,6 @@
     "postcss-color-function": "^4.0.1",
     "postcss-import": "^12.0.0",
     "prettier": "^2.0.0",
-    "react-intl-cra": "^0.3.3",
-    "react-intl-translations-manager": "^5.0.3",
     "react-snap": "^1.23.0",
     "sitemap": "^6.0.0",
     "tailwindcss": "^1.0.0-beta.3"

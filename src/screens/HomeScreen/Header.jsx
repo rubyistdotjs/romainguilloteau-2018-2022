@@ -19,10 +19,9 @@ function Header() {
             <br />A Senior Full Stack Developer
           </h1>
           <p className="text-base md:text-xl mt-12 text-gray-700">
-            Currently working at Swile, previously Codeur and 1Year1Book. I have
-            more than 8 years of professional experiences during which I had the
-            opportunity to take on all the roles necessary to launch ambitious
-            applications.
+            Currently working at BuyCo. I have more than 8 years of professional
+            experiences during which I had the opportunity to take on all the
+            roles necessary to launch ambitious applications.
           </p>
           <div className="mt-12">
             <a

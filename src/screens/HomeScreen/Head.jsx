@@ -7,7 +7,7 @@ function Head() {
       <title>Romain Guilloteau - Senior Full Stack Developer</title>
       <meta
         name="description"
-        content="Aka rubyistdotjs, I'm a Senior Full Stack Developer, with 8 years of professional experiences, currently working at Swile in Montpellier, France."
+        content="Aka rubyistdotjs, I'm a Senior Full Stack Developer, with 8 years of professional experiences, currently working at BuyCo in Montpellier, France."
       />
       <meta
         property="og:title"
@@ -15,7 +15,7 @@ function Head() {
       />
       <meta
         property="og:description"
-        content="Also known as rubyistdotjs, I'm a Senior Full Stack Developer, mainly Ruby on Rails and JavaScript (Node.js and React), with 8 years of professional experiences, currently working at Swile in Montpellier, Hérault, France."
+        content="Also known as rubyistdotjs, I'm a Senior Full Stack Developer, mainly Ruby on Rails and JavaScript (Node.js and React), with 8 years of professional experiences, currently working at BuyCo in Montpellier, Hérault, France."
       />
       <meta property="og:url" content="https://www.romainguilloteau.dev" />
       <meta property="og:type" content="profile" />
@@ -43,7 +43,7 @@ function Head() {
             "alternateName": "rubyistdotjs",
             "image": "https://www.romainguilloteau.dev/images/mugshot.jpg",
             "jobTitle": "Senior Full Stack Developer",
-            "description": "Also known as rubyistdotjs, I'm a Senior Full Stack Developer, mainly Ruby on Rails and JavaScript (Node.js and React), with 8 years of professional experiences, currently working at Swile in Montpellier, Hérault, France.",
+            "description": "Also known as rubyistdotjs, I'm a Senior Full Stack Developer, mainly Ruby on Rails and JavaScript (Node.js and React), with 8 years of professional experiences, currently working at BuyCo in Montpellier, Hérault, France.",
             "gender": "Male",
             "nationality": "FR",
             "birthDate": "1992-08-13",
